@@ -1,0 +1,1161 @@
+archetype (adl_version=1.4; uid=74d09d18-03c3-40af-80f8-9d172222326f)
+	openEHR-EHR-OBSERVATION.norpeq.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			author = <
+			>
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2025-07-22">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			purpose = <"Enregistrer les réponses d'un patient au Nordic Patient Experiences Questionnaire (NORPEQ) dans un format structuré et interopérable à des fins de mesure de la qualité, d'analyse comparative et de recherche. Destiné au stockage, à l'échange et à l'analyse des données NORPEQ dans des référentiels de données cliniques basés sur openEHR et des outils de reporting. Chacun des huit éléments est représenté par un DV_ORDINAL (1 – 5). Un score NORPEQ global facultatif peut être obtenu lors d'analyses en aval. Convient aux enquêtes de qualité de routine, aux audits cliniques et aux comparaisons interinstitutionnelles.
+Développé dans le cadre du programme pilote OpenPROMs de la Commission fédérale pour la qualité (EQK), qui harmonise les mesures rapportées par les patients dans toute la Suisse (voir https://www.bag.admin.ch/de/eqk-uebertragene-programme).">
+			keywords = <"Expérience rapportée par le patient","NORPEQ","PREM","hôpital","soins","hospitalisation","qualité","questionnaire">
+			copyright = <"© openEHR Foundation">
+			use = <"À utiliser pour enregistrer les huit réponses NORPEQ dans les hôpitaux et les services ambulatoires suisses.">
+			misuse = <"Ne doit pas être utilisé pour d'autres mesures des résultats ou de l'expérience rapportés par les patients, pour des versions modifiées du NORPEQ dont la formulation ou l'échelle a été modifiée, ni comme substitut à une évaluation clinique ou à une décision diagnostique.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a patient’s responses to the Nordic Patient Experiences Questionnaire (NORPEQ) in a structured, interoperable format for quality measurement, benchmarking and research. Intended for storage, exchange and analysis of NORPEQ data within openEHR-based clinical data repositories and reporting tools. Each of the eight items is represented as a DV_ORDINAL (1 – 5). An optional overall NORPEQ score may be derived in downstream analytics. Suitable for routine quality surveys, clinical audits and cross-institutional comparisons.
+Developed as part of the Federal Quality Commission (EQK) OpenPROMs pilot programme, which harmonises patient-reported measures across Switzerland (see https://www.bag.admin.ch/de/eqk-uebertragene-programme).">
+			keywords = <"Patient-reported","experience","NORPEQ","PREM","hospital","care","inpatient","quality","questionnaire">
+			use = <"Use to record the eight NORPEQ responses within Swiss hospitals and ambulatory settings.">
+			misuse = <"Not to be used for other patient-reported outcome or experience measures, for modified NORPEQ versions with changed wording or scale, or as a substitute for clinical assessment or diagnostic decision making.">
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			purpose = <"Registrare le risposte dei pazienti al Questionario nordico sulle esperienze dei pazienti (NORPEQ) in un formato strutturato e interoperabile per la misurazione della qualità, il benchmarking e la ricerca. Destinato all'archiviazione, allo scambio e all'analisi dei dati NORPEQ all'interno di archivi di dati clinici basati su openEHR e strumenti di reporting. Ciascuna delle otto voci è rappresentata come DV_ORDINAL (1 – 5). Un punteggio NORPEQ complessivo facoltativo può essere ricavato in analisi a valle. Adatto per indagini di qualità di routine, audit clinici e confronti tra istituzioni.
+Sviluppato nell'ambito del programma pilota OpenPROMs della Commissione federale per la qualità (EQK), che armonizza le misure riferite dai pazienti in tutta la Svizzera (vedi https://www.bag.admin.ch/de/eqk-uebertragene-programme).">
+			keywords = <"Segnalato dal paziente","esperienza","NORPEQ","PREM","ospedale","assistenza","ricoverato","qualità","questionario">
+			copyright = <"© openEHR Foundation">
+			use = <"Da utilizzare per registrare le otto risposte NORPEQ negli ospedali svizzeri e nelle strutture ambulatoriali.">
+			misuse = <"Da non utilizzare per altre misure di esito o esperienza riferite dal paziente, per versioni modificate del NORPEQ con formulazione o scala modificate, né come sostituto della valutazione clinica o del processo decisionale diagnostico.">
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			purpose = <"Zur Erfassung der Antworten eines Patienten auf den Nordic Patient Experiences Questionnaire (NORPEQ) in einem strukturierten, interoperablen Format für Qualitätsmessungen, Benchmarking und Forschungszwecke. Bestimmt für die Speicherung, den Austausch und die Analyse von NORPEQ-Daten in openEHR-basierten klinischen CDR's und Berichtstools. Jeder der acht Punkte wird als DV_ORDINAL (1 – 5) dargestellt. Ein optionaler NORPEQ-Gesamtwert kann in nachgelagerten Analysen abgeleitet werden. Geeignet für routinemässige Qualitätserhebungen, klinische Audits und institutionsübergreifende Vergleiche. Entwickelt im Rahmen des Pilotprogramms OpenPROMs der Eidgenössischen Qualitätskommission (EQK), das patientenberichtete Messgrössen in der ganzen Schweiz harmonisiert (siehe https://www.bag.admin.ch/de/eqk-uebertragene-programme).">
+			keywords = <"Patient-reported","experience","NORPEQ","PREM","Behandlung","Qualität","Fragebogen">
+			copyright = <"© openEHR Foundation">
+			use = <"Verwenden für die Erfassung der acht NORPEQ-Antworten in Schweizer Spitälern und ambulanten Einrichtungen.">
+			misuse = <"Nicht zu verwenden für andere von Patienten berichtete Ergebnisse oder Erfahrungswerte, für modifizierte NORPEQ-Versionen mit geänderter Formulierung oder Skala oder als Ersatz für klinische Beurteilungen oder diagnostische Entscheidungen.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"1. Skudal KE, Garratt AM, Eriksson B, Leinonen T, Simonsen J, Bjertnaes OA. The Nordic Patient Experiences Questionnaire (NORPEQ): Cross-national comparison of data quality, internal consistency and validity in four Nordic countries. BMJ Open. 2012;2:e000864. https://doi.org/10.1136/bmjopen-2012-000864. Bjertnaes OA, Sjetne IS, Iversen HH. Overall patient satisfaction with hospitals: effects of patient-reported experiences and fulfilment of expectations. BMJ Qual Saf. 2012;21:39-46.
+">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4d0f83cc81c87b16863adf4d3fc4b670">
+		["build_uid"] = <"286de4e6-7953-34de-9803-6217b204d2a0">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Norpeq questionnaire
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Core score items
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0012] occurrences matches {0..1} matches {    -- 1. Doctors understandable
+												value matches {
+													1|[local::at0013],
+													2|[local::at0014],
+													3|[local::at0015],
+													4|[local::at0016],
+													5|[local::at0017]
+												}
+											}
+											ELEMENT[at0018] occurrences matches {0..1} matches {    -- 2. Doctors professional skills
+												value matches {
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021],
+													4|[local::at0022],
+													5|[local::at0023]
+												}
+											}
+											ELEMENT[at0024] occurrences matches {0..1} matches {    -- 3. Nurses professional skills
+												value matches {
+													1|[local::at0025],
+													2|[local::at0026],
+													3|[local::at0027],
+													4|[local::at0028],
+													5|[local::at0029]
+												}
+											}
+											ELEMENT[at0042] occurrences matches {0..1} matches {    -- 4. Nursing care
+												value matches {
+													1|[local::at0043],
+													2|[local::at0044],
+													3|[local::at0045],
+													4|[local::at0046],
+													5|[local::at0047]
+												}
+											}
+											ELEMENT[at0060] occurrences matches {0..1} matches {    -- 5. Health personnel interested in problem
+												value matches {
+													1|[local::at0061],
+													2|[local::at0062],
+													3|[local::at0063],
+													4|[local::at0064],
+													5|[local::at0065]
+												}
+											}
+											ELEMENT[at0066] occurrences matches {0..1} matches {    -- 6. Information on tests
+												value matches {
+													1|[local::at0067],
+													2|[local::at0068],
+													3|[local::at0069],
+													4|[local::at0070],
+													5|[local::at0071]
+												}
+											}
+											ELEMENT[at0072] occurrences matches {0..1} matches {    -- Overall score
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..100|}
+													}
+												}
+											}
+											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Mean score
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0005] occurrences matches {0..1} matches {    -- Supplementary items
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0048] occurrences matches {0..1} matches {    -- 7. General satisfaction
+												value matches {
+													1|[local::at0049],
+													2|[local::at0050],
+													3|[local::at0051],
+													4|[local::at0052],
+													5|[local::at0053]
+												}
+											}
+											ELEMENT[at0054] occurrences matches {0..1} matches {    -- 8. Incorrect treatment
+												value matches {
+													1|[local::at0055],
+													2|[local::at0056],
+													3|[local::at0057],
+													4|[local::at0058],
+													5|[local::at0059]
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0074] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Norpeq questionnaire">
+					description = <"Eight patient-reported items that capture key aspects of the inpatient hospital experience: clarity of doctor communication, confidence in clinical competence, perceived concern and interest from staff, adequacy of test information, overall satisfaction, and perception of incorrect treatment.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Core score items">
+					description = <"Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.">
+				>
+				["at0005"] = <
+					text = <"Supplementary items">
+					description = <"Two additional NORPEQ questions that are collected for descriptive purposes but are not included in the calculated total score.
+">
+				>
+				["at0012"] = <
+					text = <"1. Doctors understandable">
+					description = <"question: 1. Did the doctors talk to you in a way you could understand?">
+					order = <"1">
+				>
+				["at0013"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"To a small extent">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"To some extent">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"To a large extent">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"To a very large extent">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"2. Doctors professional skills">
+					description = <"question: 2. Do you have confidence in the doctors’ medical competence?">
+					order = <"2">
+				>
+				["at0019"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"To a small extent">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"To some extent">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"To a large extent">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"To a very large extent">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"3. Nurses professional skills">
+					description = <"question: 3. Do you have confidence in the nursing staff’s medical competence?">
+					order = <"3">
+				>
+				["at0025"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"To a small extent">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"To some extent">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"To a large extent">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"To a very large extent">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"4. Nursing care">
+					description = <"question: 4. Did you experience the nursing staff showed concern for you?">
+					order = <"4">
+				>
+				["at0043"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"To a small extent">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"To some extent">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"To a large extent">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"To a very large extent">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"7. General satisfaction">
+					description = <"question: 7. Overall, was the treatment and care you received at the hospital satisfactory?">
+					order = <"7">
+				>
+				["at0049"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"To a small extent">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"To some extent">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"To a large extent">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"To a very large extent">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"8. Incorrect treatment">
+					description = <"question: 8. Do you believe you were in any way given the wrong treatment (as far as you are able to judge)?">
+					order = <"8">
+				>
+				["at0055"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"To a small extent">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"To some extent">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"To a large extent">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"To a very large extent">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"5. Health personnel interested in problem">
+					description = <"question: 5. Did you experience that the doctors and nursing staff were interested in your description of your own situation?">
+					order = <"5">
+				>
+				["at0061"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"To a small extent">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"To some extent">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"To a large extent">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"To a very large extent">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"6. Information on tests">
+					description = <"question: 6. Were you given the information you thought were necessary about how tests and examinations would be conducted?">
+					order = <"6">
+				>
+				["at0067"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"To a small extent">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"To some extent">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"To a large extent">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"To a very large extent">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Overall score">
+					description = <"Six of the eight NORPEQ items sum to produce an
+overall scale from 0 to 100, where 100 is the best possible experience of care. If respondents had missing values on more than half of the items, mean scores were imputed.">
+				>
+				["at0073"] = <
+					text = <"Mean score">
+					description = <"Six of the eight NORPEQ items sum to produce an
+overall scale from 0 to 100, where 100 is the best possible experience of care. If respondents had missing values on more than half of the items, mean scores were imputed.">
+				>
+				["at0074"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Norpeq questionnaire">
+					description = <"Huit éléments rapportés par les patients qui reflètent les aspects clés de l'expérience hospitalière : clarté de la communication du médecin, confiance dans les compétences cliniques, perception de l'attention et de l'intérêt du personnel, adéquation des informations fournies sur les examens, satisfaction globale et perception d'un traitement inapproprié.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Questions du score principal">
+					description = <"Six questions NORPEQ qui constituent le cœur de l'instrument et sont notées sur une échelle numérique. Chaque élément est enregistré sous la forme DV_ORDINAL (1 à 5) et peut être agrégé dans le score NORPEQ total.">
+				>
+				["at0005"] = <
+					text = <"Questions supplémentaires">
+					description = <"Deux questions NORPEQ supplémentaires qui sont recueillies à des fins descriptives, mais qui ne sont pas incluses dans le score total calculé.">
+				>
+				["at0012"] = <
+					text = <"1.	Communication des médecins">
+					description = <"Question: 1. Les médecins vous ont-ils parlé d’une manière que vous pouviez comprendre?">
+					order = <"1">
+				>
+				["at0013"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Dans une faible mesure">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Dans une certaine mesure">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Dans une large mesure">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Dans une très large mesure">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"2.	Compétence des médecins">
+					description = <"Question: 2. Avez-vous confiance dans la compétence médicale des médecins?">
+					order = <"2">
+				>
+				["at0019"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Dans une faible mesure">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Dans une certaine mesure">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Dans une large mesure">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Dans une très large mesure">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"3.	Compétence infirmière">
+					description = <"Question: 3. Avez-vous confiance dans la compétence médicale du personnel infirmier?">
+					order = <"3">
+				>
+				["at0025"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Dans une faible mesure">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Dans une certaine mesure">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Dans une large mesure">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Dans une très large mesure">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"4.	Attention infirmière">
+					description = <"Question: 4. Avez-vous constaté que le personnel infirmier s’est montré préoccupé à votre égard?">
+					order = <"4">
+				>
+				["at0043"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Dans une faible mesure">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Dans une certaine mesure">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Dans une large mesure">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Dans une très large mesure">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"7.	Satisfaction globale">
+					description = <"Question: 7. Dans l’ensemble, le traitement et les soins que vous avez reçus à l’hôpital étaient-ils satisfaisants?">
+					order = <"7">
+				>
+				["at0049"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Dans une faible mesure">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Dans une certaine mesure">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Dans une large mesure">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Dans une très large mesure">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"8.	Traitement incorrect">
+					description = <"Question: 8. Pensez-vous avoir reçu un mauvais traitement d’une quelconque manière (pour autant que vous puissiez en juger)?">
+					order = <"7">
+				>
+				["at0055"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Dans une faible mesure">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Dans une certaine mesure">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Dans une large mesure">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Dans une très large mesure">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"5.	Écoute des soignants">
+					description = <"Question: 5. Avez-vous constaté que les médecins et le personnel infirmier étaient intéressés par la description que vous faisiez de votre propre situation?">
+					order = <"5">
+				>
+				["at0061"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Dans une faible mesure">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Dans une certaine mesure">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Dans une large mesure">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Dans une très large mesure">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"6.	Informations sur les examens">
+					description = <"Question: 6. Avez-vous reçu les informations que vous pensiez nécessaires sur la manière dont les tests et les examens seraient menés?">
+					order = <"6">
+				>
+				["at0067"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Dans une faible mesure">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Dans une certaine mesure">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Dans une large mesure">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Dans une très large mesure">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Score global">
+					description = <"Six des huit éléments du NORPEQ sont additionnés pour obtenir une échelle globale allant de 0 à 100, où 100 correspond à la meilleure expérience possible en matière de soins. Si les répondants n'avaient pas répondu à plus de la moitié des éléments, les scores moyens ont été imputés.">
+				>
+				["at0073"] = <
+					text = <"Score moyen">
+					description = <"Six des huit éléments du NORPEQ sont additionnés pour obtenir une échelle globale allant de 0 à 100, où 100 correspond à la meilleure expérience possible en matière de soins. Si les répondants n'avaient pas répondu à plus de la moitié des éléments, les scores moyens ont été imputés.">
+				>
+				["at0074"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["de-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Norpeq Fragenkatalog">
+					description = <"Acht von Patienten angegebene Punkte, die wichtige Aspekte des Krankenhausaufenthalts erfassen: Klarheit der Kommunikation durch Ärzte, Vertrauen in die klinische Kompetenz, wahrgenommene Fürsorge und Interesse des Personals, Angemessenheit der Informationen zu Untersuchungen, allgemeine Zufriedenheit und Wahrnehmung einer falschen Behandlung.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Fragen für Score">
+					description = <"Sechs NORPEQ-Fragen, die den numerisch bewerteten Teil des Fragenkatalogs bilden. Jede Frage wird als DV_ORDINAL (1 – 5) erfasst und fliesst in die NORPEQ-Gesamtpunktzahl ein.">
+				>
+				["at0005"] = <
+					text = <"Zusatzfragen">
+					description = <"Es werden zwei zusätzliche NORPEQ-Fragen zu Beschreibungszwecken erfasst, die jedoch nicht in die berechnete Gesamtpunktzahl einfliessen.">
+				>
+				["at0012"] = <
+					text = <"1. Ärzte verständlich">
+					description = <"Frage: 1. Haben die Ärzte so mit Ihnen gesprochen, dass Sie sie verstehen konnten?">
+					order = <"1">
+				>
+				["at0013"] = <
+					text = <"Gar nicht">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"In geringem Umfang">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Bis zu einem gewissen Grad">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Zu einem grossen Teil">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"In sehr grossem Umfang">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"2. Ärzte medizinische Kompetenz">
+					description = <"Frage: 2. Haben Sie Vertrauen in die medizinische Kompetenz der Ärzte?">
+					order = <"2">
+				>
+				["at0019"] = <
+					text = <"Gar nicht">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"In geringem Umfang">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Bis zu einem gewissen Grad">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Zu einem grossen Teil">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"In sehr grossem Umfang">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"3. Pflegepersonal medizinische Kompetenz">
+					description = <"Frage: 3. Haben Sie Vertrauen in die medizinische Kompetenz des Pflegepersonals?">
+					order = <"3">
+				>
+				["at0025"] = <
+					text = <"Gar nicht">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"In geringem Umfang">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Bis zu einem gewissen Grad">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Zu einem grossen Teil">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"In sehr grossem Umfang">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"4. Pflegepersonal Zuwendung">
+					description = <"Frage: 4. Haben Sie das Gefühl gehabt, dass sich das Pflegepersonal um Sie gekümmert hat?">
+					order = <"4">
+				>
+				["at0043"] = <
+					text = <"Gar nicht">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"In geringem Umfang">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Bis zu einem gewissen Grad">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Zu einem grossen Teil">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"In sehr grossem Umfang">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"7. Gesamtzufriedenheit Krankenhaus">
+					description = <"Frage: 7. Waren Sie mit der Behandlung und Betreuung im Krankenhaus insgesamt zufrieden?">
+					order = <"7">
+				>
+				["at0049"] = <
+					text = <"Gar nicht">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"In geringem Umfang">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Bis zu einem gewissen Grad">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Zu einem grossen Teil">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"In sehr grossem Umfang">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"8. Falsche Behandlung">
+					description = <"Frage: 8. Glauben Sie, dass Sie in irgendeiner Weise falsch behandelt wurden (soweit Sie das beurteilen können)?">
+					order = <"8">
+				>
+				["at0055"] = <
+					text = <"Gar nicht">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"In geringem Umfang">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Bis zu einem gewissen Grad">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Zu einem grossen Teil">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"In sehr grossem Umfang">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"5. Gesundheitsfachpersonen Interesse an Situation">
+					description = <"Frage: 5. Haben Sie erlebt, dass sich die Ärzte und das Pflegepersonal für Ihre Schilderung Ihrer eigenen Situation interessiert haben?">
+					order = <"5">
+				>
+				["at0061"] = <
+					text = <"Gar nicht">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"In geringem Umfang">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Bis zu einem gewissen Grad">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Zu einem grossen Teil">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"In sehr grossem Umfang">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"6. Informationen Untersuchungsablauf">
+					description = <"Frage: 6. Wurden Ihnen die aus Ihrer Sicht notwendigen Informationen zum Ablauf der Tests und Untersuchungen gegeben?">
+					order = <"6">
+				>
+				["at0067"] = <
+					text = <"Gar nicht">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"In geringem Umfang">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Bis zu einem gewissen Grad">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Zu einem grossen Teil">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"In sehr grossem Umfang">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Gesamt-Score">
+					description = <"Sechs der acht NORPEQ-Fragen ergeben zusammen eine Gesamtskala von 0 bis 100, wobei 100 die bestmögliche Betreuungserfahrung darstellt. Wenn bei mehr als der Hälfte der Fragen Werte fehlten, werden die Durchschnittswerte hochgerechnet.">
+				>
+				["at0073"] = <
+					text = <"Mittlerer Score">
+					description = <"Sechs der acht NORPEQ-Fragen ergeben zusammen eine Gesamtskala von 0 bis 100, wobei 100 die bestmögliche Betreuungserfahrung darstellt. Wenn bei mehr als der Hälfte der Fragen Werte fehlten, werden die Durchschnittswerte hochgerechnet.">
+				>
+				["at0074"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["it-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Norpeq questionario">
+					description = <"Otto elementi segnalati dai pazienti che descrivono gli aspetti chiave dell'esperienza ospedaliera: chiarezza nella comunicazione dei medici, fiducia nella competenza clinica, percezione dell'attenzione e dell'interesse da parte del personale, adeguatezza delle informazioni relative agli esami, soddisfazione generale e percezione di un trattamento errato.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Domande del Core Score">
+					description = <"Sei domande NORPEQ che costituiscono il nucleo dello strumento, valutato con un punteggio numerico. Ogni voce è registrata come DV_ORDINAL (1 – 5) e può essere aggregata al punteggio NORPEQ totale.">
+				>
+				["at0005"] = <
+					text = <"Domande supplementari">
+					description = <"Due domande NORPEQ aggiuntive raccolte a scopo descrittivo, ma non incluse nel punteggio totale calcolato.">
+				>
+				["at0012"] = <
+					text = <"1.	Comunicazione medici">
+					description = <"Domanda: 1. I medici ti hanno parlato in un modo che potessi capire?">
+					order = <"1">
+				>
+				["at0013"] = <
+					text = <"Affatto">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"In piccola misura">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"In una certa misura">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"2.	Competenza medici">
+					description = <"Domanda: 2. Hai fiducia nella competenza medica dei medici?">
+					order = <"2">
+				>
+				["at0019"] = <
+					text = <"Affatto">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"In piccola misura">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"In una certa misura">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"3.	Competenza infermieri">
+					description = <"Domanda: 3. Hai fiducia nella competenza medica del personale infermieristico?">
+					order = <"3">
+				>
+				["at0025"] = <
+					text = <"Affatto">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"In piccola misura">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"In una certa misura">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"4.	Premura infermieri">
+					description = <"Domanda: 4. Hai avuto l'impressione che il personale infermieristico si sia preoccupato per te?">
+					order = <"4">
+				>
+				["at0043"] = <
+					text = <"Affatto">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"In piccola misura">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"In una certa misura">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"7.	Soddisfazione generale">
+					description = <"Domanda: 7. Nel complesso, il trattamento e l'assistenza ricevuti in ospedale sono stati soddisfacenti?">
+					order = <"7">
+				>
+				["at0049"] = <
+					text = <"Affatto">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"In piccola misura">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"In una certa misura">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"8.	Trattamento errato">
+					description = <"Domanda: 8. Credi di aver ricevuto in qualche modo un trattamento sbagliato (per quanto puoi giudicare)?">
+					order = <"8">
+				>
+				["at0055"] = <
+					text = <"Affatto">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"In piccola misura">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"In una certa misura">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"5.	Interesse dei curanti">
+					description = <"Domanda: 5. Hai avuto l'impressione che i medici e il personale infermieristico fossero interessati alla descrizione della tua situazione?">
+					order = <"5">
+				>
+				["at0061"] = <
+					text = <"Affatto">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"In piccola misura">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"In una certa misura">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"6.	Informazioni sugli esami">
+					description = <"Domanda: 6. Ti sono state fornite le informazioni che ritenevi necessarie su come sarebbero stati condotti i test e gli esami?">
+					order = <"6">
+				>
+				["at0067"] = <
+					text = <"Affatto">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"In piccola misura">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"In una certa misura">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"In larga misura">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Score complessivo">
+					description = <"Sei degli otto elementi NORPEQ vengono sommati per ottenere una scala complessiva da 0 a 100, dove 100 rappresenta la migliore esperienza di assistenza possibile. Se i rispondenti presentavano valori mancanti in più della metà degli elementi, sono stati imputati i punteggi medi.">
+				>
+				["at0073"] = <
+					text = <"Score medio">
+					description = <"Sei degli otto elementi NORPEQ vengono sommati per ottenere una scala complessiva da 0 a 100, dove 100 rappresenta la migliore esperienza di assistenza possibile. Se i rispondenti presentavano valori mancanti in più della metà degli elementi, sono stati imputati i punteggi medi.">
+				>
+				["at0074"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
