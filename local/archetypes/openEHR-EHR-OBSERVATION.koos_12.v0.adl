@@ -35,34 +35,34 @@ description
 	details = <
 		["fr-ch"] = <
 			language = <[ISO_639-1::fr-ch]>
-			purpose = <"Pour enregistrer les réponses du patient à l'instrument KOOS-12 et calculer et conserver les trois scores transformés par domaine (douleur, fonction, qualité de vie ; 0-100) et le score global résumant l'impact au genou (0-100), ainsi que les valeurs brutes des items et (facultativement) les sommes brutes par domaine à des fins de contrôle de la qualité des données. Le KOOS-12 est une mesure en 12 items dérivée du Hip Injury and Osteoarthritis Outcome Score (KOOS) original. Le KOOS-12 contient 4 items KOOS sur la douleur, 4 items KOOS sur la fonction (activités quotidiennes et sport/loisirs) et 4 items KOOS sur la qualité de vie (QOL). Le KOOS-12 réduit la charge des répondants de 70 % par rapport au KOOS original, tout en fournissant des scores sur une échelle pour la douleur, la fonction et la qualité de vie spécifiques au genou, ainsi qu'une mesure sommaire de l'impact global au genou. Comme l'enquête KOOS complète, le KOOS-12 vise à recueillir l'opinion des personnes sur les difficultés qu'elles rencontrent en raison de problèmes au genou et couvre les aspects de la douleur, des limitations fonctionnelles et de la qualité de vie liée au genou.">
+			purpose = <"Pour enregistrer les réponses du patient à l'instrument KOOS-12 et calculer et conserver les trois scores transformés par domaine (douleur, fonction, qualité de vie ; 0-100) et le score global résumé de l'impact sur le genou (0-100), ainsi que les valeurs brutes des items et (facultativement) les sommes brutes par domaine à des fins de contrôle de la qualité des données. Le KOOS-12 est un questionnaire en 12 points dérivé du questionnaire original en 42 points intitulé Knee injury and Osteoarthritis Outcome Score (KOOS). Le KOOS-12 comprend 4 items relatifs à la douleur, 4 items relatifs à la fonction (activités quotidiennes et sport/loisirs) et 4 items relatifs à la qualité de vie (QOL). Il réduit la charge pour les répondants d'environ 70 % (12 items contre 42) par rapport au KOOS complet, tout en fournissant des scores par domaine et une mesure sommaire de l'impact global sur le genou. Comme le KOOS complet, le KOOS-12 recueille l'avis des personnes sur les difficultés liées à leurs problèmes de genou, notamment la douleur, les limitations fonctionnelles et la qualité de vie liée au genou.">
 			keywords = <"PROM, KOOS-12, Genou", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"La réponse du patient aux 12 questions du questionnaire KOOS-12 (période de référence : semaine précédente) est enregistrée, ainsi que chaque réponse brute (0 à 4). À partir de ces données, trois scores (douleur, fonction, qualité de vie) sont calculés en transformant linéairement les sommes brutes (0 à 16) en valeurs comprises entre 0 et 100, les valeurs les plus élevées indiquant un meilleur état. Un score résumé de l'impact au genou (0-100) est ensuite calculé comme la moyenne non pondérée des trois scores de domaine et ne doit pas être calculé si l'un des scores de domaine n'est pas disponible. Un score de domaine peut être calculé si au moins deux de ses quatre éléments ont reçu une réponse ; les éléments manquants sont remplacés par la moyenne des éléments auxquels il a été répondu dans ce domaine et l'imputation est signalée. La version de l'instrument, la langue, les informations relatives à la licence et l'algorithme/la version de notation sont enregistrés afin de garantir la comparabilité dans le temps.">
-			misuse = <"N'utilisez pas cet archétype pour documenter des faits cliniques tels que les antécédents du patient ou les résultats d'examens physiques ; il est uniquement destiné à saisir les résultats rapportés par les patients (PROM) à l'aide de l'instrument KOOS-12 à 12 items. Ne modifiez pas la formulation des items, les catégories de réponse, le sens de la notation (0 = pire, 100 = meilleur) ou la formule de transformation, et ne réévaluez pas les domaines. Ne calculez pas les scores des domaines lorsque moins de 2 des 4 items ont reçu une réponse, et n'appliquez pas de règles d'imputation alternatives. Ne mélangez pas les versions, les langues ou les périodes de rappel au sein du suivi d'un patient. Ne déployez pas l'instrument sans vous assurer que vous disposez des licences/autorisations appropriées auprès du détenteur des droits.">
+			use = <"Utilisez cette fonction pour saisir les réponses KOOS-12 fournies par le patient (période de rappel : dernière semaine) et pour calculer trois scores de domaine (douleur, fonction et qualité de vie) en transformant les sommes brutes des domaines (0-16) en valeurs comprises entre 0 et 100 (plus la valeur est élevée, meilleur est le résultat). À utiliser pour obtenir le score résumé de l'impact sur le genou (0-100) comme moyenne non pondérée des trois scores de domaine ; ne pas calculer le résumé si l'un des scores de domaine n'est pas disponible. Chaque domaine peut être noté lorsque au moins 2 de ses 4 items ont reçu une réponse ; imputez les items manquants à l'aide d'une estimation spécifique à la personne selon les règles de notation KOOS-12 et signalez l'imputation. À utiliser pour enregistrer les métadonnées de l'instrument (version, langue, licence) et l'algorithme/la version de notation à des fins de comparabilité longitudinale.">
+			misuse = <"N'utilisez pas cet archétype pour documenter des faits cliniques ou des diagnostics ; il est uniquement destiné à saisir les résultats rapportés par les patients (KOOS-12). Ne modifiez pas la formulation des items, leur ordre, les catégories de réponse, le sens de la notation (0 = pire, 100 = meilleur) ou la transformation linéaire, et ne répondes pas aux domaines. Ne calculez pas les scores des domaines lorsque moins de 2 items sur 4 ont été répondu, et n'appliquez pas de règles d'imputation alternatives. Ne calculez pas le score résumé de l'impact sur le genou si un score de domaine est manquant. Ne modifiez pas la période de rappel (« dernière semaine ») et ne mélangez pas les versions, les langues ou les périodes de rappel dans le suivi d'un patient. Ne déployez pas l'instrument sans vous assurer que vous disposez des licences/autorisations appropriées auprès du détenteur des droits.">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To capture the patient’s responses to the KOOS-12 instrument and to calculate and persist the three transformed domain scores (Pain, Function, Quality of life; 0-100) and the overall summary knee impact score (0-100) together with raw item values and (optionally) raw domain sums for data quality auditing. KOOS-12 is a 12-item measure derived from the original Knee Injury and Osteoarthritis Outcome Score (KOOS). KOOS-12 contains 4 KOOS Pain items, 4 KOOS Function (Activities of Daily Living and Sport/Recreation) items, and 4 KOOS Quality of Life (QOL) items. KOOS-12 reduces respondent burden by 70% from the original KOOS while providing scale scores for knee-specific Pain, Function and QOL, along with a summary measure of overall knee impact. As with the full-length KOOS survey, KOOS-12 is intended to elicit people’s opinions about the difficulties they experience due to problems with their knee and covers aspects of pain, functional limitations and knee-related quality of life.">
+			purpose = <"To capture the patient's responses to the KOOS-12 instrument and to calculate and persist the three transformed domain scores (Pain, Function, Quality of Life; 0-100) and the overall Summary knee impact score (0-100), together with raw item values and (optionally) raw domain sums for data quality auditing. KOOS-12 is a 12-item measure derived from the original 42-item Knee injury and Osteoarthritis Outcome Score (KOOS). KOOS-12 contains 4 Pain items, 4 Function (ADL and Sport/Recreation) items, and 4 Quality of Life (QOL) items, and reduces respondent burden by approximately 70% (12 vs 42 items) compared to the full KOOS while providing domain scores and a summary measure of overall knee impact. As with the full-length KOOS, KOOS-12 elicits people's views on difficulties due to knee problems, covering pain, functional limitations, and knee-related quality of life.">
 			keywords = <"PROM, KOOS-12, Knee", ...>
-			use = <"Patient-reported completion of all 12 KOOS-12 items (recall period: last week) is recorded, storing every raw item response (0-4). From these, three domain scores (Pain, Function, Quality of Life) are calculated by linearly transforming the raw domain sums (0-16) to 0-100, where higher values indicate better status. A Summary knee impact score (0-100) is then computed as the unweighted mean of the three domain scores and must not be calculated if any domain score is unavailable. A domain score may be computed if at least two of its four items are answered; missing items are imputed with the mean of the answered items within that domain and the imputation is flagged. Instrument version, language, licensing information, and the scoring algorithm/version are recorded to ensure comparability over time.">
-			misuse = <"Do not use this archetype to document clinical facts such as patient history or physical findings; it is intended solely to capture patient-reported outcomes (PROM) using the 12-item KOOS-12 instrument. Do not change item wording, response categories, scoring direction (0 = worst, 100 = best) or the transformation formula, and do not re-weight domains. Do not compute domain scores when fewer than 2 of 4 items are answered, and do not apply alternative imputation rules. Do not mix versions, languages or recall periods within a patient’s follow-up. Do not deploy the instrument without ensuring appropriate licensing/permissions from the rights holder.">
+			use = <"Use to capture patient-reported KOOS-12 responses (recall period: last week) and to compute three domain scores - Pain, Function, and Quality of Life - by transforming raw domain sums (0-16) to 0-100 (higher = better). Use to derive the Summary knee impact score (0-100) as the unweighted mean of the three domain scores; do not compute the summary if any domain score is unavailable. Each domain may be scored when at least 2 of its 4 items are answered; impute missing items using a person-specific estimate per KOOS-12 scoring rules and flag imputation. Use to record instrument metadata (version, language, licensing) and the scoring algorithm/version for longitudinal comparability.">
+			misuse = <"Do not use this archetype to document clinical facts or diagnoses; it is intended solely to capture patient-reported outcomes (KOOS-12). Do not change item wording, order, response categories, scoring direction (0 = worst, 100 = best), or the linear transformation, and do not re-weight domains. Do not compute domain scores when fewer than 2 of 4 items are answered, and do not apply alternative imputation rules. Do not compute the Summary knee impact score if any domain score is missing. Do not change the recall period (\"last week\") or mix versions, languages, or recall periods within a patient's follow-up. Do not deploy the instrument without ensuring appropriate licensing/permissions from the rights holder.">
 		>
 		["it-ch"] = <
 			language = <[ISO_639-1::it-ch]>
-			purpose = <"Acquisire le risposte del paziente allo strumento KOOS-12 e calcolare e conservare i tre punteggi trasformati dei domini (Dolore, Funzionalità, Qualità della vita; 0-100) e il punteggio complessivo dell'impatto sull'ginocchio (0-100) insieme ai valori grezzi delle voci e (facoltativamente) alle somme grezze dei domini per il controllo della qualità dei dati. KOOS-12 è una misura composta da 12 voci derivata dall'originale Knee Injury and Osteoarthritis Outcome Score (KOOS). KOOS-12 contiene 4 voci KOOS relative al dolore, 4 voci KOOS relative alla funzionalità (attività quotidiane e sport/attività ricreative) e 4 voci KOOS relative alla qualità della vita (QOL). KOOS-12 riduce del 70% il carico dei rispondenti rispetto all'KOOS originale, fornendo al contempo punteggi su scala per il dolore, la funzionalità e la QOL specifici dell'ginocchio, insieme a una misura sintetica dell'impatto complessivo sull'ginocchio. Come il questionario KOOS completo, KOOS-12 ha lo scopo di raccogliere le opinioni delle persone sulle difficoltà che incontrano a causa di problemi all'ginocchio e copre aspetti quali il dolore, le limitazioni funzionali e la qualità della vita correlata al ginocchio.">
+			purpose = <"Acquisire le risposte del paziente allo strumento KOOS-12 e calcolare e conservare i tre punteggi trasformati dei domini (Dolore, Funzionalità, Qualità della vita; 0-100) e il punteggio complessivo Summary knee impact (0-100), insieme ai valori grezzi delle voci e (facoltativamente) alle somme grezze dei domini per la verifica della qualità dei dati. Il KOOS-12 è una misura composta da 12 voci derivata dal Knee injury and Osteoarthritis Outcome Score (KOOS) originale composto da 42 voci. KOOS-12 contiene 4 voci relative al dolore, 4 voci relative alla funzionalità (ADL e sport/attività ricreative) e 4 voci relative alla qualità della vita (QOL) e riduce il carico per i rispondenti di circa il 70% (12 voci contro 42) rispetto al KOOS completo, fornendo al contempo punteggi di dominio e una misura riassuntiva dell'impatto complessivo sul ginocchio. Come il KOOS completo, il KOOS-12 raccoglie le opinioni delle persone sulle difficoltà dovute ai problemi alle ginocchia, coprendo il dolore, le limitazioni funzionali e la qualità della vita correlata alle ginocchia.">
 			keywords = <"PROM, KOOS-12, Ginocchio", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"Viene registrato il completamento di tutti i 12 item KOOS-12 riferito dal paziente (periodo di riferimento: ultima settimana), memorizzando ogni risposta grezza (0-4). Da questi, vengono calcolati tre punteggi di dominio (Dolore, Funzione, Qualità della vita) trasformando linearmente le somme grezze dei domini (0-16) in 0-100, dove i valori più alti indicano uno stato migliore. Viene quindi calcolato un punteggio riassuntivo dell'impatto sull'ginocchio (0-100) come media non ponderata dei tre punteggi di dominio e non deve essere calcolato se uno qualsiasi dei punteggi di dominio non è disponibile. Un punteggio di dominio può essere calcolato se almeno due delle sue quattro voci hanno una risposta; le voci mancanti vengono sostituite con la media delle voci con risposta all'interno di quel dominio e la sostituzione viene segnalata. La versione dello strumento, la lingua, le informazioni sulla licenza e l'algoritmo/versione di punteggio vengono registrati per garantire la comparabilità nel tempo.">
-			misuse = <"Non utilizzare questo archetipo per documentare fatti clinici quali anamnesi del paziente o risultati fisici; esso è destinato esclusivamente alla registrazione dei risultati riferiti dal paziente (PROM) utilizzando lo strumento HOOS-12 composto da 12 voci. Non modificare la formulazione delle voci, le categorie di risposta, la direzione di punteggio (0 = peggiore, 100 = migliore) o la formula di trasformazione, né riponderare i domini. Non calcolare i punteggi dei domini quando sono state fornite meno di 2 risposte su 4 e non applicare regole di imputazione alternative. Non mescolare versioni, lingue o periodi di richiamo all'interno del follow-up di un paziente. Non utilizzare lo strumento senza aver ottenuto le licenze/autorizzazioni appropriate dal titolare dei diritti.">
+			use = <"Utilizzare per acquisire le risposte KOOS-12 riportate dal paziente (periodo di riferimento: ultima settimana) e per calcolare i punteggi relativi a tre domini - Dolore, Funzionalità e Qualità della vita - trasformando i punteggi grezzi dei domini (0-16) in valori compresi tra 0 e 100 (più alto = migliore). Da utilizzare per ricavare il punteggio riassuntivo dell'impatto sul ginocchio (0-100) come media non ponderata dei tre punteggi dei domini; non calcolare il punteggio riassuntivo se uno qualsiasi dei punteggi dei domini non è disponibile. Ogni dominio può essere valutato quando almeno 2 delle sue 4 voci hanno una risposta; imputare le voci mancanti utilizzando una stima specifica per persona secondo le regole di valutazione KOOS-12 e contrassegnare l'imputazione. Utilizzare per registrare i metadati dello strumento (versione, lingua, licenza) e l'algoritmo/versione di valutazione per la comparabilità longitudinale.">
+			misuse = <"Non utilizzare questo archetipo per documentare fatti clinici o diagnosi; è destinato esclusivamente a registrare i risultati riferiti dai pazienti (KOOS-12). Non modificare la formulazione delle voci, l'ordine, le categorie di risposta, la direzione del punteggio (0 = peggiore, 100 = migliore) o la trasformazione lineare, né riponderare i domini. Non calcolare i punteggi dei domini se sono state fornite meno di 2 risposte su 4 e non applicare regole di imputazione alternative. Non calcolare il punteggio riassuntivo dell'impatto sul ginocchio se manca il punteggio di un dominio. Non modificare il periodo di riferimento (“ultima settimana”) né mescolare versioni, lingue o periodi di riferimento all'interno del follow-up di un paziente. Non utilizzare lo strumento senza aver ottenuto le licenze/autorizzazioni appropriate dal titolare dei diritti.">
 		>
 		["de-ch"] = <
 			language = <[ISO_639-1::de-ch]>
-			purpose = <"Erfassung der Antworten des Patienten auf den KOOS-12-Fragebogen und Berechnung und Speicherung der drei transformierten Domänenwerte (Schmerzen, Funktion, Lebensqualität; 0–100) und des Gesamtwerts für die Kniefunktion (0–100) zusammen mit den Rohwerten der einzelnen Items und (optional) den Rohsummen der Domänen zur Überprüfung der Datenqualität. KOOS-12 ist ein 12-Punkte-Fragebogen, der aus dem ursprünglichen Knee Injury and Osteoarthritis Outcome Score (KOOS) abgeleitet wurde. KOOS-12 enthält 4 KOOS-Schmerzpunkte, 4 KOOS-Funktionspunkte (Aktivitäten des täglichen Lebens und Sport/Freizeit) und 4 KOOS-Lebensqualitätpunkte (QOL). KOOS-12 reduziert den Aufwand für die Befragten um 70 % gegenüber dem ursprünglichen KOOS und liefert gleichzeitig Skalenwerte für kniespezifische Schmerzen, Funktion und Lebensqualität sowie eine zusammenfassende Messgrösse für die Gesamtbelastung des Knies. Wie die vollständige KOOS-Umfrage soll auch KOOS-12 die Meinung der Menschen zu den Schwierigkeiten erfassen, die sie aufgrund von Knieproblemen haben, und deckt Aspekte wie Schmerzen, funktionelle Einschränkungen und die Lebensqualität im Zusammenhang mit dem Knie ab.">
+			purpose = <"Erfassung der Antworten des Patienten auf den KOOS-12-Fragebogen und Berechnung und Speicherung der drei transformierten Domänenwerte (Schmerzen, Funktion, Lebensqualität; 0–100) und des Gesamtwerts für die Kniebelastung (0–100) zusammen mit den Rohwerten der einzelnen Items und (optional) den Rohsummen der Domänen zur Überprüfung der Datenqualität. KOOS-12 ist ein 12-Punkte-Fragebogen, der aus dem ursprünglichen 42-Punkte-Fragebogen „Knee Injury and Osteoarthritis Outcome Score” (KOOS) abgeleitet wurde. KOOS-12 enthält 4 Schmerz-Items, 4 Funktions-Items (ADL und Sport/Freizeit) und 4 Lebensqualitäts-Items (QOL) und reduziert den Aufwand für die Befragten um ca. 70 % (12 gegenüber 42 Items) im Vergleich zum vollständigen KOOS, während gleichzeitig Domänenwerte und ein zusammenfassender Wert für die Gesamtbelastung des Knies bereitgestellt werden. Wie der vollständige KOOS erfasst auch der KOOS-12 die Meinung der Befragten zu den Schwierigkeiten, die ihnen durch Knieprobleme entstehen, darunter Schmerzen, funktionelle Einschränkungen und die Lebensqualität in Bezug auf die Knie.">
 			keywords = <"PROM, KOOS-12, Knie", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"Die vom Patienten angegebene vollständige Beantwortung aller 12 KOOS-12-Items (Erinnerungszeitraum: letzte Woche) wird erfasst, wobei jede Rohantwort (0–4) gespeichert wird. Daraus werden drei Domänenwerte (Schmerzen, Funktion, Lebensqualität) berechnet, indem die Rohsummen der Domänen (0–16) linear auf 0–100 transformiert werden, wobei höhere Werte einen besseren Status anzeigen. Anschliessend wird ein zusammenfassender Knie-Impact-Score (0–100) als ungewichteter Mittelwert der drei Domänen-Scores berechnet, der nicht berechnet werden darf, wenn ein Domänen-Score nicht verfügbar ist. Ein Domänenwert kann berechnet werden, wenn mindestens zwei der vier Items beantwortet wurden; fehlende Items werden mit dem Mittelwert der beantworteten Items innerhalb dieser Domäne imputiert und die Imputation wird gekennzeichnet. Die Instrumentenversion, die Sprache, die Lizenzinformationen und der Bewertungsalgorithmus/die Bewertungsversion werden erfasst, um die Vergleichbarkeit über einen längeren Zeitraum zu gewährleisten.">
-			misuse = <"Verwenden Sie diesen Archetyp nicht zur Dokumentation klinischer Fakten wie Anamnese oder körperliche Befunde; er dient ausschliesslich zur Erfassung von patientenberichteten Ergebnissen (PROM) unter Verwendung des 12-Punkte-KOOS-12-Instruments. Ändern Sie weder den Wortlaut der Items, die Antwortkategorien, die Bewertungsrichtung (0 = schlechteste, 100 = beste Bewertung) noch die Umrechnungsformel und gewichten Sie die Domänen nicht neu. Berechnen Sie keine Domänenwerte, wenn weniger als 2 von 4 Items beantwortet wurden, und wenden Sie keine alternativen Imputationsregeln an. Mischen Sie innerhalb der Nachbeobachtungszeit eines Patienten keine Versionen, Sprachen oder Erinnerungszeiträume. Setzen Sie das Instrument nicht ein, ohne zuvor die entsprechenden Lizenzen/Genehmigungen des Rechteinhabers einzuholen.">
+			use = <"Verwenden Sie diese Funktion, um die vom Patienten angegebenen KOOS-12-Antworten (Erinnerungszeitraum: letzte Woche) zu erfassen und drei Domänenwerte – Schmerz, Funktion und Lebensqualität – zu berechnen, indem Sie die rohen Domänensummen (0–16) in Werte von 0–100 umwandeln (höher = besser). Verwenden Sie diese Funktion, um den zusammenfassenden Knie-Impact-Score (0–100) als ungewichteten Mittelwert der drei Domänenwerte zu ermitteln. Berechnen Sie den zusammenfassenden Wert nicht, wenn ein Domänenwert nicht verfügbar ist. Jeder Bereich kann bewertet werden, wenn mindestens 2 seiner 4 Items beantwortet sind; fehlende Items sind anhand einer personenbezogenen Schätzung gemäss den KOOS-12-Bewertungsregeln zu imputieren und die Imputation ist zu kennzeichnen. Verwenden Sie diese Funktion, um Instrumentenmetadaten (Version, Sprache, Lizenz) und den Bewertungsalgorithmus/die Bewertungsversion für die longitudinale Vergleichbarkeit zu erfassen.">
+			misuse = <"Verwenden Sie diesen Archetype nicht zur Dokumentation klinischer Fakten oder Diagnosen; er dient ausschliesslich zur Erfassung von patientenberichteten Ergebnissen (KOOS-12). Ändern Sie weder den Wortlaut der Items, die Reihenfolge, die Antwortkategorien, die Bewertungsrichtung (0 = schlechteste, 100 = beste Bewertung) noch die lineare Transformation, und gewichten Sie die Domänen nicht neu. Berechnen Sie keine Domänenwerte, wenn weniger als 2 von 4 Items beantwortet wurden, und wenden Sie keine alternativen Imputationsregeln an. Berechnen Sie den zusammenfassenden Knie-Impact-Score nicht, wenn ein Domänenwert fehlt. Ändern Sie nicht den Erfassungszeitraum („letzte Woche“) und mischen Sie nicht verschiedene Versionen, Sprachen oder Erfassungszeiträume innerhalb der Nachbeobachtung eines Patienten. Setzen Sie das Instrument nicht ein, ohne zuvor die entsprechenden Lizenzen/Genehmigungen des Rechteinhabers einzuholen.">
 		>
 	>
 	other_details = <
@@ -77,7 +77,7 @@ Gandek B, Roos EM, Franklin PD, Ware JE Jr. Item selection for 12-item short for
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5685d678987adec842174aa383a2523a">
+		["MD5-CAM-1.0.1"] = <"99b1ea1136275cab4b4b1ab399850e13">
 		["build_uid"] = <"cf2bf7ba-e765-3e62-adcd-5a94a191de40">
 	>
 
@@ -298,7 +298,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Knee Injury and Osteoarthritis Outcome Score - Short Form (KOOS-12)">
-					description = <"Patient-reported outcome measure (PROM) to record the 12-item Knee Injury and Osteoarthritis Outcome Score short form (KOOS-12), covering three domains (Pain, Function in daily living, Quality of life). Raw item responses (0–4) are stored and transformed to 0–100 domain scores (higher = better), plus a 0–100 summary knee impact score (mean of the three domains).">
+					description = <"Patient-reported outcome measure (PROM) capturing the 12-item KOOS-12 across three domains (Pain, Function, Quality of Life). Raw item responses (0–4) are stored; domain scores are computed by summated ratings and linearly transformed to 0–100 (higher = better). The Summary knee impact score (0–100) is the unweighted mean of the three domain scores and is not calculated if any domain score is missing; each domain requires ≥2/4 items answered with imputation for missing items.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -665,7 +665,7 @@ Have “last week” in bold font.">
 				>
 				["at0150"] = <
 					text = <"Quality of life  score transformed">
-					description = <"Linearly transformed Quality of life domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Function raw score (0-16).">
+					description = <"Linearly transformed Quality of life domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Quality of life raw score (0-16).">
 					comment = <"This score contributes to the Summary knee impact score (0-100).">
 				>
 				["at0151"] = <
@@ -709,7 +709,7 @@ Explanatory note displayed between question 1 (How often do you experience knee 
 			items = <
 				["at0000"] = <
 					text = <"Knee Injury and Osteoarthritis Outcome Score - Short Form (KOOS-12)">
-					description = <"Patient-reported outcome measure (PROM) zur Erfassung des 12-Punkte-Fragebogens „Knee Injury and Osteoarthritis Outcome Score Short Form“ (KOOS-12), der drei Bereiche abdeckt (Schmerzen, Funktion im Alltag, Lebensqualität). Die Rohwerte der einzelnen Items (0–4) werden gespeichert und in Bereichswerte von 0–100 umgewandelt (höher = besser), zu denen ein zusammenfassender Knie-Impact-Score von 0–100 (Mittelwert der drei Bereiche) hinzukommt.">
+					description = <"Patient-reported outcome measure (PROM) erfasst den 12-Punkte-KOOS-12 in drei Bereichen (Schmerzen, Funktion, Lebensqualität). Die Rohwerte der einzelnen Items (0–4) werden gespeichert; die Bereichswerte werden durch Summierung der Bewertungen berechnet und linear auf 0–100 transformiert (höher = besser). Der zusammenfassende Knie-Impact-Score (0–100) ist der ungewichtete Mittelwert der drei Domänenwerte und wird nicht berechnet, wenn ein Domänenwert fehlt; jede Domäne erfordert ≥2/4 beantwortete Items mit Imputation für fehlende Items.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -1045,7 +1045,7 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 				>
 				["at0143"] = <
 					text = <"12. Allgemeine Knieprobleme">
-					description = <"Frage: 12. Wie stark sind Ihre Knieprobleme im Allgemeinen?">
+					description = <"Frage: 12. Wie stark sind Ihre Kniebeschwerden im Allgemeinen?">
 					comment = <"Jede Datenfeldbezeichnung sollte kurz und prägnant sein; die Frage an den Patienten steht in der Beschreibung.">
 					order = <"12">
 				>
@@ -1076,7 +1076,7 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 				>
 				["at0150"] = <
 					text = <"Lebensqualität-Score transformiert">
-					description = <"Linear transformierter Wert für den Bereich Lebensqualität auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus dem Funktionswert Rohwert (0-16).">
+					description = <"Linear transformierter Wert für den Bereich Lebensqualität auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus dem Rohwert für Lebensqualität (0-16).">
 					comment = <"Dieser Wert fliesst in den zusammenfassenden Knie-Impact-Score (0–100) ein.">
 				>
 				["at0151"] = <
@@ -1120,7 +1120,7 @@ Erläuterung zwischen Frage 1 (Wie oft haben Sie Knieschmerzen?) und Frage 2 (Ge
 			items = <
 				["at0000"] = <
 					text = <"Knee Injury and Osteoarthritis Outcome Score - Short Form (KOOS-12)">
-					description = <"Mesure des résultats rapportés par les patients (PROM) pour enregistrer le score abrégé de 12 items sur l'incapacité fonctionnelle du genou et l'arthrose (KOOS-12), couvrant trois domaines (douleur, fonction dans la vie quotidienne, qualité de vie). Les réponses brutes (0 à 4) sont enregistrées et transformées en scores de 0 à 100 (plus le score est élevé, mieux c'est), auxquels s'ajoute un score global de 0 à 100 (moyenne des trois domaines) reflétant l'impact sur le genou.">
+					description = <"Mesure des résultats rapportés par les patients (PROM) capturant les 12 items du KOOS-12 dans trois domaines (douleur, fonction, qualité de vie). Les réponses brutes aux items (0-4) sont enregistrées ; les scores par domaine sont calculés en additionnant les notes et en les transformant linéairement en une échelle de 0 à 100 (plus le score est élevé, meilleur est le résultat). Le score résumé de l'impact sur le genou (0 à 100) est la moyenne non pondérée des scores des trois domaines et n'est pas calculé si l'un des scores de domaine est manquant ; chaque domaine nécessite ≥ 2/4 réponses avec imputation pour les éléments manquants.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -1396,7 +1396,7 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 					description = <"">
 				>
 				["at0080"] = <
-					text = <"Tous les jours">
+					text = <"Quotidiennement">
 					description = <"">
 				>
 				["at0081"] = <
@@ -1452,7 +1452,7 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 					description = <"">
 				>
 				["at0142"] = <
-					text = <"Extrême">
+					text = <"Extrêmement">
 					description = <"">
 				>
 				["at0143"] = <
@@ -1488,12 +1488,12 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 				>
 				["at0150"] = <
 					text = <"Score qualité de vie transformé">
-					description = <"Score du domaine « Qualité de vie » transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut de la fonction (0-16).">
+					description = <"Score du domaine Qualité de vie transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut « Qualité de vie » (0-16).">
 					comment = <"Ce score contribue au score résumé d'impact sur le genou (0-100).">
 				>
 				["at0151"] = <
 					text = <"Score douleur transformé">
-					description = <"Score du domaine « Douleur » transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut « Douleur » (0-16).">
+					description = <"Score du domaine douleur transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut Douleur (0-16).">
 					comment = <"Ce score contribue au score résumé de l'impact sur le genou (0-100).">
 				>
 				["at0155"] = <
@@ -1504,7 +1504,7 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 					text = <"Score impact genou global">
 					description = <"Moyenne non pondérée des trois scores transformés du domaine KOOS-12 - Douleur, Fonctionnement et Qualité de vie - rapportés sur une échelle de 0 à 100 (100 = meilleur, 0 = pire).
 Formule : (Douleur_0-100 + Fonctionnement_0-100 + QOL_0-100) / 3.">
-					comment = <"Calculer uniquement si les trois scores de domaine sont disponibles, chacun étant dérivé selon la règle HOOS-12 relative aux données manquantes (domaine calculable si >=2/4 items ont reçu une réponse).">
+					comment = <"Calculer uniquement si les trois scores de domaine sont disponibles, chacun étant dérivé selon la règle KOOS-12 relative aux données manquantes (domaine calculable si >=2/4 items ont reçu une réponse).">
 				>
 				["at0159"] = <
 					text = <"Extension">
@@ -1530,7 +1530,7 @@ Formule : (Douleur_0-100 + Fonctionnement_0-100 + QOL_0-100) / 3.">
 			items = <
 				["at0000"] = <
 					text = <"Knee Injury and Osteoarthritis Outcome Score - Short Form (KOOS-12)">
-					description = <"Misura dei risultati riferiti dal paziente (PROM) per registrare il punteggio abbreviato di 12 voci relativo alla disabilità dell'ginocchio e all'osteoartrite (KOOS-12), che copre tre ambiti (dolore, funzionalità nella vita quotidiana, qualità della vita). Le risposte grezze (0-4) vengono memorizzate e trasformate in punteggi di dominio 0-100 (più alto = migliore), più un punteggio riassuntivo dell'impatto sull'ginocchio 0-100 (media dei tre domini).">
+					description = <"Misura dei risultati riferiti dal paziente (PROM) che rileva i 12 item del KOOS-12 in tre domini (dolore, funzionalità, qualità della vita). Vengono memorizzate le risposte grezze agli item (0-4); i punteggi dei domini vengono calcolati sommando le valutazioni e trasformandoli linearmente in un valore compreso tra 0 e 100 (più alto = migliore). Il punteggio riassuntivo dell'impatto sul ginocchio (0-100) è la media non ponderata dei punteggi dei tre domini e non viene calcolato se manca il punteggio di uno dei domini; ogni dominio richiede ≥2/4 voci con risposta e imputazione delle voci mancanti.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -1780,7 +1780,7 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 				["at0073"] = <
 					text = <"Score funzione trasformato">
 					description = <"Punteggio del dominio della funzione trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sull'ginocchio (0-100).">
+					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sul ginocchio (0-100).">
 				>
 				["at0075"] = <
 					text = <"Qualità della vita">
@@ -1897,13 +1897,13 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 				>
 				["at0150"] = <
 					text = <"Score qualità di vita trasformato">
-					description = <"Punteggio del dominio della qualità della vita trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sull'anca (0-100).">
+					description = <"Punteggio del dominio della qualità della vita trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della qualità della vita (0-16).">
+					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sul ginocchio (0-100).">
 				>
 				["at0151"] = <
 					text = <"Score dolore trasformato">
 					description = <"Punteggio del dominio Dolore trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo del Dolore (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sull'anca (0-100).">
+					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sul ginocchio (0-100).">
 				>
 				["at0155"] = <
 					text = <"Score trasformato">
