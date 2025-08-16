@@ -1,0 +1,701 @@
+archetype (adl_version=1.4; uid=19eaa8ae-8d5b-4fe8-9eec-23ed6b61ac5c)
+	openEHR-EHR-OBSERVATION.siris_additional_questions.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			author = <
+			>
+		>
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2025-08-04">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			purpose = <"Archétype avec questions supplémentaires issues du SIRIS PROM pour le registre des implants de hanche, genou et épaule SIRIS.">
+			copyright = <"© openEHR Foundation">
+			use = <"Utilisez-le pour compléter le PROM EQ-5D-5L avec les trois questions supplémentaires destinées aux patients issues de l'enquête SIRIS pour le registre SIRIS des implants de hanche, de genou et d'épaule.">
+			misuse = <"Ne l'utilisez pas pour documenter des résultats cliniques ou des faits. Il sert exclusivement de complément au questionnaire SIRIS destiné aux patients.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Archetype with additional questions from the SIRIS PROM for the SIRIS hip, knee and shoulder implant registry.">
+			keywords = <"SIRIS, PROM, Hip, Knee, Shoulder", ...>
+			use = <"Use it to supplement the PROM EQ-5D-5L with the three additional patient questions from the SIRIS patient survey for the SIRIS hip, knee and shoulder implant registry.">
+			misuse = <"Do not use it to document clinical findings or facts. It is used exclusively as a supplement to the SIRIS patient questionnaire.">
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			purpose = <"Archetype con domande aggiuntive dal SIRIS PROM per il registro degli impianti SIRIS per anca, ginocchio e spalla.">
+			keywords = <"SIRIS, PREM, anca, ginocchio, spalla", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Utilizzarlo per integrare il PROM EQ-5D-5L con le tre domande aggiuntive rivolte ai pazienti dal questionario SIRIS per il registro SIRIS degli impianti di anca, ginocchio e spalla.">
+			misuse = <"Non utilizzarlo per documentare risultati clinici o fatti. È utilizzato esclusivamente come supplemento al questionario SIRIS per i pazienti.">
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			purpose = <"Archetype mit zusätzlichen Fragen aus dem SIRIS PROM für das SIRIS-Implantatregister für Hüfte, Knie und Schulter.">
+			keywords = <"SIRIS, PROM, Hüfte, Knie, Schulter", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Verwenden Sie es als Ergänzung zum PROM EQ-5D-5L mit den drei zusätzlichen Patientenfragen aus der SIRIS-Patientenbefragung für das SIRIS-Implantatregister für Hüfte, Knie und Schulter.">
+			misuse = <"Verwenden Sie es nicht zur Dokumentation klinischer Befunde oder Fakten. Es dient ausschließlich als Ergänzung zum SIRIS-Patientenfragebogen.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"https://www.anq.ch/de/fachbereiche/akutsomatik/messinformation-akutsomatik/implantat-register-siris/
+https://siris.memdoc.org
+https://www.santesuisse.ch/fileadmin/sas_content/SIRIS_Medieninformation_de.pdf">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"069f0e10850ba327079c39dd7c73c5f0">
+		["build_uid"] = <"5347b21c-911a-308e-a7c2-fbd877faaa71">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- SIRIS additional questions
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Joint specific pain
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Joint specific pain
+												value matches {
+													0|[local::at0006],
+													1|[local::at0007],
+													2|[local::at0008],
+													3|[local::at0009],
+													4|[local::at0010],
+													5|[local::at0011],
+													6|[local::at0012],
+													7|[local::at0013],
+													8|[local::at0014],
+													9|[local::at0015],
+													10|[local::at0016]
+												}
+											}
+										}
+									}
+									CLUSTER[at0017] occurrences matches {0..1} matches {    -- Joint specific satisfaction
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Joint specific satisfaction
+												value matches {
+													0|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021],
+													4|[local::at0022],
+													5|[local::at0023]
+												}
+											}
+										}
+									}
+									CLUSTER[at0024] occurrences matches {0..1} matches {    -- Your level of education
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0025] occurrences matches {0..1} matches {    -- Your level of education
+												value matches {
+													1|[local::at0026],
+													2|[local::at0027],
+													3|[local::at0028],
+													4|[local::at0029]
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0030] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0031] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"SIRIS additional questions">
+					description = <"SIRIS has some extra questions for the PROM EQ-5D-5L for Implant Registry SIRIS Hip, Knee and Shoulder.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Joint specific pain">
+					description = <"Instruction: Please tick the number that corresponds to the intensity of the pain in the joint mentioned on page 1.">
+				>
+				["at0005"] = <
+					text = <"Joint specific pain">
+					description = <"Question: How severe was your joint-specific pain last week?">
+					comment = <"Have “joint-specific pain last week?” in bold font.">
+				>
+				["at0006"] = <
+					text = <"0">
+					description = <"no pain">
+				>
+				["at0007"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"10">
+					description = <"worst pain I can imagin">
+				>
+				["at0017"] = <
+					text = <"Joint specific satisfaction">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Joint specific satisfaction">
+					description = <"Question: How would you feel if you had to live the rest of your life with the current symptoms in the joint
+mentioned on page 1?">
+					comment = <"Have “rest of your life” in bold font.">
+				>
+				["at0019"] = <
+					text = <"very satisfied">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"somewhat satisfied">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"neither satisfied nor dissatisfied">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"somewhat dissatisfied">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"very dissatisfied">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Your level of education">
+					description = <"Instruction: (to be answered only once, in the patient survey before the operation)">
+					comment = <"Have “before the operation” in bold font.">
+				>
+				["at0025"] = <
+					text = <"Your level of education">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"up to 9 years of eductation (compulsory education)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"10 to 13 years of eduction (vocational education, secundary school, high school)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"more than 13 years of education (university, polytechnic, college of higher education, federal institute of technology)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"not specified">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0031"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["de-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"SIRIS zusätzliche Fragen">
+					description = <"SIRIS hat einige zusätzliche Fragen zum PROM EQ-5D-5L für das Implantatregister SIRIS Hüfte, Knie und Schulter.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Gelenkspezifische Schmerzen">
+					description = <"Anleitung: Bitte kreuzen Sie die Zahl an, die der Intensität der Schmerzen in dem auf Seite 1 genannten Gelenk entspricht. 0 (Null) bedeutet keine Schmerzen und 10 die stärksten vorstellbaren Schmerzen.">
+				>
+				["at0005"] = <
+					text = <"Gelenkspezifische Schmerzen">
+					description = <"Frage: Wie stark waren Ihre gelenkspezifischen Schmerzen in der letzten Woche?">
+					comment = <"“gelenkspezifischen” in bold font.
+\"in der letzten Woche?” in bold font. ">
+				>
+				["at0006"] = <
+					text = <"0">
+					description = <"keine Schmerzen">
+				>
+				["at0007"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"10">
+					description = <"stärkste Schmerzen, die ich mir vorstellen kann">
+				>
+				["at0017"] = <
+					text = <"Gelenkspezifische Zufriedenheit">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Gelenkspezifische Zufriedenheit">
+					description = <"Frage: Wie würden Sie sich fühlen, wenn Sie den Rest Ihres Lebens mit den derzeitigen Beschwerden
+in dem auf Seite 1 genannten Gelenk leben müssten?">
+					comment = <"“Rest Ihres Lebens” in bold font.">
+				>
+				["at0019"] = <
+					text = <"sehr zufrieden">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"etwas zufrieden">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"weder zufrieden noch unzufrieden">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"etwas unzufrieden">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"sehr unzufrieden">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Angaben zu Ihrem Ausbildungsniveau">
+					description = <"Anleitung: (nur einmal bei der Patientenbefragung vor der Operation zu beantworten)">
+					comment = <"“vor der Operation” in bold font.">
+				>
+				["at0025"] = <
+					text = <"Angaben zu Ihrem Ausbildungsniveau">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"bis zu 9 Jahre Ausbildung (obligatorische Schule)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"10 bis 13 Jahre Ausbildung (Berufslehre, Fachmittelschule, Gymnasium)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"mehr als 13 Jahre Ausbildung (Universität, ETH, Fachhochschule)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"keine Angabe">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0031"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"SIRIS questions supplémentaires">
+					description = <"SIRIS a quelques questions supplémentaires concernant le questionnaire PROM EQ-5D-5L pour le registre des implants SIRIS Hanche, Genou et Épaule.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Douleur spécifique à l'articulation">
+					description = <"Instruction: Veuillez cocher le chiffre correspondant à l’intensité de la douleur dans l’articulation mentionnée à la page 1.">
+				>
+				["at0005"] = <
+					text = <"Douleur spécifique à l'articulation">
+					description = <"Question: Quelle était l’intensité de vos douleurs spécifiques aux articulations au cours de la semaine dernière?">
+					comment = <"“spécifiques aux articulations?” in bold font.
+“de la semaine dernière?” in bold font. (en)">
+				>
+				["at0006"] = <
+					text = <"0">
+					description = <"aucune douleur">
+				>
+				["at0007"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"10">
+					description = <"la pire douleur imaginable">
+				>
+				["at0017"] = <
+					text = <"Satisfaction spécifique à l’articulation">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Satisfaction spécifique à l’articulation">
+					description = <"Question: Si vous deviez passer le reste de votre vie avec les symptômes que vous avez maintenant
+dans l’articulation mentionnée à la page 1, comment vous sentiriez-vous?">
+					comment = <"“le reste de votre vie” in bold font.">
+				>
+				["at0019"] = <
+					text = <"très satisfait(e)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"plutôt satisfait(e)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"ni satisfait(e), ni insatisfait(e)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"plutôt satisfait(e)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"très insatisfait(e)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Niveau de formation">
+					description = <"Instruction: (a compléter uniquement une fois, dans l’enquète avant l’opération)">
+					comment = <"“avant l’opération” in bold font.">
+				>
+				["at0025"] = <
+					text = <"Niveau de formation">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"jusqu’à 9 ans de formation (école obligatoire)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"10 à 13 ans de formation (école professionnelle, ECG, collège / gymnase)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"plus de 13 ans de formation (université, école poly- technique, HES)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"non spécifié">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0031"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["it-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"SIRIS domande aggiuntive">
+					description = <"SIRIS ha alcune domande aggiuntive per il PROM EQ-5D-5L per il Registro degli impianti SIRIS Anca, Ginocchio e Spalla.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Dolore specifico dell’articolazione">
+					description = <"Istruzioni: Barrare il numero corrispondente all’intensità del dolore nell’articolazione indicata a pagina 1.">
+				>
+				["at0005"] = <
+					text = <"Dolore specifico dell’articolazione">
+					description = <"Domanda: Quanto è stato forte il dolore specifico dell’articolazione la scorsa settimana?
+nessun dolore">
+					comment = <"“specifico dell’articolazione la scorsa settimana?” in bold font.">
+				>
+				["at0006"] = <
+					text = <"0">
+					description = <"nessun dolore">
+				>
+				["at0007"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"10">
+					description = <"il dolore più forte che possa immaginare">
+				>
+				["at0017"] = <
+					text = <"Soddisfazione specifica dell’articolazione">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Soddisfazione specifica dell’articolazione">
+					description = <"Domanda: Come si sentirebbe se dovesse vivere per il resto della sua vita con i sintomi attuali dell’articolazione
+menzionata a pagina 1?">
+					comment = <"“il resto della sua vita” in bold font. (en)">
+				>
+				["at0019"] = <
+					text = <"molto soddisfatto">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"abbastanzo soddisfatto">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"né soddisfatto né insoddisfatto">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"abbastanza insoddisfatto">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"molto insoddisfatto">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Livello di formazione">
+					description = <"Istruzioni: (da compilare sola una volta, nel sondaggio primo dell’intervento)">
+					comment = <"“primo dell’intervento” in bold font. (en)">
+				>
+				["at0025"] = <
+					text = <"Livello di formazione">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"fino a 9 anni di formazzione (scuola dell’obbligo)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"da 10 a 13 anni di formazzione (formazione professionale, specializzata, liceo)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"piû di 13 anni di formazzione (università, politechnico federale, scuola universitaria professionale)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"non specificato">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0031"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+	>
