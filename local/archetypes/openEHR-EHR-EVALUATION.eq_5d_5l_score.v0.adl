@@ -1,0 +1,1567 @@
+archetype (adl_version=1.4; uid=d6980fb6-1dfd-4eaf-af65-88f3288e5355)
+	openEHR-EHR-EVALUATION.eq_5d_5l_score.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["en-us"] = <
+			language = <[ISO_639-1::en-us]>
+			author = <
+			>
+		>
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			author = <
+			>
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2025-09-05">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en-us"] = <
+			language = <[ISO_639-1::en-us]>
+			copyright = <"© openEHR Foundation">
+		>
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			copyright = <"© openEHR Foundation">
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"73499b1b-8b9b-3f9b-9054-e6bfe22f6d73">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- EQ-5D-5L Index score
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0036] occurrences matches {0..1} matches {    -- Mobility
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0037] occurrences matches {0..1} matches {    -- 1 No problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.0>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0038] occurrences matches {0..1} matches {    -- 2 Slight problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.026>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0039] occurrences matches {0..1} matches {    -- 3 Moderate problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.042>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0040] occurrences matches {0..1} matches {    -- 4 Severe problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.139>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0041] occurrences matches {0..1} matches {    -- 5 Unable to walk about
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.224>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0042] occurrences matches {0..1} matches {    -- Mobility weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+					CLUSTER[at0043] occurrences matches {0..1} matches {    -- Self-care
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0044] occurrences matches {0..1} matches {    -- 1 No problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.0>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0045] occurrences matches {0..1} matches {    -- 2 Slight problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.05>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0046] occurrences matches {0..1} matches {    -- 3 Moderate problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.056>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0047] occurrences matches {0..1} matches {    -- 4 Severe problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.169>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0048] occurrences matches {0..1} matches {    -- Unable to wash or dress
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.26>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0049] occurrences matches {0..1} matches {    -- Self-care weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+					CLUSTER[at0050] occurrences matches {0..1} matches {    -- Usual activities
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0051] occurrences matches {0..1} matches {    -- 1 No problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.0>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0052] occurrences matches {0..1} matches {    -- 2 Slight problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.036>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0053] occurrences matches {0..1} matches {    -- 3 Moderate problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.049>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0054] occurrences matches {0..1} matches {    -- 4 Severe problems
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.129>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0055] occurrences matches {0..1} matches {    -- Unable to do my usual activities
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.209>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0056] occurrences matches {0..1} matches {    -- Usual activities weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+					CLUSTER[at0057] occurrences matches {0..1} matches {    -- Pain/discomfort
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0058] occurrences matches {0..1} matches {    -- 1 No pain or discomfort
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.0>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0059] occurrences matches {0..1} matches {    -- 2 Slight pain or discomfort
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.057>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0060] occurrences matches {0..1} matches {    -- 3 Moderate pain or discomfort
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.109>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0061] occurrences matches {0..1} matches {    -- 4 Severe pain or discomfort
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.404>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0062] occurrences matches {0..1} matches {    -- 5 Extreme pain or discomfort
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.612>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0063] occurrences matches {0..1} matches {    -- Pain/discomfort weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+					CLUSTER[at0064] occurrences matches {0..1} matches {    -- Anxiety/depression
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0065] occurrences matches {0..1} matches {    -- 1 No anxiety or depression
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.0>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0066] occurrences matches {0..1} matches {    -- 2 Slight anxiety or depression
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.03>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0067] occurrences matches {0..1} matches {    -- 3 Moderate anxiety or depression
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.082>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0068] occurrences matches {0..1} matches {    -- 4 Severe anxiety or depression
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.244>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0069] occurrences matches {0..1} matches {    -- 5 Extreme anxiety or depression
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+
+										assumed_value = <
+											units = <"1">
+											magnitude = <0.356>
+											precision = <3>
+										>
+									>
+								}
+							}
+							ELEMENT[at0070] occurrences matches {0..1} matches {    -- Anxiety/depression weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+					CLUSTER[at0073] occurrences matches {0..1} matches {    -- Index Score
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0074] occurrences matches {0..1} matches {    -- Index Score
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::507]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|-0.594..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0018] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0071] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["1"] = <
+					text = <"Weight">
+					description = <"1">
+				>
+				["at0000"] = <
+					text = <"EQ-5D-5L Index score">
+					description = <"eq_5d_5l_score">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0036"] = <
+					text = <"Mobility">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"1 No problems">
+					description = <"">
+					order = <"1">
+				>
+				["at0038"] = <
+					text = <"2 Slight problems">
+					description = <"">
+					order = <"2">
+				>
+				["at0039"] = <
+					text = <"3 Moderate problems">
+					description = <"">
+					order = <"3">
+				>
+				["at0040"] = <
+					text = <"4 Severe problems">
+					description = <"">
+					order = <"4">
+				>
+				["at0041"] = <
+					text = <"5 Unable to walk about">
+					description = <"">
+					order = <"5">
+				>
+				["at0042"] = <
+					text = <"Mobility weighted">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Self-care">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"1 No problems">
+					description = <"">
+					order = <"1">
+				>
+				["at0045"] = <
+					text = <"2 Slight problems">
+					description = <"">
+					order = <"2">
+				>
+				["at0046"] = <
+					text = <"3 Moderate problems">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"4 Severe problems">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Unable to wash or dress">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Self-care weighted">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Usual activities">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"1 No problems">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"2 Slight problems">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"3 Moderate problems">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"4 Severe problems">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Unable to do my usual activities">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Usual activities weighted">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Pain/discomfort">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"1 No pain or discomfort">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"2 Slight pain or discomfort">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"3 Moderate pain or discomfort">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"4 Severe pain or discomfort">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"5 Extreme pain or discomfort">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Pain/discomfort weighted">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Anxiety/depression">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"1 No anxiety or depression">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"2 Slight anxiety or depression">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"3 Moderate anxiety or depression">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"4 Severe anxiety or depression">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"5 Extreme anxiety or depression">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Anxiety/depression weighted">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+			>
+		>
+		["en-us"] = <
+			items = <
+				["1"] = <
+					text = <"*Weight (en)">
+					description = <"*1 (en)">
+				>
+				["at0000"] = <
+					text = <"EQ-5D-5L Index score">
+					description = <"*eq_5d_5l_score (en)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0036"] = <
+					text = <"*Mobility (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"1 No problems">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"2 Slight problems">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"3 Moderate problems">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"4 Severe problems">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"5 Unable to walk about">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Mobility weighted">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Self-care (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"1 No problems">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"2 Slight problems">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"3 Moderate problems">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"4 Severe problems">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Unable to wash or dress">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Self-care weighted">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Usual activities">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"1 No problems">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"2 Slight problems">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"3 Moderate problems">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"4 Severe problems">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Unable to do my usual activities">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Usual activities weighted">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Pain/discomfort">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"1 No pain or discomfort">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"2 Slight pain or discomfort">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"3 Moderate pain or discomfort">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"4 Severe pain or discomfort">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"5 Extreme pain or discomfort">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Pain/discomfort weighted">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Anxiety/depression">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"1 No anxiety or depression">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"2 Slight anxiety or depression">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"3 Moderate anxiety or depression">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"4 Severe anxiety or depression">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"5 Extreme anxiety or depression">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Anxiety/depression weighted">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+			>
+		>
+		["de-ch"] = <
+			items = <
+				["1"] = <
+					text = <"*Weight (en)">
+					description = <"*1 (en)">
+				>
+				["at0000"] = <
+					text = <"EQ-5D-5L Index score">
+					description = <"*eq_5d_5l_score (en)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0036"] = <
+					text = <"*Mobility (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*5 Unable to walk about (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Mobility weighted (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Self-care (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Unable to wash or dress (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Self-care weighted (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Usual activities (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Unable to do my usual activities (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Usual activities weighted (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Pain/discomfort (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*1 No pain or discomfort (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*2 Slight pain or discomfort (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*3 Moderate pain or discomfort (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*4 Severe pain or discomfort (en)">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"*5 Extreme pain or discomfort (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Pain/discomfort weighted (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*Anxiety/depression (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*1 No anxiety or depression (en)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"*2 Slight anxiety or depression (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*3 Moderate anxiety or depression (en)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"*4 Severe anxiety or depression (en)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"*5 Extreme anxiety or depression (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Anxiety/depression weighted (en)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["1"] = <
+					text = <"*Weight (en)">
+					description = <"*1 (en)">
+				>
+				["at0000"] = <
+					text = <"EQ-5D-5L Index score">
+					description = <"*eq_5d_5l_score (en)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0036"] = <
+					text = <"*Mobility (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*5 Unable to walk about (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Mobility weighted (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Self-care (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Unable to wash or dress (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Self-care weighted (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Usual activities (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Unable to do my usual activities (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Usual activities weighted (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Pain/discomfort (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*1 No pain or discomfort (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*2 Slight pain or discomfort (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*3 Moderate pain or discomfort (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*4 Severe pain or discomfort (en)">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"*5 Extreme pain or discomfort (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Pain/discomfort weighted (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*Anxiety/depression (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*1 No anxiety or depression (en)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"*2 Slight anxiety or depression (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*3 Moderate anxiety or depression (en)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"*4 Severe anxiety or depression (en)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"*5 Extreme anxiety or depression (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Anxiety/depression weighted (en)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+			>
+		>
+		["it-ch"] = <
+			items = <
+				["1"] = <
+					text = <"*Weight (en)">
+					description = <"*1 (en)">
+				>
+				["at0000"] = <
+					text = <"EQ-5D-5L Index score">
+					description = <"*eq_5d_5l_score (en)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0036"] = <
+					text = <"*Mobility (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*5 Unable to walk about (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Mobility weighted (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Self-care (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Unable to wash or dress (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Self-care weighted (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Usual activities (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*1 No problems (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*2 Slight problems (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*3 Moderate problems (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*4 Severe problems (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Unable to do my usual activities (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Usual activities weighted (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Pain/discomfort (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*1 No pain or discomfort (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*2 Slight pain or discomfort (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*3 Moderate pain or discomfort (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*4 Severe pain or discomfort (en)">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"*5 Extreme pain or discomfort (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Pain/discomfort weighted (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*Anxiety/depression (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*1 No anxiety or depression (en)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"*2 Slight anxiety or depression (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*3 Moderate anxiety or depression (en)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"*4 Severe anxiety or depression (en)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"*5 Extreme anxiety or depression (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Anxiety/depression weighted (en)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Index Score">
+					description = <"">
+				>
+			>
+		>
+	>
