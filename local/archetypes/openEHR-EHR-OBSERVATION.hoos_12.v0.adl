@@ -262,13 +262,6 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0156] occurrences matches {0..1} matches {    -- Summary hip impact score
-												value matches {
-													DV_COUNT matches {
-														magnitude matches {|0..100|}
-													}
-												}
-											}
 										}
 									}
 								}
@@ -675,12 +668,6 @@ Have “last week” in bold font.">
 					text = <"Scoring transformed">
 					description = <"">
 				>
-				["at0156"] = <
-					text = <"Summary hip impact score">
-					description = <"Unweighted mean of the three transformed HOOS-12 domain scores - Pain, Function, and Quality of Life - reported on a 0-100 scale (100 = best, 0 = worst).
-Formula: (Pain_0-100 + Function_0-100 + QOL_0-100) / 3.">
-					comment = <"Compute only if all three domain scores are available, each derived according to the HOOS-12 missing-data rule (domain computable if >=2/4 items answered.">
-				>
 				["at0159"] = <
 					text = <"Extension">
 					description = <"">
@@ -1085,12 +1072,6 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 				["at0155"] = <
 					text = <"Scoring transformiert">
 					description = <"">
-				>
-				["at0156"] = <
-					text = <"Hüft-Impact-Score">
-					description = <"Ungewichteter Mittelwert der drei transformierten HOOS-12-Domänenwerte – Schmerzen, Funktion und Lebensqualität – angegeben auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten).
-Formel: (Schmerzen_0-100 + Funktion_0-100 + Lebensqualität_0-100) / 3.">
-					comment = <"Berechnen Sie nur, wenn alle drei Domänenwerte verfügbar sind, die jeweils gemäss der HOOS-12-Regel für fehlende Daten abgeleitet wurden (Domäne berechenbar, wenn >=2/4 Items beantwortet wurden).">
 				>
 				["at0159"] = <
 					text = <"Extension">
@@ -1498,12 +1479,6 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 					text = <"Score transformé">
 					description = <"">
 				>
-				["at0156"] = <
-					text = <"Score impact hanche global">
-					description = <"Moyenne non pondérée des trois scores transformés du domaine HOOS-12 - Douleur, Fonctionnement et Qualité de vie - rapportés sur une échelle de 0 à 100 (100 = meilleur, 0 = pire).
-Formule : (Douleur_0-100 + Fonctionnement_0-100 + QOL_0-100) / 3.">
-					comment = <"Calculer uniquement si les trois scores de domaine sont disponibles, chacun étant dérivé selon la règle HOOS-12 relative aux données manquantes (domaine calculable si >=2/4 items ont reçu une réponse).">
-				>
 				["at0159"] = <
 					text = <"Extension">
 					description = <"">
@@ -1906,12 +1881,6 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 				["at0155"] = <
 					text = <"Score trasformato">
 					description = <"">
-				>
-				["at0156"] = <
-					text = <"Score impatto anca globale">
-					description = <"Media non ponderata dei tre punteggi trasformati del dominio HOOS-12 - Dolore, Funzionalità e Qualità della vita - riportati su una scala da 0 a 100 (100 = migliore, 0 = peggiore).
-Formula: (Dolore_0-100 + Funzionalità_0-100 + QOL_0-100) / 3.">
-					comment = <"Calcolare solo se sono disponibili tutti e tre i punteggi di dominio, ciascuno derivato secondo la regola HOOS-12 sui dati mancanti (dominio calcolabile se >=2/4 voci hanno ricevuto una risposta).">
 				>
 				["at0159"] = <
 					text = <"Extension">
