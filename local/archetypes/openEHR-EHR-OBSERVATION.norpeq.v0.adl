@@ -10,16 +10,25 @@ language
 		["fr-ch"] = <
 			language = <[ISO_639-1::fr-ch]>
 			author = <
+				["name"] = <"Urs Wittwer">
+				["email"] = <"urs.wittwer@healthbrain.care">
+				["organisation"] = <"Healthbrain GmbH">
 			>
 		>
 		["it-ch"] = <
 			language = <[ISO_639-1::it-ch]>
 			author = <
+				["name"] = <"Urs Wittwer">
+				["email"] = <"urs.wittwer@healthbrain.care">
+				["organisation"] = <"Healthbrain GmbH">
 			>
 		>
 		["de-ch"] = <
 			language = <[ISO_639-1::de-ch]>
 			author = <
+				["name"] = <"Urs Wittwer">
+				["email"] = <"urs.wittwer@healthbrain.care">
+				["organisation"] = <"Healthbrain GmbH">
 			>
 		>
 	>
@@ -76,8 +85,8 @@ Sviluppato nell'ambito del programma pilota OpenPROMs della Commissione federale
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4d0f83cc81c87b16863adf4d3fc4b670">
-		["build_uid"] = <"286de4e6-7953-34de-9803-6217b204d2a0">
+		["MD5-CAM-1.0.1"] = <"4c93ba279b13bcc5fa128f1f4639d26a">
+		["build_uid"] = <"004d9872-1e95-4ab3-afd5-d24227fda93d">
 	>
 
 definition
@@ -215,7 +224,7 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Core score items">
-					description = <"Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.">
+					description = <"Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score. ">
 				>
 				["at0005"] = <
 					text = <"Supplementary items">
@@ -458,7 +467,7 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 				>
 				["at0004"] = <
 					text = <"Questions du score principal">
-					description = <"Six questions NORPEQ qui constituent le cœur de l'instrument et sont notées sur une échelle numérique. Chaque élément est enregistré sous la forme DV_ORDINAL (1 à 5) et peut être agrégé dans le score NORPEQ total.">
+					description = <"*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)">
 				>
 				["at0005"] = <
 					text = <"Questions supplémentaires">
@@ -698,7 +707,7 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 				>
 				["at0004"] = <
 					text = <"Fragen für Score">
-					description = <"Sechs NORPEQ-Fragen, die den numerisch bewerteten Teil des Fragenkatalogs bilden. Jede Frage wird als DV_ORDINAL (1 – 5) erfasst und fliesst in die NORPEQ-Gesamtpunktzahl ein.">
+					description = <"*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)">
 				>
 				["at0005"] = <
 					text = <"Zusatzfragen">
@@ -938,7 +947,7 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 				>
 				["at0004"] = <
 					text = <"Domande del Core Score">
-					description = <"Sei domande NORPEQ che costituiscono il nucleo dello strumento, valutato con un punteggio numerico. Ogni voce è registrata come DV_ORDINAL (1 – 5) e può essere aggregata al punteggio NORPEQ totale.">
+					description = <"*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)">
 				>
 				["at0005"] = <
 					text = <"Domande supplementari">
