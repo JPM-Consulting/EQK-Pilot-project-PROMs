@@ -10,16 +10,24 @@ language
 		["fr-ch"] = <
 			language = <[ISO_639-1::fr-ch]>
 			author = <
+				["name"] = <"Urs Wittmer">
+				["organisation"] = <"Healthbrain GmbH">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 		["it-ch"] = <
 			language = <[ISO_639-1::it-ch]>
 			author = <
+				["name"] = <"Urs Wittmer">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 		["de-ch"] = <
 			language = <[ISO_639-1::de-ch]>
 			author = <
+				["name"] = <"Urs Wittmer">
+				["organisation"] = <"Healthbrain GmbH">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 	>
@@ -77,8 +85,8 @@ Gandek B, Roos EM, Franklin PD, Ware JE Jr. Item selection for 12-item short for
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5c56089ad150b2359795f9cd28787c33">
-		["build_uid"] = <"cf2bf7ba-e765-3e62-adcd-5a94a191de40">
+		["MD5-CAM-1.0.1"] = <"2787ac3e241d8ea0bd4f168f385092d1">
+		["build_uid"] = <"d26b82a8-2554-42df-b8bc-c444f94107ca">
 	>
 
 definition
@@ -106,7 +114,7 @@ definition
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
-															[local::at0165]    -- What amount of knee pain have you experienced the last week during the following activities?
+															[local::at0165;at0165]    -- What amount of knee pain have you experienced the last week during the following activities?
 														}
 													}
 												}
@@ -258,13 +266,6 @@ definition
 												}
 											}
 											ELEMENT[at0150] occurrences matches {0..1} matches {    -- Quality of life  score transformed
-												value matches {
-													DV_COUNT matches {
-														magnitude matches {|0..100|}
-													}
-												}
-											}
-											ELEMENT[at0156] occurrences matches {0..1} matches {    -- Summary knee impact score
 												value matches {
 													DV_COUNT matches {
 														magnitude matches {|0..100|}
@@ -548,7 +549,6 @@ Have “last week” in bold font.">
 				["at0073"] = <
 					text = <"Function score transformed">
 					description = <"Linearly transformed Function domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Function raw score (0-16).">
-					comment = <"This score contributes to the Summary knee impact score (0-100).">
 				>
 				["at0075"] = <
 					text = <"Quality of Life">
@@ -666,22 +666,14 @@ Have “last week” in bold font.">
 				["at0150"] = <
 					text = <"Quality of life  score transformed">
 					description = <"Linearly transformed Quality of life domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Quality of life raw score (0-16).">
-					comment = <"This score contributes to the Summary knee impact score (0-100).">
 				>
 				["at0151"] = <
 					text = <"Pain score transformed">
 					description = <"Linearly transformed Pain domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Pain raw score (0-16).">
-					comment = <"This score contributes to the Summary knee impact score (0-100).">
 				>
 				["at0155"] = <
 					text = <"Scoring transformed">
 					description = <"">
-				>
-				["at0156"] = <
-					text = <"Summary knee impact score">
-					description = <"Unweighted mean of the three transformed KOOS-12 domain scores - Pain, Function, and Quality of Life - reported on a 0-100 scale (100 = best, 0 = worst).
-Formula: (Pain_0-100 + Function_0-100 + QOL_0-100) / 3.">
-					comment = <"Compute only if all three domain scores are available, each derived according to the KOOS-12 missing-data rule (domain computable if >=2/4 items answered.">
 				>
 				["at0159"] = <
 					text = <"Extension">
@@ -689,7 +681,7 @@ Formula: (Pain_0-100 + Function_0-100 + QOL_0-100) / 3.">
 				>
 				["at0161"] = <
 					text = <"General instructions">
-					description = <"INSTRUCTIONS: This survey asks for your views about your knee. Answer every question by marking the appropriate box, only one box for each question. If you are unsure about how to answer a question, please give the best answer you can.">
+					description = <"INSTRUCTIONS: This survey asks for your views about your knee. Please tick only one box per question. If you are unsure about how to answer a question, please give the best answer you can.">
 					comment = <"Have “INSTRUCTIONS:” in bold font.">
 				>
 				["at0164"] = <
@@ -729,7 +721,7 @@ Explanatory note displayed between question 1 (How often do you experience knee 
 				>
 				["at0005"] = <
 					text = <"1. Häufigkeit Knieschmerzen">
-					description = <"*Question: 1. How often do you experience knee pain?   (en)">
+					description = <"Frage: 1. Wie oft haben Sie Knieschmerzen?">
 					comment = <"Jede Datenfeldbezeichnung sollte kurz und prägnant sein; die Frage an den Patienten steht in der Beschreibung.">
 					order = <"1">
 				>
@@ -816,11 +808,11 @@ Explanatory note displayed between question 1 (How often do you experience knee 
 					description = <"">
 				>
 				["at0031"] = <
-					text = <"Mittel">
+					text = <"Leicht">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"Leicht">
+					text = <"Mittel">
 					description = <"">
 				>
 				["at0033"] = <
@@ -926,8 +918,8 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"*8. Twisting/pivoting on your injured knee (en)">
-					description = <"*Question: 8. Twisting/pivoting on your injured knee (en)">
+					text = <"8. Drehen/Schwenkbewegungen auf verletztem Knie">
+					description = <"Frage: 8. Drehen/Schwenkbewegungen auf dem verletzten Knie">
 					comment = <"Jede Datenfeldbezeichnung sollte kurz und prägnant sein; die Frage an den Patienten steht in der Beschreibung.">
 					order = <"8">
 				>
@@ -959,7 +951,6 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 				["at0073"] = <
 					text = <"Funktions-Score transformiert">
 					description = <"Linear transformierte Funktionsbereichsbewertung auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus der Funktions-Rohbewertung (0-16).">
-					comment = <"Dieser Wert fliesst in den zusammenfassenden Knie-Impact-Score (0–100) ein.">
 				>
 				["at0075"] = <
 					text = <"Lebensqualität">
@@ -1077,22 +1068,14 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 				["at0150"] = <
 					text = <"Lebensqualität-Score transformiert">
 					description = <"Linear transformierter Wert für den Bereich Lebensqualität auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus dem Rohwert für Lebensqualität (0-16).">
-					comment = <"Dieser Wert fliesst in den zusammenfassenden Knie-Impact-Score (0–100) ein.">
 				>
 				["at0151"] = <
 					text = <"Schmerz-Score transformiert">
 					description = <"Linear transformierter Schmerzbereichswert auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohwert / 16 * 100) aus dem Schmerz-Rohwert (0–16).">
-					comment = <"Dieser Wert fliesst in den zusammenfassenden Knie-Impact-Score (0–100) ein.">
 				>
 				["at0155"] = <
 					text = <"Scoring transformiert">
 					description = <"">
-				>
-				["at0156"] = <
-					text = <"Knie-Impact-Score">
-					description = <"Ungewichteter Mittelwert der drei transformierten KOOS-12-Domänenwerte – Schmerzen, Funktion und Lebensqualität – angegeben auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten).
-Formel: (Schmerzen_0-100 + Funktion_0-100 + Lebensqualität_0-100) / 3.">
-					comment = <"Berechnen Sie nur, wenn alle drei Domänenwerte verfügbar sind, die jeweils gemäss der KOOS-12-Regel für fehlende Daten abgeleitet wurden (Domäne berechenbar, wenn >=2/4 Items beantwortet wurden).">
 				>
 				["at0159"] = <
 					text = <"Extension">
@@ -1100,7 +1083,7 @@ Formel: (Schmerzen_0-100 + Funktion_0-100 + Lebensqualität_0-100) / 3.">
 				>
 				["at0161"] = <
 					text = <"Allgemeine Anleitung">
-					description = <"ANLEITUNG: In dieser Umfrage werden Sie nach Ihrer Meinung zu Ihrem Knie gefragt. Beantworten Sie jede Frage, indem Sie das entsprechende Kästchen ankreuzen. Für jede Frage ist nur ein Kästchen erforderlich. Wenn Sie sich bei der Beantwortung einer Frage unsicher sind, geben Sie bitte die bestmögliche Antwort.">
+					description = <"ANLEITUNG: In dieser Umfrage werden Sie nach Ihrer Meinung zu Ihrem Knie gefragt. Bitte kreuzen Sie pro Frage nur ein Kästchen an. Wenn Sie sich bei der Beantwortung einer Frage unsicher sind, geben Sie bitte die bestmögliche Antwort.">
 					comment = <"“ANLEITUNG:” in bold font.">
 				>
 				["at0164"] = <
@@ -1140,7 +1123,7 @@ Erläuterung zwischen Frage 1 (Wie oft haben Sie Knieschmerzen?) und Frage 2 (Ge
 				>
 				["at0005"] = <
 					text = <"1. Fréquence douleur genou">
-					description = <"*Question: 1. How often do you experience knee pain?   (en)">
+					description = <"Question: 1. À quelle fréquence ressentez-vous des douleurs au genou?">
 					comment = <"Chaque libellé de champ de données doit être court et concis ; la question posée au patient figure dans la section Description.">
 					order = <"1">
 				>
@@ -1338,8 +1321,8 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"*8. Twisting/pivoting on your injured knee (en)">
-					description = <"*Question: 8. Twisting/pivoting on your injured knee (en)">
+					text = <"8. Torsion/pivotement sur votre genou blessé">
+					description = <"Question: 8. Torsion/pivotement sur votre genou blessé">
 					comment = <"Chaque libellé de champ de données doit être court et concis ; la question posée au patient figure dans la section Description.">
 					order = <"8">
 				>
@@ -1371,7 +1354,6 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 				["at0073"] = <
 					text = <"Score fonction transformé">
 					description = <"Score du domaine de la fonction transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut de la fonction (0-16).">
-					comment = <"Ce score contribue au score résumé de l'impact sur le genou (0-100).">
 				>
 				["at0075"] = <
 					text = <"Qualité de vie">
@@ -1405,7 +1387,7 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 				>
 				["at0131"] = <
 					text = <"10. Évitement activités genou">
-					description = <"Question: 10. Avez-vous modifié votre mode de vie pour éviter les activités potentiellement dommageables pour votre genou?">
+					description = <"Question: 10. Avez-vous modifié votre mode de vie pour éviter les activités potentiellement dangereuses pour votre genou?">
 					comment = <"Chaque libellé de champ de données doit être court et concis ; la question posée au patient figure dans la section Description.">
 					order = <"10">
 				>
@@ -1489,22 +1471,14 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 				["at0150"] = <
 					text = <"Score qualité de vie transformé">
 					description = <"Score du domaine Qualité de vie transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut « Qualité de vie » (0-16).">
-					comment = <"Ce score contribue au score résumé d'impact sur le genou (0-100).">
 				>
 				["at0151"] = <
 					text = <"Score douleur transformé">
 					description = <"Score du domaine douleur transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut Douleur (0-16).">
-					comment = <"Ce score contribue au score résumé de l'impact sur le genou (0-100).">
 				>
 				["at0155"] = <
 					text = <"Score transformé">
 					description = <"">
-				>
-				["at0156"] = <
-					text = <"Score impact genou global">
-					description = <"Moyenne non pondérée des trois scores transformés du domaine KOOS-12 - Douleur, Fonctionnement et Qualité de vie - rapportés sur une échelle de 0 à 100 (100 = meilleur, 0 = pire).
-Formule : (Douleur_0-100 + Fonctionnement_0-100 + QOL_0-100) / 3.">
-					comment = <"Calculer uniquement si les trois scores de domaine sont disponibles, chacun étant dérivé selon la règle KOOS-12 relative aux données manquantes (domaine calculable si >=2/4 items ont reçu une réponse).">
 				>
 				["at0159"] = <
 					text = <"Extension">
@@ -1512,7 +1486,7 @@ Formule : (Douleur_0-100 + Fonctionnement_0-100 + QOL_0-100) / 3.">
 				>
 				["at0161"] = <
 					text = <"Instructions générales">
-					description = <"INSTRUCTIONS: Ce questionnaire vous demande votre avis sur votre genou. Répondez à chaque question en cochant la case correspondante, une seule case par question. En cas de doute, veuillez donner la meilleure réponse possible.">
+					description = <"INSTRUCTIONS: Ce questionnaire vous demande votre opinion sur votre genou. Veuillez cocher une seule case par question. En cas de doute, cochez la case qui vous semble la plus adaptée à votre cas.">
 					comment = <"“INSTRUCTIONS:” in bold font.">
 				>
 				["at0164"] = <
@@ -1550,7 +1524,7 @@ Formule : (Douleur_0-100 + Fonctionnement_0-100 + QOL_0-100) / 3.">
 				>
 				["at0005"] = <
 					text = <"1. Frequenza dolore ginocchio">
-					description = <"*Question: 1. How often do you experience knee pain?   (en)">
+					description = <"Domanda: 1. Con quale frequenza avverti dolore al ginocchio?">
 					comment = <"Ogni etichetta dei campi dati deve essere breve e concisa; la domanda rivolta al paziente è riportata nella Descrizione.">
 					order = <"1">
 				>
@@ -1747,8 +1721,8 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"*8. Twisting/pivoting on your injured knee (en)">
-					description = <"*Question: 8. Twisting/pivoting on your injured knee (en)">
+					text = <"8. Ruotare/ruotare sul ginocchio infortunato">
+					description = <"Domanda: 8. Ruotare/ruotare sul ginocchio infortunato">
 					comment = <"Ogni etichetta dei campi dati deve essere breve e concisa; la domanda rivolta al paziente è riportata nella Descrizione.">
 					order = <"8">
 				>
@@ -1780,7 +1754,6 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 				["at0073"] = <
 					text = <"Score funzione trasformato">
 					description = <"Punteggio del dominio della funzione trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sul ginocchio (0-100).">
 				>
 				["at0075"] = <
 					text = <"Qualità della vita">
@@ -1898,22 +1871,14 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 				["at0150"] = <
 					text = <"Score qualità di vita trasformato">
 					description = <"Punteggio del dominio della qualità della vita trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della qualità della vita (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sul ginocchio (0-100).">
 				>
 				["at0151"] = <
 					text = <"Score dolore trasformato">
 					description = <"Punteggio del dominio Dolore trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo del Dolore (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sul ginocchio (0-100).">
 				>
 				["at0155"] = <
 					text = <"Score trasformato">
 					description = <"">
-				>
-				["at0156"] = <
-					text = <"Score impatto ginocchio globale">
-					description = <"Media non ponderata dei tre punteggi trasformati del dominio KOOS-12 - Dolore, Funzionalità e Qualità della vita - riportati su una scala da 0 a 100 (100 = migliore, 0 = peggiore).
-Formula: (Dolore_0-100 + Funzionalità_0-100 + QOL_0-100) / 3.">
-					comment = <"Calcolare solo se sono disponibili tutti e tre i punteggi di dominio, ciascuno derivato secondo la regola KOOS-12 sui dati mancanti (dominio calcolabile se >=2/4 voci hanno ricevuto una risposta).">
 				>
 				["at0159"] = <
 					text = <"Extension">
@@ -1921,7 +1886,7 @@ Formula: (Dolore_0-100 + Funzionalità_0-100 + QOL_0-100) / 3.">
 				>
 				["at0161"] = <
 					text = <"Istruzioni generali">
-					description = <"ISTRUZIONI: Questo sondaggio chiede la tua opinione sulla tuo ginocchio. Rispondi a ogni domanda contrassegnando la casella appropriata, una sola casella per ogni domanda. Se non sei sicuro di come rispondere a una domanda, ti preghiamo di fornire la risposta migliore possibile.">
+					description = <"ISTRUZIONI: Questo questionario chiede la tua opinione sulla tuo ginocchio. Si prega di spuntare una sola casella per domanda. Se non si è sicuri di come rispondere a una domanda, si prega di fornire la migliore risposta possibile.">
 					comment = <"“ISTRUZIONI:” in bold font.">
 				>
 				["at0164"] = <

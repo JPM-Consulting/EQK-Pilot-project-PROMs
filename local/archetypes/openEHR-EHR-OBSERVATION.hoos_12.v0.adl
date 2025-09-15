@@ -10,16 +10,25 @@ language
 		["fr-ch"] = <
 			language = <[ISO_639-1::fr-ch]>
 			author = <
+				["name"] = <"Urs Wittwer">
+				["organisation"] = <"Healthbrain GmbH">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 		["it-ch"] = <
 			language = <[ISO_639-1::it-ch]>
 			author = <
+				["name"] = <"Urs Wittwer">
+				["organisation"] = <"Healthbrain GmbH">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 		["de-ch"] = <
 			language = <[ISO_639-1::de-ch]>
 			author = <
+				["name"] = <"Urs Wittwer">
+				["organisation"] = <"Healthbrain GmbH">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 	>
@@ -75,8 +84,8 @@ Roos EM, Lohmander LS. The Hip disability and Osteoarthritis Outcome Score (HOOS
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e4a0839995d99c5b20b727719c099df7">
-		["build_uid"] = <"cf2bf7ba-e765-3e62-adcd-5a94a191de40">
+		["MD5-CAM-1.0.1"] = <"7d987f7844e9ae5b44e2fa4288e6a4ec">
+		["build_uid"] = <"9142beb3-1087-40e4-9d64-4415899cb6cf">
 	>
 
 definition
@@ -104,7 +113,7 @@ definition
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
-															[local::at0165]    -- What amount of hip pain have you experienced the last week during the following activities?
+															[local::at0165;at0165]    -- What amount of hip pain have you experienced the last week during the following activities?
 														}
 													}
 												}
@@ -539,7 +548,6 @@ Have “last week” in bold font.">
 				["at0073"] = <
 					text = <"Function score transformed">
 					description = <"Linearly transformed Function domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Function raw score (0-16).">
-					comment = <"This score contributes to the Summary hip impact score (0-100).">
 				>
 				["at0075"] = <
 					text = <"Quality of Life">
@@ -657,12 +665,10 @@ Have “last week” in bold font.">
 				["at0150"] = <
 					text = <"Quality of life  score transformed">
 					description = <"Linearly transformed Quality of life domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Function raw score (0-16).">
-					comment = <"This score contributes to the Summary hip impact score (0-100).">
 				>
 				["at0151"] = <
 					text = <"Pain score transformed">
 					description = <"Linearly transformed Pain domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Pain raw score (0-16).">
-					comment = <"This score contributes to the Summary hip impact score (0-100).">
 				>
 				["at0155"] = <
 					text = <"Scoring transformed">
@@ -674,7 +680,7 @@ Have “last week” in bold font.">
 				>
 				["at0161"] = <
 					text = <"General instructions">
-					description = <"INSTRUCTIONS: This survey asks for your views about your hip. Answer every question by marking the appropriate box, only one box for each question. If you are unsure about how to answer a question, please give the best answer you can.">
+					description = <"INSTRUCTIONS: This survey asks for your views about your hip. Please tick only one box per question. If you are unsure about how to answer a question, please give the best answer you can.">
 					comment = <"Have “INSTRUCTIONS:” in bold font.">
 				>
 				["at0164"] = <
@@ -801,11 +807,11 @@ Explanatory note displayed between question 1 (How often do you experience hip p
 					description = <"">
 				>
 				["at0031"] = <
-					text = <"Mittel">
+					text = <"Leicht">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"Leicht">
+					text = <"Mittel">
 					description = <"">
 				>
 				["at0033"] = <
@@ -944,7 +950,6 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 				["at0073"] = <
 					text = <"Funktions-Score transformiert">
 					description = <"Linear transformierte Funktionsbereichsbewertung auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus der Funktions-Rohbewertung (0-16).">
-					comment = <"Dieser Wert fliesst in den zusammenfassenden Hüft-Impact-Score (0–100) ein.">
 				>
 				["at0075"] = <
 					text = <"Lebensqualität">
@@ -1062,12 +1067,10 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 				["at0150"] = <
 					text = <"Lebensqualität-Score transformiert">
 					description = <"Linear transformierter Wert für den Bereich Lebensqualität auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus dem Funktionswert Rohwert (0-16).">
-					comment = <"Dieser Wert fliesst in den zusammenfassenden Hüft-Impact-Score (0–100) ein.">
 				>
 				["at0151"] = <
 					text = <"Schmerz-Score transformiert">
 					description = <"Linear transformierter Schmerzbereichswert auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohwert / 16 * 100) aus dem Schmerz-Rohwert (0–16).">
-					comment = <"Dieser Wert fliesst in den zusammenfassenden Hüft-Impact-Score (0–100) ein.">
 				>
 				["at0155"] = <
 					text = <"Scoring transformiert">
@@ -1079,7 +1082,7 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 				>
 				["at0161"] = <
 					text = <"Allgemeine Anleitung">
-					description = <"ANLEITUNG: In dieser Umfrage werden Sie nach Ihrer Meinung zu Ihrer Hüfte gefragt. Beantworten Sie jede Frage, indem Sie das entsprechende Kästchen ankreuzen. Für jede Frage ist nur ein Kästchen erforderlich. Wenn Sie sich bei der Beantwortung einer Frage unsicher sind, geben Sie bitte die bestmögliche Antwort.">
+					description = <"ANLEITUNG: In dieser Umfrage werden Sie nach Ihrer Meinung zu Ihrer Hüfte gefragt. Bitte kreuzen Sie pro Frage nur ein Kästchen an. Wenn Sie sich bei der Beantwortung einer Frage unsicher sind, geben Sie bitte die bestmögliche Antwort.">
 					comment = <"“ANLEITUNG:” in bold font.">
 				>
 				["at0164"] = <
@@ -1090,7 +1093,7 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 Erläuterung zwischen Frage 1 (Wie oft haben Sie Hüftschmerzen?) und Frage 2 (Gehen auf ebener Fläche) des Fragebogens.">
 				>
 				["at0165"] = <
-					text = <"*What amount of hip pain have you experienced the last week during the following activities? (en)">
+					text = <"Wie stark waren Ihre Hüftschmerzen in der letzten Woche bei den folgenden Aktivitäten?">
 					description = <"">
 				>
 			>
@@ -1350,7 +1353,6 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 				["at0073"] = <
 					text = <"Score fonction transformé">
 					description = <"Score du domaine de la fonction transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut de la fonction (0-16).">
-					comment = <"Ce score contribue au score résumé de l'impact sur la hanche (0-100).">
 				>
 				["at0075"] = <
 					text = <"Qualité de vie">
@@ -1468,12 +1470,10 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 				["at0150"] = <
 					text = <"Score qualité de vie transformé">
 					description = <"Score du domaine « Qualité de vie » transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut de la fonction (0-16).">
-					comment = <"Ce score contribue au score résumé d'impact sur la hanche (0-100).">
 				>
 				["at0151"] = <
 					text = <"Score douleur transformé">
 					description = <"Score du domaine « Douleur » transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut « Douleur » (0-16).">
-					comment = <"Ce score contribue au score résumé de l'impact sur la hanche (0-100).">
 				>
 				["at0155"] = <
 					text = <"Score transformé">
@@ -1485,7 +1485,7 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 				>
 				["at0161"] = <
 					text = <"Instructions générales">
-					description = <"INSTRUCTIONS: Ce questionnaire vous demande votre avis sur votre hanche. Répondez à chaque question en cochant la case correspondante, une seule case par question. En cas de doute, veuillez donner la meilleure réponse possible.">
+					description = <"INSTRUCTIONS: Ce questionnaire vous demande votre opinion sur votre hanche. Veuillez cocher une seule case par question. En cas de doute, cochez la case qui vous semble la plus adaptée à votre cas.">
 					comment = <"“INSTRUCTIONS:” in bold font.">
 				>
 				["at0164"] = <
@@ -1753,7 +1753,6 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 				["at0073"] = <
 					text = <"Score funzione trasformato">
 					description = <"Punteggio del dominio della funzione trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sull'anca (0-100).">
 				>
 				["at0075"] = <
 					text = <"Qualità della vita">
@@ -1871,12 +1870,10 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 				["at0150"] = <
 					text = <"Score qualità di vita trasformato">
 					description = <"Punteggio del dominio della qualità della vita trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sull'anca (0-100).">
 				>
 				["at0151"] = <
 					text = <"Score dolore trasformato">
 					description = <"Punteggio del dominio Dolore trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo del Dolore (0-16).">
-					comment = <"Questo punteggio contribuisce al punteggio riassuntivo dell'impatto sull'anca (0-100).">
 				>
 				["at0155"] = <
 					text = <"Score trasformato">
@@ -1888,7 +1885,7 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 				>
 				["at0161"] = <
 					text = <"Istruzioni generali">
-					description = <"ISTRUZIONI: Questo sondaggio chiede la tua opinione sulla tua anca. Rispondi a ogni domanda contrassegnando la casella appropriata, una sola casella per ogni domanda. Se non sei sicuro di come rispondere a una domanda, ti preghiamo di fornire la risposta migliore possibile.">
+					description = <"ISTRUZIONI: Questo sondaggio chiede la tua opinione sulla tua anca. Si prega di spuntare una sola casella per domanda. Se non si è sicuri di come rispondere a una domanda, si prega di fornire la migliore risposta possibile.">
 					comment = <"“ISTRUZIONI:” in bold font.">
 				>
 				["at0164"] = <
