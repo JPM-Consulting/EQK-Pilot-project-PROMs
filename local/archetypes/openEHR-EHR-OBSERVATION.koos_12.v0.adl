@@ -77,7 +77,7 @@ Gandek B, Roos EM, Franklin PD, Ware JE Jr. Item selection for 12-item short for
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"99b1ea1136275cab4b4b1ab399850e13">
+		["MD5-CAM-1.0.1"] = <"5c56089ad150b2359795f9cd28787c33">
 		["build_uid"] = <"cf2bf7ba-e765-3e62-adcd-5a94a191de40">
 	>
 
@@ -176,7 +176,7 @@ definition
 													4|[local::at0065]
 												}
 											}
-											ELEMENT[at0066] occurrences matches {0..1} matches {    -- 8. Walking on an uneven surface
+											ELEMENT[at0066] occurrences matches {0..1} matches {    -- 8. Twisting/pivoting on your injured knee
 												value matches {
 													0|[local::at0067],
 													1|[local::at0068],
@@ -318,7 +318,7 @@ ontology
 				>
 				["at0005"] = <
 					text = <"1. Knee pain frequency">
-					description = <"Question: 1. How often do you experience knee pain?">
+					description = <"Question: 1. How often do you experience knee pain?  ">
 					comment = <"Each data-field label should be short and concise; the patient-facing question is in Description.">
 					order = <"1">
 				>
@@ -515,8 +515,8 @@ Have “last week” in bold font.">
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"8. Walking on an uneven surface">
-					description = <"Question: 8. Walking on an uneven surface">
+					text = <"8. Twisting/pivoting on your injured knee">
+					description = <"Question: 8. Twisting/pivoting on your injured knee">
 					comment = <"Each data-field label should be short and concise; the patient-facing question is in Description.">
 					order = <"8">
 				>
@@ -729,7 +729,7 @@ Explanatory note displayed between question 1 (How often do you experience knee 
 				>
 				["at0005"] = <
 					text = <"1. Häufigkeit Knieschmerzen">
-					description = <"Frage: 1. Wie oft haben Sie Knieschmerzen?">
+					description = <"*Question: 1. How often do you experience knee pain?   (en)">
 					comment = <"Jede Datenfeldbezeichnung sollte kurz und prägnant sein; die Frage an den Patienten steht in der Beschreibung.">
 					order = <"1">
 				>
@@ -926,8 +926,8 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"8. Gehen auf unebenem Untergrund">
-					description = <"Frage: 8. Gehen auf unebenem Untergrund">
+					text = <"*8. Twisting/pivoting on your injured knee (en)">
+					description = <"*Question: 8. Twisting/pivoting on your injured knee (en)">
 					comment = <"Jede Datenfeldbezeichnung sollte kurz und prägnant sein; die Frage an den Patienten steht in der Beschreibung.">
 					order = <"8">
 				>
@@ -1140,7 +1140,7 @@ Erläuterung zwischen Frage 1 (Wie oft haben Sie Knieschmerzen?) und Frage 2 (Ge
 				>
 				["at0005"] = <
 					text = <"1. Fréquence douleur genou">
-					description = <"Question: 1. À quelle fréquence ressentez-vous des douleurs au genou?">
+					description = <"*Question: 1. How often do you experience knee pain?   (en)">
 					comment = <"Chaque libellé de champ de données doit être court et concis ; la question posée au patient figure dans la section Description.">
 					order = <"1">
 				>
@@ -1338,8 +1338,8 @@ Les questions suivantes concernent votre fonction physique, c'est-à-dire votre 
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"8. Marche surface irrégulière">
-					description = <"Question: 8. Marcher sur une surface irrégulière">
+					text = <"*8. Twisting/pivoting on your injured knee (en)">
+					description = <"*Question: 8. Twisting/pivoting on your injured knee (en)">
 					comment = <"Chaque libellé de champ de données doit être court et concis ; la question posée au patient figure dans la section Description.">
 					order = <"8">
 				>
@@ -1550,7 +1550,7 @@ Formule : (Douleur_0-100 + Fonctionnement_0-100 + QOL_0-100) / 3.">
 				>
 				["at0005"] = <
 					text = <"1. Frequenza dolore ginocchio">
-					description = <"Domanda: 1. Con quale frequenza avverti dolore al ginocchio?">
+					description = <"*Question: 1. How often do you experience knee pain?   (en)">
 					comment = <"Ogni etichetta dei campi dati deve essere breve e concisa; la domanda rivolta al paziente è riportata nella Descrizione.">
 					order = <"1">
 				>
@@ -1747,8 +1747,8 @@ Le seguenti domande riguardano la tua funzionalità fisica. Con questo intendiam
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"8. Camminare su una superficie irregolare">
-					description = <"Domanda: 8. Camminare su una superficie irregolare">
+					text = <"*8. Twisting/pivoting on your injured knee (en)">
+					description = <"*Question: 8. Twisting/pivoting on your injured knee (en)">
 					comment = <"Ogni etichetta dei campi dati deve essere breve e concisa; la domanda rivolta al paziente è riportata nella Descrizione.">
 					order = <"8">
 				>
