@@ -1,0 +1,4533 @@
+{
+  "templateId" : "EQK Master Hip",
+  "semVer" : "2.0.0",
+  "version" : "2.3",
+  "defaultLanguage" : "en",
+  "languages" : [ "de-ch", "fr-ch", "it-ch", "en" ],
+  "tree" : {
+    "id" : "eqk_master_hip",
+    "name" : "EQK Master Hip",
+    "localizedName" : "EQK Master Hip",
+    "rmType" : "COMPOSITION",
+    "nodeId" : "openEHR-EHR-COMPOSITION.self_reported_data.v1",
+    "min" : 1,
+    "max" : 1,
+    "localizedNames" : {
+      "de-ch" : "EQK Master Hip",
+      "fr-ch" : "EQK Master Hip",
+      "it-ch" : "EQK Master Hip",
+      "en" : "EQK Master Hip"
+    },
+    "localizedDescriptions" : {
+      "de-ch" : "Generic container for information provided by an individual.",
+      "fr-ch" : "Generic container for information provided by an individual.",
+      "it-ch" : "Generic container for information provided by an individual.",
+      "en" : "Generic container for information provided by an individual."
+    },
+    "aqlPath" : "",
+    "children" : [ {
+      "id" : "context",
+      "rmType" : "EVENT_CONTEXT",
+      "nodeId" : "",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/context",
+      "children" : [ {
+        "id" : "start_time",
+        "name" : "Start_time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/context/start_time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "setting",
+        "name" : "Setting",
+        "rmType" : "DV_CODED_TEXT",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/context/setting",
+        "inputs" : [ {
+          "suffix" : "code",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "value",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "eq-5d-5l_health_status",
+      "name" : "EQ-5D-5L Health status",
+      "localizedName" : "EQ-5D-5L Health status",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.eq_5d_5l.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "de-ch" : "EQ-5D-5L Gesundheitszustand",
+        "fr-ch" : "EQ-5D-5L État de santé",
+        "it-ch" : "EQ-5D-5L Stato di salute",
+        "en" : "EQ-5D-5L Health status"
+      },
+      "localizedDescriptions" : {
+        "de-ch" : "Ein standardisiertes Mass für den Gesundheitszustand, um ein einfaches, allgemeines Mass für den Gesundheitszustand für die klinische und wirtschaftliche Bewertung zu erhalten. ",
+        "fr-ch" : "Une mesure standardisée de l’état de santé destinée à fournir un indicateur simple et générique de la santé pour les évaluations cliniques et économiques.",
+        "it-ch" : "Una misura standardizzata dello stato di salute pensata per fornire un indicatore semplice e generico della salute in valutazioni cliniche ed economiche.",
+        "en" : "A standardised measure of health status to provide a simple, generic measure of health for clinical and economic appraisal."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]",
+      "children" : [ {
+        "id" : "a1._mobility",
+        "name" : "1. Mobility",
+        "localizedName" : "1. Mobility",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0004",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "1. Beweglichkeit / Mobilität",
+          "fr-ch" : "1. Mobilité",
+          "it-ch" : "1. Capacità di movimento",
+          "en" : "1. Mobility"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Probleme mit der Mobilität.",
+          "fr-ch" : "Problèmes de mobilité.",
+          "it-ch" : "Problemi di mobilità.",
+          "en" : "Issues with mobility."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004,'1. Mobility']/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0005",
+            "label" : "No problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe keine Probleme herumzugehen",
+              "fr-ch" : "Je n’ai aucun problème pour me déplacer à pied",
+              "it-ch" : "Non ho difficoltà nel camminare",
+              "en" : "No problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0012",
+            "label" : "Slight problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe leichte Probleme herumzugehen",
+              "fr-ch" : "J’ai des problèmes légers pour me déplacer à pied",
+              "it-ch" : "Ho lievi difficoltà nel camminare",
+              "en" : "Slight problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0013",
+            "label" : "Moderate problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe mässige Probleme herumzugehen",
+              "fr-ch" : "J’ai des problèmes modérés pour me déplacer à pied",
+              "it-ch" : "Ho moderate difficoltà nel camminare",
+              "en" : "Moderate problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0014",
+            "label" : "Severe problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe grosse Probleme herumzugehen",
+              "fr-ch" : "J’ai des problèmes sévères pour me déplacer à pied",
+              "it-ch" : "Ho gravi difficoltà nel camminare",
+              "en" : "Severe problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0015",
+            "label" : "Unable to walk about.",
+            "localizedLabels" : {
+              "de-ch" : "Ich bin nicht in der Lage herumzugehen",
+              "fr-ch" : "Je suis incapable de me déplacer à pied",
+              "it-ch" : "Non sono in grado di camminare",
+              "en" : "Unable to walk about."
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "a2._self-care",
+        "name" : "2. Self-Care",
+        "localizedName" : "2. Self-Care",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0006",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "2. Für sich selbst sorgen",
+          "fr-ch" : "2. Autonomie de la personne",
+          "it-ch" : "2. Cura della persona",
+          "en" : "2. Self-Care"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Probleme für sich selbst zu sorgen.",
+          "fr-ch" : "Problèmes liés aux soins personnels",
+          "it-ch" : "Problemi di cura di sé. ",
+          "en" : "Issues with self-care."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0006,'2. Self-Care']/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0016",
+            "label" : "No problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe keine Probleme, mich selbst zu waschen oder anzuziehen",
+              "fr-ch" : "Je n’ai aucun problème pour me laver ou m’habiller tout(e) seul(e)",
+              "it-ch" : "Non ho difficoltà nel lavarmi o vestirmi",
+              "en" : "No problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0017",
+            "label" : "Slight problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe leichte Probleme, mich selbst zu waschen oder anzuziehen",
+              "fr-ch" : "J’ai des problèmes légers pour me laver ou m’habiller tout(e) seul(e)",
+              "it-ch" : "Ho lievi difficoltà nel lavarmi o vestirmi",
+              "en" : "Slight problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0018",
+            "label" : "Moderate problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe mässige Probleme, mich selbst zu waschen oder anzuziehen",
+              "fr-ch" : "J’ai des problèmes modérés pour me laver ou m’habiller tout(e) seul(e)",
+              "it-ch" : "Ho moderate difficoltà nel lavarmi o vestirmi",
+              "en" : "Moderate problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0019",
+            "label" : "Severe problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe grosse Probleme, mich selbst zu waschen oder anzuziehen",
+              "fr-ch" : "J’ai des problèmes sévères pour me laver ou m’habiller tout(e) seul(e)",
+              "it-ch" : "Ho gravi difficoltà nel lavarmi o vestirmi",
+              "en" : "Severe problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0020",
+            "label" : "Unable to wash or dress",
+            "localizedLabels" : {
+              "de-ch" : "Ich bin nicht in der Lage, mich selbst zu waschen oder anzuziehen",
+              "fr-ch" : "Je suis incapable de me laver ou de m’habiller tout(e) seul(e)",
+              "it-ch" : "Non sono in grado di lavarmi o vestirmi",
+              "en" : "Unable to wash or dress"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "a3._usual_activities_e.g._work_study_housework_family_or_leisure_activities",
+        "name" : "3. Usual Activities (e.g. work, study, housework, family or leisure activities)",
+        "localizedName" : "3. Usual Activities (e.g. work, study, housework, family or leisure activities)",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0007",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "3. Alltägliche Tätigkeiten (z.B. Arbeit, Studium, Hausarbeit, Familien- oder Freizeitaktivitäten)",
+          "fr-ch" : "3. Activités courantes (exemples: travail, études, travaux domestiques, acticités familiales ou loisirs)",
+          "it-ch" : "3. Attività abituali (per es. lavoro, studio, lavori domestici, attività familiari o di svago)",
+          "en" : "3. Usual Activities (e.g. work, study, housework, family or leisure activities)"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Probleme mit alltäglichen Tätigkeiten.",
+          "fr-ch" : "Problèmes dans les activités habituelles.",
+          "it-ch" : "Problemi nelle attività abituali.",
+          "en" : "Issues with usual activities."
+        },
+        "annotations" : {
+          "comment" : "e.g. work, study, housework, family or leisure activities."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0007,'3. Usual Activities (e.g. work, study, housework, family or leisure activities)']/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0021",
+            "label" : "No problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe keine Probleme, meinen alltäglichen Tätigkeiten nachzugehen",
+              "fr-ch" : "Je n’ai aucun problème à accomplir mes activités courantes",
+              "it-ch" : "Non ho difficoltà nello svolgimento delle attività abituali",
+              "en" : "No problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0022",
+            "label" : "Slight problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe leichte Probleme, meinen alltäglichen Tätigkeiten nachzugehen",
+              "fr-ch" : "J’ai de légers problèmes à accomplir mes activités courantes",
+              "it-ch" : "Ho lievi difficoltà nello svolgimento delle attività abituali",
+              "en" : "Slight problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0023",
+            "label" : "Moderate problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe mässige Probleme, meinen alltäglichen Tätigkeiten nachzugehen",
+              "fr-ch" : "J’ai des problèmes modérés à accomplir mes activités courantes",
+              "it-ch" : "Ho moderate difficoltà nello svolgimento delle attività abituali",
+              "en" : "Moderate problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0024",
+            "label" : "Severe problems",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe grosse Probleme, meinen alltäglichen Tätigkeiten nachzugehen",
+              "fr-ch" : "J’ai de grands problèmes à accomplir mes activités courantes",
+              "it-ch" : "Ho gravi difficoltà nello svolgimento delle attività abituali",
+              "en" : "Severe problems"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0025",
+            "label" : "Unable to do my usual activities",
+            "localizedLabels" : {
+              "de-ch" : "Ich bin nicht in der Lage, meinen alltäglichen Tätigkeiten nachzugehen",
+              "fr-ch" : "Je suis incapable d’accomplir mes activités courantes",
+              "it-ch" : "Non sono in grado di svolgere le mie attività abituali",
+              "en" : "Unable to do my usual activities"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "a4._pain_discomfort",
+        "name" : "4. Pain / Discomfort",
+        "localizedName" : "4. Pain / Discomfort",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0008",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "4. Schmerzen / körperliche Beschwerden",
+          "fr-ch" : "4. Douleurs / gêne",
+          "it-ch" : "4. Dolore o fastidio",
+          "en" : "4. Pain / Discomfort"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Probleme mit Beschwerden / Schmwerzen.",
+          "fr-ch" : "Problèmes de douleur ou d’inconfort.",
+          "it-ch" : "Problemi di dolore o fastidio.",
+          "en" : "Issues of pain or discomfort."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0008,'4. Pain / Discomfort']/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0026",
+            "label" : "No pain or discomfort",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe keine Schmerzen oder Beschwerden",
+              "fr-ch" : "Je n’ai ni douleurs, ni gêne",
+              "it-ch" : "Non provo alcun dolore o fastidio",
+              "en" : "No pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0027",
+            "label" : "Slight pain or discomfort",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe leichte Schmerzen oder Beschwerden",
+              "fr-ch" : "J’ai des douleurs ou un inconfort légère(es)",
+              "it-ch" : "Provo lieve dolore o fastidio",
+              "en" : "Slight pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0028",
+            "label" : "Moderate pain or discomfort",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe mässige Schmerzen oder Beschwerden",
+              "fr-ch" : "J’ai des douleurs ou un inconfort modérée(s)",
+              "it-ch" : "Provo moderato dolore o fastidio",
+              "en" : "Moderate pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0029",
+            "label" : "Severe pain or discomfort",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe starke Schmerzen oder Beschwerden",
+              "fr-ch" : "J’ai des douleurs ou un inconfort sévère(s)",
+              "it-ch" : "Provo grave dolore o fastidio",
+              "en" : "Severe pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0030",
+            "label" : "Extreme pain or discomfort",
+            "localizedLabels" : {
+              "de-ch" : "Ich habe extreme Schmerzen oder Beschwerden",
+              "fr-ch" : "J’ai des douleurs ou un inconfort extrême(s)",
+              "it-ch" : "Provo estremo dolore o fastidio",
+              "en" : "Extreme pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "a5._anxiety_depression",
+        "name" : "5. Anxiety / Depression",
+        "localizedName" : "5. Anxiety / Depression",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0009",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "5. Angst / Niedergeschlagenheit",
+          "fr-ch" : "5. Anxiéte / dépression",
+          "it-ch" : "5. Ansia o depressione",
+          "en" : "5. Anxiety / Depression"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Problem mit Angstzuständen oder Depressionen.",
+          "fr-ch" : "Problème d’anxiété ou de dépression.",
+          "it-ch" : "Problema di ansia o depressione.",
+          "en" : "Issue with anxiety or depression."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0009,'5. Anxiety / Depression']/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0031",
+            "label" : "No anxiety or depression",
+            "localizedLabels" : {
+              "de-ch" : "Ich bin nicht ängstlich oder deprimiert",
+              "fr-ch" : "Je ne suis ni anxieux(se), ni déprimé(e)",
+              "it-ch" : "Non sono ansioso/a o depresso/a",
+              "en" : "No anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0032",
+            "label" : "Slight anxiety or depression",
+            "localizedLabels" : {
+              "de-ch" : "Ich bin ein wenig ängstlich oder deprimiert",
+              "fr-ch" : "Je suis légèrement anxieux(se) ou déprimé(e)",
+              "it-ch" : "Sono lievemente ansioso/a o depresso/a",
+              "en" : "Slight anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0033",
+            "label" : "Moderate anxiety or depression",
+            "localizedLabels" : {
+              "de-ch" : "Ich bin mässig ängstlich oder deprimiert",
+              "fr-ch" : "Je suis modérément anxieux(se) ou déprimé(e)",
+              "it-ch" : "Sono moderatamente ansioso/a o depresso/a",
+              "en" : "Moderate anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0034",
+            "label" : "Severe anxiety or depression",
+            "localizedLabels" : {
+              "de-ch" : "Ich bin sehr ängstlich oder deprimiert",
+              "fr-ch" : "Je suis sévèrement anxieux(se) ou déprimé(e)",
+              "it-ch" : "Sono gravemente ansioso/a o depresso/a",
+              "en" : "Severe anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0035",
+            "label" : "Extreme anxiety or depression",
+            "localizedLabels" : {
+              "de-ch" : "Ich bin extrem ängstlich oder deprimiert",
+              "fr-ch" : "Je suis extrêmement anxieux(se) ou déprimé(e)",
+              "it-ch" : "Sono estremamente ansioso/a o depresso/a",
+              "en" : "Extreme anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "de-ch" : "*",
+              "fr-ch" : "*",
+              "it-ch" : "*",
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "state",
+        "name" : "State",
+        "localizedName" : "State",
+        "rmType" : "DV_TEXT",
+        "nodeId" : "at0011",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Gesundheitszustand",
+          "fr-ch" : "État de santé",
+          "it-ch" : "Stato di salute",
+          "en" : "State"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Ein 5-stelliger Code, der aus den Punktzahlen der einzelnen Komponenten gebildet wird, wobei 9 einen fehlenden Wert angibt.",
+          "fr-ch" : "Code à cinq chiffres obtenu à partir des scores de chaque composant, où le 9 indique une valeur manquante.",
+          "it-ch" : "Codice a 5 cifre formato dai punteggi di ciascun componente, in cui 9 indica un valore mancante.",
+          "en" : "A 5-digit code formed from the scores of each component, with 9 indicating a missing value."
+        },
+        "annotations" : {
+          "comment" : "e.g. '21491'"
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0011]/value",
+        "inputs" : [ {
+          "type" : "TEXT"
+        } ]
+      }, {
+        "id" : "a6._general_health",
+        "name" : "6. General Health",
+        "localizedName" : "6. General Health",
+        "rmType" : "DV_COUNT",
+        "nodeId" : "at0010",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "6. Gesundheit generell",
+          "fr-ch" : "6. Santé en générale",
+          "it-ch" : "6. Stato di salute generale",
+          "en" : "6. General Health"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Eine Selbsteinschätzung des allgemeinen Gesundheitszustands auf einer Skala von 0 bis 100.",
+          "fr-ch" : "Auto-évaluation de l’état de santé global sur une échelle de 0 à 100.",
+          "it-ch" : "Autovalutazione dello stato di salute complessivo su una scala da 0 a 100.",
+          "en" : "A self-assessment of overall health on a scale from 0 to 100."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0010,'6. General Health']/value",
+        "inputs" : [ {
+          "type" : "INTEGER",
+          "validation" : {
+            "range" : {
+              "minOp" : ">=",
+              "min" : 0,
+              "maxOp" : "<=",
+              "max" : 100
+            }
+          }
+        } ]
+      }, {
+        "id" : "time",
+        "name" : "Time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "eq-5d-5l_index_score",
+      "name" : "EQ-5D-5L Index Score",
+      "localizedName" : "EQ-5D-5L Index Score",
+      "rmType" : "EVALUATION",
+      "nodeId" : "openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "de-ch" : "EQ 5D 5L Index Score",
+        "fr-ch" : "EQ 5D 5L Index Score",
+        "it-ch" : "EQ 5D 5L Index Score",
+        "en" : "EQ-5D-5L Index Score"
+      },
+      "localizedDescriptions" : {
+        "de-ch" : "Zur Berechnung eines EQ-5D-5L-Scores wird zunächst der fünfstellige Gesundheitszustand ermittelt, indem die Antworten der Person für jede der fünf Dimensionen (Mobilität, Selbstversorgung, Alltägliche Aktivitäten, Schmerz/Unwohlsein, Angst/Depression) kombiniert werden. Jede Ziffer entspricht einem Niveau von 1 (keine Probleme) bis 5 (extreme Probleme). Anschliessend wird von 1 die Summe der Gewichtungen für jede Antwort abgezogen, unter Verwendung eines länderspezifischen Wertemodells, das jedem Gesundheitszustand ein spezifisches Gewicht zuweist. Das Ergebnis ist ein einzelner Indexwert zwischen –0,594 und 1, wobei 1 für volle Gesundheit steht und Werte unter 0 Gesundheitszustände repräsentieren, die als schlechter als der Tod angesehen werden",
+        "fr-ch" : "Pour calculer un score EQ-5D-5L, il faut d’abord déterminer l’état de santé à 5 chiffres en combinant les réponses de l’individu pour chacune des cinq dimensions (Mobilité, Soins personnels, Activités habituelles, Douleur/Inconfort, Anxiété/Dépression). Chaque chiffre correspond à un niveau allant de 1 (aucun problème) à 5 (problèmes extrêmes). Ensuite, on applique l’ensemble de valeurs spécifique au pays, qui attribue un poids à chaque état de santé, et l’on soustrait la somme des pondérations de 1. Le résultat est un score d’indice unique compris entre –0,594 et 1, où 1 représente la pleine santé et les valeurs inférieures à 0 représentent des états de santé considérés comme pires que la mort.",
+        "it-ch" : "Per calcolare un punteggio EQ-5D-5L, occorre innanzitutto identificare lo stato di salute a 5 cifre combinando le risposte dell’individuo per ciascuna delle cinque dimensioni (Mobilità, Cura di sé, Attività abituali, Dolore/Disagio, Ansia/Depressione), con ogni cifra che rappresenta un livello da 1 (nessun problema) a 5 (problemi estremi). Successivamente, si sottrae da 1 la somma delle ponderazioni corrispondenti a ciascuna risposta, utilizzando un set di valori specifico per paese che assegna un peso a ciascuno stato di salute. Il risultato è un punteggio indice unico compreso tra –0,594 e 1, dove 1 indica piena salute e valori inferiori a 0 rappresentano stati considerati peggiori della morte.",
+        "en" : "To calculate an EQ-5D-5L score, first identify the 5-digit health state bycombining the individual's responses for each of the five dimensions (Mobility, Self-care, Usual Activities, Pain/Discomfort, Anxiety/Depression), with eachdigit representing a level from 1 (no problems) to 5 (extreme problems). Then, subtract the sum of the value weights for each response from 1, using a country-specific value set that assigns a specific weight to each health state. The result is a single index score between -0.594 and 1, where 1 indicates full health and values below 0 represent states worse than death."
+      },
+      "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']",
+      "children" : [ {
+        "id" : "dimensions",
+        "name" : "Dimensions",
+        "localizedName" : "Dimensions",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0002",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Dimensionen",
+          "fr-ch" : "Dimensions",
+          "it-ch" : "Dimensioni",
+          "en" : "Dimensions"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "",
+          "fr-ch" : "",
+          "it-ch" : "",
+          "en" : ""
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/data[at0001]/items[at0002]",
+        "children" : [ {
+          "id" : "mobility_weighted",
+          "name" : "Mobility weighted",
+          "localizedName" : "Mobility weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0006",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Beweglichkeit / Mobilität gewichtet",
+            "fr-ch" : "Mobilité pondérée",
+            "it-ch" : "Capacità di movimento ponderata",
+            "en" : "Mobility weighted"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/data[at0001]/items[at0002]/items[at0006]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "self-care_weighted",
+          "name" : "Self-care weighted",
+          "localizedName" : "Self-care weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0007",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Für sich selbst sorgen gewichtet",
+            "fr-ch" : "Autonomie de la personne pondérés",
+            "it-ch" : "Cura della persona ponderata",
+            "en" : "Self-care weighted"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/data[at0001]/items[at0002]/items[at0007]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "usual_activities_weighted",
+          "name" : "Usual activities weighted",
+          "localizedName" : "Usual activities weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0008",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Alltägliche Tätigkeiten gewichtet",
+            "fr-ch" : "Activités courantes pondérées",
+            "it-ch" : "Attività abituali ponderate",
+            "en" : "Usual activities weighted"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/data[at0001]/items[at0002]/items[at0008]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "pain_discomfort_weighted",
+          "name" : "Pain/discomfort weighted",
+          "localizedName" : "Pain/discomfort weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0009",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Schmerzen / körperliche Beschwerden gewichtet",
+            "fr-ch" : "Douleurs / gêne pondéré",
+            "it-ch" : "Dolore o fastidio ponderato",
+            "en" : "Pain/discomfort weighted"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/data[at0001]/items[at0002]/items[at0009]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "anxiety_depression_weighted",
+          "name" : "Anxiety/depression weighted",
+          "localizedName" : "Anxiety/depression weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0010",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Angst / Niedergeschlagenheit gewichtet",
+            "fr-ch" : "Anxiété / dépression pondérée",
+            "it-ch" : "Ansia o depressione ponderata",
+            "en" : "Anxiety/depression weighted"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/data[at0001]/items[at0002]/items[at0010]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "single_index_score",
+        "name" : "Single index score",
+        "localizedName" : "Single index score",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0011",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Single index score",
+          "fr-ch" : "Single index score",
+          "it-ch" : "Single index score",
+          "en" : "Single index score"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "",
+          "fr-ch" : "",
+          "it-ch" : "",
+          "en" : ""
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/data[at0001]/items[at0011]",
+        "children" : [ {
+          "id" : "index_score",
+          "name" : "Index Score",
+          "localizedName" : "Index Score",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0012",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Index Score",
+            "fr-ch" : "Index Score",
+            "it-ch" : "Index Score",
+            "en" : "Index Score"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Subtrahiere von 1 die Summe der Gewichtungen für jede Antwort, unter Verwendung eines länderspezifischen Wertemodells, das jedem Gesundheitszustand ein spezifisches Gewicht zuweist. Das Ergebnis ist ein einzelner Indexwert zwischen –0,594 und 1, wobei 1 volle Gesundheit anzeigt und Werte unter 0 Zustände darstellen, die als schlechter als der Tod angesehen werden.",
+            "fr-ch" : "Soustrayez de 1 la somme des pondérations (value weights) correspondant à chaque réponse, en utilisant un ensemble de valeurs spécifique au pays qui attribue un poids à chaque état de santé. Le résultat est un score d’indice unique compris entre –0,594 et 1, où 1 indique une santé complète et les valeurs inférieures à 0 représentent des états jugés pires que la mort.",
+            "it-ch" : "Sottrarre da 1 la somma delle ponderazioni (value weights) relative a ciascuna risposta, utilizzando un set di valori specifico per paese che assegna un peso a ciascuno stato di salute. Il risultato è un punteggio indice unico compreso tra –0,594 e 1, dove 1 indica piena salute e valori inferiori a 0 rappresentano stati considerati peggiori della morte",
+            "en" : "Subtract the sum of the value weights for each response from 1, using a country-specific value set that assigns a specific weight to each health state. The result is a single index score between -0.594 and 1, where 1 indicates full health and values below 0 represent states worse than death."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/data[at0001]/items[at0011]/items[at0012]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : -0.594,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : -0.594,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0,'EQ-5D-5L Index Score']/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "siris_additional_questions",
+      "name" : "SIRIS additional questions",
+      "localizedName" : "SIRIS additional questions",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.siris_additional_questions.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "de-ch" : "SIRIS zusätzliche Fragen",
+        "fr-ch" : "SIRIS questions supplémentaires",
+        "it-ch" : "SIRIS domande aggiuntive",
+        "en" : "SIRIS additional questions"
+      },
+      "localizedDescriptions" : {
+        "de-ch" : "SIRIS hat einige zusätzliche Fragen zum PROM EQ-5D-5L für das Implantatregister SIRIS Hüfte, Knie und Schulter.",
+        "fr-ch" : "SIRIS a quelques questions supplémentaires concernant le questionnaire PROM EQ-5D-5L pour le registre des implants SIRIS Hanche, Genou et Épaule.",
+        "it-ch" : "SIRIS ha alcune domande aggiuntive per il PROM EQ-5D-5L per il Registro degli impianti SIRIS Anca, Ginocchio e Spalla.",
+        "en" : "SIRIS has some extra questions for the PROM EQ-5D-5L for Implant Registry SIRIS Hip, Knee and Shoulder."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]",
+      "children" : [ {
+        "id" : "joint_specific_pain",
+        "name" : "Joint specific pain",
+        "localizedName" : "Joint specific pain",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0004",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Gelenkspezifische Schmerzen",
+          "fr-ch" : "Douleur spécifique à l'articulation",
+          "it-ch" : "Dolore specifico dell’articolazione",
+          "en" : "Joint specific pain"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Anleitung: Bitte kreuzen Sie die Zahl an, die der Intensität der Schmerzen in dem auf Seite 1 genannten Gelenk entspricht. 0 (Null) bedeutet keine Schmerzen und 10 die stärksten vorstellbaren Schmerzen.",
+          "fr-ch" : "Instruction: Veuillez cocher le chiffre correspondant à l’intensité de la douleur dans l’articulation mentionnée à la page 1.",
+          "it-ch" : "Istruzioni: Barrare il numero corrispondente all’intensità del dolore nell’articolazione indicata a pagina 1.",
+          "en" : "Please tick the number that corresponds to the intensity of the pain in the joint mentioned on page 1."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]",
+        "children" : [ {
+          "id" : "a7._joint_specific_pain",
+          "name" : "7. Joint specific pain",
+          "localizedName" : "7. Joint specific pain",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0005",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "7. Gelenkspezifische Schmerzen",
+            "fr-ch" : "7. Douleur spécifique à l'articulation",
+            "it-ch" : "7. Dolore specifico dell’articolazione",
+            "en" : "7. Joint specific pain"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: Wie stark waren Ihre gelenkspezifischen Schmerzen in der letzten Woche?",
+            "fr-ch" : "Question: Quelle était l’intensité de vos douleurs spécifiques aux articulations au cours de la semaine dernière?",
+            "it-ch" : "Domanda: Quanto è stato forte il dolore specifico dell’articolazione la scorsa settimana?\nnessun dolore",
+            "en" : "Question: How severe was your joint-specific pain last week?"
+          },
+          "annotations" : {
+            "comment" : "Have “joint-specific pain last week?” in bold font."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0005,'7. Joint specific pain']/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0006",
+              "label" : "0",
+              "localizedLabels" : {
+                "de-ch" : "0",
+                "fr-ch" : "0",
+                "it-ch" : "0",
+                "en" : "0"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "keine Schmerzen",
+                "fr-ch" : "aucune douleur",
+                "it-ch" : "nessun dolore",
+                "en" : "no pain"
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0007",
+              "label" : "1",
+              "localizedLabels" : {
+                "de-ch" : "1",
+                "fr-ch" : "1",
+                "it-ch" : "1",
+                "en" : "1"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0008",
+              "label" : "2",
+              "localizedLabels" : {
+                "de-ch" : "2",
+                "fr-ch" : "2",
+                "it-ch" : "2",
+                "en" : "2"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0009",
+              "label" : "3",
+              "localizedLabels" : {
+                "de-ch" : "3",
+                "fr-ch" : "3",
+                "it-ch" : "3",
+                "en" : "3"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0010",
+              "label" : "4",
+              "localizedLabels" : {
+                "de-ch" : "4",
+                "fr-ch" : "4",
+                "it-ch" : "4",
+                "en" : "4"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0011",
+              "label" : "5",
+              "localizedLabels" : {
+                "de-ch" : "5",
+                "fr-ch" : "5",
+                "it-ch" : "5",
+                "en" : "5"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            }, {
+              "value" : "at0012",
+              "label" : "6",
+              "localizedLabels" : {
+                "de-ch" : "6",
+                "fr-ch" : "6",
+                "it-ch" : "6",
+                "en" : "6"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 6
+            }, {
+              "value" : "at0013",
+              "label" : "7",
+              "localizedLabels" : {
+                "de-ch" : "7",
+                "fr-ch" : "7",
+                "it-ch" : "7",
+                "en" : "7"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 7
+            }, {
+              "value" : "at0014",
+              "label" : "8",
+              "localizedLabels" : {
+                "de-ch" : "8",
+                "fr-ch" : "8",
+                "it-ch" : "8",
+                "en" : "8"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 8
+            }, {
+              "value" : "at0015",
+              "label" : "9",
+              "localizedLabels" : {
+                "de-ch" : "9",
+                "fr-ch" : "9",
+                "it-ch" : "9",
+                "en" : "9"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 9
+            }, {
+              "value" : "at0016",
+              "label" : "10",
+              "localizedLabels" : {
+                "de-ch" : "10",
+                "fr-ch" : "10",
+                "it-ch" : "10",
+                "en" : "10"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "stärkste Schmerzen, die ich mir vorstellen kann",
+                "fr-ch" : "la pire douleur imaginable",
+                "it-ch" : "il dolore più forte che possa immaginare",
+                "en" : "worst pain I can imagin"
+              },
+              "ordinal" : 10
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "joint_specific_satisfaction",
+        "name" : "Joint specific satisfaction",
+        "localizedName" : "Joint specific satisfaction",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0017",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Gelenkspezifische Zufriedenheit",
+          "fr-ch" : "Satisfaction spécifique à l’articulation",
+          "it-ch" : "Soddisfazione specifica dell’articolazione",
+          "en" : "Joint specific satisfaction"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "",
+          "fr-ch" : "",
+          "it-ch" : "",
+          "en" : ""
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0017]",
+        "children" : [ {
+          "id" : "a8._joint_specific_satisfaction",
+          "name" : "8. Joint specific satisfaction",
+          "localizedName" : "8. Joint specific satisfaction",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0018",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "8. Gelenkspezifische Zufriedenheit",
+            "fr-ch" : "8. Satisfaction spécifique à l’articulation",
+            "it-ch" : "8. Soddisfazione specifica dell’articolazione",
+            "en" : "8. Joint specific satisfaction"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: Wie würden Sie sich fühlen, wenn Sie den Rest Ihres Lebens mit den derzeitigen Beschwerden\nin dem auf Seite 1 genannten Gelenk leben müssten?",
+            "fr-ch" : "Question: Si vous deviez passer le reste de votre vie avec les symptômes que vous avez maintenant\ndans l’articulation mentionnée à la page 1, comment vous sentiriez-vous?",
+            "it-ch" : "Domanda: Come si sentirebbe se dovesse vivere per il resto della sua vita con i sintomi attuali dell’articolazione\nmenzionata a pagina 1?",
+            "en" : "Question: How would you feel if you had to live the rest of your life with the current symptoms in the joint\nmentioned on page 1?"
+          },
+          "annotations" : {
+            "comment" : "Have “rest of your life” in bold font."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0017]/items[at0018,'8. Joint specific satisfaction']/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0019",
+              "label" : "very satisfied",
+              "localizedLabels" : {
+                "de-ch" : "sehr zufrieden",
+                "fr-ch" : "très satisfait(e)",
+                "it-ch" : "molto soddisfatto",
+                "en" : "very satisfied"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0020",
+              "label" : "somewhat satisfied",
+              "localizedLabels" : {
+                "de-ch" : "etwas zufrieden",
+                "fr-ch" : "plutôt satisfait(e)",
+                "it-ch" : "abbastanzo soddisfatto",
+                "en" : "somewhat satisfied"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0021",
+              "label" : "neither satisfied nor dissatisfied",
+              "localizedLabels" : {
+                "de-ch" : "weder zufrieden noch unzufrieden",
+                "fr-ch" : "ni satisfait(e), ni insatisfait(e)",
+                "it-ch" : "né soddisfatto né insoddisfatto",
+                "en" : "neither satisfied nor dissatisfied"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0022",
+              "label" : "somewhat dissatisfied",
+              "localizedLabels" : {
+                "de-ch" : "etwas unzufrieden",
+                "fr-ch" : "plutôt satisfait(e)",
+                "it-ch" : "abbastanza insoddisfatto",
+                "en" : "somewhat dissatisfied"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0023",
+              "label" : "very dissatisfied",
+              "localizedLabels" : {
+                "de-ch" : "sehr unzufrieden",
+                "fr-ch" : "très insatisfait(e)",
+                "it-ch" : "molto insoddisfatto",
+                "en" : "very dissatisfied"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "your_level_of_education",
+        "name" : "Your level of education",
+        "localizedName" : "Your level of education",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0024",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Angaben zu Ihrem Ausbildungsniveau",
+          "fr-ch" : "Niveau de formation",
+          "it-ch" : "Livello di formazione",
+          "en" : "Your level of education"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Anleitung: (nur einmal bei der Patientenbefragung vor der Operation zu beantworten)",
+          "fr-ch" : "Instruction: (a compléter uniquement une fois, dans l’enquète avant l’opération)",
+          "it-ch" : "Istruzioni: (da compilare sola una volta, nel sondaggio primo dell’intervento)",
+          "en" : "Instruction: (to be answered only once, in the patient survey before the operation)"
+        },
+        "annotations" : {
+          "comment" : "Have “before the operation” in bold font."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0024]",
+        "children" : [ {
+          "id" : "a9._your_level_of_education",
+          "name" : "9. Your level of education",
+          "localizedName" : "9. Your level of education",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0025",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "9. Angaben zu Ihrem Ausbildungsniveau",
+            "fr-ch" : "9. Niveau de formation",
+            "it-ch" : "9. Livello di formazione",
+            "en" : "9. Your level of education"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0024]/items[at0025,'9. Your level of education']/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0026",
+              "label" : "up to 9 years of eductation (compulsory education)",
+              "localizedLabels" : {
+                "de-ch" : "bis zu 9 Jahre Ausbildung (obligatorische Schule)",
+                "fr-ch" : "jusqu’à 9 ans de formation (école obligatoire)",
+                "it-ch" : "fino a 9 anni di formazzione (scuola dell’obbligo)",
+                "en" : "up to 9 years of eductation (compulsory education)"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0027",
+              "label" : "10 to 13 years of eduction (vocational education, secundary school, high school)",
+              "localizedLabels" : {
+                "de-ch" : "10 bis 13 Jahre Ausbildung (Berufslehre, Fachmittelschule, Gymnasium)",
+                "fr-ch" : "10 à 13 ans de formation (école professionnelle, ECG, collège / gymnase)",
+                "it-ch" : "da 10 a 13 anni di formazzione (formazione professionale, specializzata, liceo)",
+                "en" : "10 to 13 years of eduction (vocational education, secundary school, high school)"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0028",
+              "label" : "more than 13 years of education (university, polytechnic, college of higher education, federal institute of technology)",
+              "localizedLabels" : {
+                "de-ch" : "mehr als 13 Jahre Ausbildung (Universität, ETH, Fachhochschule)",
+                "fr-ch" : "plus de 13 ans de formation (université, école poly- technique, HES)",
+                "it-ch" : "piû di 13 anni di formazzione (università, politechnico federale, scuola universitaria professionale)",
+                "en" : "more than 13 years of education (university, polytechnic, college of higher education, federal institute of technology)"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0029",
+              "label" : "not specified",
+              "localizedLabels" : {
+                "de-ch" : "keine Angabe",
+                "fr-ch" : "non spécifié",
+                "it-ch" : "non specificato",
+                "en" : "not specified"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "time",
+        "name" : "Time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "hoos-12",
+      "name" : "HOOS-12",
+      "localizedName" : "HOOS-12",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.hoos_12.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "de-ch" : "Hip Disability and Osteoarthritis Outcome Score - Short Form (HOOS-12)",
+        "fr-ch" : "Hip Disability and Osteoarthritis Outcome Score - Short Form (HOOS-12)",
+        "it-ch" : "Hip Disability and Osteoarthritis Outcome Score - Short Form (HOOS-12)",
+        "en" : "HOOS-12"
+      },
+      "localizedDescriptions" : {
+        "de-ch" : "Patient-reported outcome measure (PROM) zur Erfassung des 12-Punkte-Fragebogens „Hip disability and Osteoarthritis Outcome Score Short Form“ (HOOS-12), der drei Bereiche abdeckt (Schmerzen, Funktion im Alltag, Lebensqualität). Die Rohwerte der einzelnen Items (0–4) werden gespeichert und in Bereichswerte von 0–100 umgewandelt (höher = besser), zu denen ein zusammenfassender Hüft-Impact-Score von 0–100 (Mittelwert der drei Bereiche) hinzukommt.",
+        "fr-ch" : "Mesure des résultats rapportés par les patients (PROM) pour enregistrer le score abrégé de 12 items sur l'incapacité fonctionnelle de la hanche et l'arthrose (HOOS-12), couvrant trois domaines (douleur, fonction dans la vie quotidienne, qualité de vie). Les réponses brutes (0 à 4) sont enregistrées et transformées en scores de 0 à 100 (plus le score est élevé, mieux c'est), auxquels s'ajoute un score global de 0 à 100 (moyenne des trois domaines) reflétant l'impact sur la hanche.",
+        "it-ch" : "Misura dei risultati riferiti dal paziente (PROM) per registrare il punteggio abbreviato di 12 voci relativo alla disabilità dell'anca e all'osteoartrite (HOOS-12), che copre tre ambiti (dolore, funzionalità nella vita quotidiana, qualità della vita). Le risposte grezze (0-4) vengono memorizzate e trasformate in punteggi di dominio 0-100 (più alto = migliore), più un punteggio riassuntivo dell'impatto sull'anca 0-100 (media dei tre domini).",
+        "en" : "Patient-reported outcome measure (PROM) to record the 12-item Hip disability and Osteoarthritis Outcome Score short form (HOOS-12), covering three domains (Pain, Function in daily living, Quality of life). Raw item responses (0–4) are stored and transformed to 0–100 domain scores (higher = better), plus a 0–100 summary hip impact score (mean of the three domains)."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']",
+      "children" : [ {
+        "id" : "pain",
+        "name" : "Pain",
+        "localizedName" : "Pain",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0004",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Schmerzen",
+          "fr-ch" : "Douleur",
+          "it-ch" : "Dolore",
+          "en" : "Pain"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "",
+          "fr-ch" : "",
+          "it-ch" : "",
+          "en" : ""
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]",
+        "children" : [ {
+          "id" : "a1._hip_pain_frequency",
+          "name" : "1. Hip pain frequency",
+          "localizedName" : "1. Hip pain frequency",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0005",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "1. Häufigkeit Hüftschmerzen",
+            "fr-ch" : "1. Fréquence douleur hanche",
+            "it-ch" : "1. Frequenza dolore anca",
+            "en" : "1. Hip pain frequency"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 1. Wie oft haben Sie Hüftschmerzen?",
+            "fr-ch" : "Question: 1. À quelle fréquence ressentez-vous des douleurs à la hanche?",
+            "it-ch" : "Domanda: 1. Con quale frequenza avverti dolore all'anca?",
+            "en" : "Question: 1. How often do you experience hip pain?"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "1"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0005]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0006",
+              "label" : "Never",
+              "localizedLabels" : {
+                "de-ch" : "Nie",
+                "fr-ch" : "Jamais",
+                "it-ch" : "Mai",
+                "en" : "Never"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0007",
+              "label" : "Monthly",
+              "localizedLabels" : {
+                "de-ch" : "Monatlich",
+                "fr-ch" : "Une fois par mois",
+                "it-ch" : "Mensilmente",
+                "en" : "Monthly"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0008",
+              "label" : "Weekly",
+              "localizedLabels" : {
+                "de-ch" : "Wöchentlich",
+                "fr-ch" : "Une fois par semaine",
+                "it-ch" : "Settimanalmente",
+                "en" : "Weekly"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0009",
+              "label" : "Daily",
+              "localizedLabels" : {
+                "de-ch" : "Täglich",
+                "fr-ch" : "Tous les jours",
+                "it-ch" : "Giornalmente",
+                "en" : "Daily"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0010",
+              "label" : "Always",
+              "localizedLabels" : {
+                "de-ch" : "Immer",
+                "fr-ch" : "Toujours",
+                "it-ch" : "Sempre",
+                "en" : "Always"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "instruction",
+          "name" : "Instruction",
+          "localizedName" : "Instruction",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0164",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Anleitung",
+            "fr-ch" : "Instructions",
+            "it-ch" : "Istruzioni",
+            "en" : "Instruction"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Wie stark waren Ihre Hüftschmerzen in der letzten Woche bei den folgenden Aktivitäten?",
+            "fr-ch" : "Quelle intensité de douleur à la hanche avez-vous ressentie la semaine dernière lors des activités suivantes?",
+            "it-ch" : "Quanto dolore all'anca hai avvertito nell'ultima settimana durante le seguenti attività?",
+            "en" : "What amount of hip pain have you experienced the last week during the following activities?"
+          },
+          "annotations" : {
+            "comment" : "Have “last week” in bold font.\n\nExplanatory note displayed between question 1 (How often do you experience hip pain?) and question 2 (Walking on a flat surface) of the questionnaire."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0164]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0165",
+              "label" : "What amount of hip pain have you experienced the last week during the following activities?",
+              "localizedLabels" : {
+                "de-ch" : "Wie stark waren Ihre Hüftschmerzen in der letzten Woche bei den folgenden Aktivitäten?",
+                "fr-ch" : "Quelle intensité de douleur à la hanche avez-vous ressentie la semaine dernière lors des activités suivantes?",
+                "it-ch" : "Quanto dolore all'anca hai avvertito nell'ultima settimana durante le seguenti attività?",
+                "en" : "What amount of hip pain have you experienced the last week during the following activities?"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              }
+            } ],
+            "defaultValue" : "at0165"
+          } ]
+        }, {
+          "id" : "a2._walking_on_a_flat_surface",
+          "name" : "2. Walking on a flat surface",
+          "localizedName" : "2. Walking on a flat surface",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0017",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "2. Gehen auf ebenem Untergrund",
+            "fr-ch" : "2. Marcher sur une surface plane",
+            "it-ch" : "2. Camminare su una superficie piana",
+            "en" : "2. Walking on a flat surface"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 2. Gehen auf ebenem Untergrund",
+            "fr-ch" : "Question: 2. Marcher sur une surface plane",
+            "it-ch" : "Domanda: 2. Camminare su una superficie piana",
+            "en" : "Question: 2. Walking on a flat surface"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "2"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0017]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0018",
+              "label" : "None",
+              "localizedLabels" : {
+                "de-ch" : "Keine",
+                "fr-ch" : "Aucune",
+                "it-ch" : "Nessuno",
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0019",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Légère",
+                "it-ch" : "Lieve",
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0020",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modérée",
+                "it-ch" : "Moderato",
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0021",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "de-ch" : "Stark",
+                "fr-ch" : "Intense",
+                "it-ch" : "Grave",
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0022",
+              "label" : "Extreme",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremo",
+                "en" : "Extreme"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "a3._going_up_or_down_stairs",
+          "name" : "3. Going up or down stairs",
+          "localizedName" : "3. Going up or down stairs",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0023",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "3. Treppensteigen",
+            "fr-ch" : "3. Monter ou descendre des escaliers",
+            "it-ch" : "3. Salire o scendere le scale",
+            "en" : "3. Going up or down stairs"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 3. Treppensteigen",
+            "fr-ch" : "Question: 3. Monter ou descendre des escaliers",
+            "it-ch" : "Domanda: 3. Salire o scendere le scale",
+            "en" : "Question: 3. Going up or down stairs"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "3"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0023]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0024",
+              "label" : "None",
+              "localizedLabels" : {
+                "de-ch" : "Keine",
+                "fr-ch" : "Aucune",
+                "it-ch" : "Nessuno",
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0025",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Légère",
+                "it-ch" : "Lieve",
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0026",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modérée",
+                "it-ch" : "Moderato",
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0027",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "de-ch" : "Stark",
+                "fr-ch" : "Intense",
+                "it-ch" : "Grave",
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0028",
+              "label" : "Extreme",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremo",
+                "en" : "Extreme"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "a4._sitting_or_lying",
+          "name" : "4. Sitting or lying",
+          "localizedName" : "4. Sitting or lying",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0029",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "4. Sitzen oder Liegen",
+            "fr-ch" : "4. Être assis ou allongé",
+            "it-ch" : "4. Stare seduto o sdraiato",
+            "en" : "4. Sitting or lying"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 4. Sitzen oder Liegen",
+            "fr-ch" : "Question: 4. Être assis ou allongé",
+            "it-ch" : "Domanda: 4. Stare seduto o sdraiato",
+            "en" : "Question: 4. Sitting or lying"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "4"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0029]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0030",
+              "label" : "None",
+              "localizedLabels" : {
+                "de-ch" : "Keine",
+                "fr-ch" : "Aucune",
+                "it-ch" : "Nessuno",
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0031",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Légère",
+                "it-ch" : "Lieve",
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0032",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modérée",
+                "it-ch" : "Moderato",
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0033",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "de-ch" : "Stark",
+                "fr-ch" : "Intense",
+                "it-ch" : "Grave",
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0034",
+              "label" : "Extreme",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremo",
+                "en" : "Extreme"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "pain_score_raw",
+          "name" : "Pain score raw",
+          "localizedName" : "Pain score raw",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0042",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Schmerz-Score",
+            "fr-ch" : "Score douleur",
+            "it-ch" : "Score dolore",
+            "en" : "Pain score raw"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Unveränderte Summe (0–16) der vier HOOS-12-Schmerzpunkte (jeweils bewertet mit 0–4; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Punkten beantwortet sind; wenn 1–2 Punkte fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Schmerzpunkte ergänzen und kennzeichnen, dass eine Ergänzung vorgenommen wurde.",
+            "fr-ch" : "Somme non transformée (0-16) des quatre items HOOS-12 relatifs à la douleur (chacun noté de 0 à 4 ; plus le score est élevé, plus la douleur est intense). Ne calculer que si >= 2 des 4 items ont reçu une réponse ; si 1 ou 2 items manquent, imputer chaque valeur manquante à la moyenne des items relatifs à la douleur auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
+            "it-ch" : "Somma non trasformata (0-16) dei quattro item HOOS-12 relativi al dolore (ognuno con punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 item; se mancano 1-2 item, imputare ogni valore mancante con la media degli item relativi al dolore a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
+            "en" : "Untransformed sum (0-16) of the four HOOS-12 Pain items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Pain items and flag that imputation was applied."
+          },
+          "annotations" : {
+            "comment" : "This value is the basis for the transformed Pain score (0-100, higher = better)."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0042]/value",
+          "inputs" : [ {
+            "type" : "INTEGER",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0,
+                "maxOp" : "<=",
+                "max" : 16
+              }
+            }
+          } ]
+        } ]
+      }, {
+        "id" : "function_daily_living",
+        "name" : "Function, daily living",
+        "localizedName" : "Function, daily living",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0047",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Funktion, Alltag",
+          "fr-ch" : "Fonctionnement, vie quotidienne",
+          "it-ch" : "Funzionalità, vita quotidiana",
+          "en" : "Function, daily living"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Funktion, Alltag\nDie folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Damit meinen wir Ihre Fähigkeit, sich zu bewegen und für sich selbst zu sorgen. Geben Sie für jede der folgenden Aktivitäten bitte an, wie stark Ihre Hüfte Sie in der letzten Woche beeinträchtigt hat.\n",
+          "fr-ch" : "Fonctionnement, vie quotidienne\nLes questions suivantes concernent votre fonction physique, c'est-à-dire votre capacité à vous déplacer et à prendre soin de vous. Pour chacune des activités suivantes, veuillez indiquer le degré de difficulté que vous avez éprouvé au cours de la semaine dernière en raison de votre hanche.\n",
+          "it-ch" : "Funzionalità, vita quotidiana\nLe seguenti domande riguardano la tua funzionalità fisica. Con questo intendiamo la tua capacità di muoverti e prenderti cura di te stesso. Per ciascuna delle seguenti attività, indica il grado di difficoltà che hai riscontrato nell'ultima settimana a causa della tua anca.",
+          "en" : "Function, daily living\nThe following questions concern your physical function. By this we mean your ability to move around and to look after yourself. For each of the following activities please indicate the degree of difficulty you have experienced in the last week due to your hip."
+        },
+        "annotations" : {
+          "comment" : "Have “Function, daily living” in bold font.\nHave “last week” in bold font."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]",
+        "children" : [ {
+          "id" : "a5._rising_from_sitting",
+          "name" : "5. Rising from sitting",
+          "localizedName" : "5. Rising from sitting",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0048",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "5. Aus einer Sitzposition aufstehen",
+            "fr-ch" : "5. Se lever de la position assise",
+            "it-ch" : "5. Alzarsi da seduti",
+            "en" : "5. Rising from sitting"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 5. Aus einer Sitzposition aufstehen",
+            "fr-ch" : "Question: 5. Se lever de la position assise",
+            "it-ch" : "Domanda: 5. Alzarsi da seduti",
+            "en" : "Question: 5. Rising from sitting"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "5"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0048]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0049",
+              "label" : "None",
+              "localizedLabels" : {
+                "de-ch" : "Keine",
+                "fr-ch" : "Aucun",
+                "it-ch" : "Nessuno",
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0050",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Léger",
+                "it-ch" : "Lieve",
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0051",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modéré",
+                "it-ch" : "Moderato",
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0052",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "de-ch" : "Schwer",
+                "fr-ch" : "Sévère",
+                "it-ch" : "Grave",
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0053",
+              "label" : "Extreme",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremo",
+                "en" : "Extreme"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "a6._standing",
+          "name" : "6. Standing",
+          "localizedName" : "6. Standing",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0054",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "6. Stehen",
+            "fr-ch" : "6. Se tenir debout",
+            "it-ch" : "6. Stare in piedi",
+            "en" : "6. Standing"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 6. Stehen",
+            "fr-ch" : "Question: 6. Se tenir debout",
+            "it-ch" : "Domanda: 6. Stare in piedi",
+            "en" : "Question: 6. Standing"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "6"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0054]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0055",
+              "label" : "None",
+              "localizedLabels" : {
+                "de-ch" : "Keine",
+                "fr-ch" : "Aucun",
+                "it-ch" : "Nessuno",
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0056",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Léger",
+                "it-ch" : "Lieve",
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0057",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modéré",
+                "it-ch" : "Moderato",
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0058",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "de-ch" : "Schwer",
+                "fr-ch" : "Sévère",
+                "it-ch" : "Grave",
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0059",
+              "label" : "Extreme",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremo",
+                "en" : "Extreme"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "a7._getting_in_out_of_a_car",
+          "name" : "7. Getting in/out of a car",
+          "localizedName" : "7. Getting in/out of a car",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0060",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "7. Ein-/Aussteigen aus einem Auto",
+            "fr-ch" : "7. Monter/descendre d'une voiture",
+            "it-ch" : "7. Salire/scendere dall'auto",
+            "en" : "7. Getting in/out of a car"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 7. Ein-/Aussteigen aus einem Auto",
+            "fr-ch" : "Question: 7. Monter/descendre d'une voiture",
+            "it-ch" : "Domanda: 7. Salire/scendere dall'auto",
+            "en" : "Question: 7. Getting in/out of a car"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "7"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0060]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0061",
+              "label" : "None",
+              "localizedLabels" : {
+                "de-ch" : "Keine",
+                "fr-ch" : "Aucun",
+                "it-ch" : "Nessuno",
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0062",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Léger",
+                "it-ch" : "Lieve",
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0063",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modéré",
+                "it-ch" : "Moderato",
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0064",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "de-ch" : "Schwer",
+                "fr-ch" : "Sévère",
+                "it-ch" : "Grave",
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0065",
+              "label" : "Extreme",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremo",
+                "en" : "Extreme"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "a8._walking_on_an_uneven_surface",
+          "name" : "8. Walking on an uneven surface",
+          "localizedName" : "8. Walking on an uneven surface",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0066",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "8. Gehen auf unebenem Untergrund",
+            "fr-ch" : "8. Marche surface irrégulière",
+            "it-ch" : "8. Camminare su una superficie irregolare",
+            "en" : "8. Walking on an uneven surface"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 8. Gehen auf unebenem Untergrund",
+            "fr-ch" : "Question: 8. Marcher sur une surface irrégulière",
+            "it-ch" : "Domanda: 8. Camminare su una superficie irregolare",
+            "en" : "Question: 8. Walking on an uneven surface"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "8"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0066]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0067",
+              "label" : "None",
+              "localizedLabels" : {
+                "de-ch" : "Keine",
+                "fr-ch" : "Aucun",
+                "it-ch" : "Nessuno",
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0068",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Léger",
+                "it-ch" : "Lieve",
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0069",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modéré",
+                "it-ch" : "Moderato",
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0070",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "de-ch" : "Schwer",
+                "fr-ch" : "Sévère",
+                "it-ch" : "Grave",
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0071",
+              "label" : "Extreme",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremo",
+                "en" : "Extreme"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "function_score_raw",
+          "name" : "Function score raw",
+          "localizedName" : "Function score raw",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0072",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Funktions-Score",
+            "fr-ch" : "Score fonction",
+            "it-ch" : "Score funzione",
+            "en" : "Function score raw"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Ungeänderte Summe (0–16) der vier HOOS-12-Funktionsitems (jeweils mit 0–4 bewertet; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Items beantwortet sind; wenn 1–2 Items fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Funktionsitems ergänzen und kennzeichnen, dass eine Ergänzung vorgenommen wurde.",
+            "fr-ch" : "Somme non transformée (0-16) des quatre items de la fonction HOOS-12 (chacun noté de 0 à 4 ; plus la note est élevée, plus la situation est grave). Ne calculer que si >= 2 des 4 items ont reçu une réponse ; si 1 ou 2 items manquent, imputer chaque valeur manquante avec la moyenne des items de la fonction auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
+            "it-ch" : "Somma non trasformata (0-16) dei quattro elementi della funzione HOOS-12 (ognuno con un punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 elementi; se mancano 1-2 elementi, imputare ogni valore mancante con la media degli elementi della funzione a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
+            "en" : "Untransformed sum (0-16) of the four HOOS-12 Function items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Function items and flag that imputation was applied."
+          },
+          "annotations" : {
+            "comment" : "This value is the basis for the transformed Function score (0-100, higher = better)."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0072]/value",
+          "inputs" : [ {
+            "type" : "INTEGER",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0,
+                "maxOp" : "<=",
+                "max" : 16
+              }
+            }
+          } ]
+        } ]
+      }, {
+        "id" : "quality_of_life",
+        "name" : "Quality of Life",
+        "localizedName" : "Quality of Life",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0075",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Lebensqualität",
+          "fr-ch" : "Qualité de vie",
+          "it-ch" : "Qualità della vita",
+          "en" : "Quality of Life"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "",
+          "fr-ch" : "",
+          "it-ch" : "",
+          "en" : ""
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]",
+        "children" : [ {
+          "id" : "a9._awareness_of_hip_problem",
+          "name" : "9. Awareness of hip problem",
+          "localizedName" : "9. Awareness of hip problem",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0076",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "9. Bewusstsein für Hüftprobleme",
+            "fr-ch" : "9. Fréquence conscience hanche",
+            "it-ch" : "9. Frequenza consapevolezza anca",
+            "en" : "9. Awareness of hip problem"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 9. Wie oft sind Sie sich Ihrer Hüftprobleme bewusst?",
+            "fr-ch" : "Question: 9. À quelle fréquence êtes-vous conscient de votre problème de hanche?",
+            "it-ch" : "Domanda: 9. Con quale frequenza ti accorgi del tuo problema all'anca?",
+            "en" : "Question: 9. How often are you aware of your hip problem?"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "9"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0076]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0077",
+              "label" : "Never",
+              "localizedLabels" : {
+                "de-ch" : "Nie",
+                "fr-ch" : "Jamais",
+                "it-ch" : "Mai",
+                "en" : "Never"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0078",
+              "label" : "Monthly",
+              "localizedLabels" : {
+                "de-ch" : "Monatlich",
+                "fr-ch" : "Une fois par mois",
+                "it-ch" : "Mensilmente",
+                "en" : "Monthly"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0079",
+              "label" : "Weekly",
+              "localizedLabels" : {
+                "de-ch" : "Wöchentlich",
+                "fr-ch" : "Une fois par semaine",
+                "it-ch" : "Settimanalmente",
+                "en" : "Weekly"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0080",
+              "label" : "Daily",
+              "localizedLabels" : {
+                "de-ch" : "Täglich",
+                "fr-ch" : "Tous les jours",
+                "it-ch" : "Giornalmente",
+                "en" : "Daily"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0081",
+              "label" : "Constantly",
+              "localizedLabels" : {
+                "de-ch" : "Ständig",
+                "fr-ch" : "Constamment",
+                "it-ch" : "Costantemente",
+                "en" : "Constantly"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "a10._lifestyle_modification_to_avoid_hip_damage",
+          "name" : "10. Lifestyle modification to avoid hip damage",
+          "localizedName" : "10. Lifestyle modification to avoid hip damage",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0131",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "10. Änderung der Lebensweise zur Vermeidung von Hüftschäden",
+            "fr-ch" : "10. Évitement activités hanche",
+            "it-ch" : "10. Evitamento attività anca",
+            "en" : "10. Lifestyle modification to avoid hip damage"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 10. Haben Sie Ihren Lebensstil geändert, um potenziell hüftschädigende Aktivitäten zu vermeiden?",
+            "fr-ch" : "Question: 10. Avez-vous modifié votre mode de vie pour éviter les activités potentiellement dommageables pour votre hanche?",
+            "it-ch" : "Domanda: 10. Hai modificato il tuo stile di vita per evitare attività potenzialmente dannose per l'anca?",
+            "en" : "Question: 10. Have you modified your life style to avoid potentially damaging activities to your hip?"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "10"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0131]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0132",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Überhaupt nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Per niente",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0133",
+              "label" : "Mildly",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Léger",
+                "it-ch" : "Lievemente",
+                "en" : "Mildly"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0134",
+              "label" : "Moderately",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modéré",
+                "it-ch" : "Moderatamente",
+                "en" : "Moderately"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0135",
+              "label" : "Severely",
+              "localizedLabels" : {
+                "de-ch" : "Schwer",
+                "fr-ch" : "Sévère",
+                "it-ch" : "Grave",
+                "en" : "Severely"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0136",
+              "label" : "Totally",
+              "localizedLabels" : {
+                "de-ch" : "Vollständig",
+                "fr-ch" : "Totalement",
+                "it-ch" : "Totalmente",
+                "en" : "Totally"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "a11._lack_of_confidence_in_hip",
+          "name" : "11. Lack of confidence in hip",
+          "localizedName" : "11. Lack of confidence in hip",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0137",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "11. Mangelndes Vertrauen in die Hüfte",
+            "fr-ch" : "11. Manque confiance hanche",
+            "it-ch" : "11. Mancanza fiducia anca",
+            "en" : "11. Lack of confidence in hip"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 11. Wie sehr stört Sie Ihr mangelndes Vertrauen in Ihre Hüfte?",
+            "fr-ch" : "Question: 11. Dans quelle mesure manquez-vous de confiance en votre hanche?",
+            "it-ch" : "Domanda: 11. Quanto ti preoccupa la mancanza di fiducia nella tua anca?",
+            "en" : "Question: 11. How much are you troubled with lack of confidence in your hip?"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "11"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0137]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0138",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Überhaupt nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Per niente",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0139",
+              "label" : "Mildly",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Léger",
+                "it-ch" : "Lievemente",
+                "en" : "Mildly"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0140",
+              "label" : "Moderately",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modéré",
+                "it-ch" : "Moderatamente",
+                "en" : "Moderately"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0141",
+              "label" : "Severely",
+              "localizedLabels" : {
+                "de-ch" : "Schwer",
+                "fr-ch" : "Sévère",
+                "it-ch" : "Grave",
+                "en" : "Severely"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0142",
+              "label" : "Extremely",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremamente",
+                "en" : "Extremely"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "a12._overall_hip-related_difficulty",
+          "name" : "12. Overall hip-related difficulty",
+          "localizedName" : "12. Overall hip-related difficulty",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0143",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "12. Allgemeine Hüftprobleme",
+            "fr-ch" : "12. Difficultés générales hanche",
+            "it-ch" : "12. Difficoltà generale anca",
+            "en" : "12. Overall hip-related difficulty"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 12. Wie stark sind Ihre Hüftprobleme im Allgemeinen?",
+            "fr-ch" : "Question: 12. En général, quelles sont vos difficultés avec votre hanche?",
+            "it-ch" : "Domanda: 12. In generale, quanta difficoltà hai con l'anca?",
+            "en" : "Question: 12. In general, how much difficulty do you have with your hip?"
+          },
+          "annotations" : {
+            "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
+            "order" : "12"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0143]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0144",
+              "label" : "None",
+              "localizedLabels" : {
+                "de-ch" : "Keine",
+                "fr-ch" : "Aucune",
+                "it-ch" : "Nessuno",
+                "en" : "None"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0145",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "de-ch" : "Leicht",
+                "fr-ch" : "Léger",
+                "it-ch" : "Lieve",
+                "en" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0146",
+              "label" : "Moderate",
+              "localizedLabels" : {
+                "de-ch" : "Mittel",
+                "fr-ch" : "Modéré",
+                "it-ch" : "Moderato",
+                "en" : "Moderate"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0147",
+              "label" : "Severe",
+              "localizedLabels" : {
+                "de-ch" : "Schwer",
+                "fr-ch" : "Sévère",
+                "it-ch" : "Grave",
+                "en" : "Severe"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0148",
+              "label" : "Extreme",
+              "localizedLabels" : {
+                "de-ch" : "Extrem",
+                "fr-ch" : "Extrême",
+                "it-ch" : "Estremo",
+                "en" : "Extreme"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "quality_of_life_score_raw",
+          "name" : "Quality of life score raw",
+          "localizedName" : "Quality of life score raw",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0149",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Lebensqualität-Score",
+            "fr-ch" : "Score qualité de vie",
+            "it-ch" : "Score qualità di vita",
+            "en" : "Quality of life score raw"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Unveränderte Summe (0–16) der vier HOOS-12-Lebensqualitätsitems (jeweils bewertet mit 0–4; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Items beantwortet sind; wenn 1–2 Items fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Lebensqualitätsitems imputieren und kennzeichnen, dass eine Imputation vorgenommen wurde.",
+            "fr-ch" : "Somme non transformée (0-16) des quatre éléments HOOS-12 relatifs à la qualité de vie (chacun noté de 0 à 4 ; plus le score est élevé, plus la situation est mauvaise). Ne calculer que si >= 2 des 4 éléments ont reçu une réponse ; si 1 ou 2 éléments manquent, imputer chaque valeur manquante avec la moyenne des éléments relatifs à la qualité de vie auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
+            "it-ch" : "Somma non trasformata (0-16) dei quattro elementi HOOS-12 relativi alla qualità della vita (ciascuno con un punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 elementi; se mancano 1-2 elementi, imputare ciascun valore mancante con la media degli elementi relativi alla qualità della vita a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
+            "en" : "Untransformed sum (0-16) of the four HOOS-12 Quality of life items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Quality of life items and flag that imputation was applied."
+          },
+          "annotations" : {
+            "comment" : "This value is the basis for the transformed Quality of life score (0-100, higher = better)."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0149]/value",
+          "inputs" : [ {
+            "type" : "INTEGER",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0,
+                "maxOp" : "<=",
+                "max" : 16
+              }
+            }
+          } ]
+        } ]
+      }, {
+        "id" : "scoring_transformed",
+        "name" : "Scoring transformed",
+        "localizedName" : "Scoring transformed",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0155",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Scoring transformiert",
+          "fr-ch" : "Score transformé",
+          "it-ch" : "Score trasformato",
+          "en" : "Scoring transformed"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "",
+          "fr-ch" : "",
+          "it-ch" : "",
+          "en" : ""
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]",
+        "children" : [ {
+          "id" : "pain_score_transformed",
+          "name" : "Pain score transformed",
+          "localizedName" : "Pain score transformed",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0151",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Schmerz-Score transformiert",
+            "fr-ch" : "Score douleur transformé",
+            "it-ch" : "Score dolore trasformato",
+            "en" : "Pain score transformed"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Linear transformierter Schmerzbereichswert auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohwert / 16 * 100) aus dem Schmerz-Rohwert (0–16).",
+            "fr-ch" : "Score du domaine « Douleur » transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut « Douleur » (0-16).",
+            "it-ch" : "Punteggio del dominio Dolore trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo del Dolore (0-16).",
+            "en" : "Linearly transformed Pain domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Pain raw score (0-16)."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0151]/value",
+          "inputs" : [ {
+            "type" : "INTEGER",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0,
+                "maxOp" : "<=",
+                "max" : 100
+              }
+            }
+          } ]
+        }, {
+          "id" : "function_score_transformed",
+          "name" : "Function score transformed",
+          "localizedName" : "Function score transformed",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0073",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Funktions-Score transformiert",
+            "fr-ch" : "Score fonction transformé",
+            "it-ch" : "Score funzione trasformato",
+            "en" : "Function score transformed"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Linear transformierte Funktionsbereichsbewertung auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus der Funktions-Rohbewertung (0-16).",
+            "fr-ch" : "Score du domaine de la fonction transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut de la fonction (0-16).",
+            "it-ch" : "Punteggio del dominio della funzione trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).",
+            "en" : "Linearly transformed Function domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Function raw score (0-16)."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0073]/value",
+          "inputs" : [ {
+            "type" : "INTEGER",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0,
+                "maxOp" : "<=",
+                "max" : 100
+              }
+            }
+          } ]
+        }, {
+          "id" : "quality_of_life_score_transformed",
+          "name" : "Quality of life  score transformed",
+          "localizedName" : "Quality of life  score transformed",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0150",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Lebensqualität-Score transformiert",
+            "fr-ch" : "Score qualité de vie transformé",
+            "it-ch" : "Score qualità di vita trasformato",
+            "en" : "Quality of life  score transformed"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Linear transformierter Wert für den Bereich Lebensqualität auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus dem Funktionswert Rohwert (0-16).",
+            "fr-ch" : "Score du domaine « Qualité de vie » transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut de la fonction (0-16).",
+            "it-ch" : "Punteggio del dominio della qualità della vita trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).",
+            "en" : "Linearly transformed Quality of life domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Function raw score (0-16)."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0150]/value",
+          "inputs" : [ {
+            "type" : "INTEGER",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0,
+                "maxOp" : "<=",
+                "max" : 100
+              }
+            }
+          } ]
+        } ]
+      }, {
+        "id" : "time",
+        "name" : "Time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "norpeq",
+      "name" : "NORPEQ",
+      "localizedName" : "NORPEQ",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.norpeq.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "de-ch" : "Norpeq Fragenkatalog",
+        "fr-ch" : "Norpeq questionnaire",
+        "it-ch" : "Norpeq questionario",
+        "en" : "NORPEQ"
+      },
+      "localizedDescriptions" : {
+        "de-ch" : "Acht von Patienten angegebene Punkte, die wichtige Aspekte des Krankenhausaufenthalts erfassen: Klarheit der Kommunikation durch Ärzte, Vertrauen in die klinische Kompetenz, wahrgenommene Fürsorge und Interesse des Personals, Angemessenheit der Informationen zu Untersuchungen, allgemeine Zufriedenheit und Wahrnehmung einer falschen Behandlung.",
+        "fr-ch" : "Huit éléments rapportés par les patients qui reflètent les aspects clés de l'expérience hospitalière : clarté de la communication du médecin, confiance dans les compétences cliniques, perception de l'attention et de l'intérêt du personnel, adéquation des informations fournies sur les examens, satisfaction globale et perception d'un traitement inapproprié.",
+        "it-ch" : "Otto elementi segnalati dai pazienti che descrivono gli aspetti chiave dell'esperienza ospedaliera: chiarezza nella comunicazione dei medici, fiducia nella competenza clinica, percezione dell'attenzione e dell'interesse da parte del personale, adeguatezza delle informazioni relative agli esami, soddisfazione generale e percezione di un trattamento errato.",
+        "en" : "Eight patient-reported items that capture key aspects of the inpatient hospital experience: clarity of doctor communication, confidence in clinical competence, perceived concern and interest from staff, adequacy of test information, overall satisfaction, and perception of incorrect treatment."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']",
+      "children" : [ {
+        "id" : "core_score_items",
+        "name" : "Core score items",
+        "localizedName" : "Core score items",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0004",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Fragen für Score",
+          "fr-ch" : "Questions du score principal",
+          "it-ch" : "Domande del Core Score",
+          "en" : "Core score items"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)",
+          "fr-ch" : "*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)",
+          "it-ch" : "*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)",
+          "en" : "Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score. "
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]",
+        "children" : [ {
+          "id" : "a1._doctors_understandable",
+          "name" : "1. Doctors understandable",
+          "localizedName" : "1. Doctors understandable",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0012",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "1. Ärzte verständlich",
+            "fr-ch" : "1.\tCommunication des médecins",
+            "it-ch" : "1.\tComunicazione medici",
+            "en" : "1. Doctors understandable"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 1. Haben die Ärzte so mit Ihnen gesprochen, dass Sie sie verstehen konnten?",
+            "fr-ch" : "Question: 1. Les médecins vous ont-ils parlé d’une manière que vous pouviez comprendre?",
+            "it-ch" : "Domanda: 1. I medici ti hanno parlato in un modo che potessi capire?",
+            "en" : "question: 1. Did the doctors talk to you in a way you could understand?"
+          },
+          "annotations" : {
+            "order" : "1"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0012]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0013",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0014",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0015",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0016",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0017",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a2._doctors_professional_skills",
+          "name" : "2. Doctors professional skills",
+          "localizedName" : "2. Doctors professional skills",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0018",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "2. Ärzte medizinische Kompetenz",
+            "fr-ch" : "2.\tCompétence des médecins",
+            "it-ch" : "2.\tCompetenza medici",
+            "en" : "2. Doctors professional skills"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 2. Haben Sie Vertrauen in die medizinische Kompetenz der Ärzte?",
+            "fr-ch" : "Question: 2. Avez-vous confiance dans la compétence médicale des médecins?",
+            "it-ch" : "Domanda: 2. Hai fiducia nella competenza medica dei medici?",
+            "en" : "question: 2. Do you have confidence in the doctors’ medical competence?"
+          },
+          "annotations" : {
+            "order" : "2"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0018]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0019",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0020",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0021",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0022",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0023",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a3._nurses_professional_skills",
+          "name" : "3. Nurses professional skills",
+          "localizedName" : "3. Nurses professional skills",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0024",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "3. Pflegepersonal medizinische Kompetenz",
+            "fr-ch" : "3.\tCompétence infirmière",
+            "it-ch" : "3.\tCompetenza infermieri",
+            "en" : "3. Nurses professional skills"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 3. Haben Sie Vertrauen in die medizinische Kompetenz des Pflegepersonals?",
+            "fr-ch" : "Question: 3. Avez-vous confiance dans la compétence médicale du personnel infirmier?",
+            "it-ch" : "Domanda: 3. Hai fiducia nella competenza medica del personale infermieristico?",
+            "en" : "question: 3. Do you have confidence in the nursing staff’s medical competence?"
+          },
+          "annotations" : {
+            "order" : "3"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0024]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0025",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0026",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0027",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0028",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0029",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a4._nursing_care",
+          "name" : "4. Nursing care",
+          "localizedName" : "4. Nursing care",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0042",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "4. Pflegepersonal Zuwendung",
+            "fr-ch" : "4.\tAttention infirmière",
+            "it-ch" : "4.\tPremura infermieri",
+            "en" : "4. Nursing care"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 4. Haben Sie das Gefühl gehabt, dass sich das Pflegepersonal um Sie gekümmert hat?",
+            "fr-ch" : "Question: 4. Avez-vous constaté que le personnel infirmier s’est montré préoccupé à votre égard?",
+            "it-ch" : "Domanda: 4. Hai avuto l'impressione che il personale infermieristico si sia preoccupato per te?",
+            "en" : "question: 4. Did you experience the nursing staff showed concern for you?"
+          },
+          "annotations" : {
+            "order" : "4"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0042]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0043",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0044",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0045",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0046",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0047",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a5._health_personnel_interested_in_problem",
+          "name" : "5. Health personnel interested in problem",
+          "localizedName" : "5. Health personnel interested in problem",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0060",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "5. Gesundheitsfachpersonen Interesse an Situation",
+            "fr-ch" : "5.\tÉcoute des soignants",
+            "it-ch" : "5.\tInteresse dei curanti",
+            "en" : "5. Health personnel interested in problem"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 5. Haben Sie erlebt, dass sich die Ärzte und das Pflegepersonal für Ihre Schilderung Ihrer eigenen Situation interessiert haben?",
+            "fr-ch" : "Question: 5. Avez-vous constaté que les médecins et le personnel infirmier étaient intéressés par la description que vous faisiez de votre propre situation?",
+            "it-ch" : "Domanda: 5. Hai avuto l'impressione che i medici e il personale infermieristico fossero interessati alla descrizione della tua situazione?",
+            "en" : "question: 5. Did you experience that the doctors and nursing staff were interested in your description of your own situation?"
+          },
+          "annotations" : {
+            "order" : "5"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0060]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0061",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0062",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0063",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0064",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0065",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a6._information_on_tests",
+          "name" : "6. Information on tests",
+          "localizedName" : "6. Information on tests",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0066",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "6. Informationen Untersuchungsablauf",
+            "fr-ch" : "6.\tInformations sur les examens",
+            "it-ch" : "6.\tInformazioni sugli esami",
+            "en" : "6. Information on tests"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 6. Wurden Ihnen die aus Ihrer Sicht notwendigen Informationen zum Ablauf der Tests und Untersuchungen gegeben?",
+            "fr-ch" : "Question: 6. Avez-vous reçu les informations que vous pensiez nécessaires sur la manière dont les tests et les examens seraient menés?",
+            "it-ch" : "Domanda: 6. Ti sono state fornite le informazioni che ritenevi necessarie su come sarebbero stati condotti i test e gli esami?",
+            "en" : "question: 6. Were you given the information you thought were necessary about how tests and examinations would be conducted?"
+          },
+          "annotations" : {
+            "order" : "6"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0066]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0067",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0068",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0069",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0070",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0071",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "overall_score",
+          "name" : "Overall score",
+          "localizedName" : "Overall score",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0072",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Gesamt-Score",
+            "fr-ch" : "Score global",
+            "it-ch" : "Score complessivo",
+            "en" : "Overall score"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Sechs der acht NORPEQ-Fragen ergeben zusammen eine Gesamtskala von 0 bis 100, wobei 100 die bestmögliche Betreuungserfahrung darstellt. Wenn bei mehr als der Hälfte der Fragen Werte fehlten, werden die Durchschnittswerte hochgerechnet.",
+            "fr-ch" : "Six des huit éléments du NORPEQ sont additionnés pour obtenir une échelle globale allant de 0 à 100, où 100 correspond à la meilleure expérience possible en matière de soins. Si les répondants n'avaient pas répondu à plus de la moitié des éléments, les scores moyens ont été imputés.",
+            "it-ch" : "Sei degli otto elementi NORPEQ vengono sommati per ottenere una scala complessiva da 0 a 100, dove 100 rappresenta la migliore esperienza di assistenza possibile. Se i rispondenti presentavano valori mancanti in più della metà degli elementi, sono stati imputati i punteggi medi.",
+            "en" : "Six of the eight NORPEQ items sum to produce an\noverall scale from 0 to 100, where 100 is the best possible experience of care. If respondents had missing values on more than half of the items, mean scores were imputed."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0072]/value",
+          "inputs" : [ {
+            "type" : "INTEGER",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0,
+                "maxOp" : "<=",
+                "max" : 100
+              }
+            }
+          } ]
+        }, {
+          "id" : "mean_score",
+          "name" : "Mean score",
+          "localizedName" : "Mean score",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0073",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Mittlerer Score",
+            "fr-ch" : "Score moyen",
+            "it-ch" : "Score medio",
+            "en" : "Mean score"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Sechs der acht NORPEQ-Fragen ergeben zusammen eine Gesamtskala von 0 bis 100, wobei 100 die bestmögliche Betreuungserfahrung darstellt. Wenn bei mehr als der Hälfte der Fragen Werte fehlten, werden die Durchschnittswerte hochgerechnet.",
+            "fr-ch" : "Six des huit éléments du NORPEQ sont additionnés pour obtenir une échelle globale allant de 0 à 100, où 100 correspond à la meilleure expérience possible en matière de soins. Si les répondants n'avaient pas répondu à plus de la moitié des éléments, les scores moyens ont été imputés.",
+            "it-ch" : "Sei degli otto elementi NORPEQ vengono sommati per ottenere una scala complessiva da 0 a 100, dove 100 rappresenta la migliore esperienza di assistenza possibile. Se i rispondenti presentavano valori mancanti in più della metà degli elementi, sono stati imputati i punteggi medi.",
+            "en" : "Six of the eight NORPEQ items sum to produce an\noverall scale from 0 to 100, where 100 is the best possible experience of care. If respondents had missing values on more than half of the items, mean scores were imputed."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0073]/value",
+          "inputs" : [ {
+            "type" : "INTEGER"
+          } ]
+        } ]
+      }, {
+        "id" : "supplementary_items",
+        "name" : "Supplementary items",
+        "localizedName" : "Supplementary items",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0005",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Zusatzfragen",
+          "fr-ch" : "Questions supplémentaires",
+          "it-ch" : "Domande supplementari",
+          "en" : "Supplementary items"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Es werden zwei zusätzliche NORPEQ-Fragen zu Beschreibungszwecken erfasst, die jedoch nicht in die berechnete Gesamtpunktzahl einfliessen.",
+          "fr-ch" : "Deux questions NORPEQ supplémentaires qui sont recueillies à des fins descriptives, mais qui ne sont pas incluses dans le score total calculé.",
+          "it-ch" : "Due domande NORPEQ aggiuntive raccolte a scopo descrittivo, ma non incluse nel punteggio totale calcolato.",
+          "en" : "Two additional NORPEQ questions that are collected for descriptive purposes but are not included in the calculated total score.\n"
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]",
+        "children" : [ {
+          "id" : "a7._general_satisfaction",
+          "name" : "7. General satisfaction",
+          "localizedName" : "7. General satisfaction",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0048",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "7. Gesamtzufriedenheit Krankenhaus",
+            "fr-ch" : "7.\tSatisfaction globale",
+            "it-ch" : "7.\tSoddisfazione generale",
+            "en" : "7. General satisfaction"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 7. Waren Sie mit der Behandlung und Betreuung im Krankenhaus insgesamt zufrieden?",
+            "fr-ch" : "Question: 7. Dans l’ensemble, le traitement et les soins que vous avez reçus à l’hôpital étaient-ils satisfaisants?",
+            "it-ch" : "Domanda: 7. Nel complesso, il trattamento e l'assistenza ricevuti in ospedale sono stati soddisfacenti?",
+            "en" : "question: 7. Overall, was the treatment and care you received at the hospital satisfactory?"
+          },
+          "annotations" : {
+            "order" : "7"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]/items[at0048]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0049",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0050",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0051",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0052",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0053",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a8._incorrect_treatment",
+          "name" : "8. Incorrect treatment",
+          "localizedName" : "8. Incorrect treatment",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0054",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "8. Falsche Behandlung",
+            "fr-ch" : "8.\tTraitement incorrect",
+            "it-ch" : "8.\tTrattamento errato",
+            "en" : "8. Incorrect treatment"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 8. Glauben Sie, dass Sie in irgendeiner Weise falsch behandelt wurden (soweit Sie das beurteilen können)?",
+            "fr-ch" : "Question: 8. Pensez-vous avoir reçu un mauvais traitement d’une quelconque manière (pour autant que vous puissiez en juger)?",
+            "it-ch" : "Domanda: 8. Credi di aver ricevuto in qualche modo un trattamento sbagliato (per quanto puoi giudicare)?",
+            "en" : "question: 8. Do you believe you were in any way given the wrong treatment (as far as you are able to judge)?"
+          },
+          "annotations" : {
+            "order" : "8"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]/items[at0054]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0055",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0056",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0057",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0058",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0059",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "time",
+        "name" : "Time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/data[at0001]/events[at0002,'Point in time']/time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0,'NORPEQ']/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "category",
+      "rmType" : "DV_CODED_TEXT",
+      "nodeId" : "",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/category",
+      "inputs" : [ {
+        "suffix" : "code",
+        "type" : "CODED_TEXT",
+        "list" : [ {
+          "value" : "433",
+          "label" : "event",
+          "localizedLabels" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : "event"
+          }
+        } ],
+        "terminology" : "openehr"
+      } ],
+      "inContext" : true
+    }, {
+      "id" : "language",
+      "name" : "Language",
+      "rmType" : "CODE_PHRASE",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/language",
+      "inContext" : true
+    }, {
+      "id" : "territory",
+      "name" : "Territory",
+      "rmType" : "CODE_PHRASE",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/territory",
+      "inContext" : true
+    }, {
+      "id" : "composer",
+      "name" : "Composer",
+      "rmType" : "PARTY_PROXY",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/composer",
+      "inputs" : [ {
+        "suffix" : "id",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "id_scheme",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "id_namespace",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "name",
+        "type" : "TEXT"
+      } ],
+      "inContext" : true
+    } ]
+  }
+}

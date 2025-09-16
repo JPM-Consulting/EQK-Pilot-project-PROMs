@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
+    <id>a4662b25-f5ad-4df6-bfa2-1e150167708d</id>
+    <name>EQK Master Hip</name>
+    <description>
+        <original_author>
+            <item>
+                <key>name</key>
+                <value>Jean-Pierre Messerli</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>JPM Consulting GmbH</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>jean-pierre.messerli@jpm-consulting.ch</value>
+            </item>
+            <item>
+                <key>date</key>
+                <value>2025-09-16</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>2.0.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value>d10f405a-8ba8-4797-b817-470421d5bea4</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>5f6eb1dc4161a6d7aafcfa8ac96782b7</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>23e937ad8f57781248b104d9086c5751</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0017]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>2</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0060]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>7</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0029]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>4</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0137]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>11</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>1</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0048]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>5</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0143]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>12</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0066]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>8</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0076]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>9</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0023]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>3</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0054]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>6</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0131]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>10</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0018]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>2</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0048]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>7</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0060]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>5</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0042]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>4</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0024]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>3</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0054]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>8</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0066]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>6</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0012]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>1</value>
+            </item>
+        </items>
+    </annotations>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK Master Hip" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule name="Point in time" path="/data[at0001]/events[at0002]"/>
+            <Rule name="1. Mobility" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]"/>
+            <Rule name="2. Self-Care" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]"/>
+            <Rule name="3. Usual Activities (e.g. work, study, housework, family or leisure activities)" path="/data[at0001]/events[at0002]/data[at0003]/items[at0007]"/>
+            <Rule name="4. Pain / Discomfort" path="/data[at0001]/events[at0002]/data[at0003]/items[at0008]"/>
+            <Rule name="5. Anxiety / Depression" path="/data[at0001]/events[at0002]/data[at0003]/items[at0009]"/>
+            <Rule name="6. General Health" path="/data[at0001]/events[at0002]/data[at0003]/items[at0010]">
+                <constraint xsi:type="tem:countConstraint">
+                    <maxMagnitude>100</maxMagnitude>
+                    <minMagnitude>0</minMagnitude>
+                    <includesMaximum>true</includesMaximum>
+                    <includesMinimum>true</includesMinimum>
+                </constraint>
+            </Rule>
+        </Content>
+        <Content archetype_id="openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0" concept_name="EQ 5D 5L Index Score" max="1" name="EQ-5D-5L Index Score" path="/content" xsi:type="tem:EVALUATION"/>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.siris_additional_questions.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]"/>
+            <Rule name="7. Joint specific pain" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]"/>
+            <Rule name="8. Joint specific satisfaction" path="/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0018]"/>
+            <Rule name="9. Your level of education" path="/data[at0001]/events[at0002]/data[at0003]/items[at0024]/items[at0025]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.hoos_12.v0" concept_name="Hip Disability and Osteoarthritis Outcome Score - Short Form (HOOS-12)" max="1" name="HOOS-12" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]"/>
+            <Rule max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0161]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.norpeq.v0" concept_name="Norpeq questionnaire" max="1" name="NORPEQ" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]"/>
+        </Content>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">23e937ad8f57781248b104d9086c5751</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">282d6455a68756ccb30d14641ac85b94</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">40d87fe1a6a5de0278eb69682d03af91</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.siris_additional_questions.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">33e9b3906e519cb7cc9fdf08dd065a83</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.hoos_12.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">ae290c6f6c3b783fcd523a13878465dd</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.norpeq.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">4c93ba279b13bcc5fa128f1f4639d26a</digest>
+    </integrity_checks>
+</template>
