@@ -1,22 +1,22 @@
 {
-  "templateId" : "EQK Master Hip",
-  "semVer" : "2.0.1",
+  "templateId" : "EQK Master Knee",
+  "semVer" : "3.0.1",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "de-ch", "fr-ch", "it-ch", "en" ],
   "tree" : {
-    "id" : "eqk_master_hip",
-    "name" : "EQK Master Hip",
-    "localizedName" : "EQK Master Hip",
+    "id" : "eqk_master_knee",
+    "name" : "EQK Master Knee",
+    "localizedName" : "EQK Master Knee",
     "rmType" : "COMPOSITION",
     "nodeId" : "openEHR-EHR-COMPOSITION.self_reported_data.v1",
     "min" : 1,
     "max" : 1,
     "localizedNames" : {
-      "de-ch" : "EQK Master Hip",
-      "fr-ch" : "EQK Master Hip",
-      "it-ch" : "EQK Master Hip",
-      "en" : "EQK Master Hip"
+      "de-ch" : "EQK Master Knee",
+      "fr-ch" : "EQK Master Knee",
+      "it-ch" : "EQK Master Knee",
+      "en" : "EQK Master Knee"
     },
     "localizedDescriptions" : {
       "de-ch" : "Generic container for information provided by an individual.",
@@ -1720,26 +1720,26 @@
         "inContext" : true
       } ]
     }, {
-      "id" : "hoos-12",
-      "name" : "HOOS-12",
-      "localizedName" : "HOOS-12",
+      "id" : "koos-12",
+      "name" : "KOOS-12",
+      "localizedName" : "KOOS-12",
       "rmType" : "OBSERVATION",
-      "nodeId" : "openEHR-EHR-OBSERVATION.hoos_12.v0",
+      "nodeId" : "openEHR-EHR-OBSERVATION.koos_12.v0",
       "min" : 0,
       "max" : 1,
       "localizedNames" : {
-        "de-ch" : "HOOS-12",
-        "fr-ch" : "HOOS-12",
-        "it-ch" : "HOOS-12",
-        "en" : "HOOS-12"
+        "de-ch" : "KOOS-12",
+        "fr-ch" : "KOOS-12",
+        "it-ch" : "KOOS-12",
+        "en" : "KOOS-12"
       },
       "localizedDescriptions" : {
-        "de-ch" : "Patient-reported outcome measure (PROM) zur Erfassung des 12-Punkte-Fragebogens „Hip disability and Osteoarthritis Outcome Score Short Form“ (HOOS-12), der drei Bereiche abdeckt (Schmerzen, Funktion im Alltag, Lebensqualität). Die Rohwerte der einzelnen Items (0–4) werden gespeichert und in Bereichswerte von 0–100 umgewandelt (höher = besser), zu denen ein zusammenfassender Hüft-Impact-Score von 0–100 (Mittelwert der drei Bereiche) hinzukommt.",
-        "fr-ch" : "Mesure des résultats rapportés par les patients (PROM) pour enregistrer le score abrégé de 12 items sur l'incapacité fonctionnelle de la hanche et l'arthrose (HOOS-12), couvrant trois domaines (douleur, fonction dans la vie quotidienne, qualité de vie). Les réponses brutes (0 à 4) sont enregistrées et transformées en scores de 0 à 100 (plus le score est élevé, mieux c'est), auxquels s'ajoute un score global de 0 à 100 (moyenne des trois domaines) reflétant l'impact sur la hanche.",
-        "it-ch" : "Misura dei risultati riferiti dal paziente (PROM) per registrare il punteggio abbreviato di 12 voci relativo alla disabilità dell'anca e all'osteoartrite (HOOS-12), che copre tre ambiti (dolore, funzionalità nella vita quotidiana, qualità della vita). Le risposte grezze (0-4) vengono memorizzate e trasformate in punteggi di dominio 0-100 (più alto = migliore), più un punteggio riassuntivo dell'impatto sull'anca 0-100 (media dei tre domini).",
-        "en" : "Patient-reported outcome measure (PROM) to record the 12-item Hip disability and Osteoarthritis Outcome Score short form (HOOS-12), covering three domains (Pain, Function in daily living, Quality of life). Raw item responses (0–4) are stored and transformed to 0–100 domain scores (higher = better), plus a 0–100 summary hip impact score (mean of the three domains)."
+        "de-ch" : "Patient-reported outcome measure (PROM) erfasst den 12-Punkte-KOOS-12 in drei Bereichen (Schmerzen, Funktion, Lebensqualität). Die Rohwerte der einzelnen Items (0–4) werden gespeichert; die Bereichswerte werden durch Summierung der Bewertungen berechnet und linear auf 0–100 transformiert (höher = besser). Der zusammenfassende Knie-Impact-Score (0–100) ist der ungewichtete Mittelwert der drei Domänenwerte und wird nicht berechnet, wenn ein Domänenwert fehlt; jede Domäne erfordert ≥2/4 beantwortete Items mit Imputation für fehlende Items.",
+        "fr-ch" : "Mesure des résultats rapportés par les patients (PROM) capturant les 12 items du KOOS-12 dans trois domaines (douleur, fonction, qualité de vie). Les réponses brutes aux items (0-4) sont enregistrées ; les scores par domaine sont calculés en additionnant les notes et en les transformant linéairement en une échelle de 0 à 100 (plus le score est élevé, meilleur est le résultat). Le score résumé de l'impact sur le genou (0 à 100) est la moyenne non pondérée des scores des trois domaines et n'est pas calculé si l'un des scores de domaine est manquant ; chaque domaine nécessite ≥ 2/4 réponses avec imputation pour les éléments manquants.",
+        "it-ch" : "Misura dei risultati riferiti dal paziente (PROM) che rileva i 12 item del KOOS-12 in tre domini (dolore, funzionalità, qualità della vita). Vengono memorizzate le risposte grezze agli item (0-4); i punteggi dei domini vengono calcolati sommando le valutazioni e trasformandoli linearmente in un valore compreso tra 0 e 100 (più alto = migliore). Il punteggio riassuntivo dell'impatto sul ginocchio (0-100) è la media non ponderata dei punteggi dei tre domini e non viene calcolato se manca il punteggio di uno dei domini; ogni dominio richiede ≥2/4 voci con risposta e imputazione delle voci mancanti.",
+        "en" : "Patient-reported outcome measure (PROM) capturing the 12-item KOOS-12 across three domains (Pain, Function, Quality of Life). Raw item responses (0–4) are stored; domain scores are computed by summated ratings and linearly transformed to 0–100 (higher = better). The Summary knee impact score (0–100) is the unweighted mean of the three domain scores and is not calculated if any domain score is missing; each domain requires ≥2/4 items answered with imputation for missing items."
       },
-      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']",
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']",
       "children" : [ {
         "id" : "pain",
         "name" : "Pain",
@@ -1760,32 +1760,32 @@
           "it-ch" : "",
           "en" : ""
         },
-        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]",
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]",
         "children" : [ {
-          "id" : "a1._hip_pain_frequency",
-          "name" : "1. Hip pain frequency",
-          "localizedName" : "1. Hip pain frequency",
+          "id" : "a1._knee_pain_frequency",
+          "name" : "1. Knee pain frequency",
+          "localizedName" : "1. Knee pain frequency",
           "rmType" : "DV_ORDINAL",
           "nodeId" : "at0005",
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
-            "de-ch" : "1. Häufigkeit Hüftschmerzen",
-            "fr-ch" : "1. Fréquence douleur hanche",
-            "it-ch" : "1. Frequenza dolore anca",
-            "en" : "1. Hip pain frequency"
+            "de-ch" : "1. Häufigkeit Knieschmerzen",
+            "fr-ch" : "1. Fréquence douleur genou",
+            "it-ch" : "1. Frequenza dolore ginocchio",
+            "en" : "1. Knee pain frequency"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Frage: 1. Wie oft haben Sie Hüftschmerzen?",
-            "fr-ch" : "Question: 1. À quelle fréquence ressentez-vous des douleurs à la hanche?",
-            "it-ch" : "Domanda: 1. Con quale frequenza avverti dolore all'anca?",
-            "en" : "Question: 1. How often do you experience hip pain?"
+            "de-ch" : "Frage: 1. Wie oft haben Sie Knieschmerzen?",
+            "fr-ch" : "Question: 1. À quelle fréquence ressentez-vous des douleurs au genou?",
+            "it-ch" : "Domanda: 1. Con quale frequenza avverti dolore al ginocchio?",
+            "en" : "Question: 1. How often do you experience knee pain?  "
           },
           "annotations" : {
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "1"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0005]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0005]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -1885,26 +1885,26 @@
             "en" : "Instruction"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Wie stark waren Ihre Hüftschmerzen in der letzten Woche bei den folgenden Aktivitäten?",
-            "fr-ch" : "Quelle intensité de douleur à la hanche avez-vous ressentie la semaine dernière lors des activités suivantes?",
-            "it-ch" : "Quanto dolore all'anca hai avvertito nell'ultima settimana durante le seguenti attività?",
-            "en" : "What amount of hip pain have you experienced the last week during the following activities?"
+            "de-ch" : "Wie stark waren Ihre Knieschmerzen in der letzten Woche bei den folgenden Aktivitäten?",
+            "fr-ch" : "Quelle intensité de douleur au genou avez-vous ressentie la semaine dernière lors des activités suivantes?",
+            "it-ch" : "Quanto dolore al ginocchio hai avvertito nell'ultima settimana durante le seguenti attività?",
+            "en" : "What amount of knee pain have you experienced the last week during the following activities?"
           },
           "annotations" : {
-            "comment" : "Have “last week” in bold font.\n\nExplanatory note displayed between question 1 (How often do you experience hip pain?) and question 2 (Walking on a flat surface) of the questionnaire."
+            "comment" : "Have “last week” in bold font.\n\nExplanatory note displayed between question 1 (How often do you experience knee pain?) and question 2 (Walking on a flat surface) of the questionnaire."
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0164]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0164]/value",
           "inputs" : [ {
             "suffix" : "code",
             "type" : "CODED_TEXT",
             "list" : [ {
               "value" : "at0165",
-              "label" : "What amount of hip pain have you experienced the last week during the following activities?",
+              "label" : "What amount of knee pain have you experienced the last week during the following activities?",
               "localizedLabels" : {
-                "de-ch" : "Wie stark waren Ihre Hüftschmerzen in der letzten Woche bei den folgenden Aktivitäten?",
-                "fr-ch" : "Quelle intensité de douleur à la hanche avez-vous ressentie la semaine dernière lors des activités suivantes?",
-                "it-ch" : "Quanto dolore all'anca hai avvertito nell'ultima settimana durante le seguenti attività?",
-                "en" : "What amount of hip pain have you experienced the last week during the following activities?"
+                "de-ch" : "Wie stark waren Ihre Knieschmerzen in der letzten Woche bei den folgenden Aktivitäten?",
+                "fr-ch" : "Quelle intensité de douleur au genou avez-vous ressentie la semaine dernière lors des activités suivantes?",
+                "it-ch" : "Quanto dolore al ginocchio hai avvertito nell'ultima settimana durante le seguenti attività?",
+                "en" : "What amount of knee pain have you experienced the last week during the following activities?"
               },
               "localizedDescriptions" : {
                 "de-ch" : "",
@@ -1939,7 +1939,7 @@
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "2"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0017]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0017]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -2048,7 +2048,7 @@
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "3"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0023]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0023]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -2157,7 +2157,7 @@
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "4"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0029]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0029]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -2257,15 +2257,15 @@
             "en" : "Pain score raw"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Unveränderte Summe (0–16) der vier HOOS-12-Schmerzpunkte (jeweils bewertet mit 0–4; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Punkten beantwortet sind; wenn 1–2 Punkte fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Schmerzpunkte ergänzen und kennzeichnen, dass eine Ergänzung vorgenommen wurde.",
-            "fr-ch" : "Somme non transformée (0-16) des quatre items HOOS-12 relatifs à la douleur (chacun noté de 0 à 4 ; plus le score est élevé, plus la douleur est intense). Ne calculer que si >= 2 des 4 items ont reçu une réponse ; si 1 ou 2 items manquent, imputer chaque valeur manquante à la moyenne des items relatifs à la douleur auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
-            "it-ch" : "Somma non trasformata (0-16) dei quattro item HOOS-12 relativi al dolore (ognuno con punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 item; se mancano 1-2 item, imputare ogni valore mancante con la media degli item relativi al dolore a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
-            "en" : "Untransformed sum (0-16) of the four HOOS-12 Pain items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Pain items and flag that imputation was applied."
+            "de-ch" : "Unveränderte Summe (0–16) der vier KOOS-12-Schmerzpunkte (jeweils bewertet mit 0–4; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Punkten beantwortet sind; wenn 1–2 Punkte fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Schmerzpunkte ergänzen und kennzeichnen, dass eine Ergänzung vorgenommen wurde.",
+            "fr-ch" : "Somme non transformée (0-16) des quatre items KOOS-12 relatifs à la douleur (chacun noté de 0 à 4 ; plus le score est élevé, plus la douleur est intense). Ne calculer que si >= 2 des 4 items ont reçu une réponse ; si 1 ou 2 items manquent, imputer chaque valeur manquante à la moyenne des items relatifs à la douleur auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
+            "it-ch" : "Somma non trasformata (0-16) dei quattro item KOOS-12 relativi al dolore (ognuno con punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 item; se mancano 1-2 item, imputare ogni valore mancante con la media degli item relativi al dolore a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
+            "en" : "Untransformed sum (0-16) of the four KOOS-12 Pain items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Pain items and flag that imputation was applied."
           },
           "annotations" : {
             "comment" : "This value is the basis for the transformed Pain score (0-100, higher = better)."
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0042]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0042]/value",
           "inputs" : [ {
             "type" : "INTEGER",
             "validation" : {
@@ -2293,15 +2293,15 @@
           "en" : "Function, daily living"
         },
         "localizedDescriptions" : {
-          "de-ch" : "Funktion, Alltag\nDie folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Damit meinen wir Ihre Fähigkeit, sich zu bewegen und für sich selbst zu sorgen. Geben Sie für jede der folgenden Aktivitäten bitte an, wie stark Ihre Hüfte Sie in der letzten Woche beeinträchtigt hat.\n",
-          "fr-ch" : "Fonctionnement, vie quotidienne\nLes questions suivantes concernent votre fonction physique, c'est-à-dire votre capacité à vous déplacer et à prendre soin de vous. Pour chacune des activités suivantes, veuillez indiquer le degré de difficulté que vous avez éprouvé au cours de la semaine dernière en raison de votre hanche.\n",
-          "it-ch" : "Funzionalità, vita quotidiana\nLe seguenti domande riguardano la tua funzionalità fisica. Con questo intendiamo la tua capacità di muoverti e prenderti cura di te stesso. Per ciascuna delle seguenti attività, indica il grado di difficoltà che hai riscontrato nell'ultima settimana a causa della tua anca.",
-          "en" : "Function, daily living\nThe following questions concern your physical function. By this we mean your ability to move around and to look after yourself. For each of the following activities please indicate the degree of difficulty you have experienced in the last week due to your hip."
+          "de-ch" : "Funktion, Alltag\nDie folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Damit meinen wir Ihre Fähigkeit, sich zu bewegen und für sich selbst zu sorgen. Geben Sie für jede der folgenden Aktivitäten bitte an, wie stark Sie in der letzten Woche aufgrund Ihres Knies Schmerzen hatten.\n",
+          "fr-ch" : "Fonctionnement, vie quotidienne\nLes questions suivantes concernent votre fonction physique, c'est-à-dire votre capacité à vous déplacer et à prendre soin de vous. Pour chacune des activités suivantes, veuillez indiquer le degré de difficulté que vous avez ressenti au cours de la semaine dernière en raison de votre genou.\n",
+          "it-ch" : "Funzionalità, vita quotidiana\nLe seguenti domande riguardano la tua funzionalità fisica. Con questo intendiamo la tua capacità di muoverti e prenderti cura di te stesso. Per ciascuna delle seguenti attività, indica il grado di difficoltà che hai riscontrato nell'ultima settimana a causa della tuo ginocchio.",
+          "en" : "Function, daily living\nThe following questions concern your physical function. By this we mean your ability to move around and to look after yourself. For each of the following activities please indicate the degree of difficulty you have experienced in the last week due to your knee."
         },
         "annotations" : {
           "comment" : "Have “Function, daily living” in bold font.\nHave “last week” in bold font."
         },
-        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]",
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]",
         "children" : [ {
           "id" : "a5._rising_from_sitting",
           "name" : "5. Rising from sitting",
@@ -2326,7 +2326,7 @@
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "5"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0048]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0048]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -2435,7 +2435,7 @@
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "6"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0054]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0054]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -2544,7 +2544,7 @@
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "7"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0060]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0060]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -2630,30 +2630,30 @@
             } ]
           } ]
         }, {
-          "id" : "a8._walking_on_an_uneven_surface",
-          "name" : "8. Walking on an uneven surface",
-          "localizedName" : "8. Walking on an uneven surface",
+          "id" : "a8._twisting_pivoting_on_your_injured_knee",
+          "name" : "8. Twisting/pivoting on your injured knee",
+          "localizedName" : "8. Twisting/pivoting on your injured knee",
           "rmType" : "DV_ORDINAL",
           "nodeId" : "at0066",
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
-            "de-ch" : "8. Gehen auf unebenem Untergrund",
-            "fr-ch" : "8. Marche surface irrégulière",
-            "it-ch" : "8. Camminare su una superficie irregolare",
-            "en" : "8. Walking on an uneven surface"
+            "de-ch" : "8. Drehen/Schwenkbewegungen auf verletztem Knie",
+            "fr-ch" : "8. Torsion/pivotement sur votre genou blessé",
+            "it-ch" : "8. Ruotare/ruotare sul ginocchio infortunato",
+            "en" : "8. Twisting/pivoting on your injured knee"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Frage: 8. Gehen auf unebenem Untergrund",
-            "fr-ch" : "Question: 8. Marcher sur une surface irrégulière",
-            "it-ch" : "Domanda: 8. Camminare su una superficie irregolare",
-            "en" : "Question: 8. Walking on an uneven surface"
+            "de-ch" : "Frage: 8. Drehen/Schwenkbewegungen auf dem verletzten Knie",
+            "fr-ch" : "Question: 8. Torsion/pivotement sur votre genou blessé",
+            "it-ch" : "Domanda: 8. Ruotare/ruotare sul ginocchio infortunato",
+            "en" : "Question: 8. Twisting/pivoting on your injured knee"
           },
           "annotations" : {
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "8"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0066]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0066]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -2753,15 +2753,15 @@
             "en" : "Function score raw"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Ungeänderte Summe (0–16) der vier HOOS-12-Funktionsitems (jeweils mit 0–4 bewertet; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Items beantwortet sind; wenn 1–2 Items fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Funktionsitems ergänzen und kennzeichnen, dass eine Ergänzung vorgenommen wurde.",
-            "fr-ch" : "Somme non transformée (0-16) des quatre items de la fonction HOOS-12 (chacun noté de 0 à 4 ; plus la note est élevée, plus la situation est grave). Ne calculer que si >= 2 des 4 items ont reçu une réponse ; si 1 ou 2 items manquent, imputer chaque valeur manquante avec la moyenne des items de la fonction auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
-            "it-ch" : "Somma non trasformata (0-16) dei quattro elementi della funzione HOOS-12 (ognuno con un punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 elementi; se mancano 1-2 elementi, imputare ogni valore mancante con la media degli elementi della funzione a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
-            "en" : "Untransformed sum (0-16) of the four HOOS-12 Function items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Function items and flag that imputation was applied."
+            "de-ch" : "Ungeänderte Summe (0–16) der vier KOOS-12-Funktionsitems (jeweils mit 0–4 bewertet; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Items beantwortet sind; wenn 1–2 Items fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Funktionsitems ergänzen und kennzeichnen, dass eine Ergänzung vorgenommen wurde.",
+            "fr-ch" : "Somme non transformée (0-16) des quatre items de la fonction KOOS-12 (chacun noté de 0 à 4 ; plus la note est élevée, plus la situation est grave). Ne calculer que si >= 2 des 4 items ont reçu une réponse ; si 1 ou 2 items manquent, imputer chaque valeur manquante avec la moyenne des items de la fonction auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
+            "it-ch" : "Somma non trasformata (0-16) dei quattro elementi della funzione KOOS-12 (ognuno con un punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 elementi; se mancano 1-2 elementi, imputare ogni valore mancante con la media degli elementi della funzione a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
+            "en" : "Untransformed sum (0-16) of the four KOOS-12 Function items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Function items and flag that imputation was applied."
           },
           "annotations" : {
             "comment" : "This value is the basis for the transformed Function score (0-100, higher = better)."
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0072]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0047]/items[at0072]/value",
           "inputs" : [ {
             "type" : "INTEGER",
             "validation" : {
@@ -2794,32 +2794,32 @@
           "it-ch" : "",
           "en" : ""
         },
-        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]",
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]",
         "children" : [ {
-          "id" : "a9._awareness_of_hip_problem",
-          "name" : "9. Awareness of hip problem",
-          "localizedName" : "9. Awareness of hip problem",
+          "id" : "a9._awareness_of_knee_problem",
+          "name" : "9. Awareness of knee problem",
+          "localizedName" : "9. Awareness of knee problem",
           "rmType" : "DV_ORDINAL",
           "nodeId" : "at0076",
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
-            "de-ch" : "9. Bewusstsein für Hüftprobleme",
-            "fr-ch" : "9. Fréquence conscience hanche",
-            "it-ch" : "9. Frequenza consapevolezza anca",
-            "en" : "9. Awareness of hip problem"
+            "de-ch" : "9. Bewusstsein für Knieprobleme",
+            "fr-ch" : "9. Fréquence conscience genou",
+            "it-ch" : "9. Frequenza consapevolezza ginocchio",
+            "en" : "9. Awareness of knee problem"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Frage: 9. Wie oft sind Sie sich Ihrer Hüftprobleme bewusst?",
-            "fr-ch" : "Question: 9. À quelle fréquence êtes-vous conscient de votre problème de hanche?",
-            "it-ch" : "Domanda: 9. Con quale frequenza ti accorgi del tuo problema all'anca?",
-            "en" : "Question: 9. How often are you aware of your hip problem?"
+            "de-ch" : "Frage: 9. Wie oft sind Sie sich Ihrer Knieprobleme bewusst?",
+            "fr-ch" : "Question: 9. À quelle fréquence êtes-vous conscient de votre problème de genou?",
+            "it-ch" : "Domanda: 9. Con quale frequenza ti accorgi del tuo problema al ginocchio?",
+            "en" : "Question: 9. How often are you aware of your knee problem?"
           },
           "annotations" : {
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "9"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0076]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0076]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -2875,7 +2875,7 @@
               "label" : "Daily",
               "localizedLabels" : {
                 "de-ch" : "Täglich",
-                "fr-ch" : "Tous les jours",
+                "fr-ch" : "Quotidiennement",
                 "it-ch" : "Giornalmente",
                 "en" : "Daily"
               },
@@ -2905,30 +2905,30 @@
             } ]
           } ]
         }, {
-          "id" : "a10._lifestyle_modification_to_avoid_hip_damage",
-          "name" : "10. Lifestyle modification to avoid hip damage",
-          "localizedName" : "10. Lifestyle modification to avoid hip damage",
+          "id" : "a10._lifestyle_modification_to_avoid_knee_damage",
+          "name" : "10. Lifestyle modification to avoid knee damage",
+          "localizedName" : "10. Lifestyle modification to avoid knee damage",
           "rmType" : "DV_ORDINAL",
           "nodeId" : "at0131",
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
-            "de-ch" : "10. Änderung der Lebensweise zur Vermeidung von Hüftschäden",
-            "fr-ch" : "10. Évitement activités hanche",
-            "it-ch" : "10. Evitamento attività anca",
-            "en" : "10. Lifestyle modification to avoid hip damage"
+            "de-ch" : "10. Änderung der Lebensweise zur Vermeidung von Knieschäden",
+            "fr-ch" : "10. Évitement activités genou",
+            "it-ch" : "10. Evitamento attività ginocchio",
+            "en" : "10. Lifestyle modification to avoid knee damage"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Frage: 10. Haben Sie Ihren Lebensstil geändert, um potenziell hüftschädigende Aktivitäten zu vermeiden?",
-            "fr-ch" : "Question: 10. Avez-vous modifié votre mode de vie pour éviter les activités potentiellement dommageables pour votre hanche?",
-            "it-ch" : "Domanda: 10. Hai modificato il tuo stile di vita per evitare attività potenzialmente dannose per l'anca?",
-            "en" : "Question: 10. Have you modified your life style to avoid potentially damaging activities to your hip?"
+            "de-ch" : "Frage: 10. Haben Sie Ihren Lebensstil geändert, um potenziell knieschädigende Aktivitäten zu vermeiden?",
+            "fr-ch" : "Question: 10. Avez-vous modifié votre mode de vie pour éviter les activités potentiellement dangereuses pour votre genou?",
+            "it-ch" : "Domanda: 10. Hai modificato il tuo stile di vita per evitare attività potenzialmente dannose per il ginocchio?",
+            "en" : "Question: 10. Have you modified your life style to avoid potentially damaging activities to your knee?"
           },
           "annotations" : {
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "10"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0131]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0131]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -3014,30 +3014,30 @@
             } ]
           } ]
         }, {
-          "id" : "a11._lack_of_confidence_in_hip",
-          "name" : "11. Lack of confidence in hip",
-          "localizedName" : "11. Lack of confidence in hip",
+          "id" : "a11._lack_of_confidence_in_knee",
+          "name" : "11. Lack of confidence in knee",
+          "localizedName" : "11. Lack of confidence in knee",
           "rmType" : "DV_ORDINAL",
           "nodeId" : "at0137",
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
-            "de-ch" : "11. Mangelndes Vertrauen in die Hüfte",
-            "fr-ch" : "11. Manque confiance hanche",
-            "it-ch" : "11. Mancanza fiducia anca",
-            "en" : "11. Lack of confidence in hip"
+            "de-ch" : "11. Mangelndes Vertrauen in das Knie",
+            "fr-ch" : "11. Manque confiance genou",
+            "it-ch" : "11. Mancanza fiducia ginocchio",
+            "en" : "11. Lack of confidence in knee"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Frage: 11. Wie sehr stört Sie Ihr mangelndes Vertrauen in Ihre Hüfte?",
-            "fr-ch" : "Question: 11. Dans quelle mesure manquez-vous de confiance en votre hanche?",
-            "it-ch" : "Domanda: 11. Quanto ti preoccupa la mancanza di fiducia nella tua anca?",
-            "en" : "Question: 11. How much are you troubled with lack of confidence in your hip?"
+            "de-ch" : "Frage: 11. Wie sehr stört Sie Ihr mangelndes Vertrauen in Ihr Knie?",
+            "fr-ch" : "Question: 11. Dans quelle mesure manquez-vous de confiance en votre genou?",
+            "it-ch" : "Domanda: 11. Quanto ti preoccupa la mancanza di fiducia nella tuo ginocchio?",
+            "en" : "Question: 11. How much are you troubled with lack of confidence in your knee?"
           },
           "annotations" : {
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "11"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0137]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0137]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -3109,7 +3109,7 @@
               "label" : "Extremely",
               "localizedLabels" : {
                 "de-ch" : "Extrem",
-                "fr-ch" : "Extrême",
+                "fr-ch" : "Extrêmement",
                 "it-ch" : "Estremamente",
                 "en" : "Extremely"
               },
@@ -3123,30 +3123,30 @@
             } ]
           } ]
         }, {
-          "id" : "a12._overall_hip-related_difficulty",
-          "name" : "12. Overall hip-related difficulty",
-          "localizedName" : "12. Overall hip-related difficulty",
+          "id" : "a12._overall_knee-related_difficulty",
+          "name" : "12. Overall knee-related difficulty",
+          "localizedName" : "12. Overall knee-related difficulty",
           "rmType" : "DV_ORDINAL",
           "nodeId" : "at0143",
           "min" : 0,
           "max" : 1,
           "localizedNames" : {
-            "de-ch" : "12. Allgemeine Hüftprobleme",
-            "fr-ch" : "12. Difficultés générales hanche",
-            "it-ch" : "12. Difficoltà generale anca",
-            "en" : "12. Overall hip-related difficulty"
+            "de-ch" : "12. Allgemeine Knieprobleme",
+            "fr-ch" : "12. Difficultés générales genou",
+            "it-ch" : "12. Difficoltà generale ginocchio",
+            "en" : "12. Overall knee-related difficulty"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Frage: 12. Wie stark sind Ihre Hüftprobleme im Allgemeinen?",
-            "fr-ch" : "Question: 12. En général, quelles sont vos difficultés avec votre hanche?",
-            "it-ch" : "Domanda: 12. In generale, quanta difficoltà hai con l'anca?",
-            "en" : "Question: 12. In general, how much difficulty do you have with your hip?"
+            "de-ch" : "Frage: 12. Wie stark sind Ihre Kniebeschwerden im Allgemeinen?",
+            "fr-ch" : "Question: 12. En général, quelles sont vos difficultés avec votre genou?",
+            "it-ch" : "Domanda: 12. In generale, quanta difficoltà hai con il ginocchio?",
+            "en" : "Question: 12. In general, how much difficulty do you have with your knee?"
           },
           "annotations" : {
             "comment" : "Each data-field label should be short and concise; the patient-facing question is in Description.",
             "order" : "12"
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0143]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0143]/value",
           "inputs" : [ {
             "type" : "CODED_TEXT",
             "list" : [ {
@@ -3246,15 +3246,15 @@
             "en" : "Quality of life score raw"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Unveränderte Summe (0–16) der vier HOOS-12-Lebensqualitätsitems (jeweils bewertet mit 0–4; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Items beantwortet sind; wenn 1–2 Items fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Lebensqualitätsitems imputieren und kennzeichnen, dass eine Imputation vorgenommen wurde.",
-            "fr-ch" : "Somme non transformée (0-16) des quatre éléments HOOS-12 relatifs à la qualité de vie (chacun noté de 0 à 4 ; plus le score est élevé, plus la situation est mauvaise). Ne calculer que si >= 2 des 4 éléments ont reçu une réponse ; si 1 ou 2 éléments manquent, imputer chaque valeur manquante avec la moyenne des éléments relatifs à la qualité de vie auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
-            "it-ch" : "Somma non trasformata (0-16) dei quattro elementi HOOS-12 relativi alla qualità della vita (ciascuno con un punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 elementi; se mancano 1-2 elementi, imputare ciascun valore mancante con la media degli elementi relativi alla qualità della vita a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
-            "en" : "Untransformed sum (0-16) of the four HOOS-12 Quality of life items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Quality of life items and flag that imputation was applied."
+            "de-ch" : "Unveränderte Summe (0–16) der vier KOOS-12-Lebensqualitätsitems (jeweils bewertet mit 0–4; höher = schlechter). Nur berechnen, wenn >= 2 von 4 Items beantwortet sind; wenn 1–2 Items fehlen, jeden fehlenden Wert mit dem Mittelwert der beantworteten Lebensqualitätsitems imputieren und kennzeichnen, dass eine Imputation vorgenommen wurde.",
+            "fr-ch" : "Somme non transformée (0-16) des quatre éléments KOOS-12 relatifs à la qualité de vie (chacun noté de 0 à 4 ; plus le score est élevé, plus la situation est mauvaise). Ne calculer que si >= 2 des 4 éléments ont reçu une réponse ; si 1 ou 2 éléments manquent, imputer chaque valeur manquante avec la moyenne des éléments relatifs à la qualité de vie auxquels une réponse a été donnée et signaler que l'imputation a été appliquée.",
+            "it-ch" : "Somma non trasformata (0-16) dei quattro elementi KOOS-12 relativi alla qualità della vita (ciascuno con un punteggio da 0 a 4; più alto = peggiore). Calcolare solo se sono state fornite risposte a >= 2 dei 4 elementi; se mancano 1-2 elementi, imputare ciascun valore mancante con la media degli elementi relativi alla qualità della vita a cui è stata data risposta e segnalare che è stata applicata l'imputazione.",
+            "en" : "Untransformed sum (0-16) of the four KOOS-12 Quality of life items (each scored 0-4; higher = worse). Compute only if >= 2 of 4 items are answered; if 1-2 items are missing, impute each missing value with the mean of the answered Quality of life items and flag that imputation was applied."
           },
           "annotations" : {
             "comment" : "This value is the basis for the transformed Quality of life score (0-100, higher = better)."
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0149]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0075]/items[at0149]/value",
           "inputs" : [ {
             "type" : "INTEGER",
             "validation" : {
@@ -3287,7 +3287,7 @@
           "it-ch" : "",
           "en" : ""
         },
-        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]",
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]",
         "children" : [ {
           "id" : "pain_score_transformed",
           "name" : "Pain score transformed",
@@ -3304,11 +3304,11 @@
           },
           "localizedDescriptions" : {
             "de-ch" : "Linear transformierter Schmerzbereichswert auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohwert / 16 * 100) aus dem Schmerz-Rohwert (0–16).",
-            "fr-ch" : "Score du domaine « Douleur » transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut « Douleur » (0-16).",
+            "fr-ch" : "Score du domaine douleur transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut Douleur (0-16).",
             "it-ch" : "Punteggio del dominio Dolore trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo del Dolore (0-16).",
             "en" : "Linearly transformed Pain domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Pain raw score (0-16)."
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0151]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0151]/value",
           "inputs" : [ {
             "type" : "INTEGER",
             "validation" : {
@@ -3340,7 +3340,7 @@
             "it-ch" : "Punteggio del dominio della funzione trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).",
             "en" : "Linearly transformed Function domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Function raw score (0-16)."
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0073]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0073]/value",
           "inputs" : [ {
             "type" : "INTEGER",
             "validation" : {
@@ -3367,12 +3367,12 @@
             "en" : "Quality of life  score transformed"
           },
           "localizedDescriptions" : {
-            "de-ch" : "Linear transformierter Wert für den Bereich Lebensqualität auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus dem Funktionswert Rohwert (0-16).",
-            "fr-ch" : "Score du domaine « Qualité de vie » transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut de la fonction (0-16).",
-            "it-ch" : "Punteggio del dominio della qualità della vita trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della funzione (0-16).",
-            "en" : "Linearly transformed Quality of life domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Function raw score (0-16)."
+            "de-ch" : "Linear transformierter Wert für den Bereich Lebensqualität auf einer Skala von 0 bis 100 (100 = am besten, 0 = am schlechtesten), berechnet als 100 - (Rohsumme / 16 * 100) aus dem Rohwert für Lebensqualität (0-16).",
+            "fr-ch" : "Score du domaine Qualité de vie transformé linéairement sur une échelle de 0 à 100 (100 = meilleur, 0 = pire), calculé comme suit : 100 - (somme brute / 16 * 100) à partir du score brut « Qualité de vie » (0-16).",
+            "it-ch" : "Punteggio del dominio della qualità della vita trasformato linearmente su una scala da 0 a 100 (100 = migliore, 0 = peggiore), calcolato come 100 - (somma_grezza / 16 * 100) dal punteggio grezzo della qualità della vita (0-16).",
+            "en" : "Linearly transformed Quality of life domain score on a 0-100 scale (100 = best, 0 = worst), calculated as 100 - (raw_sum / 16 * 100) from the Quality of life raw score (0-16)."
           },
-          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0150]/value",
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0155]/items[at0150]/value",
           "inputs" : [ {
             "type" : "INTEGER",
             "validation" : {
@@ -3391,7 +3391,7 @@
         "rmType" : "DV_DATE_TIME",
         "min" : 1,
         "max" : 1,
-        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/data[at0001]/events[at0002,'Point in time']/time",
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/data[at0001]/events[at0002,'Point in time']/time",
         "inputs" : [ {
           "type" : "DATETIME"
         } ],
@@ -3402,7 +3402,7 @@
         "rmType" : "CODE_PHRASE",
         "min" : 1,
         "max" : 1,
-        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/language",
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/language",
         "inContext" : true
       }, {
         "id" : "encoding",
@@ -3410,7 +3410,7 @@
         "rmType" : "CODE_PHRASE",
         "min" : 1,
         "max" : 1,
-        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/encoding",
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/encoding",
         "inContext" : true
       }, {
         "id" : "subject",
@@ -3418,7 +3418,7 @@
         "rmType" : "PARTY_PROXY",
         "min" : 1,
         "max" : 1,
-        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.hoos_12.v0,'HOOS-12']/subject",
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.koos_12.v0,'KOOS-12']/subject",
         "inputs" : [ {
           "suffix" : "id",
           "type" : "TEXT"

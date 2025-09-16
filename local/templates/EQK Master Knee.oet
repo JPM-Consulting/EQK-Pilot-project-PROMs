@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
-    <id>a4662b25-f5ad-4df6-bfa2-1e150167708d</id>
-    <name>EQK Master Hip</name>
+    <id>8bcd3b89-83dd-474e-93ba-3b4005a2e941</id>
+    <name>EQK Master Knee</name>
     <description>
         <original_author>
             <item>
@@ -45,15 +45,15 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>2.0.1</value>
+                <value>3.0.1</value>
             </item>
             <item>
                 <key>build_uid</key>
-                <value>63338758-963d-4b68-b037-0e50da2816e8</value>
+                <value>a688a33b-7259-4fd3-b8b0-52f6662050cc</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>28635a5118aecb350536b4e21d0492fd</value>
+                <value>4278317550a339ef725cd9d3c7c03f23</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -65,7 +65,7 @@
             </item>
         </other_details>
     </description>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0017]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0017]">
         <items>
             <item>
                 <key>order</key>
@@ -73,7 +73,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0060]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0060]">
         <items>
             <item>
                 <key>order</key>
@@ -81,7 +81,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0029]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0029]">
         <items>
             <item>
                 <key>order</key>
@@ -89,7 +89,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0137]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0137]">
         <items>
             <item>
                 <key>order</key>
@@ -97,7 +97,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]">
         <items>
             <item>
                 <key>order</key>
@@ -105,7 +105,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0048]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0048]">
         <items>
             <item>
                 <key>order</key>
@@ -113,7 +113,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0143]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0143]">
         <items>
             <item>
                 <key>order</key>
@@ -121,7 +121,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0066]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0066]">
         <items>
             <item>
                 <key>order</key>
@@ -129,7 +129,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0076]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0076]">
         <items>
             <item>
                 <key>order</key>
@@ -137,7 +137,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0023]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0023]">
         <items>
             <item>
                 <key>order</key>
@@ -145,7 +145,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0054]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0054]">
         <items>
             <item>
                 <key>order</key>
@@ -153,7 +153,7 @@
             </item>
         </items>
     </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0131]">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0131]">
         <items>
             <item>
                 <key>order</key>
@@ -225,7 +225,7 @@
             </item>
         </items>
     </annotations>
-    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK Master Hip" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK Master Knee" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
         <Content archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
             <Rule name="Point in time" path="/data[at0001]/events[at0002]"/>
             <Rule name="1. Mobility" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]"/>
@@ -249,7 +249,7 @@
             <Rule name="8. Joint specific satisfaction" path="/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0018]"/>
             <Rule name="9. Your level of education" path="/data[at0001]/events[at0002]/data[at0003]/items[at0024]/items[at0025]"/>
         </Content>
-        <Content archetype_id="openEHR-EHR-OBSERVATION.hoos_12.v0" concept_name="Hip Disability and Osteoarthritis Outcome Score - Short Form (HOOS-12)" max="1" name="HOOS-12" path="/content" xsi:type="tem:OBSERVATION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.koos_12.v0" concept_name="Knee Injury and Osteoarthritis Outcome Score - Short Form (KOOS-12)" max="1" name="KOOS-12" path="/content" xsi:type="tem:OBSERVATION">
             <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]"/>
             <Rule max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0161]"/>
         </Content>
@@ -269,8 +269,8 @@
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.siris_additional_questions.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">33e9b3906e519cb7cc9fdf08dd065a83</digest>
     </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.hoos_12.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">ae290c6f6c3b783fcd523a13878465dd</digest>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.koos_12.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">3deac807bf917f04dfdaf128ece8d9b0</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.norpeq.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">4c93ba279b13bcc5fa128f1f4639d26a</digest>

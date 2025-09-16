@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
-    <id>a4662b25-f5ad-4df6-bfa2-1e150167708d</id>
-    <name>EQK Master Hip</name>
+    <id>322fe1b0-7602-48d2-97a0-d6fdc36af706</id>
+    <name>EQK Master Shoulder</name>
     <description>
         <original_author>
             <item>
@@ -45,15 +45,15 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>2.0.1</value>
+                <value>2.1.0</value>
             </item>
             <item>
                 <key>build_uid</key>
-                <value>63338758-963d-4b68-b037-0e50da2816e8</value>
+                <value>681e723d-9a0b-4de3-9e67-b719876a8949</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>28635a5118aecb350536b4e21d0492fd</value>
+                <value>d6c800fca8d1f4a26c12c0e93e92293d</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -65,102 +65,6 @@
             </item>
         </other_details>
     </description>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0017]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>2</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0060]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>7</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0029]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>4</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0137]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>11</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>1</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0048]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>5</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0143]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>12</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0066]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>8</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0076]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>9</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0023]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>3</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0054]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>6</value>
-            </item>
-        </items>
-    </annotations>
-    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.hoos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0131]">
-        <items>
-            <item>
-                <key>order</key>
-                <value>10</value>
-            </item>
-        </items>
-    </annotations>
     <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0018]">
         <items>
             <item>
@@ -225,7 +129,7 @@
             </item>
         </items>
     </annotations>
-    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK Master Hip" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK Master Shoulder" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
         <Content archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
             <Rule name="Point in time" path="/data[at0001]/events[at0002]"/>
             <Rule name="1. Mobility" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]"/>
@@ -249,10 +153,6 @@
             <Rule name="8. Joint specific satisfaction" path="/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0018]"/>
             <Rule name="9. Your level of education" path="/data[at0001]/events[at0002]/data[at0003]/items[at0024]/items[at0025]"/>
         </Content>
-        <Content archetype_id="openEHR-EHR-OBSERVATION.hoos_12.v0" concept_name="Hip Disability and Osteoarthritis Outcome Score - Short Form (HOOS-12)" max="1" name="HOOS-12" path="/content" xsi:type="tem:OBSERVATION">
-            <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]"/>
-            <Rule max="1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0161]"/>
-        </Content>
         <Content archetype_id="openEHR-EHR-OBSERVATION.norpeq.v0" concept_name="Norpeq questionnaire" max="1" name="NORPEQ" path="/content" xsi:type="tem:OBSERVATION">
             <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]"/>
         </Content>
@@ -268,9 +168,6 @@
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.siris_additional_questions.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">33e9b3906e519cb7cc9fdf08dd065a83</digest>
-    </integrity_checks>
-    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.hoos_12.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">ae290c6f6c3b783fcd523a13878465dd</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.norpeq.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">4c93ba279b13bcc5fa128f1f4639d26a</digest>
