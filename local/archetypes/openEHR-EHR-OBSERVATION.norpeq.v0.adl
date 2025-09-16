@@ -11,24 +11,24 @@ language
 			language = <[ISO_639-1::fr-ch]>
 			author = <
 				["name"] = <"Urs Wittwer">
-				["email"] = <"urs.wittwer@healthbrain.care">
 				["organisation"] = <"Healthbrain GmbH">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 		["it-ch"] = <
 			language = <[ISO_639-1::it-ch]>
 			author = <
 				["name"] = <"Urs Wittwer">
-				["email"] = <"urs.wittwer@healthbrain.care">
 				["organisation"] = <"Healthbrain GmbH">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 		["de-ch"] = <
 			language = <[ISO_639-1::de-ch]>
 			author = <
 				["name"] = <"Urs Wittwer">
-				["email"] = <"urs.wittwer@healthbrain.care">
 				["organisation"] = <"Healthbrain GmbH">
+				["email"] = <"urs.wittwer@healthbrain.care">
 			>
 		>
 	>
@@ -85,7 +85,7 @@ Sviluppato nell'ambito del programma pilota OpenPROMs della Commissione federale
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4c93ba279b13bcc5fa128f1f4639d26a">
+		["MD5-CAM-1.0.1"] = <"c797fc2f7fa832945396825fdfc074ae">
 		["build_uid"] = <"004d9872-1e95-4ab3-afd5-d24227fda93d">
 	>
 
@@ -198,7 +198,14 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0074] matches {*}    -- Item tree
+			ITEM_TREE[at0074] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0075] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
 		}
 	}
 
@@ -445,6 +452,10 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
+				["at0075"] = <
+					text = <"Extension">
+					description = <"">
+				>
 			>
 		>
 		["fr-ch"] = <
@@ -684,6 +695,10 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 				["at0074"] = <
 					text = <"Item tree">
 					description = <"@ internal @">
+				>
+				["at0075"] = <
+					text = <"*Extension (en)">
+					description = <"">
 				>
 			>
 		>
@@ -925,6 +940,10 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
+				["at0075"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
 			>
 		>
 		["it-ch"] = <
@@ -1164,6 +1183,10 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 				["at0074"] = <
 					text = <"Item tree">
 					description = <"@ internal @">
+				>
+				["at0075"] = <
+					text = <"*Extension (en)">
+					description = <"">
 				>
 			>
 		>
