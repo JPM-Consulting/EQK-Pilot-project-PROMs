@@ -84,7 +84,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b6a2a1305aa0feba3f3aab8b93010ee1">
+		["MD5-CAM-1.0.1"] = <"40d87fe1a6a5de0278eb69682d03af91">
 		["build_uid"] = <"a6acaad0-24d9-4215-9e5e-1d8184d4692b">
 	>
 
@@ -167,7 +167,7 @@ definition
 							}
 						}
 					}
-					CLUSTER[at0011] occurrences matches {0..1} matches {    -- Single index ccore
+					CLUSTER[at0011] occurrences matches {0..1} matches {    -- Single index score
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Index Score
 								value matches {
@@ -237,7 +237,7 @@ ontology
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"Single index ccore">
+					text = <"Single index score">
 					description = <"">
 				>
 				["at0012"] = <
