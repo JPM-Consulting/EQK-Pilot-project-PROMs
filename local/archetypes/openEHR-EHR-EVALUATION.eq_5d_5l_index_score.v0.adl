@@ -1,0 +1,465 @@
+archetype (adl_version=1.4; uid=5e3766b9-d71b-45d1-b57f-313205b0e3e7)
+	openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["en-us"] = <
+			language = <[ISO_639-1::en-us]>
+			author = <
+			>
+		>
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			author = <
+			>
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2025-09-09">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en-us"] = <
+			language = <[ISO_639-1::en-us]>
+			purpose = <"Evaluation archetype to record the value weights of individual responses and the derived index score from the EQ-5D-5L health status instrument.">
+			keywords = <"EQ-5D-5L, Index Score", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Use this Evaluation archetype only to record the value weights of each response and the derived index score, in conjunction with the Composition archetype EQ-5D-5L Health Status.">
+			misuse = <"*Do not use this Evaluation archetype as a questionnaire to capture the individual’s responses. Use the Composition archetype EQ-5D-5L Health Status for that purpose. (en)">
+		>
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			purpose = <"Archétype d’évaluation destiné à enregistrer les pondérations (value weights) des réponses individuelles ainsi que le score d’indice dérivé de l’instrument d’état de santé EQ-5D-5L. ">
+			keywords = <"EQ-5D-5L","Index","Score">
+			copyright = <"© openEHR Foundation">
+			use = <"Utilisez cet archétype d’évaluation uniquement pour enregistrer les pondérations de chaque réponse et le score d’indice dérivé, en conjonction avec l’archétype de composition EQ-5D-5L Health Status.">
+			misuse = <"N’utilisez pas cet archétype d’évaluation comme questionnaire pour recueillir les réponses de l’individu. Pour cet usage, utilisez l’archétype de composition EQ-5D-5L Health Status. ">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Evaluation archetype to record the value weights of individual responses and the derived index score from the EQ-5D-5L health status instrument.">
+			keywords = <"EQ-5D-5L","Index","Score">
+			use = <"Use this Evaluation archetype only to record the value weights of each response and the derived index score, in conjunction with the Composition archetype EQ-5D-5L Health Status.">
+			misuse = <"Do not use this Evaluation archetype as a questionnaire to capture the individual’s responses. Use the Composition archetype EQ-5D-5L Health Status for that purpose.">
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			purpose = <"Archetype di valutazione destinato a registrare le ponderazioni (value weights) delle risposte individuali e l’indice derivato dallo strumento di stato di salute EQ-5D-5L.">
+			keywords = <"EQ-5D-5L","Index","Score">
+			copyright = <"© openEHR Foundation">
+			use = <"Utilizzare questo archetype di valutazione solo per registrare le ponderazioni di ciascuna risposta e l’indice derivato, in combinazione con l’archetype di composizione EQ-5D-5L Health Status.">
+			misuse = <"Non utilizzare questo archetype di valutazione come questionario per raccogliere le risposte dell’individuo. A tale scopo, utilizzare l’archetype di composizione EQ-5D-5L Health Status">
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			purpose = <"Evaluation-Archetyp zur Erfassung der Gewichtungen der einzelnen Antworten sowie des abgeleiteten Indexwerts aus dem EQ-5D-5L-Gesundheitsstatus-Instrument">
+			keywords = <"EQ-5D-5L","Index","Score">
+			copyright = <"© openEHR Foundation">
+			use = <"Verwenden Sie diesen Evaluation-Archetyp ausschliesslich zur Erfassung der Gewichtungen jeder Antwort und des abgeleiteten Indexwerts, in Verbindung mit dem Composition-Archetyp EQ-5D-5L Health Status">
+			misuse = <"Verwenden Sie diesen Evaluation-Archetyp nicht als Fragebogen zur Erfassung der Antworten der Person. Verwenden Sie dafür den Composition-Archetyp EQ-5D-5L Health Status">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"b6a2a1305aa0feba3f3aab8b93010ee1">
+		["build_uid"] = <"a6acaad0-24d9-4215-9e5e-1d8184d4692b">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- EQ 5D 5L Index Score
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0002] occurrences matches {0..1} matches {    -- Dimensions
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0006] occurrences matches {0..1} matches {    -- Mobility weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::380]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Self-care weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::380]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Usual activities weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::380]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Pain/discomfort weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::380]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Anxiety/depression weighted
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::380]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|0.0..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+					CLUSTER[at0011] occurrences matches {0..1} matches {    -- Single index ccore
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Index Score
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::380]>
+										list = <
+											["1"] = <
+												units = <"1">
+												magnitude = <|-0.594..1.0|>
+												precision = <|3|>
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0013] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"EQ 5D 5L Index Score">
+					description = <"To calculate an EQ-5D-5L score, first identify the 5-digit health state bycombining the individual's responses for each of the five dimensions (Mobility, Self-care, Usual Activities, Pain/Discomfort, Anxiety/Depression), with eachdigit representing a level from 1 (no problems) to 5 (extreme problems). Then, subtract the sum of the value weights for each response from 1, using a country-specific value set that assigns a specific weight to each health state. The result is a single index score between -0.594 and 1, where 1 indicates full health and values below 0 represent states worse than death.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Dimensions">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Mobility weighted">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Self-care weighted">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Usual activities weighted">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Pain/discomfort weighted">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Anxiety/depression weighted">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Single index ccore">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Index Score">
+					description = <"Subtract the sum of the value weights for each response from 1, using a country-specific value set that assigns a specific weight to each health state. The result is a single index score between -0.594 and 1, where 1 indicates full health and values below 0 represent states worse than death.">
+				>
+				["at0013"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["en-us"] = <
+			items = <
+				["at0000"] = <
+					text = <"EQ 5D 5L Index Score">
+					description = <"To calculate an EQ-5D-5L score, first identify the 5-digit health state bycombining the individual's responses for each of the five dimensions (Mobility, Self-care, Usual Activities, Pain/Discomfort, Anxiety/Depression), with eachdigit representing a level from 1 (no problems) to 5 (extreme problems). Then, subtract the sum of the value weights for each response from 1, using a country-specific value set that assigns a specific weight to each health state. The result is a single index score between -0.594 and 1, where 1 indicates full health and values below 0 represent states worse than death.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Dimensions">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Mobility weighted">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Self-Care weighted">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Usual Activities weighted">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Pain / Discomfort weighted">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Anxiety / Depression weighted">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Single index score">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Index Score">
+					description = <"Subtract the sum of the value weights for each response from 1, using a country-specific value set that assigns a specific weight to each health state. The result is a single index score between -0.594 and 1, where 1 indicates full health and values below 0 represent states worse than death.">
+				>
+				["at0013"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["de-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"EQ 5D 5L Index Score">
+					description = <"Zur Berechnung eines EQ-5D-5L-Scores wird zunächst der fünfstellige Gesundheitszustand ermittelt, indem die Antworten der Person für jede der fünf Dimensionen (Mobilität, Selbstversorgung, Alltägliche Aktivitäten, Schmerz/Unwohlsein, Angst/Depression) kombiniert werden. Jede Ziffer entspricht einem Niveau von 1 (keine Probleme) bis 5 (extreme Probleme). Anschliessend wird von 1 die Summe der Gewichtungen für jede Antwort abgezogen, unter Verwendung eines länderspezifischen Wertemodells, das jedem Gesundheitszustand ein spezifisches Gewicht zuweist. Das Ergebnis ist ein einzelner Indexwert zwischen –0,594 und 1, wobei 1 für volle Gesundheit steht und Werte unter 0 Gesundheitszustände repräsentieren, die als schlechter als der Tod angesehen werden">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Dimensionen">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Beweglichkeit / Mobilität gewichtet">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Für sich selbst sorgen gewichtet">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Alltägliche Tätigkeiten gewichtet">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Schmerzen / körperliche Beschwerden gewichtet">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Angst / Niedergeschlagenheit gewichtet">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Single index score">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Index Score">
+					description = <"Subtrahiere von 1 die Summe der Gewichtungen für jede Antwort, unter Verwendung eines länderspezifischen Wertemodells, das jedem Gesundheitszustand ein spezifisches Gewicht zuweist. Das Ergebnis ist ein einzelner Indexwert zwischen –0,594 und 1, wobei 1 volle Gesundheit anzeigt und Werte unter 0 Zustände darstellen, die als schlechter als der Tod angesehen werden.">
+				>
+				["at0013"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"EQ 5D 5L Index Score">
+					description = <"Pour calculer un score EQ-5D-5L, il faut d’abord déterminer l’état de santé à 5 chiffres en combinant les réponses de l’individu pour chacune des cinq dimensions (Mobilité, Soins personnels, Activités habituelles, Douleur/Inconfort, Anxiété/Dépression). Chaque chiffre correspond à un niveau allant de 1 (aucun problème) à 5 (problèmes extrêmes). Ensuite, on applique l’ensemble de valeurs spécifique au pays, qui attribue un poids à chaque état de santé, et l’on soustrait la somme des pondérations de 1. Le résultat est un score d’indice unique compris entre –0,594 et 1, où 1 représente la pleine santé et les valeurs inférieures à 0 représentent des états de santé considérés comme pires que la mort.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Dimensions">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Mobilité pondérée">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Autonomie de la personne pondérés">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Activités courantes pondérées">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Douleurs / gêne pondéré">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Anxiété / dépression pondérée">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Single index score">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Index Score">
+					description = <"Soustrayez de 1 la somme des pondérations (value weights) correspondant à chaque réponse, en utilisant un ensemble de valeurs spécifique au pays qui attribue un poids à chaque état de santé. Le résultat est un score d’indice unique compris entre –0,594 et 1, où 1 indique une santé complète et les valeurs inférieures à 0 représentent des états jugés pires que la mort.">
+				>
+				["at0013"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["it-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"EQ 5D 5L Index Score">
+					description = <"Per calcolare un punteggio EQ-5D-5L, occorre innanzitutto identificare lo stato di salute a 5 cifre combinando le risposte dell’individuo per ciascuna delle cinque dimensioni (Mobilità, Cura di sé, Attività abituali, Dolore/Disagio, Ansia/Depressione), con ogni cifra che rappresenta un livello da 1 (nessun problema) a 5 (problemi estremi). Successivamente, si sottrae da 1 la somma delle ponderazioni corrispondenti a ciascuna risposta, utilizzando un set di valori specifico per paese che assegna un peso a ciascuno stato di salute. Il risultato è un punteggio indice unico compreso tra –0,594 e 1, dove 1 indica piena salute e valori inferiori a 0 rappresentano stati considerati peggiori della morte.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Dimensioni">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Capacità di movimento ponderata">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Cura della persona ponderata">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Attività abituali ponderate">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Dolore o fastidio ponderato">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Ansia o depressione ponderata">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Single index score">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Index Score">
+					description = <"Sottrarre da 1 la somma delle ponderazioni (value weights) relative a ciascuna risposta, utilizzando un set di valori specifico per paese che assegna un peso a ciascuno stato di salute. Il risultato è un punteggio indice unico compreso tra –0,594 e 1, dove 1 indica piena salute e valori inferiori a 0 rappresentano stati considerati peggiori della morte">
+				>
+				["at0013"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+	>

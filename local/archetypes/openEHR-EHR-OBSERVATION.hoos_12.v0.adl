@@ -84,7 +84,7 @@ Roos EM, Lohmander LS. The Hip disability and Osteoarthritis Outcome Score (HOOS
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7d987f7844e9ae5b44e2fa4288e6a4ec">
+		["MD5-CAM-1.0.1"] = <"ae290c6f6c3b783fcd523a13878465dd">
 		["build_uid"] = <"9142beb3-1087-40e4-9d64-4415899cb6cf">
 	>
 
@@ -839,8 +839,8 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 					comment = <"“letzten Woche” in bold font.">
 				>
 				["at0048"] = <
-					text = <"5. Aufstehen aus der Sitzposition">
-					description = <"Frage: 5. Aufstehen aus der Sitzposition">
+					text = <"5. Aus einer Sitzposition aufstehen">
+					description = <"Frage: 5. Aus einer Sitzposition aufstehen">
 					comment = <"Jede Datenfeldbezeichnung sollte kurz und prägnant sein; die Frage an den Patienten steht in der Beschreibung.">
 					order = <"5">
 				>
@@ -891,8 +891,8 @@ Die folgenden Fragen beziehen sich auf Ihre körperliche Funktionsfähigkeit. Da
 					description = <"">
 				>
 				["at0060"] = <
-					text = <"7. Ein-/Aussteigen aus dem Auto">
-					description = <"Frage: 7. Ein-/Aussteigen aus dem Auto">
+					text = <"7. Ein-/Aussteigen aus einem Auto">
+					description = <"Frage: 7. Ein-/Aussteigen aus einem Auto">
 					comment = <"Jede Datenfeldbezeichnung sollte kurz und prägnant sein; die Frage an den Patienten steht in der Beschreibung.">
 					order = <"7">
 				>

@@ -7,11 +7,6 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["de-ch"] = <
-			language = <[ISO_639-1::de-ch]>
-			author = <
-			>
-		>
 		["fr-ch"] = <
 			language = <[ISO_639-1::fr-ch]>
 			author = <
@@ -19,6 +14,11 @@ language
 		>
 		["it-ch"] = <
 			language = <[ISO_639-1::it-ch]>
+			author = <
+			>
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
 			author = <
 			>
 		>
@@ -73,8 +73,8 @@ https://www.santesuisse.ch/fileadmin/sas_content/SIRIS_Medieninformation_de.pdf"
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"069f0e10850ba327079c39dd7c73c5f0">
-		["build_uid"] = <"5347b21c-911a-308e-a7c2-fbd877faaa71">
+		["MD5-CAM-1.0.1"] = <"33e9b3906e519cb7cc9fdf08dd065a83">
+		["build_uid"] = <"fdfec22b-e5a8-4e08-bde0-729e5d7eea84">
 	>
 
 definition
