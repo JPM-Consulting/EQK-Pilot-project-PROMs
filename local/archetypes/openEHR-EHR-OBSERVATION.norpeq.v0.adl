@@ -85,7 +85,7 @@ Sviluppato nell'ambito del programma pilota OpenPROMs della Commissione federale
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c797fc2f7fa832945396825fdfc074ae">
+		["MD5-CAM-1.0.1"] = <"23f061fdd7405039070957d5ac57cda6">
 		["build_uid"] = <"004d9872-1e95-4ab3-afd5-d24227fda93d">
 	>
 
@@ -697,7 +697,7 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 					description = <"@ internal @">
 				>
 				["at0075"] = <
-					text = <"*Extension (en)">
+					text = <"Extension">
 					description = <"">
 				>
 			>
@@ -941,7 +941,7 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 					description = <"@ internal @">
 				>
 				["at0075"] = <
-					text = <"*Extension (en)">
+					text = <"Extension">
 					description = <"">
 				>
 			>
@@ -1185,7 +1185,7 @@ overall scale from 0 to 100, where 100 is the best possible experience of care. 
 					description = <"@ internal @">
 				>
 				["at0075"] = <
-					text = <"*Extension (en)">
+					text = <"Extension">
 					description = <"">
 				>
 			>

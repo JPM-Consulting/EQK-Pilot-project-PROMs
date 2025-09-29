@@ -1,6 +1,6 @@
 {
   "templateId" : "EQK Master Shoulder",
-  "semVer" : "2.1.0",
+  "semVer" : "3.0.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "de-ch", "fr-ch", "it-ch", "en" ],
@@ -33,6 +33,157 @@
       "max" : 1,
       "aqlPath" : "/context",
       "children" : [ {
+        "id" : "data_entry_device",
+        "name" : "Data Entry Device",
+        "localizedName" : "Data Entry Device",
+        "rmType" : "CLUSTER",
+        "nodeId" : "openEHR-EHR-CLUSTER.data_entry_device.v0",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Data Entry Device",
+          "fr-ch" : "Data Entry Device",
+          "it-ch" : "Data Entry Device",
+          "en" : "Data Entry Device"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Data Entry Device",
+          "fr-ch" : "Data Entry Device",
+          "it-ch" : "Data Entry Device",
+          "en" : "Data Entry Device"
+        },
+        "aqlPath" : "/context/other_context[at0003]/items[openEHR-EHR-CLUSTER.data_entry_device.v0]",
+        "children" : [ {
+          "id" : "device_category",
+          "name" : "Device category",
+          "localizedName" : "Device category",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0001",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Device category",
+            "fr-ch" : "Device category",
+            "it-ch" : "Device category",
+            "en" : "Device category"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : ""
+          },
+          "aqlPath" : "/context/other_context[at0003]/items[openEHR-EHR-CLUSTER.data_entry_device.v0]/items[at0001]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0002",
+              "label" : "Smartphone",
+              "localizedLabels" : {
+                "de-ch" : "Smartphone",
+                "fr-ch" : "Smartphone",
+                "it-ch" : "Smartphone",
+                "en" : "Smartphone"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              }
+            }, {
+              "value" : "at0003",
+              "label" : "Tablet",
+              "localizedLabels" : {
+                "de-ch" : "Tablet",
+                "fr-ch" : "Tablet",
+                "it-ch" : "Tablet",
+                "en" : "Tablet"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              }
+            }, {
+              "value" : "at0004",
+              "label" : "Desktop",
+              "localizedLabels" : {
+                "de-ch" : "Desktop",
+                "fr-ch" : "Desktop",
+                "it-ch" : "Desktop",
+                "en" : "Desktop"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              }
+            }, {
+              "value" : "at0005",
+              "label" : "Laptop",
+              "localizedLabels" : {
+                "de-ch" : "Laptop",
+                "fr-ch" : "Laptop",
+                "it-ch" : "Laptop",
+                "en" : "Laptop"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              }
+            }, {
+              "value" : "at0006",
+              "label" : "Unknown",
+              "localizedLabels" : {
+                "de-ch" : "Unknown",
+                "fr-ch" : "Unknown",
+                "it-ch" : "Unknown",
+                "en" : "Unknown"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              }
+            } ],
+            "listOpen" : true
+          }, {
+            "suffix" : "other",
+            "type" : "TEXT"
+          } ]
+        }, {
+          "id" : "comment",
+          "name" : "Comment",
+          "localizedName" : "Comment",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0009",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Comment",
+            "fr-ch" : "Comment",
+            "it-ch" : "Comment",
+            "en" : "Comment"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "",
+            "fr-ch" : "",
+            "it-ch" : "",
+            "en" : ""
+          },
+          "aqlPath" : "/context/other_context[at0003]/items[openEHR-EHR-CLUSTER.data_entry_device.v0]/items[at0009]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        } ]
+      }, {
         "id" : "start_time",
         "name" : "Start_time",
         "rmType" : "DV_DATE_TIME",
