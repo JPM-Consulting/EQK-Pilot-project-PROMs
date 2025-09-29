@@ -1,0 +1,273 @@
+archetype (adl_version=1.4; uid=61dbff74-480c-4442-89f7-5bc1b266d8f5)
+	openEHR-EHR-CLUSTER.data_entry_device.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			author = <
+			>
+		>
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+		["date"] = <"2025-09-29">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			copyright = <"© openEHR Foundation">
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"3fe25599-d757-3824-a634-27b9330d59ee">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Data Entry Device
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Device category
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Smartphone
+							at0003,    -- Tablet
+							at0004,    -- Desktop
+							at0005,    -- Laptop
+							at0006]    -- Unknown
+						}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {    -- Components
+				include
+					archetype_id/value matches {/.*/}
+			}
+			allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- Extension
+				include
+					archetype_id/value matches {/.*/}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Data Entry Device">
+					description = <"Data Entry Device">
+				>
+				["at0001"] = <
+					text = <"Device category">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Smartphone">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tablet">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Desktop">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Laptop">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Components">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["de-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Data Entry Device">
+					description = <"Data Entry Device">
+				>
+				["at0001"] = <
+					text = <"Device category">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Smartphone">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tablet">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Desktop">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Laptop">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Components">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Data Entry Device">
+					description = <"Data Entry Device">
+				>
+				["at0001"] = <
+					text = <"Device category">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Smartphone">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tablet">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Desktop">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Laptop">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Components">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["it-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Data Entry Device">
+					description = <"Data Entry Device">
+				>
+				["at0001"] = <
+					text = <"Device category">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Smartphone">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tablet">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Desktop">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Laptop">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Components">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+	>
