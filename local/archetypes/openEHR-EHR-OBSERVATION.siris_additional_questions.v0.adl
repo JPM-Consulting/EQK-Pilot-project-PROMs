@@ -73,7 +73,7 @@ https://www.santesuisse.ch/fileadmin/sas_content/SIRIS_Medieninformation_de.pdf"
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"33e9b3906e519cb7cc9fdf08dd065a83">
+		["MD5-CAM-1.0.1"] = <"47a245ae51a7820e65dce5b1e97eb963">
 		["build_uid"] = <"fdfec22b-e5a8-4e08-bde0-729e5d7eea84">
 	>
 
@@ -109,7 +109,7 @@ definition
 										items cardinality matches {1..*; unordered} matches {
 											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Joint specific satisfaction
 												value matches {
-													0|[local::at0019],
+													1|[local::at0019],
 													2|[local::at0020],
 													3|[local::at0021],
 													4|[local::at0022],
@@ -262,7 +262,7 @@ mentioned on page 1?">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"up to 9 years of eductation (compulsory education)">
+					text = <"up to 9 years of education (compulsory education)">
 					description = <"">
 				>
 				["at0027"] = <
