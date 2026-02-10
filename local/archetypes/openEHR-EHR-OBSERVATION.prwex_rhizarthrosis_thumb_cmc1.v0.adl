@@ -6,6 +6,32 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+				["name"] = <"Jean-Pierre Messerli">
+				["organisation"] = <"jean-pierre.messerli@jpm-consulting.ch">
+				["email"] = <"JPM Consulting GmbH">
+			>
+		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			author = <
+				["name"] = <"Jean-Pierre Messerli">
+				["organisation"] = <"jean-pierre.messerli@jpm-consulting.ch">
+				["email"] = <"JPM Consulting GmbH">
+			>
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			author = <
+				["name"] = <"Jean-Pierre Messerli">
+				["organisation"] = <"jean-pierre.messerli@jpm-consulting.ch">
+				["email"] = <"JPM Consulting GmbH">
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,10 +42,14 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record patient-reported outcomes for thumb carpometacarpal (CMC1/TMC) osteoarthritis (rhizarthrosis) using the PRWEx Rhizarthrosis – Thumb/CMC1 questionnaire over the last 7 days. The archetype captures individual item responses for pain and function, plus perceived outcome items (including satisfaction), and optionally stores calculated sub-scores and a total score (PRWE-type scoring).">
-			keywords = <"PRWEx, PROM, Rhizarthrosis, Thumb, CMC1, Pain, Function", ...>
+			keywords = <"PRWEx","PROM","Rhizarthrosis","Thumb","CMC1","Pain","Function">
 			use = <"Use this archetype to:
 	•	Capture patient self-reported pain and functional difficulty related to thumb/hand function in the context of rhizarthrosis / CMC1.
 	•	Record the questionnaire as part of pre-/post-intervention assessment (e.g., conservative management, post-arthroplasty follow-up) and/or longitudinal follow-up.
@@ -34,6 +64,14 @@ description
 	•	To document patient experience of care processes (PREMs) such as communication, waiting times, or service satisfaction (use dedicated PREM instruments/archetypes).
 	•	As a diagnosis, problem list entry, procedure record, or clinical interpretation (store those in appropriate EVALUATION/ACTION archetypes).">
 		>
+		["it-ch"] = <
+			language = <[ISO_639-1::it-ch]>
+			copyright = <"© openEHR Foundation">
+		>
+		["de-ch"] = <
+			language = <[ISO_639-1::de-ch]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -45,7 +83,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a097836ebae12c70fc573e8e5e5a0b1e">
+		["MD5-CAM-1.0.1"] = <"41377b1c73bed2fce7bb19fc9f9dca77">
 		["build_uid"] = <"89131b6b-5ab0-385c-bab6-655110061018">
 	>
 
@@ -1242,6 +1280,2574 @@ Note: The score may contain 0.5 increments; do not round unless required for dis
 					text = <"Score Total">
 					description = <"Total score (PRWEx/PRWE-type), last 7 days.">
 					comment = <"Composite score combining pain and function. Range 0-100, where higher scores indicate worse overall outcome. Formula: TotalScore = PainScore + FunctionScore, where PainScore = sum(A1-A5) and FunctionScore = sum(B1-B10)/2">
+				>
+				["at0209"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0210"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["de-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"PRWEx Rhizarthrosis Thumb/CMC1">
+					description = <"PRWEx – Rhizarthrosis – Thumb/CMC1">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"A. Schmerz (5 Fragen)">
+					description = <"Referenzzeitraum: Letzte 7 Tage">
+				>
+				["at0005"] = <
+					text = <"1. Schmerzen in Ruhe (Daumen/Hand in Ruhe)">
+					description = <"Frage: 1. Schmerzen in Ruhe (Daumen/Hand in Ruhe)">
+				>
+				["at0006"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0007"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0017"] = <
+					text = <"2. Schmerzen bei Nutzung (Greifen/Zupacken)">
+					description = <"Frage: 2. Schmerzen bei Nutzung (Greifen/Zupacken)">
+				>
+				["at0018"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0019"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0029"] = <
+					text = <"3. Maximale Schmerzen diese Woche">
+					description = <"Frage: 3. Maximale Schmerzen diese Woche">
+				>
+				["at0030"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0031"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0041"] = <
+					text = <"4. Häufigkeit der Schmerzen diese Woche">
+					description = <"Frage: 4. Häufigkeit der Schmerzen diese Woche">
+				>
+				["at0042"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0043"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0053"] = <
+					text = <"5. Schmerzen bei längerer oder wiederholter Aktivität (Kochen, Putzen, Telefonieren)">
+					description = <"Frage: 5. Schmerzen bei längerer oder wiederholter Aktivität (Kochen, Putzen, Telefonieren)">
+				>
+				["at0054"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0055"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0065"] = <
+					text = <"B. Funktion (10 Fragen)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"B1. Spezifische Daumenaktivitäten (6 Fragen)">
+					description = <"Referenzzeitraum: Letzte 7 Tage">
+				>
+				["at0067"] = <
+					text = <"6. Ein Glas oder einen Schraubverschluss öffnen">
+					description = <"Frage: 6. Ein Glas oder einen Schraubverschluss öffnen">
+				>
+				["at0068"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0069"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0079"] = <
+					text = <"7. Einen Schlüssel im Schloss drehen">
+					description = <"Frage: 7. Einen Schlüssel im Schloss drehen">
+				>
+				["at0080"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0081"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0091"] = <
+					text = <"8. Ein Tuch/Mopp/Schwamm auswringen">
+					description = <"Frage: 8. Ein Tuch/Mopp/Schwamm auswringen">
+				>
+				["at0092"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0093"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0103"] = <
+					text = <"9. Essen schneiden (Essen halten + Messer benutzen)">
+					description = <"Frage: 9. Essen schneiden (Essen halten + Messer benutzen)">
+				>
+				["at0104"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0105"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0113"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0114"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0115"] = <
+					text = <"10. Eine Einkaufstasche oder einen Topf tragen (Greifen + Halten)">
+					description = <"Frage: 10. Eine Einkaufstasche oder einen Topf tragen (Greifen + Halten)">
+				>
+				["at0116"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0117"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0118"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0119"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0120"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0121"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0123"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0124"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0125"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0126"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0127"] = <
+					text = <"11. Schreiben/Tastatur oder Smartphone benutzen">
+					description = <"Frage: 11. Schreiben/Tastatur oder Smartphone benutzen">
+				>
+				["at0128"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0129"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0137"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0138"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0139"] = <
+					text = <"B2. Alltagsaktivitäten (4 Fragen)">
+					description = <"Referenzzeitraum: Letzte 7 Tage">
+				>
+				["at0140"] = <
+					text = <"12. Toilette und Anziehen (Knöpfe, BH, Reissverschluss, Waschen)">
+					description = <"Frage: 12. Toilette und Anziehen (Knöpfe, BH, Reissverschluss, Waschen)">
+				>
+				["at0141"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0142"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0143"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0144"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0145"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0146"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0147"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0148"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0149"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0150"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0151"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0152"] = <
+					text = <"13. Kochen und Haushaltsaufgaben (Vorbereiten, Waschen, Aufräumen)">
+					description = <"Frage: 13. Kochen und Haushaltsaufgaben (Vorbereiten, Waschen, Aufräumen)">
+				>
+				["at0153"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0154"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0155"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0156"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0157"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0158"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0159"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0160"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0161"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0162"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0163"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0164"] = <
+					text = <"14. Einkaufen/Aussenaktivitäten (Tragen, Handhaben, Öffnen/Schliessen)">
+					description = <"Frage. 14. Einkaufen/Aussenaktivitäten (Tragen, Handhaben, Öffnen/Schliessen)">
+				>
+				["at0165"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0166"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0167"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0168"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0169"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0170"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0171"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0172"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0173"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0174"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0175"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0176"] = <
+					text = <"15. Alltagshobbys (leichtes Heimwerken, Gärtnern, Lesen, Spiele, etc.)">
+					description = <"Frage: 15. Alltagshobbys (leichtes Heimwerken, Gärtnern, Lesen, Spiele, etc.)">
+				>
+				["at0177"] = <
+					text = <"0">
+					description = <"0 = Kein Schmerz / Keine Schwierigkeiten">
+				>
+				["at0178"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0179"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0180"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0181"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0182"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0183"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0184"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0185"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0186"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0187"] = <
+					text = <"10">
+					description = <"10 = Maximale Schmerzen / Unmöglich">
+				>
+				["at0188"] = <
+					text = <"C. Wahrgenommenes Ergebnis nach Prothese">
+					description = <"">
+				>
+				["at0189"] = <
+					text = <"16. Insgesamt, wie zufrieden sind Sie mit dem Ergebnis der Operation?">
+					description = <"Frage: 16. Insgesamt, wie zufrieden sind Sie mit dem Ergebnis der Operation?">
+				>
+				["at0190"] = <
+					text = <"0">
+					description = <"0 = Überhaupt nicht zufrieden">
+				>
+				["at0191"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0192"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0193"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0194"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0195"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0196"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0197"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0198"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0199"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0200"] = <
+					text = <"10">
+					description = <"10 = Total zufrieden">
+				>
+				["at0201"] = <
+					text = <"17. Würden Sie sich unter den gleichen Umständen erneut operieren lassen?">
+					description = <"Frage: 17. Würden Sie sich unter den gleichen Umständen erneut operieren lassen?">
+				>
+				["at0202"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0203"] = <
+					text = <"Nein">
+					description = <"">
+				>
+				["at0204"] = <
+					text = <"Ich weiss nicht">
+					description = <"">
+				>
+				["at0205"] = <
+					text = <"Scores">
+					description = <"">
+				>
+				["at0206"] = <
+					text = <"Score Schmerz">
+					description = <"Schmerz-Subscore (PRWEx / PRWE-Typ), letzte 7 Tage.">
+					comment = <"Berechnet als Summe der Schmerzfragen A1-A5.
+Bereich 0-50, höhere Werte bedeuten stärkere Schmerzen.
+Formel: SchmerzScore = A1 + A2 + A3 + A4 + A5. Es wird ein ganzzahliges Ergebnis erwartet, da der Score eine nicht skalierte Summe der Fragen A1-A5 ist.">
+				>
+				["at0207"] = <
+					text = <"Score Funktion">
+					description = <"Funktions-Subscore (PRWEx / PRWE-Typ), letzte 7 Tage.">
+					comment = <"Berechnet als Summe der Funktionsfragen B1-B10 (Rohbereich 0-100) und anschliessend durch 2 geteilt, um den Score an den Schmerz-Subscore anzugleichen. Endbereich 0-50, höhere Werte bedeuten stärkere funktionelle Einschränkungen.
+Formel: FunktionsScore = (B1 + … + B10) / 2
+Hinweis: Der Score kann Schritte von 0,5 enthalten; nicht runden, ausser wenn dies ist für die Anzeige erforderlich ist.">
+				>
+				["at0208"] = <
+					text = <"Score Total">
+					description = <"Gesamtscore (PRWEx / PRWE-Typ), letzte 7 Tage.">
+					comment = <"Zusammengesetzter Score aus Schmerz und Funktion. Bereich 0-100, höhere Werte bedeuten ein schlechteres Gesamtergebnis.
+Formel: GesamtScore = SchmerzScore + FunktionsScore, wobei SchmerzScore = Summe(A1-A5) und FunktionsScore = Summe(B1-B10) / 2.">
+				>
+				["at0209"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0210"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"PRWEx Rhizarthrosis Thumb/CMC1">
+					description = <"PRWEx – Rhizarthrosis – Thumb/CMC1">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"A. Douleur (5 questions)">
+					description = <"Période de référence : les 7 derniers jours">
+				>
+				["at0005"] = <
+					text = <"1. Douleur au repos (main/pouce au calme)">
+					description = <"Question: 1. Douleur au repos (main/pouce au calme)">
+				>
+				["at0006"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0007"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0017"] = <
+					text = <"2. Douleur à l’utilisation (saisir/pincer)">
+					description = <"Question: 2. Douleur à l’utilisation (saisir/pincer)">
+				>
+				["at0018"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0019"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0029"] = <
+					text = <"3. Douleur maximale ressentie cette semaine">
+					description = <"Question: 3. Douleur maximale ressentie cette semaine ">
+				>
+				["at0030"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0031"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0041"] = <
+					text = <"4. Fréquence de la douleur cette semaine">
+					description = <"Question: 4. Fréquence de la douleur cette semaine ">
+				>
+				["at0042"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0043"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0053"] = <
+					text = <"5. Douleur lors d’une activité prolongée ou répétitive (cuisine, ménage, téléphone)">
+					description = <"Question: 5. Douleur lors d’une activité prolongée ou répétitive (cuisine, ménage, téléphone)">
+				>
+				["at0054"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0055"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0065"] = <
+					text = <"B. Function (10 questions)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"B1. Activités spécifiques du pouce (6 questions)">
+					description = <"Indique la difficulté pour ">
+				>
+				["at0067"] = <
+					text = <"6. Ouvrir un bocal ou un couvercle vissé">
+					description = <"Question: 6. Ouvrir un bocal ou un couvercle vissé">
+				>
+				["at0068"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0069"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0079"] = <
+					text = <"7. Tourner une clé dans une serrure">
+					description = <"Question: 7. Tourner une clé dans une serrure">
+				>
+				["at0080"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0081"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0091"] = <
+					text = <"8. Essorer un chiffon / une serpillière / une éponge">
+					description = <"Question: 8. Essorer un chiffon / une serpillière / une éponge">
+				>
+				["at0092"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0093"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0103"] = <
+					text = <"9. Couper des aliments (tenir l’aliment + utiliser le couteau)">
+					description = <"Question: 9. Couper des aliments (tenir l’aliment + utiliser le couteau)">
+				>
+				["at0104"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0105"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0113"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0114"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0115"] = <
+					text = <"10. Porter un sac de courses ou une casserole (prise/pince + maintien)">
+					description = <"Question: 10. Porter un sac de courses ou une casserole (prise/pince + maintien)">
+				>
+				["at0116"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0117"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0118"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0119"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0120"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0121"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0123"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0124"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0125"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0126"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0127"] = <
+					text = <"11. Écrire / utiliser un clavier ou smartphone (selon ton usage)">
+					description = <"Question: 11. Écrire / utiliser un clavier ou smartphone (selon ton usage)">
+				>
+				["at0128"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0129"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0137"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0138"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0139"] = <
+					text = <"B2. Activités habituelles (4 questions)">
+					description = <"Dans les 7 derniers jours, à quel point ton pouce/main a limité ">
+				>
+				["at0140"] = <
+					text = <"12. Toilette et habillage (boutons, soutien-gorge, fermeture éclair, lavage)">
+					description = <"Question: 12. Toilette et habillage (boutons, soutien-gorge, fermeture éclair, lavage)">
+				>
+				["at0141"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0142"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0143"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0144"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0145"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0146"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0147"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0148"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0149"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0150"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0151"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0152"] = <
+					text = <"13. Cuisine et tâches ménagères (préparer, laver, ranger)">
+					description = <"Question: 13. Cuisine et tâches ménagères (préparer, laver, ranger)">
+				>
+				["at0153"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0154"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0155"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0156"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0157"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0158"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0159"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0160"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0161"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0162"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0163"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0164"] = <
+					text = <"14. Courses / activités extérieures (porter, manipuler, ouvrir/fermer)">
+					description = <"Question: 14. Courses / activités extérieures (porter, manipuler, ouvrir/fermer)">
+				>
+				["at0165"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0166"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0167"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0168"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0169"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0170"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0171"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0172"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0173"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0174"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0175"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0176"] = <
+					text = <"15. Loisirs du quotidien (bricolage léger, jardinage, lecture, jeux, etc.)">
+					description = <"Question: 15. Loisirs du quotidien (bricolage léger, jardinage, lecture, jeux, etc.)">
+				>
+				["at0177"] = <
+					text = <"0">
+					description = <"0 = aucune douleur / aucune difficulté">
+				>
+				["at0178"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0179"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0180"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0181"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0182"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0183"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0184"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0185"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0186"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0187"] = <
+					text = <"10">
+					description = <"10 = douleur maximale / impossible">
+				>
+				["at0188"] = <
+					text = <"C. Question résultat perçu spécifique post-prothèse">
+					description = <"">
+				>
+				["at0189"] = <
+					text = <"16. Globalement, quel est ton niveau de satisfaction du résultat de l’opération ?">
+					description = <"Question: 16. Globalement, quel est ton niveau de satisfaction du résultat de l’opération ?">
+				>
+				["at0190"] = <
+					text = <"0">
+					description = <"0 = Pas du tout satisfait(e)">
+				>
+				["at0191"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0192"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0193"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0194"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0195"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0196"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0197"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0198"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0199"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0200"] = <
+					text = <"10">
+					description = <"10 = Totalement satisfait(e)">
+				>
+				["at0201"] = <
+					text = <"17. Referais-tu la même opération dans la même situation ?">
+					description = <"Question: 17. Referais-tu la même opération dans la même situation ?">
+				>
+				["at0202"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0203"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0204"] = <
+					text = <"Je ne sais pas">
+					description = <"">
+				>
+				["at0205"] = <
+					text = <"Scores">
+					description = <"">
+				>
+				["at0206"] = <
+					text = <"Score Douleur">
+					description = <"Score douleur (PRWEx / type PRWE), 7 derniers jours.">
+					comment = <"Calculé comme la somme des items de douleur A1-A5.
+Plage 0-50, où un score plus élevé indique une douleur plus importante.
+Formule : ScoreDouleur = A1 + A2 + A3 + A4 + A5. Un résultat en nombre entier est attendu, car le score correspond à une somme non pondérée des items A1-A5.">
+				>
+				["at0207"] = <
+					text = <"Score Function">
+					description = <"Score fonction (PRWEx / type PRWE), 7 derniers jours.">
+					comment = <"Calculé comme la somme des items de fonction B1-B10 (plage brute 0-100), puis divisé par 2 afin de s’aligner sur le score douleur. Plage finale 0-50, plus le score est élevé, plus la limitation fonctionnelle est importante.
+Formule : ScoreFonction = (B1 + ... + B10) / 2
+Remarque : le score peut comporter des incréments de 0,5, ne pas arrondir, sauf si nécessaire pour l’affichage.">
+				>
+				["at0208"] = <
+					text = <"Score Total">
+					description = <"Score total (PRWEx / type PRWE), 7 derniers jours.">
+					comment = <"Score composite combinant la douleur et la fonction. Plage 0-100, où un score plus élevé indique un résultat global plus défavorable.
+Formule : ScoreTotal = ScoreDouleur + ScoreFonction, où ScoreDouleur = somme(A1-A5) et ScoreFonction = somme(B1-B10) / 2.">
+				>
+				["at0209"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0210"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["it-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"PRWEx Rhizarthrosis Thumb/CMC1">
+					description = <"PRWEx – Rhizarthrosis – Thumb/CMC1">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"A. Dolore (5 domande)">
+					description = <"Periodo di riferimento: ultimi 7 giorni.">
+				>
+				["at0005"] = <
+					text = <"1. Dolore a riposo (pollice/mano a riposo)">
+					description = <"Domanda: 1. Dolore a riposo (pollice/mano a riposo)">
+				>
+				["at0006"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0007"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0017"] = <
+					text = <"2. Dolore durante l’uso (afferrare/pizzicare)">
+					description = <"Domanda: 2. Dolore durante l’uso (afferrare/pizzicare)">
+				>
+				["at0018"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0019"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0029"] = <
+					text = <"3. Dolore massimo avvertito questa settimana">
+					description = <"Domanda: 3. Dolore massimo avvertito questa settimana">
+				>
+				["at0030"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0031"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0041"] = <
+					text = <"4. Frequenza del dolore questa settimana">
+					description = <"Domanda: 4. Frequenza del dolore questa settimana">
+				>
+				["at0042"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0043"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0053"] = <
+					text = <"5. Dolore durante attività prolungate o ripetitive (cucinare, pulire, telefono)">
+					description = <"Domanda: 5. Dolore durante attività prolungate o ripetitive (cucinare, pulire, telefono)">
+				>
+				["at0054"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0055"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0065"] = <
+					text = <"B. Funzione (10 domande)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"B1. Attività specifiche del pollice (6 domande)">
+					description = <"Periodo di riferimento: ultimi 7 giorni.">
+				>
+				["at0067"] = <
+					text = <"6. Aprire un barattolo o un coperchio a vite">
+					description = <"Domanda: 6. Aprire un barattolo o un coperchio a vite">
+				>
+				["at0068"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0069"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0079"] = <
+					text = <"7.  Girare una chiave nella serratura">
+					description = <"Domanda: 7.  Girare una chiave nella serratura">
+				>
+				["at0080"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0081"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0091"] = <
+					text = <"8. Strizzare un panno / mocio / spugna">
+					description = <"Domanda: 8. Strizzare un panno / mocio / spugna">
+				>
+				["at0092"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0093"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0103"] = <
+					text = <"9. Tagliare il cibo (tenere il cibo + usare il coltello)">
+					description = <"Domanda: 9. Tagliare il cibo (tenere il cibo + usare il coltello)">
+				>
+				["at0104"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0105"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0113"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0114"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0115"] = <
+					text = <"10. Trasportare una borsa della spesa o una pentola (presa + mantenimento)">
+					description = <"Domanda: 10. Trasportare una borsa della spesa o una pentola (presa + mantenimento)">
+				>
+				["at0116"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0117"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0118"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0119"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0120"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0121"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0123"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0124"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0125"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0126"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0127"] = <
+					text = <"11. Scrivere / usare una tastiera o uno smartphone">
+					description = <"Domanda: 11. Scrivere / usare una tastiera o uno smartphone">
+				>
+				["at0128"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0129"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0137"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0138"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0139"] = <
+					text = <"B2. Attività quotidiane (4 domande)">
+					description = <"Periodo di riferimento: ultimi 7 giorni.">
+				>
+				["at0140"] = <
+					text = <"12. Igiene personale e vestirsi (bottoni, reggiseno, cerniera, lavarsi)">
+					description = <"Domanda: 12. Igiene personale e vestirsi (bottoni, reggiseno, cerniera, lavarsi)">
+				>
+				["at0141"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0142"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0143"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0144"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0145"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0146"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0147"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0148"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0149"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0150"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0151"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0152"] = <
+					text = <"13. Cucinare e faccende domestiche (preparare, lavare, riordinare)">
+					description = <"Domanda: 13. Cucinare e faccende domestiche (preparare, lavare, riordinare)">
+				>
+				["at0153"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0154"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0155"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0156"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0157"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0158"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0159"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0160"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0161"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0162"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0163"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0164"] = <
+					text = <"14. Spesa / attività all’aperto (trasportare, maneggiare, aprire/chiudere)">
+					description = <"Domanda: 14. Spesa / attività all’aperto (trasportare, maneggiare, aprire/chiudere)">
+				>
+				["at0165"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0166"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0167"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0168"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0169"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0170"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0171"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0172"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0173"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0174"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0175"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0176"] = <
+					text = <"15. Hobby quotidiani (piccoli lavori fai-da-te, giardinaggio, lettura, giochi, ecc.)">
+					description = <"Domanda: 15. Hobby quotidiani (piccoli lavori fai-da-te, giardinaggio, lettura, giochi, ecc.)">
+				>
+				["at0177"] = <
+					text = <"0">
+					description = <"0 = Nessun dolore / Nessuna difficoltà ">
+				>
+				["at0178"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0179"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0180"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0181"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0182"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0183"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0184"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0185"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0186"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0187"] = <
+					text = <"10">
+					description = <"10 = Dolore massimo / Impossibile">
+				>
+				["at0188"] = <
+					text = <"C. Esito percepito dopo la protesi">
+					description = <"">
+				>
+				["at0189"] = <
+					text = <"16. Nel complesso, qual è il suo livello di soddisfazione per il risultato dell’intervento?">
+					description = <"Domanda: 16. Nel complesso, qual è il suo livello di soddisfazione per il risultato dell’intervento?">
+				>
+				["at0190"] = <
+					text = <"0">
+					description = <"0 = Per niente soddisfatto ">
+				>
+				["at0191"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0192"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0193"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0194"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0195"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0196"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0197"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0198"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0199"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0200"] = <
+					text = <"10">
+					description = <"10 = Totalmente soddisfatto">
+				>
+				["at0201"] = <
+					text = <"17. Nella stessa situazione, rifarebbe lo stesso intervento?">
+					description = <"Domanda: 17. Nella stessa situazione, rifarebbe lo stesso intervento?">
+				>
+				["at0202"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0203"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0204"] = <
+					text = <"Non lo so">
+					description = <"">
+				>
+				["at0205"] = <
+					text = <"Scores">
+					description = <"">
+				>
+				["at0206"] = <
+					text = <"Score Dolore">
+					description = <"Sottopunteggio dolore (PRWEx / tipo PRWE), ultimi 7 giorni.">
+					comment = <"Calcolato come somma degli item di dolore A1-A5.
+Intervallo 0-50, punteggi più alti indicano un dolore più intenso.
+Formula: PunteggioDolore = A1 + A2 + A3 + A4 + A5. È previsto un risultato intero, poiché il punteggio è una somma non scalata degli item A1-A5.">
+				>
+				["at0207"] = <
+					text = <"Score Funzione">
+					description = <"Sottopunteggio funzione (PRWEx / tipo PRWE), ultimi 7 giorni.">
+					comment = <"Calcolato come somma degli item di funzione B1-B10 (intervallo grezzo 0-100), quindi diviso per 2 per allinearsi al sottopunteggio dolore. Intervallo finale 0-50, punteggi più alti indicano una maggiore limitazione funzionale.
+Formula: PunteggioFunzione = (B1 + … + B10) / 2
+Nota: il punteggio può includere incrementi di 0,5; non arrotondare, salvo se necessario per la visualizzazione.">
+				>
+				["at0208"] = <
+					text = <"Score Totale">
+					description = <"Punteggio totale (PRWEx / tipo PRWE), ultimi 7 giorni.">
+					comment = <"Punteggio composito che combina dolore e funzione. Intervallo 0-100; punteggi più alti indicano un esito complessivo peggiore.
+Formula: PunteggioTotale = PunteggioDolore + PunteggioFunzione, dove PunteggioDolore = somma(A1-A5) e PunteggioFunzione = somma(B1-B10) / 2.">
 				>
 				["at0209"] = <
 					text = <"Item tree">
