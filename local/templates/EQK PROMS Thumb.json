@@ -1,0 +1,3938 @@
+{
+  "templateId" : "EQK PROMS Thumb",
+  "semVer" : "1.2.0",
+  "version" : "2.3",
+  "defaultLanguage" : "en",
+  "languages" : [ "en" ],
+  "tree" : {
+    "id" : "eqk_proms_thumb",
+    "name" : "EQK PROMS Thumb",
+    "localizedName" : "EQK PROMS Thumb",
+    "rmType" : "COMPOSITION",
+    "nodeId" : "openEHR-EHR-COMPOSITION.self_reported_data.v1",
+    "min" : 1,
+    "max" : 1,
+    "localizedNames" : {
+      "en" : "EQK PROMS Thumb"
+    },
+    "localizedDescriptions" : {
+      "en" : "Generic container for information provided by an individual."
+    },
+    "aqlPath" : "",
+    "children" : [ {
+      "id" : "context",
+      "rmType" : "EVENT_CONTEXT",
+      "nodeId" : "",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/context",
+      "children" : [ {
+        "id" : "data_entry_device",
+        "name" : "Data Entry Device",
+        "localizedName" : "Data Entry Device",
+        "rmType" : "CLUSTER",
+        "nodeId" : "openEHR-EHR-CLUSTER.data_entry_device.v0",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Data Entry Device"
+        },
+        "localizedDescriptions" : {
+          "en" : "Data Entry Device"
+        },
+        "aqlPath" : "/context/other_context[at0003]/items[openEHR-EHR-CLUSTER.data_entry_device.v0]",
+        "children" : [ {
+          "id" : "device_category",
+          "name" : "Device category",
+          "localizedName" : "Device category",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0001",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Device category"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/context/other_context[at0003]/items[openEHR-EHR-CLUSTER.data_entry_device.v0]/items[at0001]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0002",
+              "label" : "Smartphone",
+              "localizedLabels" : {
+                "en" : "Smartphone"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0003",
+              "label" : "Tablet",
+              "localizedLabels" : {
+                "en" : "Tablet"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0004",
+              "label" : "Desktop",
+              "localizedLabels" : {
+                "en" : "Desktop"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0005",
+              "label" : "Laptop",
+              "localizedLabels" : {
+                "en" : "Laptop"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            }, {
+              "value" : "at0006",
+              "label" : "Unknown",
+              "localizedLabels" : {
+                "en" : "Unknown"
+              },
+              "localizedDescriptions" : {
+                "en" : ""
+              }
+            } ],
+            "listOpen" : true
+          }, {
+            "suffix" : "other",
+            "type" : "TEXT"
+          } ]
+        }, {
+          "id" : "comment",
+          "name" : "Comment",
+          "localizedName" : "Comment",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0009",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Comment"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/context/other_context[at0003]/items[openEHR-EHR-CLUSTER.data_entry_device.v0]/items[at0009]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        } ]
+      }, {
+        "id" : "start_time",
+        "name" : "Start_time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/context/start_time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "setting",
+        "name" : "Setting",
+        "rmType" : "DV_CODED_TEXT",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/context/setting",
+        "inputs" : [ {
+          "suffix" : "code",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "value",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "eq-5d-5l_health_status",
+      "name" : "EQ-5D-5L Health status",
+      "localizedName" : "EQ-5D-5L Health status",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.eq_5d_5l.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "en" : "EQ-5D-5L Health status"
+      },
+      "localizedDescriptions" : {
+        "en" : "A standardised measure of health status to provide a simple, generic measure of health for clinical and economic appraisal."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]",
+      "children" : [ {
+        "id" : "mobility",
+        "name" : "Mobility",
+        "localizedName" : "Mobility",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0004",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Mobility"
+        },
+        "localizedDescriptions" : {
+          "en" : "Issues with mobility."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0005",
+            "label" : "No problems",
+            "localizedLabels" : {
+              "en" : "No problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0012",
+            "label" : "Slight problems",
+            "localizedLabels" : {
+              "en" : "Slight problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0013",
+            "label" : "Moderate problems",
+            "localizedLabels" : {
+              "en" : "Moderate problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0014",
+            "label" : "Severe problems",
+            "localizedLabels" : {
+              "en" : "Severe problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0015",
+            "label" : "Unable to walk about.",
+            "localizedLabels" : {
+              "en" : "Unable to walk about."
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "self-care",
+        "name" : "Self-care",
+        "localizedName" : "Self-care",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0006",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Self-care"
+        },
+        "localizedDescriptions" : {
+          "en" : "Issues with self-care."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0006]/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0016",
+            "label" : "No problems",
+            "localizedLabels" : {
+              "en" : "No problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0017",
+            "label" : "Slight problems",
+            "localizedLabels" : {
+              "en" : "Slight problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0018",
+            "label" : "Moderate problems",
+            "localizedLabels" : {
+              "en" : "Moderate problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0019",
+            "label" : "Severe problems",
+            "localizedLabels" : {
+              "en" : "Severe problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0020",
+            "label" : "Unable to wash or dress",
+            "localizedLabels" : {
+              "en" : "Unable to wash or dress"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "usual_activities",
+        "name" : "Usual activities",
+        "localizedName" : "Usual activities",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0007",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Usual activities"
+        },
+        "localizedDescriptions" : {
+          "en" : "Issues with usual activities."
+        },
+        "annotations" : {
+          "comment" : "e.g. work, study, housework, family or leisure activities."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0007]/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0021",
+            "label" : "No problems",
+            "localizedLabels" : {
+              "en" : "No problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0022",
+            "label" : "Slight problems",
+            "localizedLabels" : {
+              "en" : "Slight problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0023",
+            "label" : "Moderate problems",
+            "localizedLabels" : {
+              "en" : "Moderate problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0024",
+            "label" : "Severe problems",
+            "localizedLabels" : {
+              "en" : "Severe problems"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0025",
+            "label" : "Unable to do my usual activities",
+            "localizedLabels" : {
+              "en" : "Unable to do my usual activities"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "pain_discomfort",
+        "name" : "Pain/discomfort",
+        "localizedName" : "Pain/discomfort",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0008",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Pain/discomfort"
+        },
+        "localizedDescriptions" : {
+          "en" : "Issues of pain or discomfort."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0008]/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0026",
+            "label" : "No pain or discomfort",
+            "localizedLabels" : {
+              "en" : "No pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0027",
+            "label" : "Slight pain or discomfort",
+            "localizedLabels" : {
+              "en" : "Slight pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0028",
+            "label" : "Moderate pain or discomfort",
+            "localizedLabels" : {
+              "en" : "Moderate pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0029",
+            "label" : "Severe pain or discomfort",
+            "localizedLabels" : {
+              "en" : "Severe pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0030",
+            "label" : "Extreme pain or discomfort",
+            "localizedLabels" : {
+              "en" : "Extreme pain or discomfort"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "anxiety_depression",
+        "name" : "Anxiety/depression",
+        "localizedName" : "Anxiety/depression",
+        "rmType" : "DV_ORDINAL",
+        "nodeId" : "at0009",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Anxiety/depression"
+        },
+        "localizedDescriptions" : {
+          "en" : "Issue with anxiety or depression."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0009]/value",
+        "inputs" : [ {
+          "type" : "CODED_TEXT",
+          "list" : [ {
+            "value" : "at0031",
+            "label" : "No anxiety or depression",
+            "localizedLabels" : {
+              "en" : "No anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 1
+          }, {
+            "value" : "at0032",
+            "label" : "Slight anxiety or depression",
+            "localizedLabels" : {
+              "en" : "Slight anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 2
+          }, {
+            "value" : "at0033",
+            "label" : "Moderate anxiety or depression",
+            "localizedLabels" : {
+              "en" : "Moderate anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 3
+          }, {
+            "value" : "at0034",
+            "label" : "Severe anxiety or depression",
+            "localizedLabels" : {
+              "en" : "Severe anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 4
+          }, {
+            "value" : "at0035",
+            "label" : "Extreme anxiety or depression",
+            "localizedLabels" : {
+              "en" : "Extreme anxiety or depression"
+            },
+            "localizedDescriptions" : {
+              "en" : "*"
+            },
+            "ordinal" : 5
+          } ]
+        } ]
+      }, {
+        "id" : "state",
+        "name" : "State",
+        "localizedName" : "State",
+        "rmType" : "DV_TEXT",
+        "nodeId" : "at0011",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "State"
+        },
+        "localizedDescriptions" : {
+          "en" : "A 5-digit code formed from the scores of each component, with 9 indicating a missing value."
+        },
+        "annotations" : {
+          "comment" : "e.g. '21491'"
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0011]/value",
+        "inputs" : [ {
+          "type" : "TEXT"
+        } ]
+      }, {
+        "id" : "overall_health",
+        "name" : "Overall health",
+        "localizedName" : "Overall health",
+        "rmType" : "DV_COUNT",
+        "nodeId" : "at0010",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Overall health"
+        },
+        "localizedDescriptions" : {
+          "en" : "A self-assessment of overall health on a scale from 0 to 100."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0010]/value",
+        "inputs" : [ {
+          "type" : "INTEGER",
+          "validation" : {
+            "range" : {
+              "minOp" : ">=",
+              "min" : 0,
+              "maxOp" : "<=",
+              "max" : 100
+            }
+          }
+        } ]
+      }, {
+        "id" : "time",
+        "name" : "Time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/data[at0001]/events[at0002,'Point in time']/time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.eq_5d_5l.v0]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "eq_5d_5l_index_score",
+      "name" : "EQ 5D 5L Index Score",
+      "localizedName" : "EQ 5D 5L Index Score",
+      "rmType" : "EVALUATION",
+      "nodeId" : "openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "en" : "EQ 5D 5L Index Score"
+      },
+      "localizedDescriptions" : {
+        "en" : "To calculate an EQ-5D-5L score, first identify the 5-digit health state bycombining the individual's responses for each of the five dimensions (Mobility, Self-care, Usual Activities, Pain/Discomfort, Anxiety/Depression), with eachdigit representing a level from 1 (no problems) to 5 (extreme problems). Then, subtract the sum of the value weights for each response from 1, using a country-specific value set that assigns a specific weight to each health state. The result is a single index score between -0.594 and 1, where 1 indicates full health and values below 0 represent states worse than death."
+      },
+      "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]",
+      "children" : [ {
+        "id" : "dimensions",
+        "name" : "Dimensions",
+        "localizedName" : "Dimensions",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0002",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Dimensions"
+        },
+        "localizedDescriptions" : {
+          "en" : ""
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/data[at0001]/items[at0002]",
+        "children" : [ {
+          "id" : "mobility_weighted",
+          "name" : "Mobility weighted",
+          "localizedName" : "Mobility weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0006",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Mobility weighted"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/data[at0001]/items[at0002]/items[at0006]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "self-care_weighted",
+          "name" : "Self-care weighted",
+          "localizedName" : "Self-care weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0007",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Self-care weighted"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/data[at0001]/items[at0002]/items[at0007]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "usual_activities_weighted",
+          "name" : "Usual activities weighted",
+          "localizedName" : "Usual activities weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0008",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Usual activities weighted"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/data[at0001]/items[at0002]/items[at0008]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "pain_discomfort_weighted",
+          "name" : "Pain/discomfort weighted",
+          "localizedName" : "Pain/discomfort weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0009",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Pain/discomfort weighted"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/data[at0001]/items[at0002]/items[at0009]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "anxiety_depression_weighted",
+          "name" : "Anxiety/depression weighted",
+          "localizedName" : "Anxiety/depression weighted",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0010",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Anxiety/depression weighted"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/data[at0001]/items[at0002]/items[at0010]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0.0,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "single_index_score",
+        "name" : "Single index score",
+        "localizedName" : "Single index score",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0011",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "en" : "Single index score"
+        },
+        "localizedDescriptions" : {
+          "en" : ""
+        },
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/data[at0001]/items[at0011]",
+        "children" : [ {
+          "id" : "index_score",
+          "name" : "Index Score",
+          "localizedName" : "Index Score",
+          "rmType" : "DV_QUANTITY",
+          "nodeId" : "at0012",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Index Score"
+          },
+          "localizedDescriptions" : {
+            "en" : "Subtract the sum of the value weights for each response from 1, using a country-specific value set that assigns a specific weight to each health state. The result is a single index score between -0.594 and 1, where 1 indicates full health and values below 0 represent states worse than death."
+          },
+          "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/data[at0001]/items[at0011]/items[at0012]/value",
+          "inputs" : [ {
+            "suffix" : "magnitude",
+            "type" : "DECIMAL",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : -0.661,
+                "maxOp" : "<=",
+                "max" : 1.0
+              },
+              "precision" : {
+                "minOp" : ">=",
+                "min" : 3,
+                "maxOp" : "<=",
+                "max" : 3
+              }
+            }
+          }, {
+            "suffix" : "unit",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "1",
+              "label" : "1",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : -0.661,
+                  "maxOp" : "<=",
+                  "max" : 1.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 3,
+                  "maxOp" : "<=",
+                  "max" : 3
+                }
+              }
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "siris_additional_questions",
+      "name" : "SIRIS additional questions",
+      "localizedName" : "SIRIS additional questions",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.siris_additional_questions.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "en" : "SIRIS additional questions"
+      },
+      "localizedDescriptions" : {
+        "en" : "SIRIS has some extra questions for the PROM EQ-5D-5L for Implant Registry SIRIS Hip, Knee and Shoulder."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]",
+      "children" : [ {
+        "id" : "point_in_time",
+        "name" : "Point in time",
+        "localizedName" : "Point in time",
+        "rmType" : "POINT_EVENT",
+        "nodeId" : "at0002",
+        "min" : 0,
+        "max" : -1,
+        "localizedNames" : {
+          "en" : "Point in time"
+        },
+        "localizedDescriptions" : {
+          "en" : "@ internal @"
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']",
+        "children" : [ {
+          "id" : "joint_specific_pain",
+          "name" : "Joint specific pain",
+          "localizedName" : "Joint specific pain",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0004",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Joint specific pain"
+          },
+          "localizedDescriptions" : {
+            "en" : "Instruction: Please tick the number that corresponds to the intensity of the pain in the joint mentioned on page 1."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]",
+          "children" : [ {
+            "id" : "joint_specific_pain",
+            "name" : "Joint specific pain",
+            "localizedName" : "Joint specific pain",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0005",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Joint specific pain"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: How severe was your joint-specific pain last week?"
+            },
+            "annotations" : {
+              "comment" : "Have “joint-specific pain last week?” in bold font."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0005]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0006",
+                "label" : "0",
+                "localizedLabels" : {
+                  "en" : "0"
+                },
+                "localizedDescriptions" : {
+                  "en" : "no pain"
+                },
+                "ordinal" : 0
+              }, {
+                "value" : "at0007",
+                "label" : "1",
+                "localizedLabels" : {
+                  "en" : "1"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0008",
+                "label" : "2",
+                "localizedLabels" : {
+                  "en" : "2"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0009",
+                "label" : "3",
+                "localizedLabels" : {
+                  "en" : "3"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0010",
+                "label" : "4",
+                "localizedLabels" : {
+                  "en" : "4"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              }, {
+                "value" : "at0011",
+                "label" : "5",
+                "localizedLabels" : {
+                  "en" : "5"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 5
+              }, {
+                "value" : "at0012",
+                "label" : "6",
+                "localizedLabels" : {
+                  "en" : "6"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 6
+              }, {
+                "value" : "at0013",
+                "label" : "7",
+                "localizedLabels" : {
+                  "en" : "7"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 7
+              }, {
+                "value" : "at0014",
+                "label" : "8",
+                "localizedLabels" : {
+                  "en" : "8"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 8
+              }, {
+                "value" : "at0015",
+                "label" : "9",
+                "localizedLabels" : {
+                  "en" : "9"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 9
+              }, {
+                "value" : "at0016",
+                "label" : "10",
+                "localizedLabels" : {
+                  "en" : "10"
+                },
+                "localizedDescriptions" : {
+                  "en" : "worst pain I can imagin"
+                },
+                "ordinal" : 10
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "joint_specific_satisfaction",
+          "name" : "Joint specific satisfaction",
+          "localizedName" : "Joint specific satisfaction",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0017",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Joint specific satisfaction"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0017]",
+          "children" : [ {
+            "id" : "joint_specific_satisfaction",
+            "name" : "Joint specific satisfaction",
+            "localizedName" : "Joint specific satisfaction",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0018",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Joint specific satisfaction"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: How would you feel if you had to live the rest of your life with the current symptoms in the joint\nmentioned on page 1?"
+            },
+            "annotations" : {
+              "comment" : "Have “rest of your life” in bold font."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0017]/items[at0018]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0019",
+                "label" : "very satisfied",
+                "localizedLabels" : {
+                  "en" : "very satisfied"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0020",
+                "label" : "somewhat satisfied",
+                "localizedLabels" : {
+                  "en" : "somewhat satisfied"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0021",
+                "label" : "neither satisfied nor dissatisfied",
+                "localizedLabels" : {
+                  "en" : "neither satisfied nor dissatisfied"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0022",
+                "label" : "somewhat dissatisfied",
+                "localizedLabels" : {
+                  "en" : "somewhat dissatisfied"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              }, {
+                "value" : "at0023",
+                "label" : "very dissatisfied",
+                "localizedLabels" : {
+                  "en" : "very dissatisfied"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 5
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "your_level_of_education",
+          "name" : "Your level of education",
+          "localizedName" : "Your level of education",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0024",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Your level of education"
+          },
+          "localizedDescriptions" : {
+            "en" : "Instruction: (to be answered only once, in the patient survey before the operation)"
+          },
+          "annotations" : {
+            "comment" : "Have “before the operation” in bold font."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0024]",
+          "children" : [ {
+            "id" : "your_level_of_education",
+            "name" : "Your level of education",
+            "localizedName" : "Your level of education",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0025",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Your level of education"
+            },
+            "localizedDescriptions" : {
+              "en" : ""
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0024]/items[at0025]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0026",
+                "label" : "up to 9 years of education (compulsory education)",
+                "localizedLabels" : {
+                  "en" : "up to 9 years of education (compulsory education)"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0027",
+                "label" : "10 to 13 years of eduction (vocational education, secundary school, high school)",
+                "localizedLabels" : {
+                  "en" : "10 to 13 years of eduction (vocational education, secundary school, high school)"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0028",
+                "label" : "more than 13 years of education (university, polytechnic, college of higher education, federal institute of technology)",
+                "localizedLabels" : {
+                  "en" : "more than 13 years of education (university, polytechnic, college of higher education, federal institute of technology)"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0029",
+                "label" : "not specified",
+                "localizedLabels" : {
+                  "en" : "not specified"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "time",
+          "name" : "Time",
+          "rmType" : "DV_DATE_TIME",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/data[at0001]/events[at0002,'Point in time']/time",
+          "inputs" : [ {
+            "type" : "DATETIME"
+          } ],
+          "inContext" : true
+        } ]
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.siris_additional_questions.v0]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "prwex_rhizarthrosis_thumb_cmc1",
+      "name" : "PRWEx Rhizarthrosis Thumb/CMC1",
+      "localizedName" : "PRWEx Rhizarthrosis Thumb/CMC1",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "en" : "PRWEx Rhizarthrosis Thumb/CMC1"
+      },
+      "localizedDescriptions" : {
+        "en" : "PRWEx – Rhizarthrosis – Thumb/CMC1"
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]",
+      "children" : [ {
+        "id" : "point_in_time",
+        "name" : "Point in time",
+        "localizedName" : "Point in time",
+        "rmType" : "POINT_EVENT",
+        "nodeId" : "at0002",
+        "min" : 0,
+        "max" : -1,
+        "localizedNames" : {
+          "en" : "Point in time"
+        },
+        "localizedDescriptions" : {
+          "en" : "@ internal @"
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']",
+        "children" : [ {
+          "id" : "a._pain_5_questions",
+          "name" : "A. Pain (5 Questions)",
+          "localizedName" : "A. Pain (5 Questions)",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0004",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "A. Pain (5 Questions)"
+          },
+          "localizedDescriptions" : {
+            "en" : "Reference Period: Last 7 Days"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]",
+          "children" : [ {
+            "id" : "a1._pain_at_rest_thumb_hand_at_rest",
+            "name" : "1. Pain at rest (thumb/hand at rest)",
+            "localizedName" : "1. Pain at rest (thumb/hand at rest)",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0005",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "1. Pain at rest (thumb/hand at rest)"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: 1. Pain at rest (thumb/hand at rest)"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0005]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0006",
+                "label" : "0",
+                "localizedLabels" : {
+                  "en" : "0"
+                },
+                "localizedDescriptions" : {
+                  "en" : "0 = No Pain / No Difficulty"
+                },
+                "ordinal" : 0
+              }, {
+                "value" : "at0007",
+                "label" : "1",
+                "localizedLabels" : {
+                  "en" : "1"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0008",
+                "label" : "2",
+                "localizedLabels" : {
+                  "en" : "2"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0009",
+                "label" : "3",
+                "localizedLabels" : {
+                  "en" : "3"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0010",
+                "label" : "4",
+                "localizedLabels" : {
+                  "en" : "4"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              }, {
+                "value" : "at0011",
+                "label" : "5",
+                "localizedLabels" : {
+                  "en" : "5"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 5
+              }, {
+                "value" : "at0012",
+                "label" : "6",
+                "localizedLabels" : {
+                  "en" : "6"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 6
+              }, {
+                "value" : "at0013",
+                "label" : "7",
+                "localizedLabels" : {
+                  "en" : "7"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 7
+              }, {
+                "value" : "at0014",
+                "label" : "8",
+                "localizedLabels" : {
+                  "en" : "8"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 8
+              }, {
+                "value" : "at0015",
+                "label" : "9",
+                "localizedLabels" : {
+                  "en" : "9"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 9
+              }, {
+                "value" : "at0016",
+                "label" : "10",
+                "localizedLabels" : {
+                  "en" : "10"
+                },
+                "localizedDescriptions" : {
+                  "en" : "10 = Maximum Pain / Impossible"
+                },
+                "ordinal" : 10
+              } ]
+            } ]
+          }, {
+            "id" : "a2._pain_during_use_grasping_pinching",
+            "name" : "2. Pain during use (grasping/pinching)",
+            "localizedName" : "2. Pain during use (grasping/pinching)",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0017",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "2. Pain during use (grasping/pinching)"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: 2. Pain during use (grasping/pinching)"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0017]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0018",
+                "label" : "0",
+                "localizedLabels" : {
+                  "en" : "0"
+                },
+                "localizedDescriptions" : {
+                  "en" : "0 = No Pain / No Difficulty"
+                },
+                "ordinal" : 0
+              }, {
+                "value" : "at0019",
+                "label" : "1",
+                "localizedLabels" : {
+                  "en" : "1"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0020",
+                "label" : "2",
+                "localizedLabels" : {
+                  "en" : "2"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0021",
+                "label" : "3",
+                "localizedLabels" : {
+                  "en" : "3"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0022",
+                "label" : "4",
+                "localizedLabels" : {
+                  "en" : "4"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              }, {
+                "value" : "at0023",
+                "label" : "5",
+                "localizedLabels" : {
+                  "en" : "5"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 5
+              }, {
+                "value" : "at0024",
+                "label" : "6",
+                "localizedLabels" : {
+                  "en" : "6"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 6
+              }, {
+                "value" : "at0025",
+                "label" : "7",
+                "localizedLabels" : {
+                  "en" : "7"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 7
+              }, {
+                "value" : "at0026",
+                "label" : "8",
+                "localizedLabels" : {
+                  "en" : "8"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 8
+              }, {
+                "value" : "at0027",
+                "label" : "9",
+                "localizedLabels" : {
+                  "en" : "9"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 9
+              }, {
+                "value" : "at0028",
+                "label" : "10",
+                "localizedLabels" : {
+                  "en" : "10"
+                },
+                "localizedDescriptions" : {
+                  "en" : "10 = Maximum Pain / Impossible"
+                },
+                "ordinal" : 10
+              } ]
+            } ]
+          }, {
+            "id" : "a3._maximum_pain_felt_this_week",
+            "name" : "3. Maximum pain felt this week",
+            "localizedName" : "3. Maximum pain felt this week",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0029",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "3. Maximum pain felt this week"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: 3. Maximum pain felt this week"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0029]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0030",
+                "label" : "0",
+                "localizedLabels" : {
+                  "en" : "0"
+                },
+                "localizedDescriptions" : {
+                  "en" : "0 = No Pain / No Difficulty"
+                },
+                "ordinal" : 0
+              }, {
+                "value" : "at0031",
+                "label" : "1",
+                "localizedLabels" : {
+                  "en" : "1"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0032",
+                "label" : "2",
+                "localizedLabels" : {
+                  "en" : "2"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0033",
+                "label" : "3",
+                "localizedLabels" : {
+                  "en" : "3"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0034",
+                "label" : "4",
+                "localizedLabels" : {
+                  "en" : "4"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              }, {
+                "value" : "at0035",
+                "label" : "5",
+                "localizedLabels" : {
+                  "en" : "5"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 5
+              }, {
+                "value" : "at0036",
+                "label" : "6",
+                "localizedLabels" : {
+                  "en" : "6"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 6
+              }, {
+                "value" : "at0037",
+                "label" : "7",
+                "localizedLabels" : {
+                  "en" : "7"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 7
+              }, {
+                "value" : "at0038",
+                "label" : "8",
+                "localizedLabels" : {
+                  "en" : "8"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 8
+              }, {
+                "value" : "at0039",
+                "label" : "9",
+                "localizedLabels" : {
+                  "en" : "9"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 9
+              }, {
+                "value" : "at0040",
+                "label" : "10",
+                "localizedLabels" : {
+                  "en" : "10"
+                },
+                "localizedDescriptions" : {
+                  "en" : "10 = Maximum Pain / Impossible"
+                },
+                "ordinal" : 10
+              } ]
+            } ]
+          }, {
+            "id" : "a4._frequency_of_pain_this_week",
+            "name" : "4. Frequency of pain this week",
+            "localizedName" : "4. Frequency of pain this week",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0041",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "4. Frequency of pain this week"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: 4. Frequency of pain this week"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0041]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0042",
+                "label" : "0",
+                "localizedLabels" : {
+                  "en" : "0"
+                },
+                "localizedDescriptions" : {
+                  "en" : "0 = No Pain / No Difficulty"
+                },
+                "ordinal" : 0
+              }, {
+                "value" : "at0043",
+                "label" : "1",
+                "localizedLabels" : {
+                  "en" : "1"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0044",
+                "label" : "2",
+                "localizedLabels" : {
+                  "en" : "2"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0045",
+                "label" : "3",
+                "localizedLabels" : {
+                  "en" : "3"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0046",
+                "label" : "4",
+                "localizedLabels" : {
+                  "en" : "4"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              }, {
+                "value" : "at0047",
+                "label" : "5",
+                "localizedLabels" : {
+                  "en" : "5"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 5
+              }, {
+                "value" : "at0048",
+                "label" : "6",
+                "localizedLabels" : {
+                  "en" : "6"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 6
+              }, {
+                "value" : "at0049",
+                "label" : "7",
+                "localizedLabels" : {
+                  "en" : "7"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 7
+              }, {
+                "value" : "at0050",
+                "label" : "8",
+                "localizedLabels" : {
+                  "en" : "8"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 8
+              }, {
+                "value" : "at0051",
+                "label" : "9",
+                "localizedLabels" : {
+                  "en" : "9"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 9
+              }, {
+                "value" : "at0052",
+                "label" : "10",
+                "localizedLabels" : {
+                  "en" : "10"
+                },
+                "localizedDescriptions" : {
+                  "en" : "10 = Maximum Pain / Impossible"
+                },
+                "ordinal" : 10
+              } ]
+            } ]
+          }, {
+            "id" : "a5._pain_during_prolonged_or_repetitive_activity_cooking_cleaning_phone",
+            "name" : "5. Pain during prolonged or repetitive activity (cooking, cleaning, phone)",
+            "localizedName" : "5. Pain during prolonged or repetitive activity (cooking, cleaning, phone)",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0053",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "5. Pain during prolonged or repetitive activity (cooking, cleaning, phone)"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: 5. Pain during prolonged or repetitive activity (cooking, cleaning, phone)"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0053]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0054",
+                "label" : "0",
+                "localizedLabels" : {
+                  "en" : "0"
+                },
+                "localizedDescriptions" : {
+                  "en" : "0 = No Pain / No Difficulty"
+                },
+                "ordinal" : 0
+              }, {
+                "value" : "at0055",
+                "label" : "1",
+                "localizedLabels" : {
+                  "en" : "1"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0056",
+                "label" : "2",
+                "localizedLabels" : {
+                  "en" : "2"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0057",
+                "label" : "3",
+                "localizedLabels" : {
+                  "en" : "3"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0058",
+                "label" : "4",
+                "localizedLabels" : {
+                  "en" : "4"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              }, {
+                "value" : "at0059",
+                "label" : "5",
+                "localizedLabels" : {
+                  "en" : "5"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 5
+              }, {
+                "value" : "at0060",
+                "label" : "6",
+                "localizedLabels" : {
+                  "en" : "6"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 6
+              }, {
+                "value" : "at0061",
+                "label" : "7",
+                "localizedLabels" : {
+                  "en" : "7"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 7
+              }, {
+                "value" : "at0062",
+                "label" : "8",
+                "localizedLabels" : {
+                  "en" : "8"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 8
+              }, {
+                "value" : "at0063",
+                "label" : "9",
+                "localizedLabels" : {
+                  "en" : "9"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 9
+              }, {
+                "value" : "at0064",
+                "label" : "10",
+                "localizedLabels" : {
+                  "en" : "10"
+                },
+                "localizedDescriptions" : {
+                  "en" : "10 = Maximum Pain / Impossible"
+                },
+                "ordinal" : 10
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "b._function_10_questions",
+          "name" : "B. Function (10 Questions)",
+          "localizedName" : "B. Function (10 Questions)",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0065",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "B. Function (10 Questions)"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]",
+          "children" : [ {
+            "id" : "b1._specific_thumb_activities_6_questions",
+            "name" : "B1. Specific Thumb Activities (6 Questions)",
+            "localizedName" : "B1. Specific Thumb Activities (6 Questions)",
+            "rmType" : "CLUSTER",
+            "nodeId" : "at0066",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "B1. Specific Thumb Activities (6 Questions)"
+            },
+            "localizedDescriptions" : {
+              "en" : "Reference Period: Last 7 Days"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0066]",
+            "children" : [ {
+              "id" : "a6._opening_a_jar_or_a_screwed_lid",
+              "name" : "6. Opening a jar or a screwed lid",
+              "localizedName" : "6. Opening a jar or a screwed lid",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0067",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "6. Opening a jar or a screwed lid"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 6. Opening a jar or a screwed lid"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0066]/items[at0067]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0068",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0069",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0070",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0071",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0072",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0073",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0074",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0075",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0076",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0077",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0078",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            }, {
+              "id" : "a7._turning_a_key_in_a_lock",
+              "name" : "7. Turning a key in a lock",
+              "localizedName" : "7. Turning a key in a lock",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0079",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "7. Turning a key in a lock"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 7. Turning a key in a lock"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0066]/items[at0079]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0080",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0081",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0082",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0083",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0084",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0085",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0086",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0087",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0088",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0089",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0090",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            }, {
+              "id" : "a8._wringing_out_a_cloth_mop_sponge",
+              "name" : "8. Wringing out a cloth/mop/sponge",
+              "localizedName" : "8. Wringing out a cloth/mop/sponge",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0091",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "8. Wringing out a cloth/mop/sponge"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 8. Wringing out a cloth/mop/sponge"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0066]/items[at0091]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0092",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0093",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0094",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0095",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0096",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0097",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0098",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0099",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0100",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0101",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0102",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            }, {
+              "id" : "a9._cutting_food_holding_food_using_knife",
+              "name" : "9. Cutting food (holding food + using knife)",
+              "localizedName" : "9. Cutting food (holding food + using knife)",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0103",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "9. Cutting food (holding food + using knife)"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 9. Cutting food (holding food + using knife)"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0066]/items[at0103]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0104",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0105",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0106",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0107",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0108",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0109",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0110",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0111",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0112",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0113",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0114",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            }, {
+              "id" : "a10._carring_a_shopping_bag_or_a_pot_grip_hold",
+              "name" : "10. Carring a shopping bag or a pot (grip + hold)",
+              "localizedName" : "10. Carring a shopping bag or a pot (grip + hold)",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0115",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "10. Carring a shopping bag or a pot (grip + hold)"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 10. Carring a shopping bag or a pot (grip + hold)"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0066]/items[at0115]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0116",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0117",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0118",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0119",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0120",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0121",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0122",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0123",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0124",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0125",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0126",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            }, {
+              "id" : "a11._writing_using_a_keyboard_or_smartphone",
+              "name" : "11. Writing/using a keyboard or smartphone",
+              "localizedName" : "11. Writing/using a keyboard or smartphone",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0127",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "11. Writing/using a keyboard or smartphone"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 11. Writing/using a keyboard or smartphone"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0066]/items[at0127]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0128",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0129",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0130",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0131",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0132",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0133",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0134",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0135",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0136",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0137",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0138",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            } ]
+          }, {
+            "id" : "b2._daily_activities_4_questions",
+            "name" : "B2. Daily Activities (4 Questions)",
+            "localizedName" : "B2. Daily Activities (4 Questions)",
+            "rmType" : "CLUSTER",
+            "nodeId" : "at0139",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "B2. Daily Activities (4 Questions)"
+            },
+            "localizedDescriptions" : {
+              "en" : "Reference Period: Last 7 Days"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0139]",
+            "children" : [ {
+              "id" : "a12._toilet_and_dressing_buttons_bra_zipper_washing",
+              "name" : "12. Toilet and dressing (buttons, bra, zipper, washing)",
+              "localizedName" : "12. Toilet and dressing (buttons, bra, zipper, washing)",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0140",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "12. Toilet and dressing (buttons, bra, zipper, washing)"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 12. Toilet and dressing (buttons, bra, zipper, washing)"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0139]/items[at0140]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0141",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0142",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0143",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0144",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0145",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0146",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0147",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0148",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0149",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0150",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0151",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            }, {
+              "id" : "a13._cooking_and_household_chores_preparing_washing_tidying",
+              "name" : "13. Cooking and household chores (preparing, washing, tidying)",
+              "localizedName" : "13. Cooking and household chores (preparing, washing, tidying)",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0152",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "13. Cooking and household chores (preparing, washing, tidying)"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 13. Cooking and household chores (preparing, washing, tidying)"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0139]/items[at0152]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0153",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0154",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0155",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0156",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0157",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0158",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0159",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0160",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0161",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0162",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0163",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            }, {
+              "id" : "a14._shopping_outdoor_activities_carrying_handling_opening_closing",
+              "name" : "14. Shopping/outdoor activities (carrying, handling, opening/closing)",
+              "localizedName" : "14. Shopping/outdoor activities (carrying, handling, opening/closing)",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0164",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "14. Shopping/outdoor activities (carrying, handling, opening/closing)"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 14. Shopping/outdoor activities (carrying, handling, opening/closing)"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0139]/items[at0164]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0165",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0166",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0167",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0168",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0169",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0170",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0171",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0172",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0173",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0174",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0175",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            }, {
+              "id" : "a15._daily_hobbies_light_diy_gardening_reading_games_etc.",
+              "name" : "15. Daily hobbies (light DIY, gardening, reading, games, etc.)",
+              "localizedName" : "15. Daily hobbies (light DIY, gardening, reading, games, etc.)",
+              "rmType" : "DV_ORDINAL",
+              "nodeId" : "at0176",
+              "min" : 0,
+              "max" : 1,
+              "localizedNames" : {
+                "en" : "15. Daily hobbies (light DIY, gardening, reading, games, etc.)"
+              },
+              "localizedDescriptions" : {
+                "en" : "Question: 15. Daily hobies (light DIY, gardening, reading, games, etc.)"
+              },
+              "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0065]/items[at0139]/items[at0176]/value",
+              "inputs" : [ {
+                "type" : "CODED_TEXT",
+                "list" : [ {
+                  "value" : "at0177",
+                  "label" : "0",
+                  "localizedLabels" : {
+                    "en" : "0"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "0 = No Pain / No Difficulty"
+                  },
+                  "ordinal" : 0
+                }, {
+                  "value" : "at0178",
+                  "label" : "1",
+                  "localizedLabels" : {
+                    "en" : "1"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 1
+                }, {
+                  "value" : "at0179",
+                  "label" : "2",
+                  "localizedLabels" : {
+                    "en" : "2"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 2
+                }, {
+                  "value" : "at0180",
+                  "label" : "3",
+                  "localizedLabels" : {
+                    "en" : "3"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 3
+                }, {
+                  "value" : "at0181",
+                  "label" : "4",
+                  "localizedLabels" : {
+                    "en" : "4"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 4
+                }, {
+                  "value" : "at0182",
+                  "label" : "5",
+                  "localizedLabels" : {
+                    "en" : "5"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 5
+                }, {
+                  "value" : "at0183",
+                  "label" : "6",
+                  "localizedLabels" : {
+                    "en" : "6"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 6
+                }, {
+                  "value" : "at0184",
+                  "label" : "7",
+                  "localizedLabels" : {
+                    "en" : "7"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 7
+                }, {
+                  "value" : "at0185",
+                  "label" : "8",
+                  "localizedLabels" : {
+                    "en" : "8"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 8
+                }, {
+                  "value" : "at0186",
+                  "label" : "9",
+                  "localizedLabels" : {
+                    "en" : "9"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : ""
+                  },
+                  "ordinal" : 9
+                }, {
+                  "value" : "at0187",
+                  "label" : "10",
+                  "localizedLabels" : {
+                    "en" : "10"
+                  },
+                  "localizedDescriptions" : {
+                    "en" : "10 = Maximum Pain / Impossible"
+                  },
+                  "ordinal" : 10
+                } ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "c._perceived_outcome_post-prothesis",
+          "name" : "C. Perceived Outcome Post-Prothesis",
+          "localizedName" : "C. Perceived Outcome Post-Prothesis",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0188",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "C. Perceived Outcome Post-Prothesis"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0188]",
+          "children" : [ {
+            "id" : "a16._overall_what_is_your_level_of_satisfaction_with_the_operation_result",
+            "name" : "16. Overall, what is your level of satisfaction with the operation result?",
+            "localizedName" : "16. Overall, what is your level of satisfaction with the operation result?",
+            "rmType" : "DV_ORDINAL",
+            "nodeId" : "at0189",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "16. Overall, what is your level of satisfaction with the operation result?"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: 16. Overall, what is your level of satisfaction with the operation result?"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0188]/items[at0189]/value",
+            "inputs" : [ {
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0190",
+                "label" : "0",
+                "localizedLabels" : {
+                  "en" : "0"
+                },
+                "localizedDescriptions" : {
+                  "en" : "0 = Not satisfied at all"
+                },
+                "ordinal" : 0
+              }, {
+                "value" : "at0191",
+                "label" : "1",
+                "localizedLabels" : {
+                  "en" : "1"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 1
+              }, {
+                "value" : "at0192",
+                "label" : "2",
+                "localizedLabels" : {
+                  "en" : "2"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 2
+              }, {
+                "value" : "at0193",
+                "label" : "3",
+                "localizedLabels" : {
+                  "en" : "3"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 3
+              }, {
+                "value" : "at0194",
+                "label" : "4",
+                "localizedLabels" : {
+                  "en" : "4"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 4
+              }, {
+                "value" : "at0195",
+                "label" : "5",
+                "localizedLabels" : {
+                  "en" : "5"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 5
+              }, {
+                "value" : "at0196",
+                "label" : "6",
+                "localizedLabels" : {
+                  "en" : "6"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 6
+              }, {
+                "value" : "at0197",
+                "label" : "7",
+                "localizedLabels" : {
+                  "en" : "7"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 7
+              }, {
+                "value" : "at0198",
+                "label" : "8",
+                "localizedLabels" : {
+                  "en" : "8"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 8
+              }, {
+                "value" : "at0199",
+                "label" : "9",
+                "localizedLabels" : {
+                  "en" : "9"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                },
+                "ordinal" : 9
+              }, {
+                "value" : "at0200",
+                "label" : "10",
+                "localizedLabels" : {
+                  "en" : "10"
+                },
+                "localizedDescriptions" : {
+                  "en" : "10 = Totally satisfied"
+                },
+                "ordinal" : 10
+              } ]
+            } ]
+          }, {
+            "id" : "a17._would_you_have_the_same_operation_again_in_the_same_situation",
+            "name" : "17. Would you have the same operation again in the same situation?",
+            "localizedName" : "17. Would you have the same operation again in the same situation?",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0201",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "17. Would you have the same operation again in the same situation?"
+            },
+            "localizedDescriptions" : {
+              "en" : "Question: 17. Would you have the same operation again in the same situation?"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0188]/items[at0201]/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "at0202",
+                "label" : "Yes",
+                "localizedLabels" : {
+                  "en" : "Yes"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0203",
+                "label" : "No",
+                "localizedLabels" : {
+                  "en" : "No"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              }, {
+                "value" : "at0204",
+                "label" : "I don't know",
+                "localizedLabels" : {
+                  "en" : "I don't know"
+                },
+                "localizedDescriptions" : {
+                  "en" : ""
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "scores",
+          "name" : "Scores",
+          "localizedName" : "Scores",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0205",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "en" : "Scores"
+          },
+          "localizedDescriptions" : {
+            "en" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0205]",
+          "children" : [ {
+            "id" : "score_pain",
+            "name" : "Score Pain",
+            "localizedName" : "Score Pain",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0206",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Score Pain"
+            },
+            "localizedDescriptions" : {
+              "en" : "Pain subscore (PRWEx/PRWE-type), last 7 days."
+            },
+            "annotations" : {
+              "comment" : "Calculated as the sum of pain items A1-A5. \nRange 0-50, where higher scores indicate worse pain.\nFormula: PainScore = A1 + A2 + A3 + A4 + A5. Whole-number result expected because the score is an unscaled sum of A1-A5."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0205]/items[at0206]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 50.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 0,
+                  "maxOp" : "<=",
+                  "max" : 0
+                }
+              }
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "1",
+                "label" : "1",
+                "validation" : {
+                  "range" : {
+                    "minOp" : ">=",
+                    "min" : 0.0,
+                    "maxOp" : "<=",
+                    "max" : 50.0
+                  },
+                  "precision" : {
+                    "minOp" : ">=",
+                    "min" : 0,
+                    "maxOp" : "<=",
+                    "max" : 0
+                  }
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "score_function",
+            "name" : "Score Function",
+            "localizedName" : "Score Function",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0207",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Score Function"
+            },
+            "localizedDescriptions" : {
+              "en" : "Function subscore (PRWEx/PRWE-type), last 7 days.\n"
+            },
+            "annotations" : {
+              "comment" : "Calculated as the sum of function items B1-B10 (raw range 0-100), then divided by 2 to align with the pain subscore. Final range 0-50; higher = worse.\nFormula: FunctionScore = (B1 + ... + B10) / 2\nNote: The score may contain 0.5 increments; do not round unless required for display."
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0205]/items[at0207]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 50.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 1,
+                  "maxOp" : "<=",
+                  "max" : 1
+                }
+              }
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "1",
+                "label" : "1",
+                "validation" : {
+                  "range" : {
+                    "minOp" : ">=",
+                    "min" : 0.0,
+                    "maxOp" : "<=",
+                    "max" : 50.0
+                  },
+                  "precision" : {
+                    "minOp" : ">=",
+                    "min" : 1,
+                    "maxOp" : "<=",
+                    "max" : 1
+                  }
+                }
+              } ]
+            } ]
+          }, {
+            "id" : "score_total",
+            "name" : "Score Total",
+            "localizedName" : "Score Total",
+            "rmType" : "DV_QUANTITY",
+            "nodeId" : "at0208",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "en" : "Score Total"
+            },
+            "localizedDescriptions" : {
+              "en" : "Total score (PRWEx/PRWE-type), last 7 days."
+            },
+            "annotations" : {
+              "comment" : "Composite score combining pain and function. Range 0-100, where higher scores indicate worse overall outcome. Formula: TotalScore = PainScore + FunctionScore, where PainScore = sum(A1-A5) and FunctionScore = sum(B1-B10)/2"
+            },
+            "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0205]/items[at0208]/value",
+            "inputs" : [ {
+              "suffix" : "magnitude",
+              "type" : "DECIMAL",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 0.0,
+                  "maxOp" : "<=",
+                  "max" : 100.0
+                },
+                "precision" : {
+                  "minOp" : ">=",
+                  "min" : 1,
+                  "maxOp" : "<=",
+                  "max" : 1
+                }
+              }
+            }, {
+              "suffix" : "unit",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "1",
+                "label" : "1",
+                "validation" : {
+                  "range" : {
+                    "minOp" : ">=",
+                    "min" : 0.0,
+                    "maxOp" : "<=",
+                    "max" : 100.0
+                  },
+                  "precision" : {
+                    "minOp" : ">=",
+                    "min" : 1,
+                    "maxOp" : "<=",
+                    "max" : 1
+                  }
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "id" : "time",
+          "name" : "Time",
+          "rmType" : "DV_DATE_TIME",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/data[at0001]/events[at0002,'Point in time']/time",
+          "inputs" : [ {
+            "type" : "DATETIME"
+          } ],
+          "inContext" : true
+        } ]
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "category",
+      "rmType" : "DV_CODED_TEXT",
+      "nodeId" : "",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/category",
+      "inputs" : [ {
+        "suffix" : "code",
+        "type" : "CODED_TEXT",
+        "list" : [ {
+          "value" : "433",
+          "label" : "event",
+          "localizedLabels" : {
+            "en" : "event"
+          }
+        } ],
+        "terminology" : "openehr"
+      } ],
+      "inContext" : true
+    }, {
+      "id" : "language",
+      "name" : "Language",
+      "rmType" : "CODE_PHRASE",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/language",
+      "inContext" : true
+    }, {
+      "id" : "territory",
+      "name" : "Territory",
+      "rmType" : "CODE_PHRASE",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/territory",
+      "inContext" : true
+    }, {
+      "id" : "composer",
+      "name" : "Composer",
+      "rmType" : "PARTY_PROXY",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/composer",
+      "inputs" : [ {
+        "suffix" : "id",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "id_scheme",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "id_namespace",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "name",
+        "type" : "TEXT"
+      } ],
+      "inContext" : true
+    } ]
+  }
+}

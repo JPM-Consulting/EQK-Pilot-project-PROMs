@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
+    <id>c7eb0dbb-643b-4c4a-a264-057dcf172340</id>
+    <name>EQK PROMS Thumb</name>
+    <description>
+        <original_author>
+            <item>
+                <key>name</key>
+                <value>Jean-Pierre Messerli</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>JPM Consulting GmbH</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>jean-pierre.messerli@jpm-consulting.ch</value>
+            </item>
+            <item>
+                <key>date</key>
+                <value>2026-02-10</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>1.2.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value>89986b8b-7ae0-484f-849e-ddc88aa0ca71</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>db0f2189bf04f05a26aeb87b87aff179</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>23e937ad8f57781248b104d9086c5751</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK PROMS Thumb" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule name="Point in time" path="/data[at0001]/events[at0002]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0" max="1" path="/content" xsi:type="tem:EVALUATION"/>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.siris_additional_questions.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule name="Point in time" path="/data[at0001]/events[at0002]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule name="Point in time" path="/data[at0001]/events[at0002]"/>
+        </Content>
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.data_entry_device.v0" max="1" path="/context/other_context[at0003]/items[at0005]" xsi:type="tem:CLUSTER"/>
+        </Context>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">23e937ad8f57781248b104d9086c5751</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.data_entry_device.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">4efd847e4b95eda1f7fb943d8e055194</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">282d6455a68756ccb30d14641ac85b94</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">385f43359611583cff7c2aeb5798ede2</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.siris_additional_questions.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">47a245ae51a7820e65dce5b1e97eb963</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">a097836ebae12c70fc573e8e5e5a0b1e</digest>
+    </integrity_checks>
+</template>
