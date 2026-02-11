@@ -83,7 +83,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"41377b1c73bed2fce7bb19fc9f9dca77">
+		["MD5-CAM-1.0.1"] = <"f9e092a0617be190475fe11bd24355da">
 		["build_uid"] = <"89131b6b-5ab0-385c-bab6-655110061018">
 	>
 
@@ -356,14 +356,9 @@ definition
 											}
 											ELEMENT[at0201] occurrences matches {0..1} matches {    -- 17. Would you have the same operation again in the same situation?
 												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0202,    -- Yes
-															at0203,    -- No
-															at0204]    -- I don't know
-														}
-													}
+													1|[local::at0211],
+													2|[local::at0212],
+													3|[local::at0213]
 												}
 											}
 										}
@@ -1245,18 +1240,6 @@ ontology
 					text = <"17. Would you have the same operation again in the same situation?">
 					description = <"Question: 17. Would you have the same operation again in the same situation?">
 				>
-				["at0202"] = <
-					text = <"Yes">
-					description = <"">
-				>
-				["at0203"] = <
-					text = <"No">
-					description = <"">
-				>
-				["at0204"] = <
-					text = <"I don't know">
-					description = <"">
-				>
 				["at0205"] = <
 					text = <"Scores">
 					description = <"">
@@ -1287,6 +1270,18 @@ Note: The score may contain 0.5 increments; do not round unless required for dis
 				>
 				["at0210"] = <
 					text = <"Extension">
+					description = <"">
+				>
+				["at0211"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0212"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0213"] = <
+					text = <"I don't know">
 					description = <"">
 				>
 			>
@@ -2101,18 +2096,6 @@ Note: The score may contain 0.5 increments; do not round unless required for dis
 					text = <"17. Würden Sie sich unter den gleichen Umständen erneut operieren lassen?">
 					description = <"Frage: 17. Würden Sie sich unter den gleichen Umständen erneut operieren lassen?">
 				>
-				["at0202"] = <
-					text = <"Ja">
-					description = <"">
-				>
-				["at0203"] = <
-					text = <"Nein">
-					description = <"">
-				>
-				["at0204"] = <
-					text = <"Ich weiss nicht">
-					description = <"">
-				>
 				["at0205"] = <
 					text = <"Scores">
 					description = <"">
@@ -2143,6 +2126,18 @@ Formel: GesamtScore = SchmerzScore + FunktionsScore, wobei SchmerzScore = Summe(
 				>
 				["at0210"] = <
 					text = <"Extension">
+					description = <"">
+				>
+				["at0211"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0212"] = <
+					text = <"Nein">
+					description = <"">
+				>
+				["at0213"] = <
+					text = <"Ich weiss nicht">
 					description = <"">
 				>
 			>
@@ -2957,18 +2952,6 @@ Formel: GesamtScore = SchmerzScore + FunktionsScore, wobei SchmerzScore = Summe(
 					text = <"17. Referais-tu la même opération dans la même situation ?">
 					description = <"Question: 17. Referais-tu la même opération dans la même situation ?">
 				>
-				["at0202"] = <
-					text = <"Oui">
-					description = <"">
-				>
-				["at0203"] = <
-					text = <"Non">
-					description = <"">
-				>
-				["at0204"] = <
-					text = <"Je ne sais pas">
-					description = <"">
-				>
 				["at0205"] = <
 					text = <"Scores">
 					description = <"">
@@ -2999,6 +2982,18 @@ Formule : ScoreTotal = ScoreDouleur + ScoreFonction, où ScoreDouleur = somme(A1
 				>
 				["at0210"] = <
 					text = <"Extension">
+					description = <"">
+				>
+				["at0211"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0212"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0213"] = <
+					text = <"Je ne sais pas">
 					description = <"">
 				>
 			>
@@ -3813,18 +3808,6 @@ Formule : ScoreTotal = ScoreDouleur + ScoreFonction, où ScoreDouleur = somme(A1
 					text = <"17. Nella stessa situazione, rifarebbe lo stesso intervento?">
 					description = <"Domanda: 17. Nella stessa situazione, rifarebbe lo stesso intervento?">
 				>
-				["at0202"] = <
-					text = <"Si">
-					description = <"">
-				>
-				["at0203"] = <
-					text = <"No">
-					description = <"">
-				>
-				["at0204"] = <
-					text = <"Non lo so">
-					description = <"">
-				>
 				["at0205"] = <
 					text = <"Scores">
 					description = <"">
@@ -3855,6 +3838,18 @@ Formula: PunteggioTotale = PunteggioDolore + PunteggioFunzione, dove PunteggioDo
 				>
 				["at0210"] = <
 					text = <"Extension">
+					description = <"">
+				>
+				["at0211"] = <
+					text = <"Si">
+					description = <"">
+				>
+				["at0212"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0213"] = <
+					text = <"Non lo so">
 					description = <"">
 				>
 			>
