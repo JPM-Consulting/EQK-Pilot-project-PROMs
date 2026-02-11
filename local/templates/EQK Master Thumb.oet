@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
-    <id>3b819813-8e1d-4aa7-bef9-e047fb277786</id>
-    <name>EQK PROMS Thumb</name>
+    <id>7af4b33a-3b58-45ce-b3d3-97b847de9f39</id>
+    <name>EQK Master Thumb</name>
     <description>
         <original_author>
             <item>
@@ -45,15 +45,15 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>5.3.0</value>
+                <value>5.0.1</value>
             </item>
             <item>
                 <key>build_uid</key>
-                <value>92b9c763-8fc7-48ff-a61c-bab24ac5756e</value>
+                <value>958be524-4fd0-4da2-b1f9-3a932816d067</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>90784ab34dcec6fef4c492f0dc6ea6bd</value>
+                <value>c59bd9eeba01cbb4ac6ababd74bf2588</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -65,7 +65,71 @@
             </item>
         </other_details>
     </description>
-    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK PROMS Thumb" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0018]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>2</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0048]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>7</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0060]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>5</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0042]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>4</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0024]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>3</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0054]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>8</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0066]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>6</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0012]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>1</value>
+            </item>
+        </items>
+    </annotations>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK Master Thumb" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
         <Content archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
             <Rule name="Point in time" path="/data[at0001]/events[at0002]"/>
             <Rule name="1. Mobility" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]"/>
@@ -92,6 +156,9 @@
         <Content archetype_id="openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
             <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]"/>
         </Content>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.norpeq.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]"/>
+        </Content>
         <Context>
             <Items archetype_id="openEHR-EHR-CLUSTER.data_entry_device.v0" max="1" path="/context/other_context[at0003]/items[at0005]" xsi:type="tem:CLUSTER"/>
         </Context>
@@ -113,5 +180,8 @@
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">e695400645b40043567a3645c4cc869d</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.norpeq.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">23f061fdd7405039070957d5ac57cda6</digest>
     </integrity_checks>
 </template>

@@ -1,22 +1,22 @@
 {
-  "templateId" : "EQK PROMS Thumb",
-  "semVer" : "5.3.0",
+  "templateId" : "EQK PROMS Thumb and NORPEQ",
+  "semVer" : "5.1.0",
   "version" : "2.3",
   "defaultLanguage" : "en",
   "languages" : [ "de-ch", "fr-ch", "it-ch", "en" ],
   "tree" : {
-    "id" : "eqk_proms_thumb",
-    "name" : "EQK PROMS Thumb",
-    "localizedName" : "EQK PROMS Thumb",
+    "id" : "eqk_proms_thumb_and_norpeq",
+    "name" : "EQK PROMS Thumb and NORPEQ",
+    "localizedName" : "EQK PROMS Thumb and NORPEQ",
     "rmType" : "COMPOSITION",
     "nodeId" : "openEHR-EHR-COMPOSITION.self_reported_data.v1",
     "min" : 1,
     "max" : 1,
     "localizedNames" : {
-      "de-ch" : "EQK PROMS Thumb",
-      "fr-ch" : "EQK PROMS Thumb",
-      "it-ch" : "EQK PROMS Thumb",
-      "en" : "EQK PROMS Thumb"
+      "de-ch" : "EQK PROMS Thumb and NORPEQ",
+      "fr-ch" : "EQK PROMS Thumb and NORPEQ",
+      "it-ch" : "EQK PROMS Thumb and NORPEQ",
+      "en" : "EQK PROMS Thumb and NORPEQ"
     },
     "localizedDescriptions" : {
       "de-ch" : "Generic container for information provided by an individual.",
@@ -5535,6 +5535,1040 @@
         "min" : 1,
         "max" : 1,
         "aqlPath" : "/content[openEHR-EHR-OBSERVATION.prwex_rhizarthrosis_thumb_cmc1.v0]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "norpeq_questionnaire",
+      "name" : "Norpeq questionnaire",
+      "localizedName" : "Norpeq questionnaire",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.norpeq.v0",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "de-ch" : "Norpeq Fragenkatalog",
+        "fr-ch" : "Norpeq questionnaire",
+        "it-ch" : "Norpeq questionario",
+        "en" : "Norpeq questionnaire"
+      },
+      "localizedDescriptions" : {
+        "de-ch" : "Acht von Patienten angegebene Punkte, die wichtige Aspekte des Krankenhausaufenthalts erfassen: Klarheit der Kommunikation durch Ärzte, Vertrauen in die klinische Kompetenz, wahrgenommene Fürsorge und Interesse des Personals, Angemessenheit der Informationen zu Untersuchungen, allgemeine Zufriedenheit und Wahrnehmung einer falschen Behandlung.",
+        "fr-ch" : "Huit éléments rapportés par les patients qui reflètent les aspects clés de l'expérience hospitalière : clarté de la communication du médecin, confiance dans les compétences cliniques, perception de l'attention et de l'intérêt du personnel, adéquation des informations fournies sur les examens, satisfaction globale et perception d'un traitement inapproprié.",
+        "it-ch" : "Otto elementi segnalati dai pazienti che descrivono gli aspetti chiave dell'esperienza ospedaliera: chiarezza nella comunicazione dei medici, fiducia nella competenza clinica, percezione dell'attenzione e dell'interesse da parte del personale, adeguatezza delle informazioni relative agli esami, soddisfazione generale e percezione di un trattamento errato.",
+        "en" : "Eight patient-reported items that capture key aspects of the inpatient hospital experience: clarity of doctor communication, confidence in clinical competence, perceived concern and interest from staff, adequacy of test information, overall satisfaction, and perception of incorrect treatment."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]",
+      "children" : [ {
+        "id" : "core_score_items",
+        "name" : "Core score items",
+        "localizedName" : "Core score items",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0004",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Fragen für Score",
+          "fr-ch" : "Questions du score principal",
+          "it-ch" : "Domande del Core Score",
+          "en" : "Core score items"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)",
+          "fr-ch" : "*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)",
+          "it-ch" : "*Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score.  (en)",
+          "en" : "Six NORPEQ questions that form the numerically scored core of the instrument. Each item is recorded as a DV_ORDINAL (1 – 5) and may be aggregated into the total NORPEQ score. "
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]",
+        "children" : [ {
+          "id" : "a1._doctors_understandable",
+          "name" : "1. Doctors understandable",
+          "localizedName" : "1. Doctors understandable",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0012",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "1. Ärzte verständlich",
+            "fr-ch" : "1.\tCommunication des médecins",
+            "it-ch" : "1.\tComunicazione medici",
+            "en" : "1. Doctors understandable"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 1. Haben die Ärzte so mit Ihnen gesprochen, dass Sie sie verstehen konnten?",
+            "fr-ch" : "Question: 1. Les médecins vous ont-ils parlé d’une manière que vous pouviez comprendre?",
+            "it-ch" : "Domanda: 1. I medici ti hanno parlato in un modo che potessi capire?",
+            "en" : "question: 1. Did the doctors talk to you in a way you could understand?"
+          },
+          "annotations" : {
+            "order" : "1"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0012]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0013",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0014",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0015",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0016",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0017",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a2._doctors_professional_skills",
+          "name" : "2. Doctors professional skills",
+          "localizedName" : "2. Doctors professional skills",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0018",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "2. Ärzte medizinische Kompetenz",
+            "fr-ch" : "2.\tCompétence des médecins",
+            "it-ch" : "2.\tCompetenza medici",
+            "en" : "2. Doctors professional skills"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 2. Haben Sie Vertrauen in die medizinische Kompetenz der Ärzte?",
+            "fr-ch" : "Question: 2. Avez-vous confiance dans la compétence médicale des médecins?",
+            "it-ch" : "Domanda: 2. Hai fiducia nella competenza medica dei medici?",
+            "en" : "question: 2. Do you have confidence in the doctors’ medical competence?"
+          },
+          "annotations" : {
+            "order" : "2"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0018]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0019",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0020",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0021",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0022",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0023",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a3._nurses_professional_skills",
+          "name" : "3. Nurses professional skills",
+          "localizedName" : "3. Nurses professional skills",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0024",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "3. Pflegepersonal medizinische Kompetenz",
+            "fr-ch" : "3.\tCompétence infirmière",
+            "it-ch" : "3.\tCompetenza infermieri",
+            "en" : "3. Nurses professional skills"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 3. Haben Sie Vertrauen in die medizinische Kompetenz des Pflegepersonals?",
+            "fr-ch" : "Question: 3. Avez-vous confiance dans la compétence médicale du personnel infirmier?",
+            "it-ch" : "Domanda: 3. Hai fiducia nella competenza medica del personale infermieristico?",
+            "en" : "question: 3. Do you have confidence in the nursing staff’s medical competence?"
+          },
+          "annotations" : {
+            "order" : "3"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0024]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0025",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0026",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0027",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0028",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0029",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a4._nursing_care",
+          "name" : "4. Nursing care",
+          "localizedName" : "4. Nursing care",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0042",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "4. Pflegepersonal Zuwendung",
+            "fr-ch" : "4.\tAttention infirmière",
+            "it-ch" : "4.\tPremura infermieri",
+            "en" : "4. Nursing care"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 4. Haben Sie das Gefühl gehabt, dass sich das Pflegepersonal um Sie gekümmert hat?",
+            "fr-ch" : "Question: 4. Avez-vous constaté que le personnel infirmier s’est montré préoccupé à votre égard?",
+            "it-ch" : "Domanda: 4. Hai avuto l'impressione che il personale infermieristico si sia preoccupato per te?",
+            "en" : "question: 4. Did you experience the nursing staff showed concern for you?"
+          },
+          "annotations" : {
+            "order" : "4"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0042]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0043",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0044",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0045",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0046",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0047",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a5._health_personnel_interested_in_problem",
+          "name" : "5. Health personnel interested in problem",
+          "localizedName" : "5. Health personnel interested in problem",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0060",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "5. Gesundheitsfachpersonen Interesse an Situation",
+            "fr-ch" : "5.\tÉcoute des soignants",
+            "it-ch" : "5.\tInteresse dei curanti",
+            "en" : "5. Health personnel interested in problem"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 5. Haben Sie erlebt, dass sich die Ärzte und das Pflegepersonal für Ihre Schilderung Ihrer eigenen Situation interessiert haben?",
+            "fr-ch" : "Question: 5. Avez-vous constaté que les médecins et le personnel infirmier étaient intéressés par la description que vous faisiez de votre propre situation?",
+            "it-ch" : "Domanda: 5. Hai avuto l'impressione che i medici e il personale infermieristico fossero interessati alla descrizione della tua situazione?",
+            "en" : "question: 5. Did you experience that the doctors and nursing staff were interested in your description of your own situation?"
+          },
+          "annotations" : {
+            "order" : "5"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0060]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0061",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0062",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0063",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0064",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0065",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a6._information_on_tests",
+          "name" : "6. Information on tests",
+          "localizedName" : "6. Information on tests",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0066",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "6. Informationen Untersuchungsablauf",
+            "fr-ch" : "6.\tInformations sur les examens",
+            "it-ch" : "6.\tInformazioni sugli esami",
+            "en" : "6. Information on tests"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 6. Wurden Ihnen die aus Ihrer Sicht notwendigen Informationen zum Ablauf der Tests und Untersuchungen gegeben?",
+            "fr-ch" : "Question: 6. Avez-vous reçu les informations que vous pensiez nécessaires sur la manière dont les tests et les examens seraient menés?",
+            "it-ch" : "Domanda: 6. Ti sono state fornite le informazioni che ritenevi necessarie su come sarebbero stati condotti i test e gli esami?",
+            "en" : "question: 6. Were you given the information you thought were necessary about how tests and examinations would be conducted?"
+          },
+          "annotations" : {
+            "order" : "6"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0066]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0067",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0068",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0069",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0070",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0071",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "overall_score",
+          "name" : "Overall score",
+          "localizedName" : "Overall score",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0072",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Gesamt-Score",
+            "fr-ch" : "Score global",
+            "it-ch" : "Score complessivo",
+            "en" : "Overall score"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Sechs der acht NORPEQ-Fragen ergeben zusammen eine Gesamtskala von 0 bis 100, wobei 100 die bestmögliche Betreuungserfahrung darstellt. Wenn bei mehr als der Hälfte der Fragen Werte fehlten, werden die Durchschnittswerte hochgerechnet.",
+            "fr-ch" : "Six des huit éléments du NORPEQ sont additionnés pour obtenir une échelle globale allant de 0 à 100, où 100 correspond à la meilleure expérience possible en matière de soins. Si les répondants n'avaient pas répondu à plus de la moitié des éléments, les scores moyens ont été imputés.",
+            "it-ch" : "Sei degli otto elementi NORPEQ vengono sommati per ottenere una scala complessiva da 0 a 100, dove 100 rappresenta la migliore esperienza di assistenza possibile. Se i rispondenti presentavano valori mancanti in più della metà degli elementi, sono stati imputati i punteggi medi.",
+            "en" : "Six of the eight NORPEQ items sum to produce an\noverall scale from 0 to 100, where 100 is the best possible experience of care. If respondents had missing values on more than half of the items, mean scores were imputed."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0072]/value",
+          "inputs" : [ {
+            "type" : "INTEGER",
+            "validation" : {
+              "range" : {
+                "minOp" : ">=",
+                "min" : 0,
+                "maxOp" : "<=",
+                "max" : 100
+              }
+            }
+          } ]
+        }, {
+          "id" : "mean_score",
+          "name" : "Mean score",
+          "localizedName" : "Mean score",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0073",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "Mittlerer Score",
+            "fr-ch" : "Score moyen",
+            "it-ch" : "Score medio",
+            "en" : "Mean score"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Sechs der acht NORPEQ-Fragen ergeben zusammen eine Gesamtskala von 0 bis 100, wobei 100 die bestmögliche Betreuungserfahrung darstellt. Wenn bei mehr als der Hälfte der Fragen Werte fehlten, werden die Durchschnittswerte hochgerechnet.",
+            "fr-ch" : "Six des huit éléments du NORPEQ sont additionnés pour obtenir une échelle globale allant de 0 à 100, où 100 correspond à la meilleure expérience possible en matière de soins. Si les répondants n'avaient pas répondu à plus de la moitié des éléments, les scores moyens ont été imputés.",
+            "it-ch" : "Sei degli otto elementi NORPEQ vengono sommati per ottenere una scala complessiva da 0 a 100, dove 100 rappresenta la migliore esperienza di assistenza possibile. Se i rispondenti presentavano valori mancanti in più della metà degli elementi, sono stati imputati i punteggi medi.",
+            "en" : "Six of the eight NORPEQ items sum to produce an\noverall scale from 0 to 100, where 100 is the best possible experience of care. If respondents had missing values on more than half of the items, mean scores were imputed."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0004]/items[at0073]/value",
+          "inputs" : [ {
+            "type" : "INTEGER"
+          } ]
+        } ]
+      }, {
+        "id" : "supplementary_items",
+        "name" : "Supplementary items",
+        "localizedName" : "Supplementary items",
+        "rmType" : "CLUSTER",
+        "nodeId" : "at0005",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "de-ch" : "Zusatzfragen",
+          "fr-ch" : "Questions supplémentaires",
+          "it-ch" : "Domande supplementari",
+          "en" : "Supplementary items"
+        },
+        "localizedDescriptions" : {
+          "de-ch" : "Es werden zwei zusätzliche NORPEQ-Fragen zu Beschreibungszwecken erfasst, die jedoch nicht in die berechnete Gesamtpunktzahl einfliessen.",
+          "fr-ch" : "Deux questions NORPEQ supplémentaires qui sont recueillies à des fins descriptives, mais qui ne sont pas incluses dans le score total calculé.",
+          "it-ch" : "Due domande NORPEQ aggiuntive raccolte a scopo descrittivo, ma non incluse nel punteggio totale calcolato.",
+          "en" : "Two additional NORPEQ questions that are collected for descriptive purposes but are not included in the calculated total score.\n"
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]",
+        "children" : [ {
+          "id" : "a7._general_satisfaction",
+          "name" : "7. General satisfaction",
+          "localizedName" : "7. General satisfaction",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0048",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "7. Gesamtzufriedenheit Krankenhaus",
+            "fr-ch" : "7.\tSatisfaction globale",
+            "it-ch" : "7.\tSoddisfazione generale",
+            "en" : "7. General satisfaction"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 7. Waren Sie mit der Behandlung und Betreuung im Krankenhaus insgesamt zufrieden?",
+            "fr-ch" : "Question: 7. Dans l’ensemble, le traitement et les soins que vous avez reçus à l’hôpital étaient-ils satisfaisants?",
+            "it-ch" : "Domanda: 7. Nel complesso, il trattamento e l'assistenza ricevuti in ospedale sono stati soddisfacenti?",
+            "en" : "question: 7. Overall, was the treatment and care you received at the hospital satisfactory?"
+          },
+          "annotations" : {
+            "order" : "7"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]/items[at0048]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0049",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0050",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0051",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0052",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0053",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        }, {
+          "id" : "a8._incorrect_treatment",
+          "name" : "8. Incorrect treatment",
+          "localizedName" : "8. Incorrect treatment",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0054",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "de-ch" : "8. Falsche Behandlung",
+            "fr-ch" : "8.\tTraitement incorrect",
+            "it-ch" : "8.\tTrattamento errato",
+            "en" : "8. Incorrect treatment"
+          },
+          "localizedDescriptions" : {
+            "de-ch" : "Frage: 8. Glauben Sie, dass Sie in irgendeiner Weise falsch behandelt wurden (soweit Sie das beurteilen können)?",
+            "fr-ch" : "Question: 8. Pensez-vous avoir reçu un mauvais traitement d’une quelconque manière (pour autant que vous puissiez en juger)?",
+            "it-ch" : "Domanda: 8. Credi di aver ricevuto in qualche modo un trattamento sbagliato (per quanto puoi giudicare)?",
+            "en" : "question: 8. Do you believe you were in any way given the wrong treatment (as far as you are able to judge)?"
+          },
+          "annotations" : {
+            "order" : "8"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/data[at0003]/items[at0005]/items[at0054]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0055",
+              "label" : "Not at all",
+              "localizedLabels" : {
+                "de-ch" : "Gar nicht",
+                "fr-ch" : "Pas du tout",
+                "it-ch" : "Affatto",
+                "en" : "Not at all"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0056",
+              "label" : "To a small extent",
+              "localizedLabels" : {
+                "de-ch" : "In geringem Umfang",
+                "fr-ch" : "Dans une faible mesure",
+                "it-ch" : "In piccola misura",
+                "en" : "To a small extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0057",
+              "label" : "To some extent",
+              "localizedLabels" : {
+                "de-ch" : "Bis zu einem gewissen Grad",
+                "fr-ch" : "Dans une certaine mesure",
+                "it-ch" : "In una certa misura",
+                "en" : "To some extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0058",
+              "label" : "To a large extent",
+              "localizedLabels" : {
+                "de-ch" : "Zu einem grossen Teil",
+                "fr-ch" : "Dans une large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 4
+            }, {
+              "value" : "at0059",
+              "label" : "To a very large extent",
+              "localizedLabels" : {
+                "de-ch" : "In sehr grossem Umfang",
+                "fr-ch" : "Dans une très large mesure",
+                "it-ch" : "In larga misura",
+                "en" : "To a very large extent"
+              },
+              "localizedDescriptions" : {
+                "de-ch" : "",
+                "fr-ch" : "",
+                "it-ch" : "",
+                "en" : ""
+              },
+              "ordinal" : 5
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "time",
+        "name" : "Time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/data[at0001]/events[at0002,'Point in time']/time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.norpeq.v0]/subject",
         "inputs" : [ {
           "suffix" : "id",
           "type" : "TEXT"
