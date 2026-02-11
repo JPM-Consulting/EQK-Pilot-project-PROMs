@@ -158,7 +158,7 @@ definition
 													10|[local::at0052]
 												}
 											}
-											ELEMENT[at0053] occurrences matches {0..1} matches {    -- 5. Pain during prolonged or repetitive activity (cooking, cleaning, phone)
+											ELEMENT[at0053] occurrences matches {0..1} matches {    -- 5. Pain during prolonged or repetitive activity (cooking, cleaning, phone...)
 												value matches {
 													0|[local::at0054],
 													1|[local::at0055],
@@ -239,7 +239,7 @@ definition
 															10|[local::at0114]
 														}
 													}
-													ELEMENT[at0115] occurrences matches {0..1} matches {    -- 10. Carring a shopping bag or a pot (grip + hold)
+													ELEMENT[at0115] occurrences matches {0..1} matches {    -- 10. Carrying a shopping bag or a pot (grip + hold)
 														value matches {
 															0|[local::at0116],
 															1|[local::at0117],
@@ -650,8 +650,8 @@ ontology
 					description = <"10 = Maximum Pain / Impossible">
 				>
 				["at0053"] = <
-					text = <"5. Pain during prolonged or repetitive activity (cooking, cleaning, phone)">
-					description = <"Question: 5. Pain during prolonged or repetitive activity (cooking, cleaning, phone)">
+					text = <"5. Pain during prolonged or repetitive activity (cooking, cleaning, phone...)">
+					description = <"Question: 5. Pain during prolonged or repetitive activity (cooking, cleaning, phone...)">
 				>
 				["at0054"] = <
 					text = <"0">
@@ -898,8 +898,8 @@ ontology
 					description = <"10 = Maximum Pain / Impossible">
 				>
 				["at0115"] = <
-					text = <"10. Carring a shopping bag or a pot (grip + hold)">
-					description = <"Question: 10. Carring a shopping bag or a pot (grip + hold)">
+					text = <"10. Carrying a shopping bag or a pot (grip + hold)">
+					description = <"Question: 10. Carrying a shopping bag or a pot (grip + hold)">
 				>
 				["at0116"] = <
 					text = <"0">
@@ -1143,7 +1143,7 @@ ontology
 				>
 				["at0176"] = <
 					text = <"15. Daily hobbies (light DIY, gardening, reading, games, etc.)">
-					description = <"Question: 15. Daily hobies (light DIY, gardening, reading, games, etc.)">
+					description = <"Question: 15. Daily hobbies (light DIY, gardening, reading, games, etc.)">
 				>
 				["at0177"] = <
 					text = <"0">
@@ -1314,8 +1314,8 @@ Note: The score may contain 0.5 increments; do not round unless required for dis
 					description = <"Referenzzeitraum: Letzte 7 Tage">
 				>
 				["at0005"] = <
-					text = <"1. Schmerzen in Ruhe (Daumen/Hand in Ruhe)">
-					description = <"Frage: 1. Schmerzen in Ruhe (Daumen/Hand in Ruhe)">
+					text = <"1. Schmerz in Ruhe (Daumen/Hand in Ruhe)">
+					description = <"Frage: 1. Schmerz in Ruhe (Daumen/Hand in Ruhe)">
 				>
 				["at0006"] = <
 					text = <"0">
@@ -1362,8 +1362,8 @@ Note: The score may contain 0.5 increments; do not round unless required for dis
 					description = <"10 = Maximale Schmerzen / Unmöglich">
 				>
 				["at0017"] = <
-					text = <"2. Schmerzen bei Nutzung (Greifen/Zupacken)">
-					description = <"Frage: 2. Schmerzen bei Nutzung (Greifen/Zupacken)">
+					text = <"2. Schmerz bei Nutzung (Greifen/Zupacken)">
+					description = <"Frage: 2. Schmerz bei Nutzung (Greifen/Zupacken)">
 				>
 				["at0018"] = <
 					text = <"0">
@@ -1506,8 +1506,8 @@ Note: The score may contain 0.5 increments; do not round unless required for dis
 					description = <"10 = Maximale Schmerzen / Unmöglich">
 				>
 				["at0053"] = <
-					text = <"5. Schmerzen bei längerer oder wiederholter Aktivität (Kochen, Putzen, Telefonieren)">
-					description = <"Frage: 5. Schmerzen bei längerer oder wiederholter Aktivität (Kochen, Putzen, Telefonieren)">
+					text = <"5. Schmerz bei längerer oder wiederholter Aktivität (Kochen, Putzen, Telefonieren ...)">
+					description = <"Frage: 5. Schmerz bei längerer oder wiederholter Aktivität (Kochen, Putzen, Telefonieren ...)">
 				>
 				["at0054"] = <
 					text = <"0">
@@ -2362,8 +2362,8 @@ Formel: GesamtScore = SchmerzScore + FunktionsScore, wobei SchmerzScore = Summe(
 					description = <"10 = douleur maximale / impossible">
 				>
 				["at0053"] = <
-					text = <"5. Douleur lors d’une activité prolongée ou répétitive (cuisine, ménage, téléphone)">
-					description = <"Question: 5. Douleur lors d’une activité prolongée ou répétitive (cuisine, ménage, téléphone)">
+					text = <"5. Douleur lors d’une activité prolongée ou répétitive (cuisine, ménage, téléphone...)">
+					description = <"Question: 5. Douleur lors d’une activité prolongée ou répétitive (cuisine, ménage, téléphone...)">
 				>
 				["at0054"] = <
 					text = <"0">
@@ -3218,8 +3218,8 @@ Formule : ScoreTotal = ScoreDouleur + ScoreFonction, où ScoreDouleur = somme(A1
 					description = <"10 = Dolore massimo / Impossibile">
 				>
 				["at0053"] = <
-					text = <"5. Dolore durante attività prolungate o ripetitive (cucinare, pulire, telefono)">
-					description = <"Domanda: 5. Dolore durante attività prolungate o ripetitive (cucinare, pulire, telefono)">
+					text = <"5. Dolore durante attività prolungate o ripetitive (cucinare, pulire, telefono ...)">
+					description = <"Domanda: 5. Dolore durante attività prolungate o ripetitive (cucinare, pulire, telefono ...)">
 				>
 				["at0054"] = <
 					text = <"0">
@@ -3467,7 +3467,7 @@ Formule : ScoreTotal = ScoreDouleur + ScoreFonction, où ScoreDouleur = somme(A1
 				>
 				["at0115"] = <
 					text = <"10. Trasportare una borsa della spesa o una pentola (presa + mantenimento)">
-					description = <"Domanda: 10. Trasportare una borsa della spesa o una pentola (presa + mantenimento)">
+					description = <"Domanda:  10. Trasportare una borsa della spesa o una pentola (presa + mantenimento)">
 				>
 				["at0116"] = <
 					text = <"0">
