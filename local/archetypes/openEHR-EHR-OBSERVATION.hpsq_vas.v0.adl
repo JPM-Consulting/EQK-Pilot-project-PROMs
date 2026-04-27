@@ -1,0 +1,223 @@
+archetype (adl_version=1.4; uid=62751cad-8043-488d-bf65-41edfa9b5924)
+	openEHR-EHR-OBSERVATION.hpsq_vas.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2026-03-30">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			purpose = <"Pour enregistrer l’intensité de la douleur et de la raideur rapportée par le patient dans la hanche index et la hanche controlatérale à l’aide d’échelles visuelles analogiques cotées de 0 à 10.">
+			keywords = <"PROM, mesure de résultat rapportée par le patient, arthroplastie de la hanche, remplacement de la hanche, douleur de la hanche, raideur de la hanche, échelle visuelle analogique, EVA", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"À utiliser pour enregistrer ou échanger l’intensité de la douleur et de la raideur rapportée par le patient dans la hanche devant être opérée ou déjà opérée et, le cas échéant, dans la hanche controlatérale. Orientation de l’échelle : 0 = aucune douleur ou aucune raideur ; 10 = douleur maximale imaginable ou raideur extrême. Des valeurs plus élevées indiquent des symptômes plus sévères.
+">
+			misuse = <"Ne pas utiliser pour enregistrer une mesure multidimensionnelle des résultats concernant la hanche ni un score récapitulatif calculé en dehors du contexte de ce questionnaire à échelle visuelle analogique.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record patient-reported pain and stiffness intensity in the index hip and contralateral hip using 0–10 visual analogue scale ratings.">
+			keywords = <"PROM","patient-reported","outcome","measure","hip","arthroplasty","hip","replacement","hip","pain","hip","stiffness","visual","analogue","scale","VAS">
+			use = <"Use to record or exchange patient-reported pain and stiffness intensity in the hip to be operated on or already operated on and, where applicable, in the contralateral hip. Scale direction: 0 = no pain or no stiffness; 10 = worst imaginable pain or extreme stiffness. Higher values indicate worse symptoms.">
+			misuse = <"Not to be used to record a multidimensional hip outcome measure or a calculated summary score outside the context of this visual analogue scale questionnaire.
+">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"88291f42025a21ff32bc86776de752a7">
+		["build_uid"] = <"17d071e0-ac46-3ee5-8663-2adb97186838">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Hip pain and stiffness VAS questionnaire (HPSQ-VAS)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any point-in-time event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- For the hip to be operated on or already operated on
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0006] occurrences matches {0..1} matches {    -- 1. What was the intensity of the pain in your hip during the past week?
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..10|}
+													}
+												}
+											}
+											ELEMENT[at0007] occurrences matches {0..1} matches {    -- 2. What was the intensity of the stiffness in your hip during the past week?
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..10|}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0005] occurrences matches {0..1} matches {    -- For the other hip / the healthy side
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0008] occurrences matches {0..1} matches {    -- 1. What was the intensity of the pain in your hip during the past week?
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..10|}
+													}
+												}
+											}
+											ELEMENT[at0009] occurrences matches {0..1} matches {    -- 2. What was the intensity of the stiffness in your hip during the past week?
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..10|}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Hip pain and stiffness VAS questionnaire (HPSQ-VAS)">
+					description = <"A patient-reported outcome measure used to record the intensity of pain and stiffness in the index hip and, where applicable, the contralateral hip using 0–10 visual analogue scale ratings.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"For the hip to be operated on or already operated on">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"For the other hip / the healthy side">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"1. What was the intensity of the pain in your hip during the past week?">
+					description = <"">
+					comment = <"higher values indicate worse symptoms
+0 = no pain / no stiffness
+10 = worst imaginable pain / extreme stiffness
+">
+				>
+				["at0007"] = <
+					text = <"2. What was the intensity of the stiffness in your hip during the past week?">
+					description = <"">
+					comment = <"higher values indicate worse symptoms
+0 = no pain / no stiffness
+10 = worst imaginable pain / extreme stiffness">
+				>
+				["at0008"] = <
+					text = <"1. What was the intensity of the pain in your hip during the past week?">
+					description = <"">
+					comment = <"higher values indicate worse symptoms
+0 = no pain / no stiffness
+10 = worst imaginable pain / extreme stiffness">
+				>
+				["at0009"] = <
+					text = <"2. What was the intensity of the stiffness in your hip during the past week?">
+					description = <"">
+					comment = <"higher values indicate worse symptoms
+0 = no pain / no stiffness
+10 = worst imaginable pain / extreme stiffness">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Hip pain and stiffness VAS questionnaire (HPSQ-VAS)">
+					description = <"Mesure de résultat rapportée par le patient utilisée pour enregistrer l’intensité de la douleur et de la raideur dans la hanche index et, le cas échéant, dans la hanche controlatérale, à l’aide d’échelles visuelles analogiques cotées de 0 à 10.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Pour la hanche à opérer ou déjà opérée">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Pour l’autre hanche / le côté sain">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"1. Quelle fut l’intensité de la douleur dans votre hanche au cours de la semaine passée?">
+					description = <"">
+					comment = <"Des valeurs plus élevées indiquent des symptômes plus sévères.
+0 = aucune douleur / aucune raideur
+10 = douleur maximale imaginable / raideur extrême">
+				>
+				["at0007"] = <
+					text = <"2. Quelle fut l’intensité des raideurs dans votre hanche au cours de la semaine passée?">
+					description = <"">
+					comment = <"Des valeurs plus élevées indiquent des symptômes plus sévères.
+0 = aucune douleur / aucune raideur
+10 = douleur maximale imaginable / raideur extrême">
+				>
+				["at0008"] = <
+					text = <"1. Quelle fut l’intensité de la douleur dans votre hanche au cours de la semaine passée?">
+					description = <"">
+					comment = <"Des valeurs plus élevées indiquent des symptômes plus sévères.
+0 = aucune douleur / aucune raideur
+10 = douleur maximale imaginable / raideur extrême">
+				>
+				["at0009"] = <
+					text = <"2. Quelle fut l’intensité des raideurs dans votre hanche au cours de la semaine passée ?">
+					description = <"">
+					comment = <"Des valeurs plus élevées indiquent des symptômes plus sévères.
+0 = aucune douleur / aucune raideur
+10 = douleur maximale imaginable / raideur extrême">
+				>
+			>
+		>
+	>

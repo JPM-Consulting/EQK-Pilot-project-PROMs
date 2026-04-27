@@ -1,0 +1,233 @@
+archetype (adl_version=1.4; uid=62fc3465-f8b8-4081-9b36-af77c21fb3fb)
+	openEHR-EHR-OBSERVATION.kpsq_vas.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2026-03-30">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			purpose = <"Pour enregistrer l’intensité de la douleur et de la raideur rapportée par le patient dans le genou index et le genou controlatéral à l’aide d’échelles visuelles analogiques cotées de 0 à 10.">
+			keywords = <"PROM, mesure de résultat rapportée par le patient, arthroplastie du genou, remplacement du genou, douleur du genou, raideur du genou, échelle visuelle analogique, EVA", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"À utiliser pour enregistrer ou échanger l’intensité de la douleur et de la raideur rapportée par le patient dans le genou devant être opéré ou déjà opéré et, le cas échéant, dans le genou controlatéral. Orientation de l’échelle : 0 = aucune douleur ou aucune raideur ; 10 = douleur maximale imaginable ou raideur extrême. Des valeurs plus élevées indiquent des symptômes plus sévères.">
+			misuse = <"Ne pas utiliser pour enregistrer une mesure multidimensionnelle des résultats concernant le genou ni un score récapitulatif calculé en dehors du contexte de ce questionnaire à échelle visuelle analogique.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"PROM, patient-reported outcome measure, knee arthroplasty, knee replacement, knee pain, knee stiffness, visual analogue scale, VAS">
+			keywords = <"PROM, patient-reported outcome measure, knee arthroplasty, knee replacement, knee pain, knee stiffness, visual analogue scale, VAS", ...>
+			use = <"Use to record or exchange patient-reported pain and stiffness intensity in the knee to be operated on or already operated on and, where applicable, in the contralateral knee. Scale direction: 0 = no pain or no stiffness; 10 = worst imaginable pain or extreme stiffness. Higher values indicate worse symptoms.">
+			misuse = <"Not to be used to record a multidimensional knee outcome measure or a calculated summary score outside the context of this visual analogue scale questionnaire.
+">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"3bc605ff8de48b88fe309d0c151ef9dd">
+		["build_uid"] = <"17d071e0-ac46-3ee5-8663-2adb97186838">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Knee pain and stiffness VAS questionnaire (KPSQ-VAS)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any point-in-time event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- For the knee to be operated on or already operated on
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0006] occurrences matches {0..1} matches {    -- 1. What was the intensity of the pain in your knee during the past week?
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..10|}
+													}
+												}
+											}
+											ELEMENT[at0007] occurrences matches {0..1} matches {    -- 2. What was the intensity of the stiffness in your knee during the past week?
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..10|}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0005] occurrences matches {0..1} matches {    -- For the other knee / the healthy side
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0008] occurrences matches {0..1} matches {    -- 1. What was the intensity of the pain in your knee during the past week?
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..10|}
+													}
+												}
+											}
+											ELEMENT[at0009] occurrences matches {0..1} matches {    -- 2. What was the intensity of the stiffness in your knee during the past week?
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..10|}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0010] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Knee pain and stiffness VAS questionnaire (KPSQ-VAS)">
+					description = <"A patient-reported outcome measure used to record the intensity of pain and stiffness in the index knee and, where applicable, the contralateral knee using 0–10 visual analogue scale ratings.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"For the knee to be operated on or already operated on">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"For the other knee / the healthy side">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"1. What was the intensity of the pain in your knee during the past week?">
+					description = <"">
+					comment = <"higher values indicate worse symptoms
+0 = no pain / no stiffness
+10 = worst imaginable pain / extreme stiffness
+">
+				>
+				["at0007"] = <
+					text = <"2. What was the intensity of the stiffness in your knee during the past week?">
+					description = <"">
+					comment = <"higher values indicate worse symptoms
+0 = no pain / no stiffness
+10 = worst imaginable pain / extreme stiffness">
+				>
+				["at0008"] = <
+					text = <"1. What was the intensity of the pain in your knee during the past week?">
+					description = <"">
+					comment = <"higher values indicate worse symptoms
+0 = no pain / no stiffness
+10 = worst imaginable pain / extreme stiffness">
+				>
+				["at0009"] = <
+					text = <"2. What was the intensity of the stiffness in your knee during the past week?">
+					description = <"">
+					comment = <"higher values indicate worse symptoms
+0 = no pain / no stiffness
+10 = worst imaginable pain / extreme stiffness">
+				>
+				["at0010"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Knee pain and stiffness VAS questionnaire (KPSQ-VAS)">
+					description = <"Mesure de résultat rapportée par le patient utilisée pour enregistrer l’intensité de la douleur et de la raideur dans le genou index et, le cas échéant, dans le genou controlatéral, à l’aide d’échelles visuelles analogiques cotées de 0 à 10.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Pour le genou à opérer ou déjà opérée">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Pour l’autre genou / le côté sain">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"1. Quelle fut l’intensité de la douleur dans votre genou au cours de la semaine passée?">
+					description = <"">
+					comment = <"Des valeurs plus élevées indiquent des symptômes plus sévères.
+0 = aucune douleur / aucune raideur
+10 = douleur maximale imaginable / raideur extrême">
+				>
+				["at0007"] = <
+					text = <"2. Quelle fut l’intensité des raideurs dans votre genou au cours de la semaine passée?">
+					description = <"">
+					comment = <"Des valeurs plus élevées indiquent des symptômes plus sévères.
+0 = aucune douleur / aucune raideur
+10 = douleur maximale imaginable / raideur extrême">
+				>
+				["at0008"] = <
+					text = <"1. Quelle fut l’intensité de la douleur dans votre genou au cours de la semaine passée?">
+					description = <"">
+					comment = <"Des valeurs plus élevées indiquent des symptômes plus sévères.
+0 = aucune douleur / aucune raideur
+10 = douleur maximale imaginable / raideur extrême">
+				>
+				["at0009"] = <
+					text = <"2. Quelle fut l’intensité des raideurs dans votre genou au cours de la semaine passée?">
+					description = <"">
+					comment = <"Des valeurs plus élevées indiquent des symptômes plus sévères.
+0 = aucune douleur / aucune raideur
+10 = douleur maximale imaginable / raideur extrême">
+				>
+				["at0010"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

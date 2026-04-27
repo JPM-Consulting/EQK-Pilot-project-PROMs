@@ -1,0 +1,217 @@
+archetype (adl_version=1.4; uid=d3fa36a0-d916-490c-affc-c584945af74c)
+	openEHR-EHR-OBSERVATION.ucla_activity_level_rating.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2026-03-31">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			purpose = <"Pour enregistrer le niveau d’activité rapporté par le patient à l’aide de l’échelle de niveau d’activité UCLA.">
+			keywords = <"PROM, mesure de résultat rapportée par le patient, UCLA, niveau d’activité, activité physique, arthroplastie, arthroplastie de la hanche, arthroplastie du genou, échelle d’activité, questionnaire", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"À utiliser pour enregistrer ou échanger le niveau d’activité UCLA rapporté par le patient dans des systèmes de santé numériques. La réponse est représentée par une valeur ordinale unique allant de 1 à 10, où 1 indique le niveau d’activité le plus faible et 10 le niveau d’activité le plus élevé.">
+			misuse = <"Ne pas utiliser pour enregistrer une fonction physique détaillée, la fréquence de l’exercice, une limitation de la mobilité ou une évaluation multidimensionnelle de l’activité en dehors du contexte de l’échelle de niveau d’activité UCLA.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the patient-reported activity level using the UCLA activity level rating.">
+			keywords = <"PROM, patient-reported outcome measure, UCLA, activity level, physical activity, arthroplasty, hip arthroplasty, knee arthroplasty, activity scale, questionnaire", ...>
+			use = <"Use to record or exchange the patient-reported UCLA activity level in digital health systems. The response is represented as a single ordinal value ranging from 1 to 10, where 1 indicates the lowest activity level and 10 indicates the highest activity level.">
+			misuse = <"Not to be used to record detailed physical function, exercise frequency, mobility impairment or a multidimensional activity assessment outside the context of the UCLA activity level rating.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"1. Zahiri CA, Schmalzried TP, Szuszczewicz ES, Amstutz HC. Assessing activity in joint replacement patients. J Arthroplasty. 1998;13(8):890-895.
+2. Naal FD, Impellizzeri FM, Leunig M. Which is the best activity rating scale for patients undergoing total joint arthroplasty? Clin Orthop Relat Res. 2009;467(4):958-965.
+3. Mørup-Petersen A, Skou ST, Holm CE, Holm PM, Varnum C, Krogsgaard MR, Laursen M, Odgaard A. Measurement properties of UCLA Activity Scale for hip and knee arthroplasty patients and translation and cultural adaptation into Danish. Acta Orthop. 2021;92(6):681-688.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6fb745cdcf7b55c675b6e51fe61fd96c">
+		["build_uid"] = <"20b3d2a5-a683-3a8b-bc38-3343ba705ade">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- UCLA activity level rating
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any point-in-time event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Activity level
+										value matches {
+											1|[local::at0005],
+											2|[local::at0006],
+											3|[local::at0007],
+											4|[local::at0008],
+											5|[local::at0009],
+											6|[local::at0010],
+											7|[local::at0011],
+											8|[local::at0012],
+											9|[local::at0013],
+											10|[local::at0014]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"UCLA activity level rating">
+					description = <"A patient-reported outcome measure used to record the current physical activity level using the UCLA activity level rating.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Activity level">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Wholly inactive: dependent on others; cannot leave residence">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Mostly inactive: restricted to minimal activities of daily living">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Sometimes participate in mild activities">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Regularly participate in mild activities, such as walking, limited housework, and limited shopping">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Sometimes participate in moderate activities">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Regularly participate in moderate activities, such as swimming and unlimited housework or shopping">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Regularly participate in active events, such as bicycling">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Regularly participate in very active events, such as bowling or golf">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Sometimes participate in impact sports">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Regularly participate in impact sports such as jogging, tennis, skiing, acrobatics, ballet, heavy labor, or backpacking">
+					description = <"">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"UCLA activity level rating">
+					description = <"Mesure de résultat rapportée par le patient utilisée pour enregistrer le niveau actuel d’activité physique à l’aide de l’échelle de niveau d’activité UCLA.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Niveau d’activité">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Totalement inactif(ve) : dépend d’autrui ; ne peut pas quitter son domicile">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"La plupart du temps inactif(ve) : limité(e) aux activités minimales de la vie quotidienne">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Participe parfois à des activités légères">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Participe régulièrement à des activités légères, par ex. marcher, tâches ménagères limitées">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Participe parfois à des activités modérées">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Participe régulièrement à des activités modérées, par ex. nager et tâches ménagères ou courses sans limitation">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Participe régulièrement à des activités actives, par ex. faire du vélo">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Participe régulièrement à des activités très actives, par ex. bowling ou golf">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Participe parfois à des sports à impact">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Participe régulièrement à des sports à impact, par ex. jogging, tennis, ski, acrobaties">
+					description = <"">
+				>
+			>
+		>
+	>

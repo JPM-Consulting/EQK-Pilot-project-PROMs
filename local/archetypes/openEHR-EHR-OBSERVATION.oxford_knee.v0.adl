@@ -1,0 +1,999 @@
+archetype (adl_version=1.4; uid=71b616a1-6de6-49f4-bd2d-5d02b256ad10)
+	openEHR-EHR-OBSERVATION.oxford_knee.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2019-08-05">
+		["name"] = <"Alan Fish">
+		["organisation"] = <"Apperta Foundation CIC.">
+		["email"] = <"alan.fish@apperta.org">
+	>
+	lifecycle_state = <"in_development">
+	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			purpose = <"Utiliser pour saisir et rapporter les détails du score de l’Oxford Knee Questionnaire Score (OKS).">
+			keywords = <"orthopédie, genou", ...>
+			copyright = <"© Apperta UK CIC, Apperta Foundation">
+			use = <"Utiliser pour saisir et rapporter l’Oxford Knee Questionnaire Score (OKS).
+
+Bien que les archétypes openEHR soient tous librement disponibles sous licence ouverte, le contenu spécifique de cet archétype peut être protégé par le droit d’auteur. Toute utilisation de cet archétype dans des implémentations doit être conforme aux conditions fixées par les titulaires des droits d’auteur lorsqu’un droit d’auteur existe.">
+			misuse = <"Ne doit pas être utilisé sans respect des conditions du droit d’auteur, si celui-ci existe.
+">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Use to capture and report Oxford Knee Questionnaire Score (OKS) score details.">
+			keywords = <"orthopaedics, knee", ...>
+			copyright = <"© Apperta UK CIC, Apperta Foundation">
+			use = <"Use to capture and report Oxford Knee Questionnaire Score (OKS).
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype may be copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners where a copyright exists.
+">
+			misuse = <"Not to be used unless the terms of copyright have been observed (if a copyright exists).">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"Apperta UK">
+		["references"] = <"https://innovation.ox.ac.uk/outcome-measures/oxford-knee-score-oks/">
+		["current_contact"] = <"Alan Fish, Apperta Foundation CIC.<alan.fish@apperta.org>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"Apperta UK">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"0acdc77ee5b1ed604abc697127fbb2e5">
+		["build_uid"] = <"01df5eee-ae75-498a-8f43-a5da7308abad">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Oxford Knee Questionnaire Score (OKS)
+		data matches {
+			HISTORY[at0001] matches {    -- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..1} matches {    -- Any point-in-time event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- 1. How would you describe the pain you usually have from your knee?
+										value matches {
+											4|[local::at0012],
+											3|[local::at0011],
+											2|[local::at0010],
+											1|[local::at0009],
+											0|[local::at0109]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- 2. Have you had any trouble with washing and drying yourself (all over) because of your knee?
+										value matches {
+											4|[local::at0016],
+											3|[local::at0017],
+											2|[local::at0018],
+											1|[local::at0015],
+											0|[local::at0019]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- 3. Have you had any trouble getting in and out of a car or using public transport because of your knee? (whichever you tend to use)
+										value matches {
+											4|[local::at0025],
+											3|[local::at0024],
+											2|[local::at0023],
+											1|[local::at0022],
+											0|[local::at0021]
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- 4. For how long have you been able to walk before pain from your knee becomes severe? (with or without a stick)
+										value matches {
+											4|[local::at0031],
+											3|[local::at0030],
+											2|[local::at0029],
+											1|[local::at0028],
+											0|[local::at0027]
+										}
+									}
+									ELEMENT[at0032] occurrences matches {0..1} matches {    -- 5. After a meal (sat at a table), how painful has it been for you to stand up from a chair because of your knee?
+										value matches {
+											4|[local::at0037],
+											3|[local::at0036],
+											2|[local::at0035],
+											1|[local::at0034],
+											0|[local::at0033]
+										}
+									}
+									ELEMENT[at0056] occurrences matches {0..1} matches {    -- 6. Have you been limping when walking, because of your knee?
+										value matches {
+											4|[local::at0061],
+											3|[local::at0060],
+											2|[local::at0059],
+											1|[local::at0058],
+											0|[local::at0057]
+										}
+									}
+									ELEMENT[at0120] occurrences matches {0..1} matches {    -- 7. Could you kneel down and get up again afterwards?
+										value matches {
+											4|[local::at0125],
+											3|[local::at0124],
+											2|[local::at0123],
+											1|[local::at0122],
+											0|[local::at0121]
+										}
+									}
+									ELEMENT[at0074] occurrences matches {0..1} matches {    -- 8. Have you been troubled by pain from your knee in bed at night?
+										value matches {
+											4|[local::at0079],
+											3|[local::at0078],
+											2|[local::at0077],
+											1|[local::at0076],
+											0|[local::at0075]
+										}
+									}
+									ELEMENT[at0068] occurrences matches {0..1} matches {    -- 9. How much has pain from your knee interfered with your usual work (including housework)?
+										value matches {
+											4|[local::at0073],
+											3|[local::at0072],
+											2|[local::at0071],
+											1|[local::at0070],
+											0|[local::at0069]
+										}
+									}
+									ELEMENT[at0062] occurrences matches {0..1} matches {    -- 10. Have you felt that your knee might suddenly 'give way' or let you down?
+										value matches {
+											4|[local::at0067],
+											3|[local::at0066],
+											2|[local::at0065],
+											1|[local::at0064],
+											0|[local::at0063]
+										}
+									}
+									ELEMENT[at0044] occurrences matches {0..1} matches {    -- 11. Could you do the household shopping on your own?
+										value matches {
+											4|[local::at0114],
+											3|[local::at0113],
+											2|[local::at0112],
+											1|[local::at0111],
+											0|[local::at0110]
+										}
+									}
+									ELEMENT[at0126] occurrences matches {0..1} matches {    -- 12. Could you walk down one flight of stairs?
+										value matches {
+											4|[local::at0131],
+											3|[local::at0130],
+											2|[local::at0129],
+											1|[local::at0128],
+											0|[local::at0127]
+										}
+									}
+									ELEMENT[at0104] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..48|}
+											}
+										}
+									}
+									ELEMENT[at0105] occurrences matches {0..1} matches {    -- Average score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
+											}
+										}
+									}
+									ELEMENT[at0115] occurrences matches {0..1} matches {    -- Grading
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0116,    -- Severe
+													at0117,    -- Moderate to severe
+													at0118,    -- Moderate
+													at0119]    -- Satisfactory
+												}
+											}
+										}
+									}
+									ELEMENT[at0132] occurrences matches {0..1} matches {    -- Pain Score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..28|}
+											}
+										}
+									}
+									ELEMENT[at0133] occurrences matches {0..1} matches {    -- Function Score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..20|}
+											}
+										}
+									}
+									ELEMENT[at0134] occurrences matches {0..1} matches {    -- Normalized pain score
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+														magnitude = <|0.0..100.0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0135] occurrences matches {0..1} matches {    -- Normalized function score
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+														magnitude = <|0.0..100.0|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0005] matches {    -- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0006] occurrences matches {0..1} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Oxford Knee Questionnaire Score (OKS)">
+					description = <"Oxford Knee Questionnaire Score (OKS).">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+				>
+				["at0008"] = <
+					text = <"1. How would you describe the pain you usually have from your knee?">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Moderate">
+					description = <"The patient has experienced moderate pain in knee during past 4 weeks.">
+				>
+				["at0010"] = <
+					text = <"Mild">
+					description = <"The patient has experienced mild pain in knee during past 4 weeks.">
+				>
+				["at0011"] = <
+					text = <"Very mild">
+					description = <"The patient has experienced very mild pain in knee during past 4 weeks.">
+				>
+				["at0012"] = <
+					text = <"None">
+					description = <"The patient has experienced no pain in knee during past 4 weeks.">
+				>
+				["at0014"] = <
+					text = <"2. Have you had any trouble with washing and drying yourself (all over) because of your knee?">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Extreme difficulty">
+					description = <"The patient has extreme difficulty trouble washing and drying in the last 4 weeks because of pain in the knee.">
+				>
+				["at0016"] = <
+					text = <"Aucune difficulté">
+					description = <"The patient has no trouble washing and drying in the last 4 weeks because of pain in the knee.">
+				>
+				["at0017"] = <
+					text = <"Très peu de difficultés">
+					description = <"The patient has little trouble washing and drying in the last 4 weeks because of pain in the knee.">
+				>
+				["at0018"] = <
+					text = <"Difficultés modérées">
+					description = <"The patient has moderate trouble washing and drying in the last 4 weeks because of pain in the knee.">
+				>
+				["at0019"] = <
+					text = <"Impossible to do">
+					description = <"The patient has could not do washing and drying in the last 4 weeks because of pain in the knee.">
+				>
+				["at0020"] = <
+					text = <"3. Have you had any trouble getting in and out of a car or using public transport because of your knee? (whichever you tend to use)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Impossible to do">
+					description = <"The patient found it impossible to get into a vehicle during the past 4 weeks due to pain in knee.">
+				>
+				["at0022"] = <
+					text = <"Extreme difficulty">
+					description = <"The patient has extreme difficulty at all getting into a vehicle during the past 4 weeks due to pain in knee.">
+				>
+				["at0023"] = <
+					text = <"Moderate trouble">
+					description = <"The patient has moderate trouble at all getting into a vehicle during the past 4 weeks due to pain in knee.">
+				>
+				["at0024"] = <
+					text = <"Very little trouble">
+					description = <"The patient has very little trouble at all getting into a vehicle during the past 4 weeks due to pain in knee.">
+				>
+				["at0025"] = <
+					text = <"No trouble at all">
+					description = <"The patient has no trouble at all getting into a vehicle during the past 4 weeks due to pain in knee.">
+				>
+				["at0026"] = <
+					text = <"4. For how long have you been able to walk before pain from your knee becomes severe? (with or without a stick)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Not at all - pain severe when walking">
+					description = <"The patient cannot walk before pain from the knee becomes severe.">
+				>
+				["at0028"] = <
+					text = <"Around the house only">
+					description = <"The patient can walk around the house before pain from the knee becomes severe.">
+				>
+				["at0029"] = <
+					text = <"5 to 15 minutes">
+					description = <"The patient can walk 5 to 15 minutes before pain from the knee becomes severe.">
+				>
+				["at0030"] = <
+					text = <"16 to 30 minutes">
+					description = <"The patient can walk 16 to 30 minutes before pain from the knee becomes severe.">
+				>
+				["at0031"] = <
+					text = <"No pain/More than 30 minutes">
+					description = <"The patient can walk without pain or for more than 30 minutes before pain from the knee becomes severe.">
+				>
+				["at0032"] = <
+					text = <"5. After a meal (sat at a table), how painful has it been for you to stand up from a chair because of your knee?">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Unbearable">
+					description = <"The patient found it unbearable to stand up from a table after a meal in the past 4 weeks.">
+				>
+				["at0034"] = <
+					text = <"Very painful">
+					description = <"The patient found it very painful to stand up from a table after a meal in the past 4 weeks.">
+				>
+				["at0035"] = <
+					text = <"Moderately painful">
+					description = <"The patient found it moderately painful to stand up from a table after a meal in the past 4 weeks.">
+				>
+				["at0036"] = <
+					text = <"Slightly painful">
+					description = <"The patient found it slightly painful to stand up from a table after a meal in the past 4 weeks.">
+				>
+				["at0037"] = <
+					text = <"Not at all painful">
+					description = <"The patient did not find it painful to stand up from a table after a meal in the past 4 weeks.">
+				>
+				["at0044"] = <
+					text = <"11. Could you do the household shopping on your own?">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"6. Have you been limping when walking, because of your knee?">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"All of the time">
+					description = <"The patient has been limping when walking all of the time, because of knee pain during past 4 weeks.">
+				>
+				["at0058"] = <
+					text = <"Most of the time">
+					description = <"The patient has been limping when walking most of the time, because of knee pain during past 4 weeks.">
+				>
+				["at0059"] = <
+					text = <"Often, not just at first">
+					description = <"The patient has been limping when walking often, not just at first, because of knee pain during past 4 weeks.">
+				>
+				["at0060"] = <
+					text = <"Sometimes, or just at first">
+					description = <"The patient has been limping when walking sometimes, or just at first, because of knee pain during past 4 weeks.">
+				>
+				["at0061"] = <
+					text = <"Rarely / never">
+					description = <"The patient has been rarely / never been limping when walking, because of knee pain during past 4 weeks.">
+				>
+				["at0062"] = <
+					text = <"10. Have you felt that your knee might suddenly 'give way' or let you down?">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"All of the time">
+					description = <"The patient felt their knee might suddenly give way all of the time during past 4 weeks.">
+				>
+				["at0064"] = <
+					text = <"Most of the time">
+					description = <"The patient felt their knee might suddenly give way most of the time during past 4 weeks.">
+				>
+				["at0065"] = <
+					text = <"Often, not just at first">
+					description = <"The patient felt their knee might suddenly give way often, not just at first during past 4 weeks.">
+				>
+				["at0066"] = <
+					text = <"Sometimes, or just at first">
+					description = <"The patient felt their knee might suddenly give way sometimes, or just at first during past 4 weeks.">
+				>
+				["at0067"] = <
+					text = <"Rarely/never">
+					description = <"The patient felt their knee might suddenly give way rarely/never during past 4 weeks.">
+				>
+				["at0068"] = <
+					text = <"9. How much has pain from your knee interfered with your usual work (including housework)?">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Totally">
+					description = <"The patient reports that knee pain has interfered totally with their work in last 4 weeks.">
+				>
+				["at0070"] = <
+					text = <"Greatly">
+					description = <"The patient reports that knee pain has interfered greatly with their work in last 4 weeks.">
+				>
+				["at0071"] = <
+					text = <"Moderately">
+					description = <"The patient reports that knee pain has interfered moderately with their work in last 4 weeks.">
+				>
+				["at0072"] = <
+					text = <"A little bit">
+					description = <"The patient reports that knee pain has interfered a little bit with their work in last 4 weeks.">
+				>
+				["at0073"] = <
+					text = <"Not at all">
+					description = <"The patient reports that knee pain has not interfered with their work in last 4 weeks.">
+				>
+				["at0074"] = <
+					text = <"8. Have you been troubled by pain from your knee in bed at night?">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Every night">
+					description = <"The patient has experienced knee pain every night in past 4 weeks.">
+				>
+				["at0076"] = <
+					text = <"Most nights">
+					description = <"The patient has experienced knee pain most nights in past 4 weeks.">
+				>
+				["at0077"] = <
+					text = <"Some nights">
+					description = <"The patient has experienced knee pain some nights in past 4 weeks.">
+				>
+				["at0078"] = <
+					text = <"Only 1 or 2 nights">
+					description = <"The patient has experienced knee pain only 1 or 2 nights in past 4 weeks.">
+				>
+				["at0079"] = <
+					text = <"No nights">
+					description = <"The patient has experienced knee pain no nights in past 4 weeks.">
+				>
+				["at0104"] = <
+					text = <"Total score">
+					description = <"Total score from Questions 1 to 12.">
+					comment = <"The overall composite score is reached by simply summing the scores received for individual questions. This results in a continuous score ranging from 0 (most severe symptoms) to 48 (least symptoms).">
+				>
+				["at0105"] = <
+					text = <"Average score">
+					description = <"Average score from Questions 1-12.">
+				>
+				["at0109"] = <
+					text = <"Severe">
+					description = <"The patient has experienced severe pain in knee during past 4 weeks.">
+				>
+				["at0110"] = <
+					text = <"No, impossible">
+					description = <"The patient found it impossible to climb stairs due to knee pain during past 4 weeks.">
+				>
+				["at0111"] = <
+					text = <"With extreme difficulty">
+					description = <"The patient found it extremely difficult to climb stairs due to knee pain during past 4 weeks.">
+				>
+				["at0112"] = <
+					text = <"With moderate difficulty">
+					description = <"The patient found it moderately difficult to climb stairs due to knee pain during past 4 weeks.">
+				>
+				["at0113"] = <
+					text = <"With little difficulty">
+					description = <"The patient found it a little difficult to climb stairs due to knee pain during past 4 weeks.">
+				>
+				["at0114"] = <
+					text = <"Yes, easily">
+					description = <"The patient found it they could easily climb stairs due to knee pain during past 4 weeks.">
+				>
+				["at0115"] = <
+					text = <"Grading">
+					description = <"*">
+				>
+				["at0116"] = <
+					text = <"Severe">
+					description = <"May indicate severe hip arthritis.">
+				>
+				["at0117"] = <
+					text = <"Moderate to severe">
+					description = <"May indicate moderate to severe hip arthritis.">
+				>
+				["at0118"] = <
+					text = <"Moderate">
+					description = <"May indicate mild to moderate hip arthritis.">
+				>
+				["at0119"] = <
+					text = <"Satisfactory">
+					description = <"May indicate satisfactory joint function.">
+				>
+				["at0120"] = <
+					text = <"7. Could you kneel down and get up again afterwards?">
+					description = <"">
+				>
+				["at0121"] = <
+					text = <"No impossible">
+					description = <"The patient finds it impossible to kneel and get up again, because of knee pain during past 4 weeks.">
+				>
+				["at0122"] = <
+					text = <"With extreme difficulty">
+					description = <"The patient was able to kneel and get up again with extreme difficulty, because of knee pain during past 4 weeks.">
+				>
+				["at0123"] = <
+					text = <"With moderate difficulty">
+					description = <"The patient was able to kneel and get up again with moderate difficulty, because of knee pain during past 4 weeks.">
+				>
+				["at0124"] = <
+					text = <"With little difficulty">
+					description = <"The patient was able to kneel and get up again with little difficulty, because of knee pain during past 4 weeks.">
+				>
+				["at0125"] = <
+					text = <"Yes, easily">
+					description = <"The patient was able to kneel and get up again easily, because of knee pain during past 4 weeks.">
+				>
+				["at0126"] = <
+					text = <"12. Could you walk down one flight of stairs?">
+					description = <"">
+				>
+				["at0127"] = <
+					text = <"No, impossible">
+					description = <"The patient found it impossible to walk down stairs due to knee pain during past 4 weeks.">
+				>
+				["at0128"] = <
+					text = <"With extreme difficulty">
+					description = <"The patient found it extremely difficult to walk down stairs due to knee pain during past 4 weeks.">
+				>
+				["at0129"] = <
+					text = <"With moderate difficulty">
+					description = <"The patient found it moderately difficult to walk down stairs due to knee pain during past 4 weeks.">
+				>
+				["at0130"] = <
+					text = <"With little difficulty">
+					description = <"The patient found it a little difficult to walk down stairs due to knee pain during past 4 weeks.">
+				>
+				["at0131"] = <
+					text = <"Yes, easily">
+					description = <"The patient found it they could easily walk down stairs due to knee pain during past 4 weeks.">
+				>
+				["at0132"] = <
+					text = <"Pain Score">
+					description = <"The OKS pain component consists of 7 items: questions 1, 4, 5, 6, 8, 9, 10">
+				>
+				["at0133"] = <
+					text = <"Function Score">
+					description = <"The OKS functional component consists of 5 items: questions 2, 3, 7, 11, 12">
+				>
+				["at0134"] = <
+					text = <"Normalized pain score">
+					description = <"">
+					comment = <"To convert the raw score to the recommended 0-100 metric:
+100/maximum possible domain score X actual (raw) score i.e. 100/24 X raw score.">
+				>
+				["at0135"] = <
+					text = <"Normalized function score">
+					description = <"">
+					comment = <"To convert the raw score to the recommended 0-100 metric:
+100/maximum possible domain score X actual (raw) score i.e. 100/24 X raw score.">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Oxford Knee Questionnaire Score (OKS)">
+					description = <"Oxford Knee Questionnaire Score (OKS)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"Une date et/ou une heure spécifiques qui peuvent être explicitement définies dans un modèle ou au moment de l’exécution.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires requises pour capturer le contexte local ou pour assurer l’alignement avec d’autres modèles de référence/formalismes.">
+					comment = <"Par ex. informations relatives au service hospitalier local ou métadonnées supplémentaires permettant l’alignement avec des équivalents HL7 ou CDISC.">
+				>
+				["at0008"] = <
+					text = <"1. Comment décririez-vous habituellement la douleur de votre genou?">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Modérée">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Légère">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Minime">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Aucune">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"2. Avez-vous eu des difficultés à vous laver et à vous sécher entièrement à cause de votre genou?">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Difficultés majeures">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Aucune difficulté">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Difficultés minimes">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Difficultés modérées">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Impossible à réaliser">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"3. Avez-vous eu des difficultés, à cause de votre genou, pour monter dans une voiture et en sortir ou pour utiliser les transports publics (selon le moyen de transport que vous utilisez habituellement)?">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Impossible à réaliser">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Difficultés majeures">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Difficultés modérées">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Difficultés minimes">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Aucune difficulté">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"4. Pendant combien de temps avez-vous pu marcher avant que la douleur de votre genou ne devienne importante? (avec ou sans canne)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Pas du tout ou douleur sévère à la marche">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Autour de la maison seulement">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"De 5 à 15 minutes">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"De 16 à 30 minutes">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Pas de douleur ou plus de 30 minutes">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"5. Après un repas (assis(e) à table), dans quelle mesure était-il douloureux pour vous de vous lever d’une chaise à cause de votre genou?">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Insupportable">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Très douloureux">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Modérément douloureux">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Légèrement douloureux">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Pas douloureux du tout">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"11. Avez-vous pu faire seul(e) les courses du ménage?">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"6. Avez-vous boité en marchant à cause de votre genou?">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Tout le temps">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"La plupart du temps">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Souvent, pas seulement au début">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Quelques fois ou juste au début">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Rarement ou jamais">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"10. Avez-vous eu l’impression que votre genou pouvait soudainement se dérober ou lâcher?">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Tout le temps">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"La plupart du temps">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Souvent, pas seulement au début">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Quelques fois ou juste au début">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Rarement ou jamais">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"9. Dans quelle mesure la douleur de votre genou vous a-t-elle gêné(e) dans votre travail habituel (y compris les tâches ménagères)?">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Tout le temps">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Fortement">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Modérément">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Un peu">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"8. Avez-vous été gêné(e) par des douleurs du genou au lit pendant la nuit?">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Toutes les nuits">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"La plupart des nuits">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Quelques nuits">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Seulement 1 ou 2 nuits">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Jamais">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Total score">
+					description = <"Score total des questions 1 à 12.">
+					comment = <"Le score composite global est obtenu simplement en additionnant les scores attribués à chaque question. Il en résulte un score continu allant de 0 (symptômes les plus sévères) à 48 (symptômes les moins sévères).">
+				>
+				["at0105"] = <
+					text = <"Average score">
+					description = <"Score moyen des questions 1 à 12.">
+				>
+				["at0109"] = <
+					text = <"Sévère">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"Non impossible">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"Avec beaucoup de difficultés">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"Avec quelques difficultés">
+					description = <"">
+				>
+				["at0113"] = <
+					text = <"Avec très peu de difficultés">
+					description = <"">
+				>
+				["at0114"] = <
+					text = <"Oui facilement">
+					description = <"">
+				>
+				["at0115"] = <
+					text = <"Grading">
+					description = <"">
+				>
+				["at0116"] = <
+					text = <"Sévère">
+					description = <"">
+				>
+				["at0117"] = <
+					text = <"Modérée à sévère">
+					description = <"">
+				>
+				["at0118"] = <
+					text = <"Modérée">
+					description = <"">
+				>
+				["at0119"] = <
+					text = <"Satisfaisante">
+					description = <"">
+				>
+				["at0120"] = <
+					text = <"7. Avez-vous pu vous mettre à genoux puis vous relever?">
+					description = <"">
+				>
+				["at0121"] = <
+					text = <"Non impossible">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"Avec beaucoup de difficultés">
+					description = <"">
+				>
+				["at0123"] = <
+					text = <"Avec quelques difficultés">
+					description = <"">
+				>
+				["at0124"] = <
+					text = <"Avec très peu de difficultés">
+					description = <"">
+				>
+				["at0125"] = <
+					text = <"Oui facilement">
+					description = <"">
+				>
+				["at0126"] = <
+					text = <"12. Avez-vous pu descendre un étage par les escaliers?">
+					description = <"">
+				>
+				["at0127"] = <
+					text = <"Non impossible">
+					description = <"">
+				>
+				["at0128"] = <
+					text = <"Avec beaucoup de difficultés">
+					description = <"">
+				>
+				["at0129"] = <
+					text = <"Avec quelques difficultés">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"Avec très peu de difficultés">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"Oui facilement">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"Pain Score">
+					description = <"La composante douleur de l’OKS comprend 7 items : les questions 1, 4, 5, 6, 8, 9 et 10.">
+				>
+				["at0133"] = <
+					text = <"Function Score">
+					description = <"La composante fonctionnelle de l’OKS comprend 5 items : les questions 2, 3, 7, 11 et 12.">
+				>
+				["at0134"] = <
+					text = <"Normalized pain score">
+					description = <"">
+					comment = <"Pour convertir le score brut en la métrique recommandée de 0 à 100 :
+100 / score maximal possible du domaine × score réel (brut), c’est-à-dire 100 / 24 × score brut.">
+				>
+				["at0135"] = <
+					text = <"Normalized function score">
+					description = <"">
+					comment = <"Pour convertir le score brut en la métrique recommandée de 0 à 100 :
+100 / score maximal possible du domaine × score réel (brut), c’est-à-dire 100 / 24 × score brut.">
+				>
+			>
+		>
+	>

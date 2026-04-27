@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><template xmlns="openEHR/v1/Template">
+    <id>eb391d6e-6b0d-46da-a351-46191f5bfd80</id>
+    <name>EQK PROMS Knee extended.v1</name>
+    <description>
+        <original_author>
+            <item>
+                <key>name</key>
+                <value>Jean-Pierre Messerli</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>JPM Consulting GmbH</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>jean-pierre.messerli@jpm-consulting.ch</value>
+            </item>
+            <item>
+                <key>date</key>
+                <value>2026-04-06</value>
+            </item>
+        </original_author>
+        <lifecycle_state>unmanaged</lifecycle_state>
+        <details/>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>sem_ver</key>
+                <value>0.4.0</value>
+            </item>
+            <item>
+                <key>build_uid</key>
+                <value>5e228eab-4537-4630-9a4e-32b17647ad66</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>2495EE8B883231F9557FFA53672E038A</value>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>1ec97e8f2391a2d12c30b20495446f5c</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
+            </item>
+        </other_details>
+    </description>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0017]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>2</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0060]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>7</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0029]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>4</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0137]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>11</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>1</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0048]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>5</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0143]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>12</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0066]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>8</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0076]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>9</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0023]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>3</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/items[at0054]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>6</value>
+            </item>
+        </items>
+    </annotations>
+    <annotations path="[openEHR-EHR-COMPOSITION.self_reported_data.v1]/content[openEHR-EHR-OBSERVATION.koos_12.v0]/data[at0001]/events[at0002]/data[at0003]/items[at0075]/items[at0131]">
+        <items>
+            <item>
+                <key>order</key>
+                <value>10</value>
+            </item>
+        </items>
+    </annotations>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" concept_name="Self-reported data" name="EQK PROMS Knee extended" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-OBSERVATION.oxford_knee.v0" max="1" path="/content" xsi:type="tem:OBSERVATION"/>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.ucla_activity_level_rating.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" path="/data[at0001]/events[at0002]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.knee_arthroplasty_satisfaction_questionnaire.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" path="/data[at0001]/events[at0002]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule name="Point in time" path="/data[at0001]/events[at0002]">
+                <eventConstraint>
+                    <allowedType>PointInTime</allowedType>
+                </eventConstraint>
+            </Rule>
+            <Rule name="Usual activities e.g. work, study, housework, family or leisure activities." path="/data[at0001]/events[at0002]/data[at0003]/items[at0007]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0" max="1" path="/content" xsi:type="tem:EVALUATION"/>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.kpsq_vas.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" path="/data[at0001]/events[at0002]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.womac.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" path="/data[at0001]/events[at0002]"/>
+        </Content>
+        <Content archetype_id="openEHR-EHR-OBSERVATION.koos_12.v0" max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule max="1" name="Point in time" path="/data[at0001]/events[at0002]">
+                <eventConstraint>
+                    <allowedType>PointInTime</allowedType>
+                </eventConstraint>
+            </Rule>
+        </Content>
+        <Context>
+            <Items archetype_id="openEHR-EHR-CLUSTER.data_entry_device.v0" max="1" path="/context/other_context[at0003]/items[at0005]" xsi:type="tem:CLUSTER"/>
+        </Context>
+    </definition>
+    <integrity_checks archetype_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">2495EE8B883231F9557FFA53672E038A</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-CLUSTER.data_entry_device.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">19ad66cbcd866c27f8d084da4b7692c7</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.oxford_knee.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">0acdc77ee5b1ed604abc697127fbb2e5</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.ucla_activity_level_rating.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">6fb745cdcf7b55c675b6e51fe61fd96c</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.knee_arthroplasty_satisfaction_questionnaire.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">a7fe002cf573a1b72dc28d5a124c84a7</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.eq_5d_5l.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">282d6455a68756ccb30d14641ac85b94</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-EVALUATION.eq_5d_5l_index_score.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">385f43359611583cff7c2aeb5798ede2</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.kpsq_vas.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">3bc605ff8de48b88fe309d0c151ef9dd</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.womac.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">6f49fee029b806bcfb225e75f8c721fd</digest>
+    </integrity_checks>
+    <integrity_checks archetype_id="openEHR-EHR-OBSERVATION.koos_12.v0" xmlns:tem="openEHR/v1/Template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">3deac807bf917f04dfdaf128ece8d9b0</digest>
+    </integrity_checks>
+</template>

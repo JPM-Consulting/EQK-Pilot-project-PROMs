@@ -1,0 +1,449 @@
+archetype (adl_version=1.4; uid=69dbec75-533d-49cd-9f19-9975e3b0066d)
+	openEHR-EHR-OBSERVATION.knee_arthroplasty_satisfaction_questionnaire.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2026-03-30">
+		["name"] = <"Jean-Pierre Messerli">
+		["organisation"] = <"JPM Consulting GmbH">
+		["email"] = <"jean-pierre.messerli@jpm-consulting.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["fr-ch"] = <
+			language = <[ISO_639-1::fr-ch]>
+			purpose = <"Pour enregistrer la satisfaction rapportée par le patient après une arthroplastie du genou à l’aide d’items sur échelle de Likert, d’une évaluation catégorielle globale, d’un score de satisfaction de 0 à 10 et de la disposition à subir à nouveau une intervention chirurgicale.">
+			keywords = <"PROM, mesure de résultat rapportée par le patient, genou, arthroplastie, remplacement, satisfaction", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"À utiliser pour enregistrer ou échanger des données de satisfaction rapportées par le patient après une arthroplastie du genou dans des systèmes de santé numériques.
+">
+			misuse = <"Ne pas utiliser pour enregistrer des symptômes généraux du genou, l’intensité de la douleur ou une limitation fonctionnelle en dehors du contexte de cette évaluation postopératoire de la satisfaction.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record patient-reported satisfaction following knee arthroplasty using Likert-scale items, an overall categorical assessment, a 0–10 satisfaction score and willingness to undergo surgery again.">
+			keywords = <"PROM","patient-reported","outcome","measure","knee","arthroplasty","replacement","satisfaction">
+			use = <"Use to record or exchange patient-reported satisfaction data following knee arthroplasty in digital health systems.">
+			misuse = <"Not to be used to record general knee symptoms, pain severity or functional limitation outside the context of this postoperative satisfaction assessment.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a7fe002cf573a1b72dc28d5a124c84a7">
+		["build_uid"] = <"0e25c1a9-6972-319a-8f9f-89247586fae9">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Knee arthroplasty satisfaction questionnaire
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any point-in-time event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- 1. How do you think your operation relieved the pain in your knee?
+										value matches {
+											1|[local::at0039],
+											2|[local::at0040],
+											3|[local::at0041],
+											4|[local::at0042],
+											5|[local::at0043]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- 2. How do you think your operation improved your ability to carry out your usual activities?
+										value matches {
+											1|[local::at0012],
+											2|[local::at0013],
+											3|[local::at0014],
+											4|[local::at0015],
+											5|[local::at0016]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- 3. How do you think your operation now enables you to do heavy work or sports activities?
+										value matches {
+											1|[local::at0018],
+											2|[local::at0019],
+											3|[local::at0020],
+											4|[local::at0021],
+											5|[local::at0022]
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- 4. How do you think your operation ultimately met your expectations?
+										value matches {
+											1|[local::at0024],
+											2|[local::at0025],
+											3|[local::at0026],
+											4|[local::at0027],
+											5|[local::at0028]
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- 5. Overall, are you…?
+										value matches {
+											1|[local::at0030],
+											2|[local::at0031],
+											3|[local::at0032]
+										}
+									}
+									ELEMENT[at0033] occurrences matches {0..1} matches {    -- 6. Rate on the scale below your level of satisfaction with your knee prosthesis.
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..10|}
+											}
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- 7. Today, would you have your knee operated on again?
+										value matches {
+											1|[local::at0035],
+											0|[local::at0036]
+										}
+									}
+									ELEMENT[at0037] occurrences matches {0..1} matches {    -- Reason for not having surgery again
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0038] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Knee arthroplasty satisfaction questionnaire">
+					description = <"A patient-reported outcome measure used to record satisfaction following knee arthroplasty, including perceived pain relief, improvement in activities, fulfilment of expectations, overall status, overall satisfaction score and willingness to undergo surgery again.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"1. How do you think your operation relieved the pain in your knee?">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"2. How do you think your operation improved your ability to carry out your usual activities?">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Average">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Good">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Very good">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Excellent">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"3. How do you think your operation now enables you to do heavy work or sports activities?">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Average">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Good">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Very good">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Excellent">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"4. How do you think your operation ultimately met your expectations?">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Average">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Good">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Very good">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Excellent">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"5. Overall, are you…?">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Disappointed">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Improved">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Satisfied">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"6. Rate on the scale below your level of satisfaction with your knee prosthesis.">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"7. Today, would you have your knee operated on again?">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Reason for not having surgery again">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0039"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Average">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Good">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Very good">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Excellent">
+					description = <"">
+				>
+			>
+		>
+		["fr-ch"] = <
+			items = <
+				["at0000"] = <
+					text = <"Knee arthroplasty satisfaction questionnaire">
+					description = <"Mesure de résultat rapportée par le patient utilisée pour enregistrer la satisfaction après une arthroplastie du genou, y compris le soulagement perçu de la douleur, l’amélioration des activités, la satisfaction des attentes, le statut global, le score global de satisfaction et la disposition à subir à nouveau une intervention chirurgicale.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any point-in-time event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"1. De quelle manière pensez-vous que votre intervention a supprimé la douleur au niveau de votre genou?">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"2. De quelle manière pensez-vous que votre intervention a augmenté votre capacité à réaliser vos activités habituelles?">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Mauvaise">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Moyenne">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Bonne">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Très bonne">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Excellente">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"3. De quelle manière pensez-vous que votre intervention vous permet de réaliser maintenant des travaux lourds ou des activités sportives?">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Mauvaise">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Moyenne">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Bonne">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Très bonne">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Excellente">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"4. De quelle manière pensez-vous que votre intervention finalement correspond à vos attentes?">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Mauvaise">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Moyenne">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Bonne">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Très bonne">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Excellente">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"5. Globalement êtes-vous?">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Déçu">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Amélioré">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Satisfait">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"6. Notez sur l’échelle ci-dessous le degré de satisfaction ressenti par rapport à votre prothèse de genou?">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"7. Aujourd’hui, vous referiez-vous opérer de votre genou?">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Raison pour ne pas subir à nouveau l’intervention chirurgical">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0039"] = <
+					text = <"Mauvaise">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Moyenne">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Bonne">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Très bonne">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Excellente">
+					description = <"">
+				>
+			>
+		>
+	>
